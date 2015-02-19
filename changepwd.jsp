@@ -1,0 +1,1 @@
+<%String templatePage = "changepwd";request.setAttribute("templatePage",templatePage);%><%@include file="template/template.jsp"%>

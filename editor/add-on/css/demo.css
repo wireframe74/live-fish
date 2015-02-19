@@ -1,0 +1,29 @@
+.standard {
+  font-family:arial;
+  font-size:10pt;
+}
+
+.header1 {
+  font-family:arial;
+  font-size:16pt;
+  font-weight:bold;
+  padding-top:12px;
+  padding-bottom:5px;
+}
+
+.header2 {
+  font-family:arial;
+  font-size:14pt;
+  font-weight:bold;
+  padding-top:12px;
+  padding-bottom:5px;
+  font-style:italic;
+}
+
+.header3 {
+  font-family:arial;
+  font-size:12pt;
+  font-weight:bold;
+  padding-top:12px;
+  padding-bottom:5px;
+}

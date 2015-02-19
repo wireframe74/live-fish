@@ -1,0 +1,104 @@
+<script language="javascript" src="pinMenu2.js"></script>
+
+<script>
+
+var objPopup = null;
+
+function onclick()
+{
+  var window2 = objPopup.document.parentWindow;
+  var popup2  = window2.createPopup();
+  popup2.document.open();
+  popup2.document.write("pop2");
+  popup2.document.close();
+  popup2.show("300","300", "100","100",document.body);
+}
+
+function init()
+{
+  var evt = window.event;
+  
+  objPopup = window.createPopup();
+  var temp = "<input type=button onclick='parent.onclick()'>";
+  objPopup.document.open();
+  objPopup.document.write(temp);
+  objPopup.document.close();
+  objPopup.document.body.style.backgroundColor = "transparent";
+  objPopup.document.body.style.overflow = "hidden";
+  objPopup.document.body.style.border = "";
+  objPopup.show(evt.clientX,evt.clientY, "300","300",document.body);
+}
+
+function show()
+{
+  var imageUrl = "http://192.168.0.31:8080/pinEdit70/editor/design/image/";
+  var evt = window.event;
+  var design = 5;
+
+  
+	var objMenu = new Menu("");
+	objMenu.design = design;
+  objMenu.isPopupMode = true;
+  objMenu.add(new MenuItem("Item 1",imageUrl + "new.gif","","NEW","","",callback1));
+  var objMenuItem = new MenuItem("Item 2",imageUrl + "open.gif","","OPEN");
+  objMenu.add(objMenuItem);
+
+	var objSubMenu = new Menu("");
+	objSubMenu.design = design;
+  objSubMenu.isPopupMode = true;
+	objMenuItem.subMenu = objSubMenu;
+  objSubMenu.add(new MenuItem("Sub Item 1",imageUrl + "new.gif","","NEW","","",callback2));
+  objSubMenu.add(new MenuItem("Sub Item 2",imageUrl + "new.gif","","OPEN"));
+	
+  objMenu.showContext(evt.clientX,evt.clientY);
+
+
+}
+
+function callback1()
+{
+  alert("Selected1");
+}
+
+function callback2()
+{
+  alert("Selected2");
+}
+
+</script>
+
+<body onmousedown="init();">
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+Popup Test skdfskl sdkhf sdklfh sdlkfh dslkjh dslkhds lfkhds flksdhflkjsdhf sdk<br>
+</body>

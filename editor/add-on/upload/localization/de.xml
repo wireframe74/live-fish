@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<strings>
+	<text id="3" value="Dateien hinzufügen" />
+	<text id="4" value="Löschen" />
+	<text id="5" value="Hochladen" />
+	<text id="6" value="Fortschritt:" />
+	<text id="7" value="Neu" />
+	<text id="8" value="Umbenennen" />
+	<text id="9" value="Löschen" />
+	
+	<text id="1000" value="Name" />
+	<text id="1001" value="Größe" />
+	<text id="1002" value="Diese Datei übersteigt die zugelassene Größe:" />
+	<text id="1003" value="Falsche Dateierweiterung: " />
+	<text id="1004" value="Die zugelassene Gesamtgröße für den Upload-Vorgang wurde überschritten !" />
+	<text id="1005" value="Dateien für Upload" />
+	<text id="1006" value="Zielverzeichnis (nicht ausgewählt):" />
+	<text id="1007" value="Zielverzeichnis" />
+	<text id="1008" value="Breite: " />
+	<text id="1009" value="Höhe: " />
+	<text id="1010" value="Alle" />
+	<text id="1011" value="Dokumente" />
+	<text id="1012" value="Ja" />
+	<text id="1013" value="Nein" />
+	<text id="1014" value="Wirklich löschen ?" />
+	<text id="1015" value="Löschen" />
+  <text id="1016" value="Speichern" />
+  <text id="1017" value="Abbrechen" />
+  <text id="1018" value="Löschen nicht erfolgreich." />
+  <text id="1019" value="Bitte wählen Sie zuerst ein Zielverzeichnis aus !" />
+  <text id="1020" value="/" />
+  <text id="1021" value="Datum" />
+  <text id="1022" value="Bilder" />
+  <text id="1023" value="Bild Voransicht:" />
+  <text id="1024" value="Größenanpassung:" />
+  <text id="1025" value="Name:" />
+  <text id="1026" value="Uploading file: " />
+
+  <text id="2000" value="Verzeichnis/Datei konnte nicht umbenannt werden. Möglicherweise wird der Name bereits verwendet !" />
+  <text id="2001" value="Verzeichnis/Datei konnte nicht gelöscht werden !" />
+  <text id="2002" value="Verzeichnis/Datei konnte nicht angelegt werden. Möglicherweise wird der Name bereits verwendet !" />
+  <text id="2003" value="Verzeichnisstruktur konnte nicht gelesen werden !" />
+  <text id="2004" value="Nachricht" />
+</strings>

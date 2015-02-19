@@ -1,0 +1,147 @@
+<HEAD>
+<title></title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../include/dialog.js"></script>
+<script language="javascript" src="../include/listbox.js"></script>
+<script language="javascript" src="../include/color.js"></script>
+<script language="javascript" >
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var lbStyle = null;
+var lbWidth = null;
+var lng = null;
+var params = new Array();
+
+function updateDesign(rule)
+{
+  var url = "";
+  document.getElementById("txturl").value = "";
+  comboSet(document.getElementById("cmbRepeat"), "")
+  document.getElementById("txtColor").style.backgroundColor = "";
+  
+  if (rule.styles.length > 0) {
+    for (var i=0;i<rule.styles.length;i++) {    
+      if (rule.styles[i].name.toLowerCase() == "background-color") {
+        document.getElementById("txtColor").style.backgroundColor = rule.styles[i].value;
+      } else if (rule.styles[i].name.toLowerCase() == "background-image") {
+        //Alles zwischen den Klammern
+        url = rule.styles[i].value.match(/\([^\)]+\)/gi,"");
+        url = String(url)
+        url = url.replace(/\'/gi,"")
+        url = url.substr(1, url.length-2)
+        document.getElementById("txturl").value = url;
+      } else if (rule.styles[i].name.toLowerCase() == "background-repeat") {
+        comboSet(document.getElementById("cmbRepeat"), rule.styles[i].value)
+      }
+    }  
+  }
+}
+
+function updateStyleSheet(style, value)
+{
+  parent.parent.parent.parent.updateRule(style.toLowerCase(), value.toLowerCase());
+}
+
+function getLanguageString(id)
+{
+	return lng[id];
+}
+
+function setImageUrl()
+{
+  try {
+    var url = "";
+    url = document.getElementById('txturl').value;
+    url = "url(" + url + ")";
+    updateStyleSheet("background-image",url);
+  } catch(Error) {}
+}
+
+function changeRepeat()
+{
+  if (!(document.getElementById("cmbRepeat").value == ""))
+    updateStyleSheet("background-repeat", document.getElementById("cmbRepeat").value)
+  else
+    updateStyleSheet("background-repeat", "")
+}
+
+function afterSelectColor(color)
+{
+  document.getElementById("txtColor").style.backgroundColor = color;
+  updateStyleSheet('background-color', document.getElementById('txtColor').style.backgroundColor);
+}
+
+function selectColor()
+{
+  try {
+    var color = new ColorDialog("1");
+    color.onAfterSelect = "afterSelectColor";
+
+    var colors = parent.parent.parent.parent.getColors();
+
+    color.colors = colors;
+    color.color = document.getElementById("txtColor").style.backgroundColor;
+    color.language = parent.parent.parent.parent.globalLanguage;
+    color.open();
+
+  } catch(Error) {}
+}
+
+function initDialog(param)
+{
+  try {
+		lng = parent.parent.parent.parent.getLocalizationResource();
+    // set language strings
+    setStrings();
+    document.getElementById("lblColor").value = getLanguageString(1000);
+  } catch(Error) {}
+} 
+
+</SCRIPT> 
+</HEAD>
+<BODY class="bodypage">
+
+
+
+        <fieldset style="margin-top:10px;">
+          <legend class="head">
+            <span id="1100">_color</span>
+          </legend>   
+            <table style="margin-top:10px; width:350px; " border="0" cellpadding="0" cellspacing="2">
+              <tr>
+                <td style="width:100px;"><div id="1102" class="label">_color</div></td>
+                <td style="width:1%"><div id="txtColor"  style="width:75px; height:17px; border:1px solid #c0c0c0">&nbsp;</div></td>
+                <td><input type="button" id="lblColor"  name="_select" value="_select" onclick="selectColor('txtColor');"></td>
+              </tr>
+            </table>
+          </fieldset>
+        <fieldset>
+          <legend class="head">
+            <span id="1104" style="margin-top:10px;" class="label">_color</span>
+          </legend>
+            <table style="margin-top:10px; width:350px; " border="0" cellpadding="0" cellspacing="2">
+              <tr>
+                <td  style="width:100px;margin-top:5px;"><div id="1105" class="label">_url</div></td>
+                <td ><input style="width:100%" type="text" name="txturl" id="txturl" onchange="setImageUrl();"></td>
+              </tr>
+              <tr>
+                <td style="margin-top:5px;"><div id="1106" class="label">_repeat</div></td>
+                <td>
+                  <select style="width:80px" id="cmbRepeat" onChange="changeRepeat()">
+                    <option value="">-</option>
+                    <option value="no-repeat">no-repeat</option>
+                    <option value="repeat">repeat</option>
+                    <option value="repeat-x">repeat-x</option>
+                    <option value="repeat-y">repeat-y</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+<div style="visibility:hidden;"><div id="tempObj"></div></div>
+</BODY>

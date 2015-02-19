@@ -1,0 +1,29 @@
+<!-- start of leftmargin070.html -->
+
+<!-- Remove comment to add gift list code
+
+<div id="asidegiftlist" class="asidebox">
+	<h2>Gift list </h2>
+
+	<div id="giftListSearch">
+	
+		<% if (userSession.hasActiveGiftList()) { %>
+			
+			<a href="viewList.jsp?listcode=<%=userSession.getGiftListCode()%>" />Active Gift List: <%=userSession.getGiftListName()%></a>
+		
+		<% } %>
+			
+		<form  id="searchform" name="GiftListform" action="viewList.jsp" method="post">
+			<div>
+				<input type="text" name="listcode" id="listcode" value="Enter Gift List Code" onfocus="this.value='';" />
+				<input type="hidden" value="activate" name="action" />
+				<input type="image" width="33" height="17" name="submit" alt="Search" src="<%=website.getImagePath("btn_search.gif")%>" />
+			</div>
+		</form>
+	</div>
+</div>
+
+Remove comment to add gift list code  -->
+
+<!-- end of leftmargin070.html -->
+

@@ -1,0 +1,133 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+var language = "";
+var design = "";
+var mode = "";
+var userMode = "0";
+var objElement;
+var isDebug = false;
+
+function save()
+{
+  try {
+    var objElement     = params[5];
+    var size           = objElement.style.height;
+    var color          = objElement.style.color;
+    var noShade        = objElement.noShade;
+    var changed = false;
+    var win = params[11];
+		
+    // size
+    if(document.getElementById("txtSize").value != "" && parseInt(document.getElementById("txtSize").value) > 0) {
+      objElement.removeAttribute("size");
+      objElement.style.height = document.getElementById("txtSize").value;
+    }
+
+    // color
+    objElement.removeAttribute("color");
+    objElement.style.color = document.getElementById("txtColor").value;
+
+    if(document.getElementById("chkShade").checked) {
+      objElement.removeAttribute("noShade");
+    } else {
+      objElement.noShade = true;
+    }
+
+    if(size != objElement.style.height)
+      changed = true;
+    if(color != objElement.style.color)
+      changed = true;
+    if(noShade != objElement.noShade)
+      changed = true;
+    
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+    
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in font page during save: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+    // set language strings
+    setStrings();
+
+	  language            = param[0];
+	  design              = param[1];
+    var objElement      = param[5];
+    userMode            = param[21];  
+
+    // clear values
+    document.getElementById("txtSize").value = "";
+    document.getElementById("txtColor").value = "";
+    document.getElementById("txtColor").style.backgroundColor = "white";
+    document.getElementById("chkShade").checked = true;
+
+    if(objElement.size) {
+      document.getElementById("txtSize").value = parseInt(objElement.size);
+    }
+    if(objElement.style.height) {
+      document.getElementById("txtSize").value = parseInt(objElement.style.height);
+    }
+    // color
+    if(objElement.color) {
+      document.getElementById("txtColor").value = objElement.color;
+      document.getElementById("txtColor").style.backgroundColor = objElement.color;
+    }
+    if(objElement.style.color) {
+      document.getElementById("txtColor").value = objElement.style.color;
+      document.getElementById("txtColor").style.backgroundColor = objElement.style.color;
+    }
+
+    document.getElementById("chkShade").checked = !objElement.noShade;
+
+    if(params[24] > 0)
+      document.getElementById("chkShade").disabled = true;
+
+  } catch(Error) {}
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="1057">_Line</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <span id="1058" class="label">_Size:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtSize" style="WIDTH: 50px">&nbsp;&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="1059" class="label">_Color:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtColor" style="WIDTH:50px">&nbsp;<input type="button" value="..." style="WIDTH:20px" onclick="selectColor('txtColor')">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="1060" class="label">_Shade:</span>
+        </td>
+        <td>
+          <input type="checkbox" ID="chkShade">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

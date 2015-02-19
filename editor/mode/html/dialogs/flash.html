@@ -1,0 +1,149 @@
+<HEAD>
+	<title></title>
+	<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../../include/dialog.js"></script>
+		<SCRIPT>
+
+var language = "";
+var design = "";
+var win = null;
+
+function save()
+{
+  try {
+    var objElement      = dialogArguments[5];
+    var objElementStyle = objElement.style;
+
+    win.__editRelativeSetId(objElement, document.getElementById("id").value);
+    if(document.getElementById("name").value != "")
+      objElement.name = document.getElementById("name").value
+
+    if(document.getElementById("txtWidth").value != "")
+      objElementStyle.width = document.getElementById("txtWidth").value
+    if(document.getElementById("txtHeight").value != "")
+      objElementStyle.height = document.getElementById("txtHeight").value
+
+		objElement.setAttribute("play",document.getElementById("optPlay1").checked ? "true":"false");
+		objElement.setAttribute("loop",document.getElementById("optLoop1").checked ? "true":"false");
+		objElement.setAttribute("menu",document.getElementById("optMenu1").checked ? "true":"false");
+		objElement.setAttribute("quality",document.getElementById("cmbQuality").value);
+		
+    win.__editOnChanged(true);
+		
+  } catch(Error) {}
+
+  window.close();
+}
+
+function Load()
+{
+  if(!dialogArguments)
+    return;
+
+  try {
+    language            = dialogArguments[0];
+    design              = dialogArguments[1];
+    var objElement      = dialogArguments[5];
+    var objElementStyle = objElement.style;
+    win                 = dialogArguments[11];
+    params              = dialogArguments;
+
+    if(objElement.id)
+      document.getElementById("id").value = win.__editRelativeGetId(objElement);
+    if(objElement.name)
+			document.getElementById("name").value = objElement.name;
+    document.getElementById("txtWidth").value = objElementStyle.width;
+    document.getElementById("txtHeight").value = objElementStyle.height;
+
+		if(objElement.getAttribute("play")) {
+			if(objElement.getAttribute("play") == "false") {
+				document.getElementById("optPlay1").checked = false;
+				document.getElementById("optPlay2").checked = true;
+			}
+		}
+		if(objElement.getAttribute("loop")) {
+			if(objElement.getAttribute("loop") == "false") {
+				document.getElementById("optLoop1").checked = false;
+				document.getElementById("optLoop2").checked = true;
+			}
+		}
+		if(objElement.getAttribute("menu")) {
+			if(objElement.getAttribute("menu") == "true") {
+				document.getElementById("optMenu1").checked = true;
+				document.getElementById("optMenu2").checked = false;
+			}
+		}
+		if(objElement.getAttribute("quality"))
+			setCombo(document.getElementById("cmbQuality"),objElement.getAttribute("quality"));		  
+
+    document.getElementById("lblId").innerHTML = getLanguageString(language,962);
+    document.getElementById("lblName").innerHTML = getLanguageString(language,963);
+    document.getElementById("lblHeadId").innerHTML = getLanguageString(language,964);
+    document.getElementById("lblOK").value = getLanguageString(language,899);
+    document.getElementById("lblCancel").value = getLanguageString(language,900);
+    document.getElementById("lblWidth").innerHTML = getLanguageString(language,942);
+    document.getElementById("lblHeight").innerHTML = getLanguageString(language,944);
+    document.getElementById("lblParameter").innerHTML = getLanguageString(language,3309);
+    document.getElementById("lblPlay").innerHTML = getLanguageString(language,3305);
+    document.getElementById("lblLoop").innerHTML = getLanguageString(language,3306);
+    document.getElementById("lblMenu").innerHTML = getLanguageString(language,3307);
+    document.getElementById("lblQuality").innerHTML = getLanguageString(language,3308);
+  } catch(Error) {}
+
+  document.getElementById("id").focus();
+
+}
+
+	</SCRIPT>
+</HEAD>
+<BODY onload="Load();">
+	<DIV class="maintable" id="frame" style="Z-INDEX: 1018; LEFT: 8px; WIDTH: 267px; POSITION: absolute; TOP: 8px; HEIGHT: 320px; BACKGROUND-COLOR: #f8f7f6">
+		<DIV class="maintable" style="Z-INDEX: 1021; LEFT: 11px; WIDTH: 244px; POSITION: absolute; TOP: 95px; HEIGHT: 71px; BACKGROUND-COLOR: #f8f7f6">
+			<P id="lblWidth" style="PADDING-LEFT: 3px; Z-INDEX: 1013; LEFT: 12px; WIDTH: 57px; POSITION: absolute; TOP: 12px; HEIGHT: 15px">Width:</P>
+			<DIV style="Z-INDEX: 1024; LEFT: 87px; WIDTH: 70px; POSITION: absolute; TOP: 33px; HEIGHT: 24px; BACKGROUND-COLOR: #f8f7f6"><INPUT id="txtHeight" style="WIDTH: 53px; HEIGHT: 22px" tabIndex="3" type="text" size="5"></DIV>
+			<DIV style="Z-INDEX: 1025; LEFT: 87px; WIDTH: 65px; POSITION: absolute; TOP: 7px; HEIGHT: 24px; BACKGROUND-COLOR: #f8f7f6"><INPUT id="txtWidth" style="WIDTH: 53px; HEIGHT: 22px" tabIndex="2" type="text" size="6"></DIV>
+			<P id="lblHeight" style="PADDING-LEFT: 3px; Z-INDEX: 1013; LEFT: 13px; WIDTH: 38px; POSITION: absolute; TOP: 36px; HEIGHT: 15px">Height:</P>
+		</DIV>
+		<P class="head" id="lblSize" style="PADDING-LEFT: 3px; Z-INDEX: 1023; LEFT: 20px; WIDTH: 32px; POSITION: absolute; TOP: 89px; HEIGHT: 15px">Size</P>
+		<DIV class="maintable" id="test1" style="Z-INDEX: 1010; LEFT: 11px; WIDTH: 243px; POSITION: absolute; TOP: 15px; HEIGHT: 64px; BACKGROUND-COLOR: #f8f7f6">
+			<P id="lblId" style="PADDING-LEFT: 3px; Z-INDEX: 1011; LEFT: 11px; WIDTH: 43px; POSITION: absolute; TOP: 14px; HEIGHT: 15px">ID:</P>
+			<DIV id="test5" style="Z-INDEX: 1024; LEFT: 87px; WIDTH: 150px; POSITION: absolute; TOP: 7px; HEIGHT: 24px; BACKGROUND-COLOR: #f8f7f6"><INPUT id="id" style="WIDTH: 136px; HEIGHT: 22px" tabIndex="1" type="text" size="17"></DIV>
+			<P id="lblName" style="PADDING-LEFT: 3px; Z-INDEX: 1011; LEFT: 11px; WIDTH: 43px; POSITION: absolute; TOP: 38px; HEIGHT: 15px">Name:</P>
+			<DIV id="Div1" style="Z-INDEX: 1024; LEFT: 87px; WIDTH: 150px; POSITION: absolute; TOP: 34px; HEIGHT: 24px; BACKGROUND-COLOR: #f8f7f6"><INPUT id="name" style="WIDTH: 136px; HEIGHT: 22px" tabIndex="1" type="text" size="17"
+					name="Text1"></DIV>
+		</DIV>
+		<P class="head" id="lblHeadId" style="PADDING-LEFT: 3px; Z-INDEX: 1012; LEFT: 21px; WIDTH: 18px; POSITION: absolute; TOP: 8px; HEIGHT: 15px">ID/Name</P>
+		<DIV class="maintable" id="area3" style="Z-INDEX: 1021; LEFT: 12px; WIDTH: 243px; POSITION: absolute; TOP: 181px; HEIGHT: 120px; BACKGROUND-COLOR: #f8f7f6">
+			<P id="lblPlay" style="PADDING-LEFT: 3px; Z-INDEX: 100; LEFT: 12px; POSITION: absolute; TOP: 12px">*Play:</P>
+			<DIV style="Z-INDEX: 102; LEFT: 87px; WIDTH: 145px; POSITION: absolute; TOP: 7px; HEIGHT: 27px; BACKGROUND-COLOR: #f8f7f6">&nbsp;
+				<INPUT id="optPlay1" tabIndex="5" type="radio" CHECKED size="30" name="Play">True<INPUT tabIndex="6" id="optPlay2" type="radio" size="30" name="Play">False</DIV>
+			<P id="lblLoop" style="PADDING-LEFT: 3px; Z-INDEX: 101; LEFT: 12px; POSITION: absolute; TOP: 41px">*Loop:</P>
+			<DIV style="LEFT: 87px; WIDTH: 145px; POSITION: absolute; TOP: 36px; HEIGHT: 27px; BACKGROUND-COLOR: #f8f7f6">&nbsp;
+				<INPUT id="optLoop1" tabIndex="7" type="radio" CHECKED size="30" value="Radio2" name="Loop">True<INPUT tabIndex="8" type="radio" size="30" value="Radio3" name="Loop" id="optLoop2">False</DIV>
+			<P id="lblMenu" style="PADDING-LEFT: 3px; LEFT: 12px; POSITION: absolute; TOP: 68px">*Menu:</P>
+			<DIV style="LEFT: 87px; WIDTH: 145px; POSITION: absolute; TOP: 65px; HEIGHT: 27px; BACKGROUND-COLOR: #f8f7f6">&nbsp;
+				<INPUT id="optMenu1" tabIndex="9" type="radio" size="30" value="Radio2" name="Menu">True<INPUT id="optMenu2" tabIndex="10" type="radio" CHECKED size="30" value="Radio3" name="Menu">False</DIV>
+			<P id="lblQuality" style="PADDING-LEFT: 3px; LEFT: 12px; POSITION: absolute; TOP: 96px">*Quality:</P>
+			<select id="cmbQuality" tabIndex="11" style="LEFT: 87px; WIDTH: 136px; POSITION: absolute; TOP: 92px; HEIGHT: 27px; BACKGROUND-COLOR: #f8f7f6">
+				<option value="low" selected>Low</option>
+				<option value="medium">Medium</option>
+				<option value="high">High</option>
+				<option value="best">Best</option>
+			</select>
+			<INPUT id="lblOK" style="LEFT: 93px; WIDTH: 81px; POSITION: absolute; TOP: 142px; HEIGHT: 24px"
+				onclick="save()" tabIndex="13" type="submit" size="108" value="OK"> <INPUT id="lblCancel" style="LEFT: 180px; WIDTH: 73px; POSITION: absolute; TOP: 142px; HEIGHT: 24px"
+				onclick="window.close()" tabIndex="14" type="button" size="97" value="Cancel">
+			<P class="head" id="lblParameter" style="PADDING-LEFT: 3px; LEFT: 8px; WIDTH: 32px; POSITION: absolute; TOP: -8px; HEIGHT: 15px">*Parameter</P>
+		</DIV>
+	</DIV>
+	<SCRIPT>
+  if(dialogArguments[2] == "LABEL")
+   document.title = getLanguageString(dialogArguments[0],931) + document.title;
+  if(dialogArguments[2] == "DIV")
+   document.title = getLanguageString(dialogArguments[0],941) + document.title;
+  if(dialogArguments[2] == "INPUT")
+   document.title = getLanguageString(dialogArguments[0],1301) + document.title;
+  if(dialogArguments[2] == "SELECT")
+   document.title = getLanguageString(dialogArguments[0],1302) + document.title;
+	</SCRIPT>
+</BODY>

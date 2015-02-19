@@ -1,0 +1,87 @@
+<HEAD>
+  <title></title>
+  <LINK href="../../design/style/dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../include/dialog.js"></script>
+    <SCRIPT>
+
+function save()
+{
+  try {
+    parent.parent.params[23] = document.getElementById("txtOwner").value;
+    parent.parent.params[24] = document.getElementById("txtUser").value;
+
+    parent.parent.params[21] = document.getElementById("chkForms").checked ? 1:0;
+    parent.parent.params[22] = document.getElementById("chkLinks").checked ? 1:0;
+
+  } catch(Error) { }
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+    // set language strings
+    setStrings();
+    
+    document.getElementById("txtOwner").value = params[23];
+    document.getElementById("txtUser").value = params[24];
+
+    document.getElementById("chkForms").checked = (params[21] == 1) ? true:false;
+    document.getElementById("chkLinks").checked = (params[22] == 1) ? true:false;
+
+  } catch(Error) {
+  }
+
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="5027">_Security</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" width="100%">
+      <tr>
+        <td nowrap width="100">
+          <div id="5028" class="label100">_Ownerpw:</div>
+        </td>
+        <td>
+          <input type="text" style="width:100%" value="" ID="txtOwner">
+        </td>
+      </tr>
+      <tr>
+        <td nowrap>
+          <div id="5029" class="label100">_Pw:</div>
+        </td>
+        <td>
+          <input type="text" style="width:100%" value="" ID="txtUser">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="5030">_Convert</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+      <tr>
+        <td nowrap style="width:1%">
+          <div id="5031" class="label100">_Form:</div>
+        </td>
+        <td>
+          <input type="checkbox" id="chkForms">
+        </td>
+      </tr>
+      <tr>
+        <td nowrap>
+          <div id="5032" class="label100">_Link:</div>
+        </td>
+        <td>
+          <input type="checkbox" id="chkLinks">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

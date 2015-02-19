@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title></title>
+  <script type="text/javascript" language="JavaScript">
+    function pinStyle()
+    {
+    	this.width = null;
+    	this.height = null;
+    	this.url = null;
+    	this.cssUrl = null;
+    	this.cssPath = null;
+    	this.cssFile = null;
+    	this.mode = 0;
+    	this.tech = null;
+    	
+      this.open = __open;
+    }
+
+    function __open()
+    {
+      var params = "";
+      var url = this.url;
+      
+      if (this.cssurl != "") {
+        url = url + "?url=" +this.cssUrl;
+        url = url + "&path=" +this.cssPath;
+        url = url + "&file=" +this.cssFile;
+        url = url + "&tech=" +this.tech;
+      }
+      url = url.replace(/\\/gi,"/");
+      //params = "width="+this.width+",height="+this.height+",location=no,menubar=no,scrollbars=no,status=no,toolbar=no";
+      //params = "width="+this.width+",height="+this.height;
+      
+      window.open(url, "_blank", params);
+    }
+    
+    function newCss()
+    {
+      var css = new pinStyle();
+      css.url = "http://localhost/pinStyle/pinStyle/pinStyle.html";
+      css.width = "807";
+      css.height = "555";
+      css.cssUrl = "http://localhost/pinStyle/";
+      css.cssPath = "C:/inetpub/wwwroot/pinStyle/";
+      //css.cssFile = "pinToolbar.css";
+      css.tech = "php";
+      
+      css.open();
+
+    }
+
+
+  </script>
+  </head>
+  <body>
+  
+    <input type="button" value="CSS Editor öffnen" onClick="newCss();">
+
+  </body>
+</html>

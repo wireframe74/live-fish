@@ -1,0 +1,400 @@
+/* ------------------*/
+/* Style4            */
+/*-------------------*/
+.MenuBar4 {
+	background-color: #D8D8E6;
+}
+.MenuBarItemStandard4 {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#D8D8E6;
+	padding:		2px 3px 2px 3px;		
+}
+.MenuBarItemHover4 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#4B4B6F;
+	padding:		1px 2px 1px 2px;		
+	background-image: url('../image/style4/tbover.gif');
+}
+.MenuBarItemActive4 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-top-color:	#7c7c94;
+	border-left-color:	#7c7c94;
+	border-right-color:	#7c7c94;
+	border-bottom-color:	white;
+	padding:		1px 2px 1px 2px;
+	background-image: url('../../design/image/style4/backactive.gif');
+	zzfilter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBarItemText4 {
+	font: 		Menu;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+
+.MenuFrame4 {
+	border:0px solid #7c7c94;
+	background-color:white;
+	position:absolute;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBorder4{
+	border:1px solid #7c7c94;
+}
+.Menu4 {
+	background-image: url('../../design/image/style4/back.gif');
+	background-repeat: repeat-y;
+	width: 100%;
+	height: 100%;
+ 	BORDER: 1px solid white;
+}
+.MenuItem4 {
+	height: 22px;
+	border: 0px;
+}
+.MenuItemHover4 {
+	height: 22px;
+	border: 1px solid #4B4B6F;
+	background-image: url('../../design/image/style4/tbover.gif');
+	cursor: hand;
+}
+.MenuItemDisabled4 {
+	font: 	Menu;
+	color: #8D8D8D;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemFont4 {
+	font:			Menu;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemHoverText4 {
+	font:			Menu;
+	padding-left: 2px;
+	text-align: left;
+}
+.MenuSeparator4 {
+	font-size: 1px;
+	border-bottom: 1px solid #6D6E8F;
+}
+.MenuLine4 {
+	color: white;
+}
+
+
+
+
+/* ------------------*/
+/* Style3            */
+/*-------------------*/
+.MenuBar3 {
+	background-color: #9EBEF5;
+}
+.MenuBarItemStandard3 {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#9EBEF5;
+	padding:		2px 3px 2px 3px;		
+}
+.MenuBarItemHover3 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#000080;
+	padding:		1px 2px 1px 2px;		
+	background-image: url('../image/style3/tbover.gif');
+}
+.MenuBarItemActive3 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-top-color:	#002E96;
+	border-left-color:	#002E96;
+	border-right-color:	#002E96;
+	border-bottom-color:	white;
+	padding:		1px 2px 1px 2px;
+	background-image: url('../../design/image/style3/backactive.gif');
+	zzfilter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBarItemText3 {
+	font: 		Menu;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+
+.MenuFrame3 {
+	border:0px solid #002E96;
+	background-color:white;
+	position:absolute;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBorder3{
+	border:1px solid #002E96;
+}
+.Menu3 {
+	background-image: url('../../design/image/style3/back.gif');
+	background-repeat: repeat-y;
+	width: 100%;
+	height: 100%;
+ 	BORDER: 1px solid white;
+}
+.MenuItem3 {
+	height: 22px;
+	border: 0px;
+}
+.MenuItemHover3 {
+	height: 22px;
+	border: 1px solid #000080;
+	background-image: url('../../design/image/style3/tbover.gif');
+	cursor: hand;
+}
+.MenuItemDisabled3 {
+	font: 	Menu;
+	color: #8D8D8D;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemFont3 {
+	font:			Menu;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemHoverText3 {
+	font:			Menu;
+	padding-left: 2px;
+	text-align: left;
+}
+.MenuSeparator3 {
+	font-size: 1px;
+	border-bottom: 1px solid #98AFDA;
+}
+.MenuLine3 {
+	color: #9BBCEB;
+}
+
+
+
+/* ------------------*/
+/* Style2            */
+/*-------------------*/
+.MenuBar2 {
+	background-color: #ECE9D8;
+}
+.MenuBarItemStandard2 {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#9EBEF5;
+	padding:		2px 3px 2px 3px;		
+}
+.MenuBarItemHover2 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#316AC5;
+	padding:		1px 2px 1px 2px;		
+	background-color: #C1D2EE;
+}
+.MenuBarItemActive2 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-top-color:	#8A867A;
+	border-left-color:	#8A867A;
+	border-right-color:	#8A867A;
+	border-bottom-color:	white;
+	padding:		1px 2px 1px 2px;
+	background-color: #EFEDDE;
+}
+.MenuBarItemText2 {
+	font: 		Menu;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+
+.MenuFrame2 {
+	border:0px solid #8A867A;
+	background-color:white;
+	position:absolute;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBorder2 {
+	border:1px solid #8A867A;
+}
+.Menu2 {
+	background-color:white;
+	background-image: url('../../design/image/style2/back.gif');
+	background-repeat: repeat-y;
+	width: 100%;
+	height: 100%;
+ 	BORDER: 1px solid white;
+}
+.MenuItem2 {
+	height: 22px;
+	border: 0px;
+}
+.MenuItemHover2 {
+	height: 22px;
+	border: 1px solid #316AC5;
+	background-color: #C1D2EE;
+	cursor: hand;
+}
+.MenuItemDisabled2 {
+	font: 	Menu;
+	color: #8D8D8D;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemFont2 {
+	font:			Menu;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemHoverText2 {
+	font:			Menu;
+	padding-left: 2px;
+	text-align: left;
+}
+.MenuSeparator2 {
+	font-size: 1px;
+	border-bottom: 1px solid #C5C2B8;
+}
+.MenuLine2 {
+	color: #EFEDDE;
+}
+
+
+/* ------------------*/
+/* Style1            */
+/*-------------------*/
+.MenuBar1 {
+	background-color: #ECE9D8;
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:		ButtonHighlight;
+	border-bottom-color:	ButtonShadow;
+}
+.MenuBarItemStandard1 {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#9EBEF5;
+	padding:		2px 3px 2px 3px;		
+}
+.MenuBarItemHover1 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:		ButtonHighlight;
+	border-bottom-color:	ButtonShadow;
+	padding:		1px 2px 1px 2px;		
+	background-color: #ECE9D8;
+}
+.MenuBarItemActive1 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+	padding:		1px 2px 1px 2px;
+	background-color: #EFEDDE;
+}
+.MenuBarItemText1 {
+	font: 		Menu;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+
+.MenuFrame1 {
+	border: 0px solid #002E96;
+	background-color:white;
+	position:absolute;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBorder1 {
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:		ButtonHighlight;
+	border-bottom-color:	ButtonShadow;
+}
+.Menu1 {
+	background-color:#ECE9D8;
+	zzbackground-image: url('../../design/image/style1/back.gif');
+	zzbackground-repeat: repeat-y;
+	width: 100%;
+	height: 100%;
+ 	BORDER: 1px solid #ECE9D8;
+}
+.MenuItem1 {
+	height: 22px;
+	border: 0px;
+}
+.MenuItemHover1 {
+	height: 22px;
+	border: 1px solid #316AC5;
+	background-color: #316AC5;
+	color: white;
+	cursor: hand;
+}
+.MenuItemDisabled1 {
+	font: 	Menu;
+	color: #8D8D8D;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemFont1 {
+	font:			Menu;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemHoverText1 {
+	font:			Menu;
+	padding-left: 2px;
+	text-align: left;
+}
+.MenuSeparator1 {
+	font-size: 1px;
+	border-bottom: 1px solid #C5C2B8;
+}
+.MenuLine1 {
+	color: ButtonHighlight;
+}
+
+
+
+

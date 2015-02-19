@@ -1,0 +1,8 @@
+<database>
+   <driver>com.mysql.jdbc.Driver</driver>
+   <url>jdbc:mysql://localhost/demo</url>
+   <username>demo</username>
+   <password>dbenc.raw</password>
+   <poolersize>20</poolersize>
+   <testmode>0</testmode>
+</database>

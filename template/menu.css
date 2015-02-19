@@ -1,0 +1,81 @@
+/*!!!!!!!!!!! QuickMenu Core CSS [Do Not Modify!] !!!!!!!!!!!!!*/
+.qmmc .qmdivider { display: block; font-size: 1px; border-width: 0px; border-style: solid; position: relative; z-index: 1; }
+.qmmc .qmdividery { float: left; width: 0px; }
+.qmmc .qmtitle { display: block; cursor: default; white-space: nowrap; position: relative; z-index: 1; }
+.qmclear { font-size: 1px; height: 0px; width: 0px; clear: left; line-height: 0px; display: block; float: none !important; }
+.qmmc { position: relative; zoom: 1; z-index: 10; }
+	.qmmc a, .qmmc li { float: left; display: block; white-space: nowrap; position: relative; z-index: 1; }
+	.qmmc div a, .qmmc ul a, .qmmc ul li { float: none; }
+.qmsh div a { float: left; }
+.qmmc div { visibility: hidden; position: absolute; }
+.qmmc .qmcbox { cursor: default; display: block; position: relative; z-index: 1; }
+	.qmmc .qmcbox a { display: inline; }
+	.qmmc .qmcbox div { float: none; position: static; visibility: inherit; left: auto; }
+.qmmc li { z-index: auto; }
+.qmmc ul { left: -10000px; position: absolute; z-index: 10; }
+.qmmc, .qmmc ul { list-style: none; padding: 0px; margin: 0px; }
+.qmmc li a { float: none }
+.qmmc li:hover>ul { left: auto; }
+#qm0 ul { top: 100%; }
+	#qm0 ul li:hover>ul { top: 0px; left: 100%; }
+/*!!!!!!!!!!! QuickMenu Styles [Please Modify!] !!!!!!!!!!!*/
+/* QuickMenu 0 */
+/*"""""""" (MAIN) Items""""""""*/
+#qm0 a { padding: 8px 10px 10px; color: #ffffff; font-size: 14px; }
+	#qm0 a:hover { text-decoration: none; color: #ffffff; }
+/*"""""""" (SUB) Container""""""""*/
+#qm0 div, #qm0 ul { padding: 10px; margin: -2px 0px 0px; background-color: transparent; border-style: none; }
+/*"""""""" (SUB) Items""""""""*/
+#qm0 div a, #qm0 ul a { padding: 3px 10px 3px 5px; background-color: transparent; font-size: 13px; border-width: 0px; border-style: none; text-align: left; }
+/*"""""""" (SUB) Hover State""""""""*/
+#qm0 div a:hover { background-color: #222222; color: #FFF; text-decoration: none; }
+/*"""""""" (SUB) Hover State - (duplicated for pure CSS)""""""""*/
+#qm0 ul li:hover>a { background-color: #717171; color: #FFF; text-decoration: none; }
+/*"""""""" (SUB) Active State""""""""*/
+body #qm0 div .qmactive, body #qm0 div .qmactive:hover { background-color: transparent; color: #E7E7E7; text-decoration: none; }
+/*"""""""" Individual Titles""""""""*/
+#qm0 .qmtitle { cursor: default; padding: 3px 0px 3px 4px; color: #444444; font-family: arial; font-size: 11px; font-weight: bold; }
+/*"""""""" Individual Horizontal Dividers""""""""*/
+#qm0 .qmdividerx { border-top-width: 1px; margin: 4px 0px; border-color: #bfbfbf; }
+/*"""""""" Individual Vertical Dividers""""""""*/
+#qm0 .qmdividery { border-left-width: 1px; height: 15px; margin: 4px 2px 0px; border-color: #aaaaaa; }
+/*"""""""" (main) Rounded Items""""""""*/
+#qm0 .qmritem span { border-color: #dadada; background-color: #f7f7f7; }
+/*"""""""" (main) Rounded Items Content""""""""*/
+#qm0 .qmritemcontent { padding: 0px 0px 0px 4px; }
+/*"""""""" Custom Rule""""""""*/
+ul#qm0 li:hover > a { background-color: #2F2F2F; text-decoration: none; }
+/*"""""""" Custom Rule""""""""*/
+ul#qm0 ul { padding: 10px; margin: -2px 0px 0px; background-color: #232A27; border-color: #232A27; }
+#qm0 div { background-color: #707171; }
+.qmmc { padding-left: 15px; text-transform: uppercase; }
+#quickshop { background-color: #eeeeee; width: 208px; margin-bottom: 10px; padding-bottom: 10px; border: 1px solid #dcdcdc; padding: 10px; margin-top: 10px; }
+	#quickshop .refinetitle { font-size: 16px; font-weight: normal; height: 25px; padding: 5px 0 8px 13px; font-family: Palatino Linotype, Book Antiqua, Palatino, serif; text-transform: uppercase; }
+	#quickshop .refineitems a { color: #4E452B; }
+	#quickshop .refinehead { color: #4E452B; }
+	#quickshop input[type="submit"], #taghdrsearchstr input[type="submit"] { padding: 4px; border: 1px transparent solid; font-size: 14px; }
+	#quickshop #search, #taghdrsearchstr input#search { font-size: 12px; height: auto; padding: 6px 3px; border-radius: 4px; width: 129px; border: 1px #C8C8C8 solid; }
+	#quickshop select { margin-left: 10px; width: 185px; }
+#refinecurrent { width: 208px; margin-top: 10px; border: 1px #DCDCDC solid; }
+	#refinecurrent .refinetitle { font-size: 16px; font-weight: normal; height: 15px; text-transform: uppercase; padding: 5px 0 13px 13px; color: #574E42; font-family: Palatino Linotype, Book Antiqua, Palatino, serif; }
+#refinetagcurrent { background-color: transparent; }
+div#refinecurrent ul { padding-bottom: 2px; padding: 0 30px; }
+/*ul.refineitems {margin: 10px 30px;}*/
+#refinefurther { width: 208px; margin-bottom: 10px; padding-bottom: 10px; overflow: hidden; margin-top: 10px; border: 1px #DCDCDC solid; }
+#refinefurther, #refinecurrent { padding: 11px; }
+#refinefurther .refinetitle { color: #555555; font-size: 16px; font-weight: normal; height: 25px; padding: 5px 0 8px 13px; font-family: Palatino Linotype, Book Antiqua, Palatino, serif; text-transform: uppercase; }
+#refinefurther .refineitems a { color: #444444; }
+#refinefurther .refinehead { color: #444444; margin-left: 15px; }
+#refinefurther ul, #rs_currprice ul { margin-bottom: 10px; margin-top: 7px; padding: 0 30px; }
+.refineblock .refineitems a { color: #444444; }
+.refineblock .refineitems li { color: #444444; }
+.refineblock .refinehead { color: #444444; margin-left: 15px; }
+#taghdrsearchstr input#search { border-radius: 3px; border: 1px #bbbbbb solid; }
+#nav #qm0 a.qmactive, #nav a:hover { background-color: #737373; }
+#refinecurrent ul.refineitems, #refinecurrent .refineitems ul { margin: 0; }
+/*matches spacing of bulleted li in Selected and Refine Further areas*/
+#refinefurther .refinehead { margin: 0.5em 15px; }
+#refinecurrent, #quickshop { margin-top: 0; }
+div#quickshop select { margin: 0 0 3px 10px; }
+/*Quickshop drop down selection box spacing*/
+#quickshop .refinehead { margin-top: 1em; }

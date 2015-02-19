@@ -1,0 +1,319 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+
+function save()
+{
+  try {
+    var objElementStyle = params[5].style;
+    var textAlign       = objElementStyle.textAlign;
+    var verticalAlign   = objElementStyle.verticalAlign;
+    var letterSpacing   = objElementStyle.letterSpacing;
+    var lineHeight      = objElementStyle.lineHeight;
+    var changed = false;
+    var win = params[11];
+
+    // set halign
+    if(document.getElementById("cmbAlignH").value != "")
+      objElementStyle.textAlign = document.getElementById("cmbAlignH").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("textAlign");
+      else
+        objElementStyle.textAlign = null;
+    }
+    
+    // set valign
+    if(document.getElementById("cmbAlignV").value != "")
+      objElementStyle.verticalAlign = document.getElementById("cmbAlignV").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("verticalAlign");
+      else
+        objElementStyle.verticalAlign = null;
+    }
+
+    // set letters
+    if(document.getElementById("txtLetters").value != "")
+      objElementStyle.letterSpacing = document.getElementById("txtLetters").value + document.getElementById("cmbLettersType").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("letterSpacing");
+      else
+        objElementStyle.letterSpacing = null;
+    }
+
+    // set height
+    if(document.getElementById("txtHeight").value != "")
+      objElementStyle.lineHeight = document.getElementById("txtHeight").value + document.getElementById("cmbHeightType").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("lineHeight");
+      else
+        objElementStyle.lineHeight = null;
+    }
+
+    // set direction
+    if(document.getElementById("cmbDirection").value != "")
+      objElementStyle.direction = document.getElementById("cmbDirection").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("direction");
+      else
+        objElementStyle.direction = null;
+    }
+
+    // set write mode
+    if(document.getElementById("cmbWriting").value != "")
+      objElementStyle.writingMode = document.getElementById("cmbWriting").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("writingMode");
+      else
+        objElementStyle.writingMode = null;
+    }
+    
+    if(document.getElementById("txtTextIndent").value != "") {
+    	 objElementStyle.textIndent = document.getElementById("txtTextIndent").value;
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("textIndent");
+      else
+        objElementStyle.textIndent = null;
+    }
+
+
+    if(textAlign       != objElementStyle.textAlign)
+      changed = true;
+    if(verticalAlign   != objElementStyle.verticalAlign)
+      changed = true;
+    if(letterSpacing   != objElementStyle.letterSpacing)
+      changed = true;
+    if(lineHeight      != objElementStyle.lineHeight)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in font page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+    // set language strings
+    setStrings();
+
+	  language            = param[0];
+	  design              = param[1];
+    var objElementStyle = param[5].style;
+
+    // clear
+    comboSet(document.getElementById("cmbAlignH"),"");
+    comboSet(document.getElementById("cmbAlignV"),"");
+    comboSet(document.getElementById("cmbDirection"),"");
+    comboSet(document.getElementById("cmbWriting"),"");
+    document.getElementById("txtLetters").value = "";
+    document.getElementById("txtHeight").value = "";
+
+    // set halign
+    if(objElementStyle.textAlign)
+      comboSet(document.getElementById("cmbAlignH"),objElementStyle.textAlign.toLowerCase());    
+    // set valign
+    if(objElementStyle.verticalAlign)
+      comboSet(document.getElementById("cmbAlignV"),objElementStyle.verticalAlign.toLowerCase());    
+
+    // letters
+    if(objElementStyle.letterSpacing) {
+      document.getElementById("txtLetters").value = parseInt(objElementStyle.letterSpacing);
+      var type = objElementStyle.letterSpacing;
+      comboSet(document.getElementById("cmbLettersType"),type.substring(type.length-2,type.length));
+    }
+    // height
+    if(objElementStyle.lineHeight) {
+      document.getElementById("txtHeight").value = parseInt(objElementStyle.lineHeight);
+      var type = objElementStyle.lineHeight;
+      comboSet(document.getElementById("cmbHeightType"),type.substring(type.length-2,type.length));
+    }
+    // direction
+    if(objElementStyle.direction) {
+      document.getElementById("cmbDirection").value = objElementStyle.direction;
+      comboSet(document.getElementById("cmbDirection"),objElementStyle.direction);
+    }
+    // writing mode
+    if(objElementStyle.writingMode) {
+      document.getElementById("cmbWriting").value = objElementStyle.writingMode;
+      comboSet(document.getElementById("cmbDirection"),objElementStyle.writingMode);
+    }
+
+    // fill data into firstrow dropdown
+    var combo = document.getElementById("cmbFirstRow");
+    comboAdd(combo,"-","");
+    comboAdd(combo,getString(7009),"FIRSTROW");
+
+  	// first row dropdown
+  	if(objElementStyle.textIndent != "") {
+  	  // show
+  	  document.getElementById("txtTextIndent").value = objElementStyle.textIndent;
+  	  document.getElementById("txtTextIndent").style.visibility = "visible";
+  	  comboSet(combo,"FIRSTROW");
+  	}
+
+  } catch(Error) {}
+}
+
+function onFirstRowChange()
+{
+  if(document.getElementById("cmbFirstRow").value == "FIRSTROW") {
+    document.getElementById("txtTextIndent").style.visibility = "visible";
+  } else {
+    document.getElementById("txtTextIndent").value = "";
+    document.getElementById("txtTextIndent").style.visibility = "hidden";
+  }
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="3381">_Alignemnt</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="4011" class="label">_Horizontal:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbAlignH">
+            <option value="">-</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="center">Center</option>
+            <option value="justify">Justify</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="4010" class="label">_Vertical:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbAlignV">
+            <option value="">-</option>
+            <option value="auto">Standard</option>
+            <option value="baseline">Baseline</option>
+            <option value="sub">Sub</option>
+            <option value="super">Super</option>
+            <option value="top">Top</option>
+            <option value="middle">Middle</option>
+            <option value="bottom">Bottom</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3382">_Spacing</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+      <tr>
+        <td>
+          <div id="3383" class="label">_Letters:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtLetters" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbLettersType">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3384" class="label">_Height:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtHeight" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbHeightType">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3385">_Text flow</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table3">
+      <tr>
+        <td>
+          <div id="3386" class="label">_Direction</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbDirection">
+            <option value="">-</option>
+            <option value="ltr">Left to right</option>
+            <option value="rtl">Right to left</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3387" class="label">_Hor./Vert.:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbWriting">
+            <option value="">-</option>
+            <option value="lr-tb">Horizontal</option>
+            <option value="tb-rl">Vertical</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="Span1">_Text flow</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table2">
+      <tr>
+        <td nowrap>
+          <div id="7005" class="label">_Specialmargin:</div>
+        </td>
+        <td nowrap>
+          <select id="cmbFirstRow" onchange="onFirstRowChange()" NAME="cmbFirstRow">
+          </select>&nbsp; <input type="text" id="txtTextIndent" style="visibility:hidden" size=4 NAME="txtTextIndent">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

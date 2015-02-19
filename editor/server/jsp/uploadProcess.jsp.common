@@ -1,0 +1,71 @@
+<%@ page import="org.apache.commons.io.*,org.apache.commons.fileupload.*,org.apache.commons.fileupload.disk.*,org.apache.commons.fileupload.servlet.*,java.util.*,java.io.*" %>
+
+<%
+  String path         = request.getParameter("path");
+  String insert       = request.getParameter("insert");
+  String sErrorDescription = "";
+  String fileName     = "";
+
+  boolean isError = false;
+
+  try {
+    if(path != null) {
+    
+      // Create a factory for disk-based file items
+      DiskFileItemFactory factory = new DiskFileItemFactory();
+
+      // Set factory constraints
+      //factory.setSizeThreshold(yourMaxMemorySize);
+      //factory.setRepository(yourTempDirectory);
+
+      // Create a new file upload handler
+      ServletFileUpload upload = new ServletFileUpload(factory);
+
+      // Set overall request size constraint
+      upload.setSizeMax(5000000);
+
+      // Parse the request
+      List items = upload.parseRequest(request);
+
+      Iterator iter = items.iterator();
+      while (iter.hasNext()) {
+        FileItem item = (FileItem) iter.next();
+        fileName = item.getName();
+        if (fileName != null) {
+          fileName = FilenameUtils.getName(fileName);
+        }
+        File uploadedFile = new File(path + fileName);
+        item.write(uploadedFile);
+        break;
+      }
+    
+    }
+  } catch(Exception e) {
+    isError = true;
+    sErrorDescription = e.getMessage();
+  }
+
+%>
+<html>
+<head>
+<script>
+function closeWindow()
+{
+  window.close();  
+}
+</script>
+</head>
+
+<% if(!isError) { %>
+<%   if(insert.equals("1")) { %>
+       <body onload="window.opener.callback_editUpload('<%= fileName %>','<%= (String) request.getParameter("url") %>');window.close()">
+<%   } else { %>
+       <body onload="window.close()">
+<%   } %>
+<% } else { %>
+       <body>
+       <%= "The following error occured while uploading to " + path + ": " + sErrorDescription %>
+<% } %>
+
+</body>
+<html>

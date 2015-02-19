@@ -1,0 +1,287 @@
+<HEAD>
+  <TITLE></TITLE>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+var language = "";
+var design   = "";
+var mode     = "";
+var doc      = null;
+var objElement;
+var win;
+var aParam;
+var technology = "";
+var baseUrl    = "";
+var basePath   = "";
+var filter     = "";
+
+function save()
+{
+
+  try {
+
+    if(mode == "0") {
+      // id
+      if(document.getElementById("txtID").value != objElement.id) {
+        win.__editRelativeSetId(objElement,document.getElementById("txtID").value);
+        win.__editOnChanged(true);
+      }
+      // href
+      if(document.getElementById("txtUrl").value != "") {
+        win.__editRelativeSetUrl(objElement,document.getElementById("txtUrl").value);
+      } else {
+        // remove link
+        win.editRemoveLink();
+      }
+      // text
+      if(document.getElementById("txtText").value != objElement.innerHTML) {
+        objElement.innerHTML = document.getElementById("txtText").value;
+        win.__editOnChanged(true);
+      }
+      // target
+      if(document.getElementById("txtTarget").value == "") {
+        objElement.removeAttribute("target");      
+        win.__editOnChanged(true);
+      } else if(document.getElementById("txtTarget").value != objElement.target) {
+        objElement.target = document.getElementById("txtTarget").value;
+        win.__editOnChanged(true);
+      }
+      // title
+      if(document.getElementById("txtTitle").value == "") {
+        objElement.removeAttribute("title");      
+        win.__editOnChanged(true);
+      } else if(document.getElementById("txtTitle").value != objElement.title) {
+        objElement.title = document.getElementById("txtTitle").value;
+        win.__editOnChanged(true);
+      }
+    } else {
+      // we have to create a new link
+      var target = document.getElementById("txtTarget").value;
+      var title  = document.getElementById("txtTitle").value;
+      var url    = document.getElementById("txtUrl").value;
+      var id     = document.getElementById("txtID").value;
+
+      if(url != "") {
+				win.editCreateLink(url,target,title,"","",id)
+      }
+    }
+  } catch(Error) { }
+  window.close();
+}
+
+function remove()
+{
+  document.getElementById("txtUrl").value = "";
+  save();
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[3];
+	  doc                 = params[4];
+    objElement          = params[5];
+    technology          = params[8];
+    filter              = params[9];
+	  win                 = params[11];
+    baseUrl             = params[16];
+    basePath            = params[17];
+
+    // set language strings
+    setStrings();
+
+    if(mode == "0") {
+      var objElementStyle = objElement.style;
+      var temp = objElement.href;
+      document.getElementById("txtID").value = win.__editRelativeGetId(objElement);
+      document.getElementById("txtUrl").value = win.__editRelativeGetUrl(objElement);
+      document.getElementById("txtText").value = objElement.innerHTML;
+      document.getElementById("txtTarget").value = objElement.target;
+      document.getElementById("txtTitle").value  = objElement.title;
+    } else {
+      //document.getElementById("txtID").readOnly = true;
+      //document.getElementById("txtText").readOnly = true;
+    }
+
+    document.getElementById("btnRemove").value = getLanguageString("",3024);
+
+    comboClear(document.getElementById("cmbAnchor"));
+    // get anchor list
+    var aLinks = doc.getElementsByTagName("a");
+    comboAdd(document.getElementById("cmbAnchor"),"-");
+    for(var i=0;i<aLinks.length;i++) {
+      if(aLinks[i].name != "") {
+        comboAdd(document.getElementById("cmbAnchor"),aLinks[i].name,aLinks[i].name);
+      }
+    }    
+        
+    if(params[18])
+      document.getElementById("btnUrl").title = getLanguageString("",3030);
+    else
+      document.getElementById("btnUrl").style.display = "none";
+
+    // XHTML support
+    if(parseInt(params[24]) > 0) {
+      document.getElementById("cmbTarget").disabled = true;
+      document.getElementById("txtTarget").disabled = true;
+      document.getElementById("txtTarget").value = "";
+    } else {
+      if(mode == "0")
+        comboSet(document.getElementById("cmbTarget"),objElement.target); 
+    }
+
+  } catch(error) { 
+  }
+}
+
+function onTypeChange(value)
+{
+  document.getElementById("txtUrl").value = value;
+}
+
+function onTargetChange(value)
+{
+  document.getElementById("txtTarget").value = value;
+}
+
+function onAnchorChange(value)
+{
+  document.getElementById("txtUrl").value = "#" + value;
+}
+
+function onUrlSelect()
+{
+  params[2] = "OPEN";
+  // set the predefined values from config.js
+	if(browser.ie) {
+		var path = window.showModalDialog("../../../server/" + technology + "/dialog.html",params,"dialogHeight:600px;dialogWidth:600px;resizable:1;status:0;scroll:0");
+		if(path != "0" && path != null) {
+ 			document.getElementById("txtUrl").value = win.__editRelativeGetRelFromAbs(path,"LINK");
+		}
+	} else {
+		var left = screen.width/2 - 600/2;
+		var top = screen.height/2 - 600/2;
+		window.open("../../../server/" + technology + "/dialog.html","dialog","modal=1,left=" + left + ",top=" + top + ",height=600,width=600,resizable=1,status=0,scrollbars=0");
+	}
+}
+
+function __editGetParam()
+{
+  return params;
+}
+
+function callbackMozilla(mode, para1, para2)
+{
+  if(mode == "OPENDOC") {
+    if(para1 != "0" && para1 != null) {
+ 			document.getElementById("txtUrl").value = win.__editRelativeGetRelFromAbs(para1,"LINK");
+    }
+  }
+}
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="3345">_Link</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" width="100%">
+      <tr>
+        <td>
+          <div id="962" class="label40">_ID:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtID" NAME="txtID">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3344" class="label40">_Text:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtText" style="FONT-SIZE: 11px; WIDTH: 100%; FONT-FAMILY: arial; HEIGHT: 20px">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3026" class="label40">_Type:</div>
+        </td>
+        <td>
+          <SELECT id="cmbType" style="FONT-SIZE: 11px; FONT-FAMILY: arial; HEIGHT: 20px"
+            onchange="javascript:onTypeChange(this.value);">
+            <OPTION value="" selected>-</OPTION>
+            <OPTION value="file:">File</OPTION>
+            <OPTION value="ftp:">ftp</OPTION>
+            <OPTION value="http:">http</OPTION>
+            <OPTION value="https:">https</OPTION>
+            <OPTION value="mailto:">mailto</OPTION>
+            <OPTION value="news:">news</OPTION>
+            <OPTION value="telnet:">telnet</OPTION>
+            <OPTION value="wais:">wais</OPTION>
+          </SELECT>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3413" class="label40">_Anchor:</div>
+        </td>
+        <td>
+          <SELECT id="cmbAnchor" style="FONT-SIZE: 11px; FONT-FAMILY: arial; HEIGHT: 20px" onchange="javascript:onAnchorChange(this.value);" NAME="Select1">
+          </SELECT>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3027" class="label40">_URL:</div>
+        </td>
+        <td>
+          <INPUT id="txtUrl" style="FONT-SIZE: 11px; WIDTH: 100%; FONT-FAMILY: arial; HEIGHT: 20px"
+            NAME="Text1">
+        </td>
+        <td>
+          <INPUT id="btnUrl" onclick="javascript: onUrlSelect();" style="WIDTH: 24px; HEIGHT: 20px"
+            type="button" size="32" value="...">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3028" class="label40">_Target:</div>
+        </td>
+        <td style="width:100%">
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td>
+                <SELECT id="cmbTarget" onchange="javascript: onTargetChange(this.value);" style="FONT-SIZE: 11px; FONT-FAMILY: arial; HEIGHT: 20px">
+                  <OPTION value="" selected>-</OPTION>
+                  <OPTION value="_blank">_blank</OPTION>
+                  <OPTION value="_new">_new</OPTION>
+                  <OPTION value="_parent">_parent</OPTION>
+                  <OPTION value="_search">_search</OPTION>
+                  <OPTION value="_self">_self</OPTION>
+                  <OPTION value="_top">_top</OPTION>
+                </SELECT>
+              </td>
+              <td style="width:100%;padding-left:2px">
+                <INPUT style="WIDTH:100%" id="txtTarget">
+              </td>
+            </tr>
+            </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3029" class="label40">_Title:</div>
+        </td>
+        <td>
+          <INPUT id="txtTitle" style="FONT-SIZE: 11px; WIDTH: 100%; FONT-FAMILY: arial; HEIGHT: 20px">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <br>
+  <INPUT id="btnRemove" type="button" value="_Remove Link" onclick="remove()">
+</BODY>

@@ -1,0 +1,68 @@
+<!-- start of components/shoppingbasketthumbnail.html -->
+				<table border=0 align="center" width="100%" cellpadding="0" cellspacing="0">
+				<tr><td>
+				  
+                                  <table width=100% cellpadding="0" cellspacing="0" border="0">
+
+                                  <tr>
+				  
+                                  <td width="100%">
+				    <table width=96%  height="100%" valign=center cellspacing=0 cellpadding=0 border="0" bordercolor="#AA4950">
+	                            <tr>			  
+				    <td>
+                                      <table border=0 width='100%' cellpadding="0" cellspacing="0">
+						<tr>
+                                            <td valign="middle" align="right">
+                                                <a href="basket.jsp"><img src="<%=website.getImagePath("spacer.gif")%>" alt="" class="noBorder" /></a>
+                                            </td>
+					</tr>
+					<tr>
+					    <td class="red7" align="left">
+						<a href="basket.jsp" class="red7"><strong>Items</strong></a><img src="<%=website.getImagePath("spacer.gif")%>" alt="" class="noBorder width20 height1" />
+					    </td>
+					    <td class="red7" align="right" >
+						<a href="basket.jsp" class="red7"><strong>
+						<%=userSession.getShoppingBasket().getTotalQuantityString()%></strong></a>
+					    </td>
+					</tr>
+					<% if (userSession.getWebsiteAccessDomainId() > Customer.WEB_ACCESS_TYPE_NO_PRICES) { %>
+						<tr>
+					    	<td class="red7" align="left">
+							<a href="basket.jsp" class="red7"><strong>Total</strong></a>
+					 	   </td>
+					 	   <td class="red7" align="right">
+							<a href="basket.jsp" class="red7"><strong><%=userSession.formatPrice(userSession.getShoppingBasket().getOrderTotalIncVAT())%></strong></a>
+					 	   </td>
+                                       	 	</tr>
+					<% } %>
+                                    </table>
+				    </td>
+				    <td>
+					<table border=0 width='10' cellpadding=0 cellspacing=0>
+                                        <tr>
+                                            <td valign="middle" align="right">
+                                                <a href="basket.jsp"><img src="<%=website.getImagePath("spacer.gif")%>" alt="" class="noBorder" /></a>
+                                            </td>
+                                            
+					</tr>
+				      </table>
+				    </td>
+					<td width="100%">
+                                    	<table border=0 width='100%' cellpadding=0 cellspacing=0>
+                                        <tr>
+                                            <td valign="middle" align="right">
+                                                <a href="basket.jsp" ><img src="<%=website.getImagePath("basketthumb.gif")%>" alt="" class="noBorder" /></a>
+                                            </td>
+                                            
+					</tr>
+				      </table>
+				    </td>	
+				   </tr></table>
+                                  </td>
+                                  </tr>
+                        	  </table>
+				
+			      </td>
+			   </tr>
+			   </table>
+<!-- end of components/shoppingbasketthumbnail.html -->

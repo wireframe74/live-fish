@@ -1,0 +1,323 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement = null;
+var doc = null;
+var isDebug = false;
+var win = null;
+var name = "";
+
+function save()
+{
+  try {
+    var objElementStyle = objElement.style;
+    var id              = objElement.id;
+    var name            = objElement.name;
+    var width           = objElementStyle.width;
+    var height          = objElementStyle.height;
+    var changed = false;
+
+    // there is a bug when setting name
+    // name is not refreshed
+    if(browser.ie) {
+      if(document.getElementById("txtName").value != "" && name != document.getElementById("txtName").value){
+        var html = "<select id='__tmpSelect' " + (objElement.size != "" ? "size='" + objElement.size + "'":"") + " name='" + document.getElementById("txtName").value + "' " + (objElement.style.cssText != "" ? " style='" + objElement.style.cssText + "'":"") + ">";
+        win.editSelectObject(objElement);
+        win.editInsertHtml(html);
+        objElement = win.editGetDocument().getElementById("__tmpSelect");
+        win.editSelectObject(objElement);
+        win.editSetActiveObject(objElement);
+        setTimeout("update()",200);
+      }
+    }
+    var objElementStyle = objElement.style;
+
+    if(document.getElementById("txtID").value != "")
+      objElement.id = document.getElementById("txtID").value
+    else
+      objElement.removeAttribute("id");
+      
+    if(document.getElementById("txtName").value != "") {
+      if(browser.ns)
+        objElement.name = document.getElementById("txtName").value
+    } else {
+      objElement.removeAttribute("name");
+    }
+
+    if(document.getElementById("txtWidth").value != "") {
+      objElementStyle.width = document.getElementById("txtWidth").value;
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("width");
+      else
+        objElementStyle.width = "";
+    }
+    
+    if(document.getElementById("txtHeight").value != "") {
+      objElementStyle.height = document.getElementById("txtHeight").value
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("height");
+      else
+        objElementStyle.height = "";
+    }
+
+    // clear options
+    var combo = document.getElementById("lstSelect");
+    while(objElement.options.length >0) {
+      objElement.remove(0);
+    }
+
+    for(var i=0; i<combo.options.length;i++) {
+      var item = doc.createElement("option");
+      item.text = combo.options[i].text;
+      item.value = combo.options[i].value;
+      item.style.color = combo.options[i].style.color;
+      item.style.backgroundColor = combo.options[i].style.backgroundColor;
+      item.selected = combo.options[i].selected;
+      if(browser.ie) {
+        objElement.add(item);
+      } else {
+        objElement.add(item,null);
+      }
+      changed = true;
+    }
+
+    if(id       != objElement.id)
+      changed = true;
+    if(name     != objElement.name)
+      changed = true;
+    if(width    != objElementStyle.width)
+      changed = true;
+    if(height   != objElementStyle.height)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in select page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+    win                 = params[11];
+
+    var objElementStyle = objElement.style;
+
+    document.getElementById("txtID").value = objElement.id;
+
+    if(objElement.name) {
+		  document.getElementById("txtName").value = objElement.name;
+		  name = objElement.name;
+		}
+
+    document.getElementById("txtWidth").value = objElementStyle.width;
+    document.getElementById("txtHeight").value = objElementStyle.height;
+
+    // clear first
+    var combo = document.getElementById("lstSelect");
+    while(combo.options.length >0) {
+      combo.remove(0);
+    }
+    
+    // read options
+    for(var i=0; i<objElement.options.length;i++) {
+      var item = document.createElement("option");
+      item.text = objElement.options[i].text;
+      item.value = objElement.options[i].value;
+      item.style.color = objElement.options[i].style.color;
+      item.style.backgroundColor = objElement.options[i].style.backgroundColor;
+      if(browser.ie) {
+        document.getElementById("lstSelect").add(item);
+      } else {
+        document.getElementById("lstSelect").add(item,null);
+      }
+    }
+
+    // set language strings
+    setStrings();
+
+    document.getElementById("btnAdd").value = getLanguageString(language,3359);
+    document.getElementById("btnEdit").value = getLanguageString(language,3360);
+    document.getElementById("btnDelete").value = getLanguageString(language,3361);
+  } catch(Error) {  }
+}
+
+function onSelectClick(combo)
+{
+  try {
+    var selItem = combo.options[combo.selectedIndex];
+    document.getElementById("txtText").value = selItem.text;
+    document.getElementById("txtValue").value = selItem.value;
+    document.getElementById("txtColor").value = selItem.style.color;
+    document.getElementById("txtColor").style.backgroundColor = selItem.style.color;
+    document.getElementById("txtBackColor").value = selItem.style.backgroundColor;
+    document.getElementById("txtBackColor").style.backgroundColor = selItem.style.backgroundColor;
+  } catch(Error) {}
+}
+
+function onItemDelete()
+{
+  var combo = document.getElementById("lstSelect");
+  if(combo.selectedIndex >= 0)
+    combo.remove(combo.selectedIndex);
+}
+
+function onItemAdd()
+{
+  try {
+    var combo = document.getElementById("lstSelect");
+    var item = document.createElement("option");
+    item.text = document.getElementById("txtText").value;
+    item.value = document.getElementById("txtValue").value;
+    item.style.color = document.getElementById("txtColor").value;
+    item.style.backgroundColor = document.getElementById("txtBackColor").value;
+    if(browser.ie) {
+      combo.add(item);
+    } else {
+      combo.add(item,null);
+    }
+  } catch(Error) {}
+}
+
+function onItemEdit()
+{
+  try {
+    var combo = document.getElementById("lstSelect");
+    var selItem = combo.options[combo.selectedIndex];
+    selItem.text = document.getElementById("txtText").value;
+    selItem.value = document.getElementById("txtValue").value;
+    selItem.style.color = document.getElementById("txtColor").value;
+    selItem.style.backgroundColor = document.getElementById("txtBackColor").value;
+  } catch(Error) {}
+}
+
+function update()
+{
+  try {
+    win.onmouseupPINEDIT();
+  } catch(Error) {}
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="964">_ID/Name</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td width="80">
+          <div id="962" class="label">_ID:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtID" NAME="txtID">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="963" class="label">_Name:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtName" NAME="txtName">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4006">_Size</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td width="80">
+          <div id="4000" class="label">_Width:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtWidth" NAME="txtWidth">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="4001" class="label">_Height:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtHeight" NAME="txtHeight">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3362">_Options</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+      <tr>
+        <td rowspan="4">
+          <select size="5" style="WIDTH:70px" id="lstSelect" onchange="javascript: onSelectClick(this)">
+          </select>
+        </td>
+        <td width="42">
+          <div id="3356" class="label40">_Text:</div>
+        </td>
+        <td>
+          <input type="text" style="WIDTH:70px" id="txtText">
+        </td>
+      </tr>
+      <tr>
+        <td width="42">
+          <div id="4012" class="label40">_Value:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtValue" NAME="Text1" style="WIDTH:70px">
+        </td>
+      </tr>
+      <tr>
+        <td width="42">
+          <div id="3357" class="label40">_Color:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtColor" style="WIDTH:50px" NAME="txtColor">&nbsp;<input type="button" value="..." style="WIDTH:20px" onclick="selectColor('txtColor')" ID="Button4"
+            NAME="Button4">
+        </td>
+      </tr>
+      <tr>
+        <td width="42">
+          <div id="3358" class="label40">_B-Color:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtBackColor" style="WIDTH:50px">&nbsp;<input type="button" value="..." style="WIDTH:20px" onclick="selectColor('txtBackColor')"
+            ID="Button1" NAME="Button4">
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <input type="button" value="_Delete" ID="btnDelete" onclick="onItemDelete()">
+        </td>
+        <td align="center" colspan="5">
+          <input type="button" value="_Add" ID="btnAdd" onclick="onItemAdd()"> <input type="button" value="_Edit" ID="btnEdit" onclick="onItemEdit()">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

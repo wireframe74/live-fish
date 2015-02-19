@@ -1,0 +1,40 @@
+<html>
+<head>
+
+<script src="include/pinTree.js"></script>
+<script src="menu/pinMenu.js"></script>
+<script src="include/ajax.js"></script>
+
+<script>
+
+function load()
+{
+//  try {
+    // add event handler
+    if(browser.ie)
+      document.onkeydown = __tree_keydown;
+    else
+      document.addEventListener("keydown", __tree_keydown, false);
+
+    if(browser.ns) {
+      document.getElementById("__inline").addEventListener("keydown", __inline_keydown, false);
+      //document.addEventListener("contextmenu", __tree_contextdisabled, false);
+      document.addEventListener("contextmenu", __tree_node_oncontext, false);
+    } else {
+      document.oncontextmenu = __tree_node_oncontext;
+    }
+
+    parent.treeCreate(objTree, window.frameElement.id);
+//  } catch(Exception) {  }
+}
+</script>
+</head>
+
+<body style="margin:0px;" onload="load()" unselectable="on">
+
+<input id='__inline' style='position:absolute;visibility:hidden;left:-100px;font-family:arial;font-size:8pt' onblur='javascript: //__tree_inline_hide()' onkeydown='__inline_keydown()'>
+<div unselectable="on" id="container" style="height:100%;width:100%;margin:0;" onclick="javascript: __tree_inline_hide()"></div>
+
+</body>
+</html>
+

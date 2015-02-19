@@ -1,0 +1,266 @@
+<HEAD>
+<title></title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../include/dialog.js"></script>
+<script language="javascript" src="../include/listbox.js"></script>
+<script language="javascript" src="../include/input.js"></script>
+<script language="javascript" >
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var lbStyle = null;
+var lbWidth = null;
+var lng = null;
+var paddingLeft = null;
+var paddingRight = null;
+var paddingTop = null;
+var paddingBottom = null;
+var marginLeft = null;
+var marginRight = null;
+var marginTop = null;
+var marginBottom = null;
+var sizeType = "px";
+
+function updateStyleSheet(style, value)
+{
+  parent.parent.parent.parent.updateRule(style.toLowerCase(), value);
+}
+
+function updateDesign(rule)
+{
+	paddingLeft.setValue(0);
+	paddingRight.setValue(0);
+	paddingTop.setValue(0);
+	paddingBottom.setValue(0);
+	marginLeft.setValue(0);
+	marginRight.setValue(0);
+	marginTop.setValue(0);
+	marginBottom.setValue(0);	
+	
+  if (rule.styles.length > 0) {
+    for (var i=0;i<rule.styles.length;i++) {    
+			if (rule.styles[i].name.toLowerCase() == "padding") {
+				paddingLeft.setValue(parseInt(rule.styles[i].value));
+				paddingRight.setValue(parseInt(rule.styles[i].value));
+				paddingTop.setValue(parseInt(rule.styles[i].value));
+        paddingBottom.setValue(parseInt(rule.styles[i].value));
+      } else if (rule.styles[i].name.toLowerCase() == "padding-left") {
+        paddingLeft.setValue(parseInt(rule.styles[i].value));
+      } else if (rule.styles[i].name.toLowerCase() == "padding-right") {
+        paddingRight.setValue(parseInt(rule.styles[i].value));
+      } else if (rule.styles[i].name.toLowerCase() == "padding-top") {
+        paddingTop.setValue(parseInt(rule.styles[i].value));
+      } else if (rule.styles[i].name.toLowerCase() == "padding-bottom") {
+        paddingBottom.setValue(parseInt(rule.styles[i].value));
+      } 
+			
+			if (rule.styles[i].name.toLowerCase() == "margin") {
+				marginLeft.setValue(parseInt(rule.styles[i].value));
+				marginRight.setValue(parseInt(rule.styles[i].value));
+				marginTop.setValue(parseInt(rule.styles[i].value));
+        marginBottom.setValue(parseInt(rule.styles[i].value));
+      } else if (rule.styles[i].name.toLowerCase() == "margin-left") {
+        marginLeft.setValue(parseInt(rule.styles[i].value));
+      } else if (rule.styles[i].name.toLowerCase() == "margin-right") {
+        marginRight.setValue(parseInt(rule.styles[i].value));
+      } else if (rule.styles[i].name.toLowerCase() == "margin-top") {
+        marginTop.setValue(parseInt(rule.styles[i].value));
+      } else if (rule.styles[i].name.toLowerCase() == "margin-bottom") {
+        marginBottom.setValue(parseInt(rule.styles[i].value));
+      } 			
+			
+    }  
+  }
+}
+
+function onInputClick(obj)
+{
+	var temp = "";
+	
+	if(obj.id == "paddingLeft") {
+		eval("temp = "+obj.id+".getValue()");
+		updateStyleSheet("padding-left", temp+sizeType);
+	} else if(obj.id == "paddingTop") {
+		eval("temp = "+obj.id+".getValue()");
+		updateStyleSheet("padding-top", temp+sizeType);	
+	} else if(obj.id == "paddingBottom") {
+		eval("temp = "+obj.id+".getValue()");
+		updateStyleSheet("padding-bottom", temp+sizeType);	
+	} else if(obj.id == "paddingRight") {
+		eval("temp = "+obj.id+".getValue()");
+		updateStyleSheet("padding-right", temp+sizeType);	
+	} else if(obj.id == "marginLeft") {
+		eval("temp = "+obj.id+".getValue()");
+		updateStyleSheet("margin-left", temp+sizeType);
+	} else if(obj.id == "marginTop") {
+		eval("temp = "+obj.id+".getValue()");
+		updateStyleSheet("margin-top", temp+sizeType);	
+	} else if(obj.id == "marginBottom") {
+		eval("temp = "+obj.id+".getValue()");
+		updateStyleSheet("margin-bottom", temp+sizeType);	
+	} else if(obj.id == "marginRight") {
+		eval("temp = "+obj.id+".getValue()");
+		updateStyleSheet("margin-right", temp+sizeType);	
+	} 
+}
+
+function changeMarginUnit()
+{
+  sizeType = document.getElementById('cmbMarginUnit').value;
+
+	temp = marginLeft.getValue();
+	updateStyleSheet("margin-left", temp+sizeType);
+
+	temp = marginTop.getValue();
+	updateStyleSheet("margin-top", temp+sizeType);
+
+	temp = marginBottom.getValue();
+	updateStyleSheet("margin-bottom", temp+sizeType);
+
+	temp = marginRight.getValue();
+	updateStyleSheet("margin-right", temp+sizeType);
+}
+
+function changePaddingUnit()
+{
+  sizeType = document.getElementById('cmbPaddingUnit').value;
+  
+	temp = paddingLeft.getValue();
+	updateStyleSheet("padding-left", temp+sizeType);
+	
+	temp = paddingTop.getValue();
+	updateStyleSheet("padding-top", temp+sizeType);
+	
+	temp = paddingBottom.getValue();
+	updateStyleSheet("padding-bottom", temp+sizeType);
+	
+	temp = paddingRight.getValue();
+	updateStyleSheet("padding-right", temp+sizeType);
+}
+
+function getLanguageString(id)
+{
+	return lng[id];
+}
+
+function initDialog(param)
+{
+
+  try {
+		lng = parent.parent.parent.parent.getLocalizationResource();
+    // set language strings
+    setStrings();
+    
+  } catch(Error) {}
+} 
+
+function init()
+{
+	paddingLeft = new Input(document.getElementById("paddingLeft"), "paddingLeft", "paddingLeft", 0, "33px", "10px", "onInputClick" );
+	paddingLeft.create();
+	paddingRight = new Input(document.getElementById("paddingRight"), "paddingRight", "paddingRight", 0, "33px", "10px", "onInputClick" );
+	paddingRight.create();
+	paddingTop = new Input(document.getElementById("paddingTop"), "paddingTop", "paddingTop", 0, "33px", "10px", "onInputClick" );
+	paddingTop.create();
+	paddingBottom = new Input(document.getElementById("paddingBottom"), "paddingBottom", "paddingBottom", 0, "33px", "10px", "onInputClick" );
+	paddingBottom.create();
+	marginLeft = new Input(document.getElementById("marginLeft"), "marginLeft", "marginLeft", 0, "33px", "10px", "onInputClick" );
+	marginLeft.create();
+	marginRight = new Input(document.getElementById("marginRight"), "marginRight", "marginRight", 0, "33px", "10px", "onInputClick" );
+	marginRight.create();
+	marginTop = new Input(document.getElementById("marginTop"), "marginTop", "marginTop", 0, "33px", "10px", "onInputClick" );
+	marginTop.create();
+	marginBottom = new Input(document.getElementById("marginBottom"), "marginBottom", "marginBottom", 0, "33px", "10px", "onInputClick" );
+	marginBottom.create();	
+//	alert(paddingLeft.create());
+}
+
+
+</SCRIPT> 
+</HEAD>
+<BODY class="bodypage" onLoad="init();">
+	<fieldset>
+		<legend class="head">
+			<span id="1500" class="label">_padding</span>
+		</legend>
+			<div style="overflow:hidden; margin:0px; " id="border" align="left">
+				<table style=" border:2px solid  #505050 " border="0" cellpadding="0" cellspacing="0" id="tblColor">
+					<tr>
+						<td><div style="width:40px; height:30px;" id="space1">&nbsp;</div></td>
+						<td align="center"><div style="width:30px; height:20px;" id="paddingTop">&nbsp;</div></td>
+						<td><div style="width:40px; height:30px;" id="space2">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td align="center"><div style="width:30px; height:20px;" id="paddingLeft">&nbsp;</div></td>
+						<td align="center"><div style="width:70px; height:70px; background-color:#FFFFFF"  id="space5"><img src="text.gif" border="0"></div></td>
+						<td align="center"><div style="width:30px; height:20px;" id="paddingRight">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td align="center"><div style="width:30px; height:30px;" id="space3">&nbsp;</div></td>
+						<td align="center"><div style="width:30px; height:20px;" id="paddingBottom">&nbsp;</div></td>
+						<td align="center"><div style="width:30px; height:30px;" id="space4">&nbsp;</div></td>
+					</tr>												
+				</table>
+		
+			</div>
+			
+	</fieldset>
+	<div style="width:30px; height:5px;" id="space10">&nbsp;</div>
+	<fieldset>
+		<legend class="head">
+			<span id="1501" class="label">_margin</span>
+		</legend>   
+			<div style="overflow:hidden; margin:0px; " id="border" align="left">   
+				<table border="0" cellpadding="0" cellspacing="0" id="tblColor">
+					<tr>
+						<td><div style="width:40px; height:30px;" id="space10">&nbsp;</div></td>
+						<td align="center"><div style="width:30px; height:20px;" id="marginTop">&nbsp;</div></td>
+						<td><div style="width:40px; height:30px;" id="space11">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td align="center"><div style="width:30px; height:20px; " id="marginLeft">&nbsp;</div></td>
+						<td align="center"><div style="width:70px; height:70px; background-color:#FFFFFF;  border:2px solid  #505050;"  id="space12"><img src="text.gif" border="0"></div></td>
+						<td align="center"><div style="width:30px; height:20px;" id="marginRight">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td align="center"><div style="width:30px; height:30px;" id="space13">&nbsp;</div></td>
+						<td align="center"><div style="width:30px; height:20px; " id="marginBottom">&nbsp;</div></td>
+						<td align="center"><div style="width:30px; height:30px;" id="space14">&nbsp;</div></td>
+					</tr>												
+				</table>
+		
+			</div>
+	</fieldset>	
+  <div id="space10" style="position:absolute; width:100px; height:20px; top:140px; left:180px;">
+    <span id="1502">_Einheit</span>
+    <select id="cmbPaddingUnit" onchange="changePaddingUnit()">
+      <option value="%">%</option>
+      <option value="cm">cm</option>
+      <option value="em">em</option>
+      <option value="ex">ex</option>
+      <option value="in">in</option>
+      <option value="mm">mm</option>
+      <option value="pc">pc</option>
+      <option value="pt">pt</option>
+      <option selected value="px">px</option>
+    </select>
+  </div>
+  <div id="space11" style="position:absolute; width:100px; height:20px; top:309px; left:180px; ">
+    <span id="1502">_Einheit</span>
+    <select id="cmbMarginUnit" onchange="changeMarginUnit()">
+      <option value="%">%</option>
+      <option value="cm">cm</option>
+      <option value="em">em</option>
+      <option value="ex">ex</option>
+      <option value="in">in</option>
+      <option value="mm">mm</option>
+      <option value="pc">pc</option>
+      <option value="pt">pt</option>
+      <option selected value="px">px</option>
+    </select>
+  </div>
+</BODY>

@@ -1,0 +1,127 @@
+<HEAD>
+  <title></title>
+  <LINK href="../design/style/dialog.css" type="text/css" rel="stylesheet">
+    <SCRIPT>
+// browser detection
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+var browser = new Browser();
+
+var language = "EN";
+var design = "";
+var mode = "";
+var objElement;
+var params = null;
+var tab = null;
+var tabDesign = "";
+
+if(browser.ie) {
+	language            = dialogArguments[0];
+	design              = dialogArguments[1];
+	mode                = dialogArguments[2];
+	doc                 = dialogArguments[4];
+	objElement          = dialogArguments[5];
+	tabDesign           = dialogArguments[13];
+ 	params              = dialogArguments;
+} else {
+	var aParam          = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	design              = aParam[1];
+	mode                = aParam[2];
+	doc                 = aParam[4];
+	objElement          = aParam[5];
+	tabDesign           = aParam[13];
+ 	params              = aParam;
+}
+
+if(mode == "CHAR")
+  document.title = "Char" + document.title;
+
+function getLanguageString(lng,id)
+{
+  var aLanguage = params[14];
+  return aLanguage[id];
+}
+
+function tabCreate(objTab,id)
+{
+  var dlgPath = "../dialogs/";
+  
+  tab = objTab;
+  objTab.design      = tabDesign;
+	objTab.orientation = "0";
+	objTab.tabarea     = true;
+	objTab.designmode  = "IMAGE";
+	
+	if(mode == "UL") {
+	  var item = objTab.createItem();
+	  item.text = getLanguageString("",1064);
+	  item.title = getLanguageString("",1064);
+	  item.tag = "ULIST";
+  	item.active = true;
+    item.url = dlgPath + "ulist.html";
+    objTab.add(item);
+  }
+  
+	if(mode == "OL") {
+	  item = objTab.createItem();
+	  item.text = getLanguageString("",1063);
+	  item.title = getLanguageString("",1063);;
+	  item.tag = "OLIST";
+  	item.active = true;
+	  item.url = dlgPath + "olist.html";
+	  objTab.add(item);
+  }
+        
+	objTab.create();
+}
+
+function tabEventPageLoaded(item,id)
+{
+  item.getWindow().initDialog(params);
+}
+
+function save()
+{
+  var items = tab.getItems();
+  for(var i=0;i<items.length;i++) {
+    items[i].call("save()");
+  }
+  window.close();
+}
+
+function init()
+{
+  document.onkeypress = onEsc;
+  document.getElementById("lblOK").value = getLanguageString(language,899);
+  document.getElementById("lblCancel").value = getLanguageString(language,900);
+}
+
+function onEsc()
+{
+  if(window.event.keyCode == 27) 
+    window.close();
+}
+    </SCRIPT>
+</HEAD>
+<body class="bodyframe" onload="init()">
+  <table style="WIDTH:100%;HEIGHT:100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td><iframe id="tab" style="WIDTH:100%;HEIGHT:100%" src="../tab/pinTab.html?id=tab" frameBorder="0"></iframe></td>
+    </tr>
+    <tr>
+      <td height="1%" align="right">
+        <div style="PADDING-TOP:5px">
+          <INPUT style="WIDTH: 81px; HEIGHT: 24px" onclick="save()" id="lblOK" type="submit" value="__OK" NAME="lblOK"> 
+          <INPUT id="lblCancel" style="WIDTH: 73px; HEIGHT: 24px" onclick="window.close()" type="button" value="__Cancel" NAME="lblCancel">
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>

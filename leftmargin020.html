@@ -1,0 +1,27 @@
+<% if (!WebSite.isThisPageInList(request, "basket,register,delivery,paysecure,confirm,quickpay,welcome,account,myaccount,register,logout,changeaddr")&& !userSession.isHomePage()) { %>
+	<% if( website.isUsingRefinementSearch() ){ %>
+		<jsp:include page="/template/components/sitenavigation.jsp" /></i>
+	<% } else { %>
+		<div id="asidebrowse" class="asidebox">
+			<h2>Browse</h2>
+			<div id="menu_ajax">
+				<div class="browseTitle">Browse by Category</div>
+				<ul class="category">
+					<%=website.getArticleMenu().getSubMenuHTML(userSession)%>
+				</ul>
+			</div>
+			<div class="browsePrice">
+				<div class="browseTitle">Browse by Price</div>
+				<ul>
+					<%
+					String currencySymbol = "&pound;";
+					currencySymbol = userSession.getCurrencySymbol();
+					String tagParamsPrice = "";
+					String tagParamsSearchStr = "";
+					%>
+					<%@include file="/pricesearch.html"%>
+				</ul>
+			</div>
+		</div>
+	<% } %>
+<% } %>

@@ -1,0 +1,1 @@
+<%String templatePage = "metaRedirectAdmin";request.setAttribute("templatePage",templatePage);%><%@include file="template/components/metaRedirectAdmin.jsp"%> 

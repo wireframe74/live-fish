@@ -1,0 +1,27 @@
+/*-------------------------------toadd_20090316.css------------------------*/
+.component_stockdetail			{ min-width:765px; width:765px; float:left; }
+#component_stockdetail_maindetail		{ width:526px; }
+#component_stockdetail_tabbedinfo_ajax	{ width:520px; }
+#component_stockdetail_alsobought		{ width:526px; }
+#stockdetailtrail                	    	{ width:480px; }
+#baskettrail                		{ width:320px; }
+
+#meXXXXnu_ajax li a				{ color:#e4fbc7; }
+.tab a span 					{ font-weight: normal; }
+#shopXXXXping_cart				{ text-align:left; color:#e4fbc7; margin-left:5px; margin-top:10px; }
+#shopXXXXping_cart a				{ text-align:left; color:#e4fbc7; }
+
+img.primaryimage 				{ border:0px solid #CCCCCC; }
+
+.menXXXXuLevel0 { line-height:150%;padding-top:0px; padding-bottom:0px; }
+.menXXXXuCell4Level1, .menuCell3Level1, .menuCell2Level1, .menuCell1Level1 { border-bottom:0 solid #999999; }
+
+.boxtop { vertical-align: top; }
+
+.button { background-color: transparent; border: 0px none; padding-left:9px; padding-right:9px; }
+
+#registerexistingcustomers { margin-bottom:25px; }
+
+.grouptextnew { line-height: 1.3em; font-weight: bold; }
+.stockthumbpriceFormat2 { font-weight: bold; }
+/*-------------------------------toadd_20090316.css------------------------*/

@@ -1,0 +1,114 @@
+<HTML>
+  <HEAD><title>Iframe</title>
+    <link rel="stylesheet" href="dialog.css" type="text/css">
+      <script language="javascript" src="../../../include/dialog.js"></script>
+      <SCRIPT>
+var language = "";
+var design = "";
+
+
+function save()
+{
+  try {
+    var objElement      = dialogArguments[5];
+    var objElementStyle = objElement.style;
+
+    if(document.getElementById("txtSource").value != "") {
+      objElement.src = document.getElementById("txtSource").value
+      //objElementStyle.contentEditable = "false";
+    }
+
+    if(document.getElementById("txtWidth").value != "")
+      objElementStyle.width = document.getElementById("txtWidth").value
+    if(document.getElementById("txtHeight").value != "")
+      objElementStyle.height = document.getElementById("txtHeight").value
+  } catch(Error) {}
+
+  window.close();
+}
+
+function Load()
+{
+  try {
+    if(!dialogArguments)
+      return;
+
+    language            = dialogArguments[0];
+    design              = dialogArguments[1];
+    var objElement      = dialogArguments[5];
+    var objElementStyle = objElement.style;
+    params              = dialogArguments;
+
+    document.getElementById("txtWidth").value = objElementStyle.width;
+    document.getElementById("txtHeight").value = objElementStyle.height;
+
+    if(objElement.src != null) {
+      document.getElementById("txtSource").value = objElement.src;
+    }
+
+    // set language strings
+    setStrings();
+
+    document.getElementById("lblOK").value = getLanguageString(language,899);
+    document.getElementById("lblCancel").value = getLanguageString(language,900);
+
+  } catch(Error) {
+    alert(Error);
+  }
+}
+
+      </SCRIPT>
+  </HEAD>
+  <BODY class="bodypage" onload="Load()">
+    <fieldset>
+      <legend class="head">
+        <span id="4006">_Size</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+        <tr>
+          <td>
+            <div id="4000" class="label">_Width:</div>
+          </td>
+          <td>
+            <input type="text" value="" ID="txtWidth" NAME="txtWidth">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="4001" class="label">_Height:</div>
+          </td>
+          <td>
+            <input type="text" value="" ID="txtHeight" NAME="txtHeight">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="3339">_Url</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table2">
+        <tr>
+          <td>
+            <div id="974" class="label">_Url:</div>
+          </td>
+          <td>
+            <input type="text" value="" ID="txtSource" NAME="txtSource">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <table>
+      <tr>
+        <td height="4"></td>
+      </tr>
+    </table>
+    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+      <TR>
+        <TD>
+          <P align="right"><INPUT id="lblOK" style="WIDTH: 83px; HEIGHT: 24px" type="button" value="_OK" onClick="save()">&nbsp;<INPUT id="lblCancel" style="WIDTH: 79px; HEIGHT: 24px" type="button" value="_Cancel" onclick="window.close();"></P>
+        </TD>
+      </TR>
+    </TABLE>
+  </BODY>
+</HTML>

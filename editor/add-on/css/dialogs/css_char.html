@@ -1,0 +1,346 @@
+<HEAD>
+<title></title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../include/listbox.js"></script>
+<script language="javascript" src="../include/styleSheet.js"></script>
+<script language="javascript" src="../include/dialog.js"></script>
+<script language="javascript" src="../include/color.js"></script>
+<script language="javascript" >
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var lb = null;
+var objRule = null;
+var lng = null;
+var params= new Array();
+var lbFontSize = new ListBox();
+var lbFontFamily = new ListBox();
+var lbFontStyle = new ListBox();
+
+function updateColor()
+{
+  updateStyleSheet('color', document.getElementById("txtColor").style.backgroundColor);
+}
+
+function getLanguageString(id)
+{
+	return lng[id];
+}
+
+function updateStyleSheet(style, value)
+{
+  parent.parent.parent.parent.updateRule(style.toLowerCase(), value.toLowerCase());
+}
+
+function setFontType(value)
+{
+  value = value.toLowerCase();
+  if(value != "standard") { 
+    if (value.indexOf("bold") >= 0) {
+      updateStyleSheet("font-weight", "bold");
+    } else {
+      //delete style
+      updateStyleSheet("font-weight", "");
+    } 
+    if (value.indexOf("italic") >= 0) {
+      updateStyleSheet("font-style", "italic");
+    } else {
+      updateStyleSheet("font-style", "");
+    }
+  } else {
+    updateStyleSheet("font-style", "");
+    updateStyleSheet("font-weight", "");
+  }
+}
+
+function setTextDecoration()
+{
+
+  var text = "";
+  if(document.getElementById("chkUnderline").checked)
+    text = text + "underline ";
+  if(document.getElementById("chkStrike").checked)
+    text = text + "line-through ";
+  if(document.getElementById("chkOverline").checked)
+    text = text + "overline ";
+  if(document.getElementById("chkBlink").checked)
+    text = text + "blink ";
+
+  if (text.length > 0)
+    updateStyleSheet("text-decoration", text);
+  else
+    updateStyleSheet("text-decoration", "");
+
+  // font caps
+  if(document.getElementById("chkCaps").checked) {
+    updateStyleSheet("font-variant", "small-caps");
+  } else {
+    updateStyleSheet("font-variant", "");
+  }
+
+}
+
+function updateDesign(rule) 
+{
+	var fontBold = false;
+	var fontItalic = false;
+	var size = "";
+	lbFontSize.selectItem("none");
+	lbFontFamily.selectItem("none");
+	lbFontStyle.selectItem("Standard");
+  document.getElementById("chkUnderline").checked = false;
+  document.getElementById("chkStrike").checked = false;
+  document.getElementById("chkOverline").checked = false;
+  document.getElementById("chkBlink").checked = false;
+  document.getElementById("chkCaps").checked = false;     
+	document.getElementById("txtColor").style.backgroundColor = "";
+
+  if (rule.styles.length > 0) {
+    for (var i=0;i<rule.styles.length;i++) {
+      if (rule.styles[i].name == "font-family") {
+        lbFontFamily.selectItem(rule.styles[i].value.toLowerCase(),true);
+      } else if (rule.styles[i].name == "font-size") {
+        size = parseInt(rule.styles[i].value);
+        lbFontSize.selectItem(size);
+      } else if (rule.styles[i].name == "text-decoration") {
+          document.getElementById("chkUnderline").checked = (rule.styles[i].value.indexOf("underline") >= 0) ? true:false;
+          document.getElementById("chkStrike").checked = (rule.styles[i].value.indexOf("line-through") >= 0) ? true:false;
+          document.getElementById("chkOverline").checked = (rule.styles[i].value.indexOf("overline") >= 0) ? true:false;
+          document.getElementById("chkBlink").checked = (rule.styles[i].value.indexOf("blink") >= 0) ? true:false;
+      } else if (rule.styles[i].name == "font-variant") {
+        document.getElementById("chkCaps").checked = (rule.styles[i].value.indexOf("small-caps") >= 0) ? true:false;    
+      } else if (rule.styles[i].name == "font-weight") {
+				fontBold = true;
+      } else if (rule.styles[i].name == "font-style") {
+				fontItalic = true;
+      } else if (rule.styles[i].name == "color") {
+				document.getElementById("txtColor").style.backgroundColor = rule.styles[i].value;
+      }
+    }  
+  }
+	if (fontBold == true) {
+		if (fontItalic == true) {
+      lbFontStyle.selectItem("Bold Italic",true);
+		} else {
+      lbFontStyle.selectItem("Bold",true);
+		}
+	} else if (fontItalic == true) {
+    lbFontStyle.selectItem("Italic",true);
+	} else {
+    lbFontStyle.selectItem("Standard",true);
+	}
+}
+
+function afterSelectColor(color)
+{
+  document.getElementById("txtColor").style.backgroundColor = color;
+  updateStyleSheet('color', document.getElementById('txtColor').style.backgroundColor);
+}
+
+function selectColor()
+{
+  try {
+    var color = new ColorDialog("1");
+    color.onAfterSelect = "afterSelectColor";
+
+    var colors = parent.parent.parent.parent.getColors();
+
+    color.colors = colors;
+    color.color = document.getElementById("txtColor").style.backgroundColor;
+    color.language = parent.parent.parent.parent.globalLanguage;
+    color.open();
+    
+  } catch(Error) {}
+}
+
+function initDialog(param)
+{ 
+  try {  
+		lng = parent.parent.parent.parent.getLocalizationResource();
+    // set language strings
+    setStrings();
+		document.getElementById("lblColor").value = getLanguageString(1000);
+		document.getElementById("fontfamily").innerHTML = createFontFamilyBox();
+		document.getElementById("fontsize").innerHTML = createFontSizeBox();
+		document.getElementById("fontstyle").innerHTML = createFontStyleBox();
+		document.getElementById("colorButton").innerHTML = createColorButton();
+          
+  } catch(Error) {}
+
+} 
+
+function createFontFamilyBox()
+{
+  var family = new Array("Arial","Arial Black","Courier","Courier New","Impact","Lucida","Tahoma","Times New Roman","Verdana");
+  var func = "";
+  var item = null;
+  lbFontFamily.onClick = "onFontFamilyClick";
+  
+  item = new ListItem('<div style="cursor:pointer; width:100%; font-size:10px; font-family:arial;">-</div>', 'none', 'none');
+  lbFontFamily.add(item);
+
+  for (var i=0;i<family.length;i++) {
+    func = "item = new ListItem('<div unselectable=\"ON\" style=\"cursor:pointer; width:100%; font-size:11px; font-family:"+family[i]+";\">"+family[i]+"</div>', '"+family[i]+"', '"+family[i]+"', false);";
+    eval(func);
+    func = "lbFontFamily.add(item);";
+    eval(func);
+  }
+  var temp = lbFontFamily.create();
+  return temp;
+}
+
+function createFontSizeBox()
+{
+  var size = new Array("8","9","10","11","12","13","14","15","16","17","18","20","22","24","26","28","30","36","48");
+  var func = "";
+  var item = null;
+  lbFontSize.onClick = "onFontSizeClick";
+  
+  item = new ListItem('<div style="cursor:pointer; font-size:10px; font-family:arial;">-</div>', 'none', 'none');
+  lbFontSize.add(item);
+  for (var i=0;i<size.length;i++) {
+    func = "item = new ListItem('<div unselectable=\"ON\" style=\"cursor:pointer; font-size:"+size[i]+"px; font-family:arial;\">"+size[i]+"</div>', '"+size[i]+"', '"+size[i]+"', false);";
+    eval(func);
+    func = "lbFontSize.add(item);";
+    eval(func);
+  }
+  var temp = lbFontSize.create();
+  return temp;
+}
+
+function createFontStyleBox()
+{
+  var style = new Array("Standard","Italic","Bold","Bold Italic");
+  var func = "";
+  var item = null;
+  lbFontStyle.onClick = "onFontStyleClick";
+
+  for (var i=0;i<style.length;i++) {
+    func = "item = new ListItem('<div unselectable=\"ON\" style=\"cursor:pointer; width:100%; font-size:11px; font-family:arial;\">"+style[i]+"</div>', '"+style[i]+"', '"+style[i]+"', false);";
+    eval(func);
+    func = "lbFontStyle.add(item);";
+    eval(func);
+  }
+  var temp = lbFontStyle.create();
+  return temp;
+}
+
+function onFontFamilyClick(item)
+{
+  if (!(item.value == "none"))
+    updateStyleSheet("font-family", item.value)
+  else
+    updateStyleSheet("font-family", "")
+}
+ 
+function onFontSizeClick(item)
+{
+  if (!(item.value == "none"))
+    updateStyleSheet("font-size", item.value + document.getElementById("cmbFontUnit").value)
+  else
+    updateStyleSheet("font-size", "")
+}
+
+function changeFontUnit()
+{
+  if (parseInt(lbFontSize.selectedItem.value) > 0)
+    updateStyleSheet("font-size", lbFontSize.selectedItem.value + document.getElementById("cmbFontUnit").value)
+}
+
+function onFontStyleClick(item)
+{
+  setFontType(item.title);
+}
+ 
+</SCRIPT> 
+</HEAD>
+<BODY class="bodypage">
+    <fieldset>
+      <legend class="head">
+        <span id="1001">_Font</span>
+      </legend>
+      <table cellspacing="0" cellpadding="3" border="0" width="1%">
+          <tr>
+            <td width="1%">
+              <span id="1002" class="label">_Family:</span><br />
+                <div style="width:130px; height:133px; overflow:auto; border:3px double #CACACA" id="fontfamily">&nbsp;
+                </div>
+            </td>
+            <td><div id="space1" style="width:10px;">&nbsp;</div>
+            </td>
+            <td width="1%">
+              <span id="1003" class="label">_Type:</span><br />
+              <div style="width:80px; height:133px; overflow:auto; border:3px double #CACACA" id="fontstyle">&nbsp;
+              </div>
+            </td>   
+            <td><div  id="space2" style="width:10px;">&nbsp;</div>
+            </td>                     
+            <td width="1%">
+              <span id="1004" class="label">_Size:</span><br />
+              <div style="width:85px; height:133px; overflow:auto; border:3px double #CACACA" id="fontsize">&nbsp;
+                </div>
+            </td>
+          </tr>
+          <tr>
+          <td >
+              <table border="0" style="width:100%; padding-top:5px;" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td colspan="2" nowrap="nowrap">
+                    <span id="1005" class="label">_borderColor:</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:100%">
+                    <div id="txtColor" style="width:100%; height:17px; border:1px solid #c0c0c0">&nbsp;</div>
+                    
+                  </td>
+                  <td>
+                    <input style="margin-left:2px;" id="lblColor" type="button" value="_Select"  onclick="selectColor('txtColor');">
+                  </td>
+                </tr>
+              </table>					
+            </td>
+						<td colspan="3"></td>
+						<td align="right" valign="bottom">
+              <span id="1502">_Einheit</span>
+              <select id="cmbFontUnit" onchange="changeFontUnit()">
+                <option value="%">%</option>
+                <option value="cm">cm</option>
+                <option value="em">em</option>
+                <option value="ex">ex</option>
+                <option value="in">in</option>
+                <option value="mm">mm</option>
+                <option value="pc">pc</option>
+                <option value="pt">pt</option>
+                <option selected value="px">px</option>
+              </select>
+            </td>
+          </tr>
+        </table>      
+    </fieldset>
+
+    <fieldset>
+      <legend class="head">
+        <span id="1006">_effects</span>
+      </legend>
+      <table  cellspacing="0" cellpadding="3" border="0" width="100%">
+        <tr>
+          <td valign="top" style="width: 33%" nowrap="nowrap">
+            <input type="checkbox" ID="chkOverline"  onclick="setTextDecoration()"><span id="1007" class="label">_Overline</span><br />
+            <input type="checkbox" ID="chkUnderline" onclick="setTextDecoration()"><span id="1008" class="label">_Underline</span><br />
+          </td>
+          <td valign="top" style="width: 33%" nowrap="nowrap">
+            <input type="checkbox" ID="chkCaps" onclick="setTextDecoration()"><span id="1009" class="label">_Caps</span><br />
+            <input type="checkbox" ID="chkBlink" onclick="setTextDecoration()"><span id="1010" class="label">_Blink</span>
+          </td>
+          <td valign="top" style="width: 33%" nowrap="nowrap">
+            <input type="checkbox" ID="chkStrike" onclick="setTextDecoration()"><span id="1011" class="label">_Strike through</span>
+          </td>
+        </tr>
+      </table>
+    </fieldset>    
+</BODY>

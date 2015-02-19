@@ -1,0 +1,24 @@
+<!-- start of components/menu.html --> 
+<script type='text/javascript'>
+<% if (1==0) { %>
+	<%=website.getArticleMenu().getMenu()%>
+
+	<%
+	int numTopLevelMenuItems = website.getArticleMenu().getNumRootItems();
+	%>
+
+	var NoOffFirstLineMenus=<%=website.getArticleMenu().getNumRootItems()%>;	// Number of first level items
+
+	document.write("<script LANGUAGE='JavaScript1.2' SRC='template/menu_style.txt'><\/script>");
+	document.write("<script LANGUAGE='JavaScript1.2' SRC='template/menu.js'><\/script>");
+	</script>
+<% } else {
+%>
+	</script>
+	<%=website.getArticleMenu().getSiteIndexHTML()%>
+<%
+}
+%>
+<!-- end of components/menu.html -->
+
+

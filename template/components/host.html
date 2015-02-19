@@ -1,0 +1,110 @@
+<!-- start of components/host.html -->
+<% 
+	String paramPg = null; 
+	String paramDesc = "";
+	String paramText = null;
+
+	if (request.getParameter("pg") != null) {
+		paramPg = request.getParameter("pg");
+	}
+	if (request.getParameter("desc") != null) {
+		paramDesc = request.getParameter("desc");
+	}
+	if (request.getParameter("txt") != null) {
+		paramText = request.getParameter("txt");
+	}
+	if (paramPg==null && paramText==null) {
+		out.write("no page or text specified");
+	} else {
+		if (paramPg!=null) {
+			File sourceFile = new File(website.getWebSitePath()+paramPg);
+
+			if (!sourceFile.exists() || (paramPg != null && paramPg.equalsIgnoreCase("delivery.html"))) {
+
+				paramPg = paramPg.substring(0,paramPg.indexOf(".html"))+".jsp";
+				sourceFile = new File(website.getWebSitePath()+paramPg);
+				if (!sourceFile.exists() || (paramPg != null && paramPg.equalsIgnoreCase("delivery.jsp"))) {
+					//out.write("You have specified a host page called "+paramPg+", but no such page exists.");
+					//website.writeToLog("Host page called but no such page exists");
+					//throw new Exception("You have specified a host page called "+paramPg+", but no such page exists.");
+					//website.writeToLog("host.jsp: You have specified a host page called "+paramPg+", but no such page exists.");
+
+					//String notFoundPageName = ""+request.getRequestURI()+(request.getQueryString()==null?"":"?"+request.getQueryString());
+					String notFoundPageName = co.simplypos.model.utils.helpers.StringHelper.replace(paramPg.toLowerCase()," ","-")+".irs";
+					notFoundPageName = "/"+notFoundPageName.substring(0,notFoundPageName.indexOf(".jsp"))+".irs";
+
+					String newURL = null;
+					String sql = "select newURI from meta_redirect where oldURL = '"+website.getBaseURL(request)+notFoundPageName+"'";
+					//website.writeToLog("host.jsp: Meta Redirect sql: "+notFoundPageName);
+
+					Connection internetConn = null;
+					Statement stmt = null;				
+					try {
+						internetConn = website.getConnection();
+						stmt = internetConn.createStatement(); 
+						//website.writeToLog("host.jsp: Meta Redirect sql: "+sql);  
+						ResultSet rs = stmt.executeQuery(sql);	 
+						if (rs.next()) {
+							String newURI = rs.getString(1);
+							newURL = website.getBaseURL(request)+"/"+newURI;
+						}
+						internetConn.commit();	
+					} catch (Exception ee1) {
+						website.writeToLog(ee1);
+						if (internetConn != null) {
+							try {
+				      				internetConn.rollback();
+					     		} catch (SQLException ee2) {}
+						}
+						newURL = null; 
+					} finally {
+						if (stmt != null) {
+							stmt.close();
+						}
+						if (internetConn != null) {
+							website.releaseConnection(internetConn);
+						}
+					}
+					if (newURL != null) {		
+						//website.writeToLog("host.jsp: Meta Redirect forwarding from: "+notFoundPageName+" to: "+newURL);
+						try {
+							response.sendRedirect(newURL); 
+						} catch (Exception e102) {
+							out.write("<script type='text/javascript'>document.location.href='"+newURL+"';</script>"); 
+						}		
+					      	return;
+					} else {
+						out.write("You have specified a host page called "+paramPg+", but no such page exists.");
+					}
+
+				} else {
+
+					//jsp
+					%>
+						<jsp:include page='<%=paramPg%>' />
+					<%	
+				}
+			} else {
+
+				// html
+			%>
+				<div class="formattedText">
+					<jsp:include page='<%=paramPg%>' />
+				</div>
+			<%	
+			}
+		} else {
+			%>
+<table border='0' width='100%' align='center' valign='top' cellspacing='0' cellpadding='0'>
+	<tr height="100%" ><td width="100%" >
+		<BR><BR><BR><BR><BR><BR>
+		<center><%=paramText%></center> 
+		<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+	</td></tr>
+</table>
+			<%
+		}
+	}
+%>
+<% response.setStatus(HttpServletResponse.SC_OK); %>
+<!-- end of components/host.html -->

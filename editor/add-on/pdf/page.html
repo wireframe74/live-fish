@@ -1,0 +1,114 @@
+<HEAD>
+<TITLE></TITLE>
+<LINK href="../../design/style/dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../include/dialog.js"></script>
+<SCRIPT>
+function save()
+{
+  try {
+    parent.parent.params[2] = document.getElementById("cmbPageSize").value;
+    parent.parent.params[3] = document.getElementById("optOri1").checked ? "1":"2";
+    parent.parent.params[4] = document.getElementById("cmbResolution").value;
+  } catch(Error) {}
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+    // set language strings
+    setStrings();
+
+    setCombo(document.getElementById("cmbPageSize"),params[2]);
+    if(params[3] == "2") {
+      document.getElementById("optOri1").checked = false;
+      document.getElementById("optOri2").checked = true;
+    }  
+    setCombo(document.getElementById("cmbResolution"),params[4]);
+
+  } catch(Error) { }
+}
+
+function __editGetParam()
+{
+  return params;
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="5000">_PageSize</span>
+    </legend>
+    <table cellSpacing="0" cellPadding="1" width="100%" border="0">
+      <tr>
+        <td>
+          <div class="label" id="5000">_PageSize:</div>
+        </td>
+        <td><SELECT id="cmbPageSize" style="FONT-SIZE: 11px; FONT-FAMILY: arial; HEIGHT: 20px">
+            <OPTION value="1">Letter [8.5 x 11 in]</OPTION>
+            <OPTION value="5">Legal [8.5 x 14 in]</OPTION>
+<!--
+            <OPTION value="">Executive [7.25 x 10.5 in]</OPTION>
+            <OPTION value="">Ledger [355.6 x 215.9 mm]</OPTION>
+            <OPTION value="">Tabloid [11 x 17 in]</OPTION>
+            <OPTION value="">Screen [10 x 7.5 in]</OPTION> -->
+            <OPTION value="8">A3 [297 x 420 mm]</OPTION> 
+            <OPTION value="9">A4 [210 x 297 mm]</OPTION>
+<!--            <OPTION value="">A5 [148 x 210 mm]</OPTION> -->
+<!--            <OPTION value="">Custom</OPTION>-->
+          </SELECT>
+        </td>
+        <td width="100%"></td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="5001">_Orientation</span>
+    </legend>
+    <table cellSpacing="0" cellPadding="1" width="100%" border="0" >
+      <tr>
+        <td>
+          <div class="label" id="5001">_Orientation:</div>
+        </td>
+        <td nowrap><INPUT type="radio" checked id="optOri1" name="optOri" VALUE="optOri1">&nbsp;<span class="label40" id="5003">_Portrait</span>
+        </td>
+        <td width="100%"></td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td nowrap><INPUT type="radio" id="optOri2" name="optOri" VALUE="optOri2">&nbsp;<span class="label40" id="5004">_Landscape</span>
+        </td>
+        <td width="100%"></td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="5002">_Resolution</span>
+    </legend>
+    <table cellSpacing="0" cellPadding="1" width="100%" border="0">
+      <tr>
+        <td>
+          <div class="label" id="5002">_Resolution:</div>
+        </td>
+        <td nowrap>
+          <SELECT id="cmbResolution" style="FONT-SIZE: 11px; FONT-FAMILY: arial; HEIGHT: 20px" NAME="cmbTarget">
+            <OPTION value="72">72</OPTION>
+            <OPTION value="150">150</OPTION>
+            <OPTION value="300">300</OPTION>
+            <OPTION value="600">600</OPTION>
+            <OPTION value="1200">1200</OPTION>
+            <OPTION value="2400">2400</OPTION>
+          </SELECT>&nbsp;<span class="label40" id="no">dpi</span>
+        </td>
+        <td width="100%"></td>
+      </tr>
+    </table>
+  </fieldset>
+  &nbsp;<br>
+</BODY>

@@ -1,0 +1,194 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+var language = "";
+var design = "";
+var technology = "";
+var mode = "";
+var objElement;
+var win = null;
+var isDebug = false;
+
+function save()
+{
+  try {
+    var objElementStyle = params[5].style;
+    var color      = objElementStyle.backgroundColor;
+    var repeat     = objElementStyle.backgroundRepeat;
+    var image      = objElementStyle.backgroundImage;
+    var changed = false;
+    var win = params[11];
+
+    // color
+    if(document.getElementById("txtColor").value != "") {
+      objElementStyle.backgroundColor = document.getElementById("txtColor").value;
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("backgroundColor");
+      else
+        objElementStyle.backgroundColor = null;
+    }
+
+    // image
+    if(document.getElementById("txtUrl").value != "") {
+      if(document.getElementById("txtUrl").value.toLowerCase().indexOf("url(") == 0)
+        objElementStyle.backgroundImage = document.getElementById("txtUrl").value;
+      else
+        objElementStyle.backgroundImage = "url(" + document.getElementById("txtUrl").value + ")";
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("backgroundImage");
+      else
+        objElementStyle.backgroundImage = null;
+    }
+        
+    // set repeat
+    if(document.getElementById("cmbRepeat").value != "")
+      objElementStyle.backgroundRepeat = document.getElementById("cmbRepeat").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("backgroundRepeat");
+      else
+        objElementStyle.backgroundRepeat = null;
+    }
+
+    if(color != objElementStyle.backgroundColor)
+      changed = true;
+    if(image != objElementStyle.backgroundImage)
+      changed = true;
+    if(repeat != objElementStyle.backgroundRepeat)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+ 
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in background page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+    // set language strings
+    setStrings();
+
+    if(!param[18])
+      document.getElementById("btnUrl").style.display = "none";
+
+	  language            = param[0];
+	  design              = param[1];
+    technology          = params[8];
+	  win                 = params[11];
+    var objElementStyle = param[5].style;
+
+    // clear
+    document.getElementById("txtColor").value = "";
+    comboSet(document.getElementById("cmbRepeat"),"");
+    
+    // color
+    if(objElementStyle.backgroundColor) {
+      document.getElementById("txtColor").value = objElementStyle.backgroundColor;
+      document.getElementById("txtColor").style.backgroundColor = objElementStyle.backgroundColor;
+    }
+
+    // image
+    if(objElementStyle.backgroundImage)
+      document.getElementById("txtUrl").value = objElementStyle.backgroundImage;
+    
+    // set repeat
+    if(objElementStyle.backgroundRepeat)
+      comboSet(document.getElementById("cmbRepeat"),objElementStyle.backgroundRepeat.toLowerCase());    
+
+
+  } catch(Error) { }
+}
+
+function onUrlSelect()
+{
+  params[2] = "IMAGE";
+  // set the predefined values from config.js
+	if(browser.ie) {
+		var path = window.showModalDialog("../../../server/" + technology + "/dialog.html",params,"dialogHeight:300px;dialogWidth:600px;resizable:1;status:0;scroll:0");
+		if(path != "0" && path != null) {
+ 			document.getElementById("txtUrl").value = "url(" + path + ")"; 
+		}
+	} else {
+		var left = screen.width/2 - 600/2;
+		var top = screen.height/2 - 300/2;
+		window.open("../../../server/" + technology + "/dialog.html","dialog","modal=1,left=" + left + ",top=" + top + ",height=300,width=600,resizable=1,status=0,scrollbars=0");
+	}
+}
+
+function __editGetParam()
+{
+  return params;
+}
+
+function callbackMozilla(mode, para1, para2)
+{
+  if(mode == "OPENIMAGE") {
+    if(para1 != "0" && para1 != null) {
+ 			document.getElementById("txtUrl").value = "url(" + para1 + ")";
+    }
+  }
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="3408">_Backcolor</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="3409" class="label">_Backcolor:</div>
+        </td>
+        <td>
+          <input type="text" value="" ID="txtColor" style="width:50px" NAME="txtColor">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColor('txtColor')">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3414">_Image</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" width="100%">
+      <tr>
+        <td>
+          <div id="3415" class="label">_Image:</div>
+        </td>
+        <td style="width:100%">
+          <input type="text" value="" ID="txtUrl" style="width:260px">
+        </td>
+        <td>
+          <input type="button" value="..." style="width:20px" onclick="javascript: onUrlSelect();"
+            id="btnUrl">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3416" class="label">_Repeat:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbRepeat">
+            <option value="">-</option>
+            <option value="no-repeat">no-repeat</option>
+            <option value="repeat">repeat</option>
+            <option value="repeat-x">repeat-x</option>
+            <option value="repeat-y">repeat-y</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

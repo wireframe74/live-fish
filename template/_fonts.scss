@@ -1,0 +1,103 @@
+p {
+line-height: 1.4em;
+font-size:14px;
+}
+
+#nav > #qm0 > a,
+h1,
+h2,
+h3, {
+@extend %primary-font;
+font-size: 16px;
+
+
+&:first-child {
+	margin-left: 0;
+	padding-left: 0;
+}
+}
+#nav > #qm0 > a
+ {
+margin-left: 13px ;
+@extend %primary-font;
+&:hover {
+	color:$secondary-color;
+}
+
+}
+h1, h2, h3, h4, h5, h6, .refinetitle, #refinefurther .refinetitle {
+ @extend %primary-font;
+color: $primary-color;
+font-weight: normal;
+text-transform: uppercase;
+@extend %heading-font;
+margin-left:0;
+
+}
+
+
+h1 {
+	font-size: 24px;
+}
+.pagetitle h1 {
+	color: $dark-grey;
+}
+
+h2,
+#refinecategory .refinetitle, 
+#refinefurther .refinetitle, #quickshop .refinetitle
+ {
+	background:url(../images/dash.gif) bottom center no-repeat;
+	color: $primary-color;
+	padding-bottom: 25px;
+	display:block;
+	@extend %primary-font;
+}
+
+.about-home {
+	h3 {
+	font-size: 34px;
+	padding:0;
+	margin: 0 0 20px;
+	color:$primary-color;
+	}
+
+	p {
+		font-size:18px;
+		@extend %primary-font;
+		color:#777;
+		line-height: 25px;
+	}
+
+	}
+
+
+.article  h2 {
+	background:none;
+	PADDING-BOTTOM:10PX;
+}
+
+
+#footer li a:hover, #footer li a:active, #footer a:hover, #footer a:active {
+color: #000;
+}
+
+#footer ul.vcard li a {
+	text-transform: none
+}
+
+#footer {
+	.small a:link {
+		text-transform: none;
+		font-size:9px;
+	}
+}
+
+#nav >  a:hover {
+	color:$primary-color!important;
+}
+
+#footer h2 {
+font-size: 18px;
+
+}

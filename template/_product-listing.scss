@@ -1,0 +1,97 @@
+#productsCatProdHdr {
+	h1 {
+		color:#111;
+		font-size: 21px;
+		margin:10px 0 10px;
+		padding-bottom:0;
+		
+		overflow: hidden;
+		
+		padding-bottom: 10px;
+		text-transform:none;
+		@extend %primary-font;
+
+	}
+}
+
+ul.productsLayoutModeThumb li.stockThumb li.productThumbName {
+height: auto;
+}
+
+ul.productsLayoutModeThumb li.stockthumbprice{
+	height:auto;
+	float:none;
+
+}
+
+ul.blocklist li.formwrap a.catpageaddtobasket {
+text-transform: uppercase;
+line-height: 30px;
+width: 100%;
+padding: 0;
+font-size: 16px;
+height:30px;
+padding:0;
+}
+
+.stockThumb li ul.formwrapper li.productqty a:nth-of-type(2n+2) {
+line-height: 19px;
+}
+
+
+// PAGINATION AT TOP
+
+.main-wrap {
+
+	div.pagetopnavextra,
+	div.pagebottomnavextra {
+	margin-bottom: 20px;
+	padding:10px;
+	background:$grey;
+	}
+
+
+	div.stocklistingSortOptions {
+	float: none;
+	display: inline-block;
+	margin-bottom: 0;
+	}
+
+	div.pagebottomnavextra div.stocklistingSortOptions {
+	position: relative;
+	}
+
+	div.pagebottomnavextra div.stocklistingmodeandpagenumber ,
+	div.stocklistingmodeandpagenumber {
+
+	position: relative;
+	top: 9px;
+	right: 0;
+	}
+	
+
+ul.productsLayoutModeThumb div.stockthumb, 
+div.component_stockdetail .productimageholder#imagescontainer, 
+div.component_stockdetail .detailInfo, 
+#tabsholder .tabBorder, 
+#recentlyviewedbody .stockthumbFormat3 {
+background: #fff;
+border: 1px solid #F2F2F2;
+
+}
+
+ul.productsLayoutModeThumb div.stockthumb, 
+#recentlyviewedbody .stockthumbFormat3 {
+-webkit-transition: all .5s;
+-o-transition: all .5s;
+transition: all .5s;
+
+		&:hover {
+			border:1px solid $secondary-color;
+		}
+}
+
+
+
+}
+

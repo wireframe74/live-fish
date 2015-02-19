@@ -1,0 +1,96 @@
+<!-- start of components/headerinit.html -->
+<%@ taglib uri="http://ajaxtags.org/tags/ajax" prefix="ajax" %>
+<%
+	
+
+	boolean isNav = true;
+	String agent = request.getHeader("USER-AGENT");
+	if (agent != null && agent.indexOf("MSIE") != -1) isNav = false;
+
+	if (website == null || website.getArticleMenu() == null) {
+		if (request.getQueryString() == null) {
+			// On homepage
+		        website.initialise(request.getRequestURL().toString(), application.getRealPath("/"), 143);
+		        userSession.initialise(website, request);
+			%>
+		        <script language="javascript"><!--
+		            alert("The server was restarted. You have been placed back at the home page. Sorry for any inconvenience caused.");
+		        //--></script>
+			<%
+		} else {
+			try {
+				response.sendRedirect("index.jsp");
+			} catch (Exception e102) {
+				%>
+			       <script type='text/javascript'>
+			           document.location.href="index.jsp";
+			       </script>
+				<%
+			}
+        		return;
+		}
+    	}
+
+    	if (website.getMenuWidth() != 170) {
+        website.setMenuWidthAndRebuildMenu(170);
+    	}
+    	website.performChecks();
+ 	
+    String primaryColour = website.getPrimaryColour();
+    String backgroundColour = website.getBackgroundColour();
+    String headerStrapLine = website.getHeaderStrapLine();
+    ArticleDetail articleDetail = userSession.getArticleDetail();
+    if (articleDetail == null) {
+        userSession.initialise(website, request);
+        articleDetail = userSession.getArticleDetail();
+%>
+        <script language="javascript"><!--
+            alert("Your session timed-out. You have been placed back at the home page. Sorry for any inconvenience caused.");
+        //--></script>
+<%
+    }
+
+
+    if (website.isEnableHttpsRedirect()) {
+	 if (request.getRequestURL().toString().startsWith("https") && !request.getRequestURL().toString().trim().endsWith("paysecure.jsp") && !request.getRequestURL().toString().trim().endsWith("quickpay.jsp") && !request.getRequestURL().toString().trim().endsWith("register.jsp") && !request.getRequestURL().toString().trim().endsWith("myaccount.jsp") && !request.getRequestURL().toString().trim().endsWith("tracking.jsp") && !(request.getRequestURL().toString().trim().endsWith("host.jsp") && (""+request.getParameter("pg")).equals("thankyou.html")) && !(request.getRequestURL().toString().trim().endsWith("host.jsp") && (""+request.getParameter("pg")).equals("thankyou.jsp"))) {
+		String nextURL = co.simplypos.model.utils.helpers.StringHelper.replace(request.getRequestURL().toString(),"https:","http:")+"?"+request.getQueryString();
+		%>
+		<meta http-equiv="REFRESH" content="0;url=<%=nextURL%>">
+		<%
+	 }
+    }
+
+    if (!userSession.isShoppingBasketEmpty() && !website.isUseQuickPayCheckout()) {
+        if (userSession.getShoppingBasket().getTransactionId() > 0) {
+            Connection conn = website.getConnection();
+            try {
+                userSession.getShoppingBasket().ensureTransactionNotHadPaymentProcessed(conn);
+                conn.commit();
+
+                userSession.getShoppingBasket().registerPage(conn, request.getRequestURL().toString());
+
+            } finally {
+                website.releaseConnection(conn);
+            }
+            if (userSession.getShoppingBasket().getTransactionId() == 0) userSession.clearShoppingBasket();
+        }
+    }
+
+    userSession.setAllowEditCurrency(true);
+    
+    if (WebSite.isThisPageInList(request, "delivery,confirm,paysecure,quickpay,thankyou")) {
+    	userSession.setAllowEditCurrency(false);
+    }
+
+    int currencyId = userSession.getCurrencyId();
+    if (request.getParameter("currid")!= null) {
+	try {
+		currencyId = Integer.parseInt(request.getParameter("currid"));
+	} catch (NumberFormatException nfe) {
+		currencyId = 0;
+	}
+	userSession.setCurrencyId(currencyId );	
+    }
+%>
+
+ <!-- end of components/headerinit.html -->

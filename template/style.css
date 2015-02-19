@@ -1,0 +1,6421 @@
+@charset "UTF-8";
+/* line 8, _variables.scss */
+#nav > #qm0 > a,
+h1,
+h2,
+h3, h4, h5, h6, .refinetitle, #refinefurther .refinetitle,
+#refinecategory .refinetitle, #quickshop .refinetitle, .about-home p, .top-area p, .top-area a, ul.productsLayoutModeThumb li.stockThumb li.productThumbName, li.stockThumb li.productThumbName a,
+li.productThumbName a, #productsCatProdHdr h1, .aside h2, a.buttonaddtobasket span, #component_stockdetail_recentlyviewed h2, .stockthumbFormat4 a.catpageaddtobasketlistlayout,
+a.buttonaddtobasket, .detailInfo h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; }
+
+/* line 19, _variables.scss */
+h1, h2, h3, h4, h5, h6, .refinetitle, #refinefurther .refinetitle, .slides li .button, .slides li h1, ul.ctas a, h3.section-title.title_center span, ul.productsLayoutModeThumb li.stockthumbprice, .module-wrap .btn, .color-2 #newsform #newsformwrap a.nlsSub {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+/* line 32, _variables.scss */
+.alt-font {
+  font-family: 'Dancing Script', cursive; }
+
+/* line 1, _responsive.scss */
+.container-fluid {
+  width: 100%;
+  overflow: hidden; }
+
+@media only screen and (min-width: 250px) {
+  /* line 7, _responsive.scss */
+  .container {
+    width: 100%;
+    margin: 0 auto; } }
+@media only screen and (min-width: 800px) {
+  /* line 7, _responsive.scss */
+  .container {
+    max-width: 800px; } }
+@media only screen and (min-width: 1366px) {
+  /* line 7, _responsive.scss */
+  .container {
+    max-width: 1040px; } }
+
+/* line 28, _responsive.scss */
+.row {
+  width: 100%; }
+
+@media only screen and (min-width: 250px) and (max-width: 760px) {
+  /* line 34, _responsive.scss */
+  .col-xs-12 {
+    width: 100%; } }
+
+@media only screen and (min-width: 768px) {
+  /* line 42, _responsive.scss */
+  .col-md-4 {
+    width: 33.333333333%;
+    float: left; } }
+
+/* Reset */
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: 'Archer-ExtraLight';
+  src: url("fonts/Archer-ExtraLight.eot?#iefix") format("embedded-opentype"), url("fonts/Archer-ExtraLight.otf") format("opentype"), url("fonts/Archer-ExtraLight.woff") format("woff"), url("fonts/Archer-ExtraLight.ttf") format("truetype"), url("fonts/Archer-ExtraLight.svg#Archer-ExtraLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Archer-Medium';
+  src: url("fonts/Archer-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/Archer-Medium.otf") format("opentype"), url("fonts/Archer-Medium.woff") format("woff"), url("fonts/Archer-Medium.ttf") format("truetype"), url("fonts/Archer-Medium.svg#Archer-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 26, _base.scss */
+p,
+li,
+a,
+span {
+  /*font-family: 'Lato', sans-serif;
+  line-height: 1.3em;
+  */ }
+
+/* line 38, _base.scss */
+body {
+  line-height: 1.3em;
+  background-color: #fff;
+  font-weight: 300;
+  background-color: #FFFFFF; }
+
+/* line 45, _base.scss */
+li ul,
+li ol,
+ul,
+ol {
+  margin: 0; }
+
+/* line 51, _base.scss */
+#basketalsobought,
+.qtyaddtobasket a > img {
+  display: none; }
+
+/* line 55, _base.scss */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0; }
+
+/* line 60, _base.scss */
+ul.labelpairleft {
+  background: none; }
+
+/* line 63, _base.scss */
+.stockthumbwrapper {
+  background: none; }
+
+/* line 66, _base.scss */
+#quickshop input[type="submit"],
+#taghdrsearchstr input[type="submit"],
+#webmngmntarea {
+  border: 0; }
+
+/* line 71, _base.scss */
+ul.navPage li,
+ul.navPage li:hover {
+  width: auto;
+  height: auto;
+  background: none;
+  font-size: 1em;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* line 81, _base.scss */
+a.buttonaddtobasket span {
+  padding: 0;
+  text-transform: capitalize; }
+
+/* line 85, _base.scss */
+#nav {
+  padding: 0; }
+
+/* line 88, _base.scss */
+ul.productsLayoutModeThumb li.stockThumb:hover {
+  background: none; }
+
+/* line 91, _base.scss */
+.index .article {
+  margin-bottom: 0; }
+
+/* line 94, _base.scss */
+#refinecategory,
+#refinefurther,
+#quickshop,
+#qm0 div {
+  margin-top: 0; }
+
+/* line 100, _base.scss */
+.pagetopnavextra,
+.pagebottomnavextra {
+  margin-left: 0; }
+
+/* line 104, _base.scss */
+#wrapper ul.crumb {
+  width: auto; }
+
+/* line 107, _base.scss */
+#webmngmntareainner a {
+  text-indent: 0; }
+
+/* line 110, _base.scss */
+#myaccountpasswordchange u {
+  text-decoration: none; }
+
+/* line 113, _base.scss */
+#newsformwrap a,
+#newsformwrap a:link,
+#newsformwrap a:visited,
+#newsformwrap a:hover,
+#newsformwrap a:active {
+  background: none;
+  font-size: 1em;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  text-shadow: none; }
+
+/* line 130, _base.scss */
+#footer .signUpSent span {
+  display: inline;
+  width: auto; }
+
+/* line 134, _base.scss */
+#contactForm label {
+  font-size: 1em; }
+
+/* line 137, _base.scss */
+.salesMessage {
+  background: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 0; }
+
+/*Font*/
+/* line 147, _base.scss */
+#refinefurther .refinetitle,
+body,
+#quickshop .refinetitle,
+#headersearch input,
+#taghdrsearchstr input#search,
+#quickshop #search,
+#newsformwrap input,
+input,
+select,
+textarea,
+button {
+  font-family: "Arial","Lucida Grande",sans-serif; }
+
+/*General Boxes*/
+/*Border*/
+/* line 163, _base.scss */
+#webmngmntareainner,
+#accountbuttons,
+#myaccount ul.contentaddressform,
+div.changepwd form,
+#myaccount ul.contentaccountform,
+#salesBlock,
+#salesWrap .salesMessage a,
+ul.productsLayoutModeThumb div.stockthumb,
+#refinefurther,
+#refinecurrent,
+.asidebox,
+#quickshop,
+form.contact,
+#registration ul.contentform,
+#registration ul.contentaddressform,
+#registration ul.contentaccountform,
+#addressupdatecontent div.checkoutcontainer > form,
+li.promocodes ul,
+li.vouchercode ul,
+div.component_stockdetail .detailInfo,
+#recentlyviewedbody .stockthumbFormat3,
+div.component_stockdetail .productimageholder#imagescontainer,
+#asidetopselling li a.class2,
+#linkedproductswrapper .stocklistingbody,
+#tabsholder .tabBorder,
+#asidebrowse,
+ul.layoutModeThumb ul.groupthumbwrapper,
+.catBanHold,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper,
+#headerbasket.miniBasketHold,
+.miniBasket div#basketcontenttable li.basketitem a:link,
+.basketV2 #basketheader,
+.basket ul.majorbasketsubtotal.labelpairleft,
+ul.majorbasketdeliverytotal.labelpairleft,
+ul.majorbaskettotal.labelpairleft,
+.basketExtrasHolder {
+  border: 1px solid #aaa;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/*Background*/
+/* line 205, _base.scss */
+#webmngmntareainner,
+#accountbuttons,
+#myaccount ul.contentaddressform,
+div.changepwd form,
+#myaccount ul.contentaccountform,
+#salesBlock,
+#salesWrap .salesMessage a,
+#refinefurther,
+#refinecurrent,
+.asidebox,
+#quickshop,
+form.contact,
+#registration ul.contentform,
+#registration ul.contentaddressform,
+#registration ul.contentaccountform,
+#addressupdatecontent div.checkoutcontainer > form,
+li.promocodes ul,
+li.vouchercode ul,
+div.component_stockdetail .detailInfo,
+#linkedproductswrapper .stocklistingbody,
+#asidebrowse,
+.basketV2 #basketheader,
+.basket ul.majorbasketsubtotal.labelpairleft,
+ul.majorbasketdeliverytotal.labelpairleft,
+ul.majorbaskettotal.labelpairleft {
+  background: #eee; }
+
+/*Text Colour*/
+/* line 235, _base.scss */
+body,
+.formattedText,
+#salesBlock,
+#refinecategory .refinetitle,
+#refinefurther .refinetitle,
+#quickshop .refinetitle,
+.salesMessage a,
+.ir-testim p,
+form[name="addressdetails"] .pagesubtitle h2,
+#addressupdatecontent h2,
+ul.labelpairleft,
+#addressupdatecontent div.checkoutcontainer > form[name="addresslookup"],
+div.changepwd form,
+div.changepwd form input.inputitem,
+#myaccountaddressdetails input.inputitem,
+#myaccountaddressdetails select.inputitem,
+#myaccountaccountdetails select,
+#myacccountcontent .message,
+div#myaccountaccountdetails li,
+#myaccountaccountdetails input,
+ul#accountdob input,
+div.listtable ul.listtableheader,
+#registration ul.contentaddressform,
+#registration ul.contentaccountform,
+#registration input.inputitem,
+#registration select.inputitem,
+div#registerpassword li.textnote,
+.irFlags span,
+#shopping_cart,
+#headersearch input:focus,
+#nav #qm0 a,
+#newsformwrap input:focus,
+.productprice,
+.qtyaddtobasket select.inputitem,
+h1,
+h2,
+h3,
+h4,
+.aside h2,
+ul#salesWrap2 li a:hover,
+#quickshop .refinehead,
+.aside #quickshop #search:focus,
+#newsformwrap input:focus,
+.stockStatus,
+.stockStatusFormat4,
+ul.productsLayoutModeThumb li.stockThumb li.productThumbName a,
+input,
+select,
+textarea,
+.salesMessage a,
+.salesMessage a:link,
+.salesMessage a:visited,
+.crumb a,
+.crumb a:link,
+.crumb a:visited,
+select.inputitem,
+ul.formwrapper li.basketqty a .text_qtyinbasket,
+#refinefurther .refinehead,
+.refineblock .refineitems li,
+#refinefurther .refineitems a,
+.pagetopnavextra,
+.sortSearch,
+div.pagetopnavextra a,
+div.pagebottomnavextra a,
+div.pagetopnavextra a:link,
+div.pagebottomnavextra a:link,
+div.pagetopnavextra a:visited,
+div.pagebottomnavextra a:visited,
+.productsLayoutModeList .productThumbName a,
+.productsLayoutModeList .productThumbName a:link,
+.productsLayoutModeList .productThumbName a:visited,
+#linkedproductswrapper ul.detailstocklisting li.stockThumb li.productThumbName a,
+#linkedproductswrapper ul.detailstocklisting li.stockThumb li.productThumbName a:link,
+#linkedproductswrapper ul.detailstocklisting li.stockThumb li.productThumbName a:visited,
+#recentlyviewedbody .productThumbName a,
+#recentlyviewedbody .productThumbName a:link,
+#recentlyviewedbody .productThumbName a:visited,
+.stockThumb ul.stockthumbwrapper li.basketqty a,
+.stockThumb ul.stockthumbwrapper li.basketqty a:link,
+.stockThumb ul.stockthumbwrapper li.basketqty a:visited,
+.basketFlip div.listtable ul.listtableline li.basketdescription,
+.basketFlip div.listtable ul.listtableline li.basketdescription a,
+.basketFlip div.listtable ul.listtableline li.basketdescription a:link,
+.basketFlip div.listtable ul.listtableline li.basketdescription a:visited .basketFlip div.listtable ul.listtableline li.basketdescription a:hover,
+.basketFlip div.listtable ul.listtableline li.basketdescription a:active,
+.asidebox li a.topselling_text,
+.asidebox li a.topselling_text:link,
+.asidebox li a.topselling_text:visited,
+.asidebox li a.topselling_text:hover,
+.asidebox li a.topselling_text:active,
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupname a,
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupname a:link,
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupname a:hover,
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupname a:active,
+#contactForm label,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper li.groupname a,
+.miniBasket div.listtable li.basketdescription a:link,
+.miniBasket div.listtable li.basketdescription a:hover,
+.miniBasket div.listtable li.basketdescription a:active,
+.miniBasket div.listtable li.basketdescription a:visited,
+.productdetailwrap .stockStatus span,
+.basketV2 #basketheader li,
+.basket div.listtable ul.basketline li.basketdescription a,
+.basket div.listtable ul.basketline li.basketremove a:visited,
+.basket div.listtable ul.basketline li.basketremove a:link {
+  color: #333; }
+
+/*Faded Text*/
+/* line 343, _base.scss */
+#headersearch input,
+ul#salesWrap2 li a,
+.aside #quickshop #search,
+#newsformwrap input,
+.stockStatus span,
+.stockStatusFormat4 i,
+#productcode {
+  color: #999; }
+
+/*Footer Text*/
+/* line 353, _base.scss */
+#footer,
+#footer h2,
+#footer div,
+#footer div#pagetimestamp {
+  color: #fff; }
+
+/*Links*/
+/* line 362, _base.scss */
+a,
+a:link,
+a:visited,
+#myaccountpasswordchange a {
+  color: #0f6797;
+  -moz-transition: 400ms ease-in-out;
+  -webkit-transition: 400ms ease-in-out;
+  transition: 400ms ease-in-out;
+  background: none;
+  border: 0;
+  text-decoration: none; }
+
+/*Link Hover*/
+/* line 376, _base.scss */
+a:hover,
+a:active,
+.formattedText a:hover,
+div.welcome div.checkoutcontainer a:active,
+.orderlink a:hover,
+.orderlink a:active,
+#myaccountpasswordchange a:hover,
+#myaccountpasswordchange a:active,
+a.quickcheckoutlogin:hover,
+.asidebox a:hover,
+.asidebox a:active {
+  color: #c20204;
+  -moz-transition: 100ms ease-in-out;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+  background: none;
+  border: 0;
+  text-decoration: none; }
+
+/*Footer Links*/
+/* line 399, _base.scss */
+#footer li a,
+#footer li a:link,
+#footer li a:visited,
+#footer a,
+#footer a:link,
+#footer a:visited {
+  color: #fff; }
+
+/*Footer Links Hover*/
+/* line 408, _base.scss */
+#footer li a:hover,
+#footer li a:active,
+#footer a:hover,
+#footer a:active {
+  color: #cc2036; }
+
+/* Curved Corners */
+/* line 417, _base.scss */
+.irBanHold,
+#salesBlock,
+#salesWrap .salesMessage a,
+#refinefurther,
+#refinecurrent,
+#asidegiftlist,
+ul.productsLayoutModeThumb li.stockThumb,
+ul.detailstocklisting li.stockThumb,
+ul.productsLayoutModeThumb li.productThumbImage,
+#linkedproductswrapper .productThumbImage,
+.layoutModeThumb li,
+.stockthumbwrapper .productThumbImage img,
+.component_stockdetail #imagescontainer img,
+#quickshop,
+#currency,
+#asidetopselling,
+.asidebox,
+#recentlyviewedbody ul.detailstocklisting li.productThumbImage,
+div.component_stockdetail .detailInfo,
+.component_stockdetail #imagescontainer a.MagicThumb-swap img,
+ul.tabs li .tab,
+ul.tabs li .tab#tabcurrent,
+#tabsholder .tabBorder,
+.barBord,
+#quickshop #search,
+#taghdrsearchstr input#search,
+#headersearch input,
+#newsformwrap input,
+.qtyaddtobasket select.inputitem,
+form.contact input,
+form.contact textarea,
+.boxshadow .gmGh,
+.gmH,
+div#quickshop select,
+#addressupdatecontent div.checkoutcontainer input,
+#addressupdatecontent div.checkoutcontainer select,
+#addressupdatecontent div.checkoutcontainer textarea,
+#webmngmntareainner,
+#accountbuttons,
+#myaccount ul.contentaddressform,
+div.changepwd form,
+div.changepwd form input,
+#myaccount ul.contentaccountform,
+#myaccountaddressdetails input.inputitem,
+#myaccountaddressdetails select.inputitem,
+#myaccountaccountdetails select,
+ul#accountdob input,
+#registration ul.contentform input,
+#registration input.inputitem,
+#registration select.inputitem,
+.sortSearch,
+a.pageNum,
+a.pageNumActive,
+#div_giftwrapoptions select,
+#div_giftwrapoptions textarea,
+.MagicZoomBigImageCont,
+.MagicThumb-expanded,
+.MagicZoomPup,
+#linkedproductswrapper .stocklistingbody,
+#recentlyviewedbody .stockthumbFormat3,
+div.component_stockdetail .productimageholder#imagescontainer,
+.productdetailwrap form[name="emailenq"] input[type="text"],
+.irBan,
+li.promocodes ul,
+li.vouchercode ul,
+ul.navPage li a,
+ul.navPage li a:link,
+ul.navPage li a:visited,
+#asidetopselling li a.class2,
+a#mainZoomer,
+a#mainZoomer:link,
+a#mainZoomer:visited,
+ul.layoutModeThumb ul.groupthumbwrapper,
+ul.productsLayoutModeThumb div.stockthumb,
+.catBanHold,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper,
+.miniBasket div#basketcontenttable li.basketitem a:link,
+#headerbasket.miniBasketHold,
+.detailInfo li.basketqty a,
+.basket div.listtable ul.basketline li.basketimage,
+.basket div.listtable ul.basketline li.basketquantity input.inputitem,
+.basketExtrasHolder,
+.basket ul.carriageregion select.inputitem,
+.promocodes ul input.inputitem,
+.vouchercode ul input.inputitem,
+form.contact {
+  /*-webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;*/ }
+
+/*Buttons*/
+/* line 510, _base.scss */
+#headersearch a:link,
+#headersearch a:visited,
+.refineblock input[type="submit"],
+form.contact .send,
+.vouchercodebutton a,
+.promocodebutton a,
+a.catpageaddtobasket,
+.irMoreLink,
+#newsformwrap a.nlsSub,
+a.buttonaddtobasket,
+a.actionbutton,
+.stockthumbFormat4 a.catpageaddtobasketlistlayout,
+a.catpageaddtobasket,
+#quickshop input[type="submit"],
+#taghdrsearchstr input[type="submit"],
+ul.navPage li a,
+.stockThumb li ul.formwrapper li.productqty a,
+.addtobasketqty a,
+a.gmLink,
+.checkoutcontainer button#submit,
+div#webmngmntareainner a,
+#accountbuttons li.accountbutton a,
+div.changepwd form input[name="submit"],
+#myaccountupdate a.actionbutton,
+.productdetailwrap form[name="emailenq"] input[type="submit"],
+.tyPage .btn,
+.no-rgba a.catpageaddtobasket,
+.no-rgba #newsformwrap a.nlsSub,
+.no-rgba a.buttonaddtobasket,
+.button,
+.btn,
+.btn:link,
+.btn:visited,
+.no-rgba #webmngmntareainner a,
+.no-rgba #webmngmntareainner a:link,
+.no-rgba #webmngmntareainner a:visited,
+.no-rgba #accountbuttons li.accountbutton a:link,
+.no-rgba #accountbuttons li.accountbutton a:visited,
+.button:link,
+ul.navPage li a,
+ul.navPage li a:link,
+ul.navPage li a:visited,
+.mbBottom a:link,
+.mbBottom a:visited,
+a.signupBtn:visited,
+a.signupBtn:link,
+input.deliveryAddToBasket,
+#registration ul.contentform input.inputBtn {
+  /*background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(40%,rgba(0,0,0,0.12)),color-stop(100%,rgba(0,0,0,0.3)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000',endColorstr='#4d000000',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000',endColorstr='#4d000000',GradientType=0 );*/
+  border: 0;
+  background-color: #0f6797;
+  -moz-transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  font-size: 1em;
+  color: #fff;
+  text-transform: capitalize;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  height: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: 0; }
+
+/* line 589, _base.scss */
+#headersearch a:hover,
+#headersearch a:active,
+.refineblock input[type="submit"]:hover,
+form.contact .send:hover,
+.vouchercodebutton a:hover,
+.promocodebutton a:hover,
+a.catpageaddtobasket:hover,
+.irMoreLink:hover,
+#newsformwrap a.nlsSub:hover,
+a.buttonaddtobasket:hover,
+a.actionbutton:hover,
+.stockthumbFormat4 a.catpageaddtobasketlistlayout:hover,
+a.catpageaddtobasket:hover,
+#quickshop input[type="submit"]:hover,
+#taghdrsearchstr input[type="submit"]:hover,
+ul.navPage li a:hover,
+.stockThumb li ul.formwrapper li.productqty a:hover,
+.addtobasketqty a:hover,
+a.gmLink:hover,
+.checkoutcontainer button#submit:hover,
+div#webmngmntareainner a:hover,
+#accountbuttons li.accountbutton a:hover,
+div.changepwd form input[name="submit"]:hover,
+#myaccountupdate a.actionbutton:hover,
+.productdetailwrap form[name="emailenq"] input[type="submit"]:hover,
+.tyPage .btn:hover,
+div.welcome div.checkoutcontainer a:hover,
+.button:hover,
+.btn:hover,
+.btn:active,
+.no-rgba #webmngmntareainner a:hover,
+.no-rgba #webmngmntareainner a:active,
+.no-rgba #accountbuttons li.accountbutton a:hover,
+.no-rgba #accountbuttons li.accountbutton a:active,
+.mbBottom a:hover,
+.mbBottom a:active,
+a.signupBtn:hover,
+a.signupBtn:active,
+input.deliveryAddToBasket:hover,
+input.deliveryAddToBasket:active,
+#registration ul.contentform input.inputBtn:hover,
+#registration ul.contentform input.inputBtn:active {
+  /*background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(40%,rgba(0,0,0,0.12)),color-stop(100%,rgba(0,0,0,0.3)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.12) 40%,rgba(0,0,0,0.3) 100%);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000',endColorstr='#4d000000',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000',endColorstr='#4d000000',GradientType=0 );*/
+  -moz-transition: 200ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  color: #fff;
+  background-color: #cc2036;
+  border: 0; }
+
+/*Joined search buttons*/
+/* line 647, _base.scss */
+#headersearch input,
+#taghdrsearchstr input#search,
+#quickshop #search,
+#newsformwrap input,
+#headersearch input:focus,
+#newsformwrap input:focus {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px #aaa solid;
+  border-right: 0;
+  margin-right: -7px; }
+
+/* line 659, _base.scss */
+#footer div#newsformwrap > a,
+#refinefurther .refineblock form[name="searchform"] input[type="submit"],
+#quickshop input[type="submit"],
+#headersearch a:link,
+#headersearch a:visited {
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+/* line 672, _base.scss */
+#footer div#newsformwrap > a {
+  line-height: 19px; }
+
+/* line 678, _base.scss */
+#newsformwrap input {
+  padding: 7px;
+  width: 170px; }
+
+/* line 682, _base.scss */
+#footer div#newsformwrap > *,
+#headersearch form > *,
+#taghdrsearchstr form > *,
+#taghdrsearchstr input#search,
+#quickshop #search {
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 30px; }
+
+/* line 693, _base.scss */
+#newsformwrap input,
+#headersearch input,
+#headersearch input:focus,
+#newsformwrap input:focus {
+  background-color: #fff;
+  width: 70%;
+  margin: 0; }
+
+/* line 701, _base.scss */
+#newsformwrap input:focus,
+#headersearch input:focus {
+  background-color: #fff; }
+
+/* line 705, _base.scss */
+#headersearch {
+  float: none; }
+
+/* line 708, _base.scss */
+#headersearch a,
+#headersearch a:link,
+#newsformwrap a,
+#newsformwrap a:link,
+#newsformwrap a:hover {
+  width: 30%; }
+
+/* line 715, _base.scss */
+#footer div#newsformwrap {
+  width: auto; }
+
+/* line 718, _base.scss */
+#newsformwrap input,
+#newsformwrap input:focus {
+  border-color: #888; }
+
+/*Main Layout*/
+/* line 725, _base.scss */
+.aside {
+  width: 25%;
+  margin: 10px 0 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 10px; }
+
+/* line 733, _base.scss */
+.article {
+  width: 75%; }
+
+/* line 736, _base.scss */
+.stockthumbwrapper .productThumbImage img {
+  max-width: 148px;
+  max-height: 148px; }
+
+/* line 740, _base.scss */
+#homepage .stockthumbwrapper .productThumbImage img {
+  max-width: 160px;
+  max-height: 160px; }
+
+/* line 744, _base.scss */
+.formattedText {
+  margin-top: 10px;
+  padding: 0 10px; }
+
+/* line 748, _base.scss */
+div.stocklistingmodeandpagenumber {
+  padding-right: 3px; }
+
+/* line 751, _base.scss */
+.loPage {
+  margin-top: 10px; }
+
+/* line 754, _base.scss */
+.catBanHold {
+  padding: 20px;
+  margin-top: 10px; }
+
+/* line 758, _base.scss */
+.catBanHold .irMore {
+  margin-bottom: 0; }
+
+/*H Tags*/
+/* line 764, _base.scss */
+h1 {
+  font-size: 1.6em; }
+
+/* line 767, _base.scss */
+h2 {
+  font-size: 1.2em; }
+
+/* line 770, _base.scss */
+h3 {
+  font-size: 1em; }
+
+/* line 773, _base.scss */
+h4 {
+  font-size: 0.8em; }
+
+/* line 776, _base.scss */
+h1,
+h2,
+h3,
+h4 {
+  text-transform: none; }
+
+/* line 782, _base.scss */
+h1:first-letter,
+h2:first-letter,
+h3:first-letter,
+h4:first-letter {
+  text-transform: capitalize; }
+
+/* Left Margin */
+/* line 791, _base.scss */
+#refinefurther,
+#refinecurrent,
+.asidebox,
+#quickshop {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 800, _base.scss */
+#asidebrowse {
+  margin-top: 0; }
+
+/* Page Nav + Numbers */
+/* line 806, _base.scss */
+#pagenumber {
+  text-align: center;
+  display: block;
+  height: 25px;
+  text-transform: capitalize;
+  margin: 0 0 -1px 0; }
+
+/* line 813, _base.scss */
+#pagenumber a {
+  margin: 0 5px 0 0;
+  display: inline-block;
+  padding-top: 1px; }
+
+/* line 818, _base.scss */
+a.pageNum {
+  width: 50px;
+  height: 25px;
+  border: 1px #aaa solid;
+  background-color: #eee;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 827, _base.scss */
+a.pageNum:hover {
+  background-color: #fff; }
+
+/* line 830, _base.scss */
+a.pageNumActive {
+  width: 50px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 25px; }
+
+/* line 839, _base.scss */
+.sortSearch {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 5px;
+  height: 30px; }
+
+/* line 845, _base.scss */
+div.pagetopnavextra,
+div.pagebottomnavextra {
+  height: auto;
+  float: none; }
+
+/* line 850, _base.scss */
+div.stocklistingmodeandpagenumber {
+  height: 30px;
+  display: table-cell; }
+
+/* line 854, _base.scss */
+div.stocklistingmodeandpagenumber > * {
+  vertical-align: middle; }
+
+/* line 857, _base.scss */
+div.stocklistingSortOptions {
+  float: none;
+  display: inline-block;
+  margin-bottom: 15px; }
+
+/* line 863, _base.scss */
+div.pagebottomnavextra {
+  background: url(../images/border.gif) top left repeat-x;
+  position: relative;
+  margin-top: 20px;
+  min-height: 40px;
+  padding-top: 10px;
+  margin-bottom: 20px; }
+
+/* line 871, _base.scss */
+div.pagetopnavextra a.pageNum,
+div.pagetopnavextra a.pageNumActive {
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+/* line 880, _base.scss */
+div.pagebottomnavextra a.pageNum,
+div.pagebottomnavextra a.pageNumActive {
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+/* line 889, _base.scss */
+div.pagebottomnavextra a.pageNumActive {
+  border-top: 0;
+  vertical-align: top; }
+
+/* line 893, _base.scss */
+div.pagetopnavextra a.pageNumActive {
+  border-bottom: 0; }
+
+/* line 896, _base.scss */
+#stocklisting h1 {
+  margin: 15px 0 10px; }
+
+/* line 899, _base.scss */
+div.pagetopnav {
+  margin: 0 0 5px;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: none;
+  overflow: hidden;
+  zoom: 1; }
+
+/* line 910, _base.scss */
+div.pagebottomnav {
+  display: none; }
+
+/* line 913, _base.scss */
+.basket div.pagebottomnav {
+  display: block; }
+
+/* line 916, _base.scss */
+div.pagebottomnavextra #pagenumber {
+  padding-bottom: 45px;
+  margin: -1px 0 0; }
+
+/* line 920, _base.scss */
+div.pagebottomnavextra div.stocklistingSortOptions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0; }
+
+/* line 926, _base.scss */
+div.pagebottomnavextra div.stocklistingmodeandpagenumber {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+/* line 931, _base.scss */
+#wrapper .register ul.crumb,
+#wrapper .changeaddr ul.crumb,
+#wrapper .basket ul.crumb {
+  float: left; }
+
+/* Sales Messages - Home*/
+/* line 940, _base.scss */
+#salesWrap {
+  margin: 10px 0 5px;
+  text-align: left;
+  width: 100%; }
+
+/* line 945, _base.scss */
+.salesMessage {
+  display: inline-block;
+  text-align: center;
+  font-size: 22px;
+  line-height: 22px;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 33.33333%; }
+
+/* line 959, _base.scss */
+.salesMessage a:hover {
+  text-decoration: none; }
+
+/* line 962, _base.scss */
+#salesBlock {
+  font-size: 30px;
+  margin-top: 10px;
+  padding: 20px;
+  height: auto; }
+
+/* line 968, _base.scss */
+div.one {
+  padding-right: 5px; }
+
+/* line 971, _base.scss */
+div.two {
+  padding: 0 2.5px; }
+
+/* line 974, _base.scss */
+div.three {
+  padding-left: 5px; }
+
+/* line 977, _base.scss */
+.salesMessage a {
+  display: inline-block;
+  padding: 10px 5px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Refine Menu  */
+/* line 988, _base.scss */
+#refinecurrent {
+  display: none;
+  visibility: hidden; }
+
+/* line 992, _base.scss */
+#refinecategory,
+#refinefurther,
+#quickshop {
+  padding: 20px;
+  margin: 0 0 10px;
+  overflow: hidden; }
+
+/* line 999, _base.scss */
+#refinecategory .refinetitle,
+#refinefurther .refinetitle,
+#quickshop .refinetitle {
+  font-size: 1.3em;
+  font-weight: normal;
+  height: 25px;
+  padding: 0;
+  text-transform: capitalize; }
+
+/* line 1008, _base.scss */
+#refinecategory .refinehead,
+#refinefurther .refinehead,
+#quickshop .refinehead {
+  margin-left: 0; }
+
+/* line 1013, _base.scss */
+#quickshop .refinehead {
+  margin-top: 10px; }
+
+/* line 1016, _base.scss */
+#quickshop select {
+  margin: 1px 0 2px 15px;
+  width: 185px; }
+
+/* line 1020, _base.scss */
+#quickshop li,
+#quickshop ul {
+  clear: left; }
+
+/* line 1024, _base.scss */
+#quickshop * {
+  float: none; }
+
+/* line 1027, _base.scss */
+.refineclear {
+  float: right;
+  font-size: 0.85em;
+  line-height: 100%;
+  margin-right: 15px; }
+
+/* line 1033, _base.scss */
+#refinecategory ul,
+#refinefurther ul {
+  margin: 0;
+  padding: 0 0 0 10px; }
+
+/* line 1038, _base.scss */
+#refinemenu_content li,
+.refinemenu_subcontent li {
+  list-style: none outside none; }
+
+/* line 1042, _base.scss */
+.refineblock .refineitems li {
+  list-style-type: none;
+  position: relative; }
+
+/* line 1046, _base.scss */
+#refinefurther .refineitems li a {
+  padding: 0 0 0 22px;
+  line-height: 150%; }
+
+/* line 1050, _base.scss */
+#refinefurther div.refineitems li.selected a {
+  padding-left: 22px;
+  line-height: 150%;
+  font-weight: bold; }
+
+/* line 1055, _base.scss */
+#refinefurther .refineitems li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #575757;
+  -moz-transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out; }
+
+/* line 1068, _base.scss */
+#refinefurther div.refineitems li.selected a:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #575757;
+  -moz-transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out; }
+
+/* line 1081, _base.scss */
+#refinefurther .refineitems li a:hover,
+#refinefurther .refineitems li a:hover:before {
+  color: #000;
+  border-color: #000;
+  -moz-transition: 100ms ease-in-out;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out; }
+
+/* line 1089, _base.scss */
+#refinefurther .refineitems li.selected a:hover {
+  color: #000;
+  border-color: #000; }
+
+/* line 1093, _base.scss */
+#refinefurther .refineitems li.selected a:hover:after {
+  background-color: #000;
+  -moz-transition: 100ms ease-in-out;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out; }
+
+/* line 1099, _base.scss */
+#quickshop #rs_currprice {
+  display: none; }
+
+/* line 1102, _base.scss */
+#quickshop #search,
+#taghdrsearchstr input#search {
+  padding-left: 10px;
+  width: 80%;
+  margin: 0; }
+
+/* line 1108, _base.scss */
+#quickshop form[name="searchform"],
+#taghdrsearchstr form {
+  font-size: 0; }
+
+/* line 1112, _base.scss */
+#quickshop form[name="searchform"] > *,
+#taghdrsearchstr form > *,
+#quickshop input[type="submit"],
+#taghdrsearchstr input[type="submit"] {
+  font-size: 13px; }
+
+/* line 1118, _base.scss */
+#quickshop input[type="submit"],
+#taghdrsearchstr input[type="submit"] {
+  width: 20%; }
+
+/* line 1122, _base.scss */
+div#quickshop select {
+  border: 1px solid #aaa;
+  padding: 5px;
+  height: 30px;
+  width: 100%;
+  margin: 5px 0 0; }
+
+/* line 1129, _base.scss */
+#taghdrsearchstr > div,
+#quickshop > div,
+#quickshop i > div {
+  padding: 0 !important; }
+
+/* line 1134, _base.scss */
+#refinefurther .refinehead {
+  padding: 15px 0 5px !important;
+  margin: 0; }
+
+/*Testimonials*/
+/* line 1141, _base.scss */
+.ir-testim {
+  display: inline-block;
+  text-align: left;
+  width: 100%; }
+
+/* line 1146, _base.scss */
+.ir-testim > span {
+  display: none; }
+
+/* line 1149, _base.scss */
+.ir-testim p {
+  margin: 0; }
+
+/* line 1152, _base.scss */
+.ir-testim .testim span {
+  text-align: right;
+  display: block; }
+
+/* line 1156, _base.scss */
+.ir-testim strong {
+  font-size: 1.2em; }
+
+/* line 1159, _base.scss */
+.ir-testim .testimHold {
+  display: block;
+  position: relative; }
+
+/* line 1163, _base.scss */
+.ir-testim .testimHold > div {
+  position: relative; }
+
+/* line 1166, _base.scss */
+.ir-testim h2 {
+  margin-bottom: 20px; }
+
+/* line 1169, _base.scss */
+.ir-testim .testim {
+  padding: 10px 0; }
+
+/* line 1172, _base.scss */
+.ir-testim .testim:last-of-type {
+  border-bottom: 0; }
+
+/*Top Selling Items*/
+/* line 1178, _base.scss */
+#asidetopselling li {
+  float: none;
+  padding: 0 0 10px;
+  margin: 0;
+  position: relative; }
+
+/* line 1184, _base.scss */
+#asidetopselling li:last-of-type {
+  border: 0;
+  margin: 0; }
+
+/* line 1188, _base.scss */
+#asidetopselling li a.class2 {
+  float: none;
+  width: 50px;
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden; }
+
+/* line 1198, _base.scss */
+.asidebox li a.topselling_text {
+  float: none;
+  width: 125px;
+  display: inline-block;
+  padding: 5px 0 0;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 0.9em;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+/* line 1210, _base.scss */
+#asidetopselling li a img.class2 {
+  border: 0;
+  background: none;
+  max-width: 50px;
+  max-height: 50px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0; }
+
+/* line 1219, _base.scss */
+#asidetopselling ul {
+  margin-top: 30px; }
+
+/*Contact Us*/
+/* line 1225, _base.scss */
+form.contact .send {
+  margin-right: 0; }
+
+/* line 1228, _base.scss */
+form.contact input,
+form.contact textarea {
+  border: 1px solid #aaa;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1235, _base.scss */
+.formattedText a.gmLink {
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.6);
+  height: 23px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8em;
+  color: #fff;
+  border: 0; }
+
+/* line 1246, _base.scss */
+.gmLH {
+  text-align: right; }
+
+/* line 1249, _base.scss */
+.gmH {
+  display: inline-block;
+  overflow: hidden;
+  border: 1px solid #aaa;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 5px; }
+
+/* line 1258, _base.scss */
+.gmGh {
+  display: inline-block;
+  margin: 20px 0 20px 10px; }
+
+/* line 1262, _base.scss */
+.gmGh {
+  line-height: 0; }
+
+/* line 1265, _base.scss */
+.gmGh > * {
+  line-height: normal; }
+
+/* line 1268, _base.scss */
+.boxshadow .gmGh {
+  -webkit-box-shadow: 0 0 0 7px white, 0 0 0 8px #aaa, 0 4px 7px 9px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0 7px white, 0 0 0 8px #aaa, 0 4px 7px 9px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 7px white, 0 0 0 8px #aaa, 0 4px 7px 9px rgba(0, 0, 0, 0.2);
+  border: 0;
+  background-color: #fff; }
+
+/* line 1275, _base.scss */
+form.contact textarea {
+  min-width: 100%;
+  max-width: 100%; }
+
+/* line 1279, _base.scss */
+.contactBtnHold {
+  text-align: right; }
+
+/* line 1282, _base.scss */
+form.contact .send {
+  float: none;
+  display: inline-block; }
+
+/* line 1286, _base.scss */
+.contactMessage {
+  padding: 10px 0 0; }
+
+/* line 1289, _base.scss */
+.contact .error {
+  color: #a00; }
+
+/* line 1292, _base.scss */
+.contact input.error,
+.contact textarea.error {
+  color: #fff;
+  background-color: #a00; }
+
+/* line 1297, _base.scss */
+.captcha {
+  display: none; }
+
+/* line 1300, _base.scss */
+.cuAlign {
+  display: inline-block;
+  width: 100px;
+  padding-right: 5px; }
+
+/*Account Area*/
+/* line 1308, _base.scss */
+#addressupdatecontent a.actionbutton {
+  float: right;
+  margin: 10px 0 0; }
+
+/* line 1312, _base.scss */
+#addressupdatecontent div.checkoutcontainer input,
+#addressupdatecontent div.checkoutcontainer select,
+#addressupdatecontent div.checkoutcontainer textarea {
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 93%;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #aaa;
+  margin-left: 20px;
+  background: #fff; }
+
+/* line 1326, _base.scss */
+#addressupdatecontent div.checkoutcontainer textarea {
+  min-height: 100px; }
+
+/* line 1329, _base.scss */
+#addressupdatecontent div.checkoutcontainer .value {
+  width: 100%; }
+
+/* line 1332, _base.scss */
+.contentform .textbox textarea {
+  max-width: 93%;
+  width: 93%; }
+
+/* line 1336, _base.scss */
+ul.contentaddressform ul {
+  width: 100%; }
+
+/* line 1339, _base.scss */
+form[name="addressdetails"] .pagesubtitle h2,
+#addressupdatecontent h2 {
+  text-transform: capitalize;
+  font-size: 1em;
+  margin: 5px 0 2px; }
+
+/* line 1345, _base.scss */
+#addressupdatecontent div.checkoutcontainer > form {
+  margin: 0 0 20px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1352, _base.scss */
+#addressupdatecontent div.checkoutcontainer > form[name="addresslookup"] {
+  width: 100%; }
+
+/* line 1355, _base.scss */
+.checkoutcontainer button#submit {
+  margin-top: 10px;
+  float: right; }
+
+/* line 1359, _base.scss */
+#accountbuttons {
+  text-align: left;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 10px 0; }
+
+/* line 1367, _base.scss */
+#webmngmntareainner {
+  padding: 10px;
+  text-align: left;
+  margin-top: 20px; }
+
+/* line 1372, _base.scss */
+#webmngmntareainner b {
+  display: none; }
+
+/* line 1375, _base.scss */
+div#webmngmntarea,
+div#webmngmntarea a {
+  margin: 0; }
+
+/* line 1379, _base.scss */
+#accountbuttons ul li {
+  margin: 0;
+  padding-right: 5px;
+  width: auto; }
+
+/* line 1384, _base.scss */
+#accountbuttons ul li#myaccountlogout {
+  float: right; }
+
+/* line 1387, _base.scss */
+#accountbuttons ul li#myaccountshop {
+  display: none; }
+
+/* line 1390, _base.scss */
+div#myaccountaddressdetails,
+div#myaccountaccountdetails {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1397, _base.scss */
+div#myaccountaddressdetails {
+  margin-bottom: 10px; }
+
+/* line 1400, _base.scss */
+#myaccount ul.contentaddressform,
+#myaccount ul.contentaccountform {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1407, _base.scss */
+#webmngmntareainner br {
+  display: none; }
+
+/* line 1410, _base.scss */
+.article .welcome,
+div#webmngmntarea {
+  border: 0;
+  background: none; }
+
+/* line 1415, _base.scss */
+div.changepwd {
+  width: 100%;
+  text-align: center;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 10px 0 0; }
+
+/* line 1423, _base.scss */
+div.changepwd form {
+  width: 175px;
+  text-align: left;
+  display: inline-block;
+  float: none;
+  padding: 10px; }
+
+/* line 1430, _base.scss */
+div.changepwd form input.inputitem {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  background: #fff;
+  height: 30px;
+  padding: 5px; }
+
+/* line 1440, _base.scss */
+div.changepwd form input[name="submit"] {
+  float: right;
+  margin: 0; }
+
+/* line 1444, _base.scss */
+div.changepwd b {
+  margin-bottom: 10px;
+  display: inline-block; }
+
+/* line 1448, _base.scss */
+#myaccountupdate a.actionbutton {
+  float: right;
+  margin: 0;
+  width: 100px; }
+
+/* line 1453, _base.scss */
+div#myaccountdetailsactions {
+  margin-top: 20px; }
+
+/* line 1456, _base.scss */
+#myaccountpasswordchange {
+  margin: 5px 0 0; }
+
+/* line 1459, _base.scss */
+#myaccountaddressdetails input.inputitem,
+#myaccountaddressdetails select.inputitem,
+#myaccountaccountdetails select {
+  width: 93%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  background: #fff;
+  height: 30px;
+  padding: 5px;
+  margin-left: 10px; }
+
+/* line 1472, _base.scss */
+#myaccount ul.contentaddressform li.value,
+div#myaccountaccountdetails .value {
+  width: 100%; }
+
+/* line 1476, _base.scss */
+ul#accountdob input {
+  width: 50px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  background: #fff;
+  height: 30px;
+  padding: 5px;
+  margin: 5px; }
+
+/* line 1487, _base.scss */
+ul#accountdob input[name="dob1"] {
+  margin-left: 10px; }
+
+/* line 1490, _base.scss */
+#myaccount ul.contentaccountform ul.labelpairleft,
+#myaccount ul.contentaddressform ul.labelpairleft {
+  width: 100%;
+  margin-bottom: 20px; }
+
+/* line 1495, _base.scss */
+div#myaccountaccountdetails li {
+  margin: 0;
+  width: 100%; }
+
+/* line 1499, _base.scss */
+#addressupdatecontent div.checkoutcontainer ul.labelpairleft {
+  margin-bottom: 20px; }
+
+/* line 1502, _base.scss */
+#addressupdatecontent div.checkoutcontainer form[name="addresslookup"] input {
+  width: 93%;
+  margin-bottom: 10px; }
+
+/* line 1506, _base.scss */
+div.listtable ul.listtableheader,
+div.listtable ul.listtableline {
+  width: 98%;
+  border-bottom: 1px solid #aaa;
+  margin: 0 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  float: none; }
+
+/* line 1517, _base.scss */
+div.listtable ul.listtableline:nth-of-type(2n+1) {
+  background-color: #f5f5f5; }
+
+/* line 1520, _base.scss */
+div.listtable ul.listtableheader {
+  font-weight: bold; }
+
+/* line 1523, _base.scss */
+#accountgender .value input {
+  margin: 0 5px 2px 10px;
+  vertical-align: middle; }
+
+/* line 1527, _base.scss */
+#accountcheckbox input {
+  margin: 0 5px 0 0; }
+
+/* line 1530, _base.scss */
+#addressupdatecontent textarea {
+  width: 200px; }
+
+/* line 1533, _base.scss */
+#contactForm {
+  float: right;
+  width: 300px;
+  margin-left: 25px; }
+
+/* line 1538, _base.scss */
+form.contact {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1544, _base.scss */
+.tracking ul.crumb {
+  display: inline-block; }
+
+/* line 1547, _base.scss */
+div.trackingordersummary,
+div#trackingbillingaddress,
+div#trackingdeliveryaddress,
+div#trackingordertracking,
+div.listtable {
+  float: none;
+  width: auto; }
+
+/* line 1555, _base.scss */
+.tracking .pagetitle h1 {
+  margin-left: 0; }
+
+/* line 1558, _base.scss */
+.tracking div.pagesubtitle {
+  float: none; }
+
+/* line 1561, _base.scss */
+div.trackingordersummary {
+  margin-top: 30px; }
+
+/* line 1564, _base.scss */
+div#ordersummarytable,
+div#orderstatus {
+  width: auto; }
+
+/* line 1568, _base.scss */
+div.listtable ul.listtableheader li,
+div#htmlrecieptdelivery ul.labelpairleft li,
+div.listtable ul.listtableline li {
+  float: none;
+  display: inline-block; }
+
+/* line 1574, _base.scss */
+div#htmlrecieptdelivery ul.labelpairleft {
+  float: none;
+  margin: 20px 1%;
+  width: auto; }
+
+/* line 1579, _base.scss */
+div.trackingaddress,
+div#trackingordertracking {
+  margin-bottom: 20px; }
+
+/* line 1583, _base.scss */
+div.trackingaddress ul,
+div#orderstatus,
+#trackingordersummarylist,
+div#ordersummarytable {
+  padding-left: 20px; }
+
+/*Register*/
+/* line 1592, _base.scss */
+#registration a.actionbutton {
+  margin-bottom: 0;
+  float: right; }
+
+/* line 1596, _base.scss */
+#registration ul.contentform input.inputBtn {
+  margin: 0;
+  display: inline-block;
+  float: right;
+  width: auto; }
+
+/* line 1602, _base.scss */
+div#newregister {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  float: right;
+  padding-left: 5px;
+  margin-bottom: 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 10px; }
+
+/* line 1618, _base.scss */
+div#returning {
+  width: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 5px;
+  float: none;
+  margin-top: 20px; }
+
+/* line 1627, _base.scss */
+#registration ul.contentform {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1633, _base.scss */
+#registration ul.contentform .value {
+  width: 100%; }
+
+/* line 1636, _base.scss */
+#registration ul.contentform input {
+  width: 93%;
+  margin: 0 0 10px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  background: #fff;
+  padding: 5px;
+  height: 30px; }
+
+/* line 1647, _base.scss */
+#registration ul.contentform ul.labelpairleft,
+#returning ul li {
+  width: 100%; }
+
+/* line 1651, _base.scss */
+#registration form[name="accountdetails"] {
+  width: 100%;
+  float: none; }
+
+/* line 1655, _base.scss */
+div#registeraddressdetails {
+  width: 100%;
+  float: none; }
+
+/* line 1659, _base.scss */
+#registration ul.contentaddressform,
+#registration ul.contentaccountform {
+  float: none;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 20px; }
+
+/* line 1668, _base.scss */
+div#registeraccountdetials {
+  float: none;
+  width: 100%; }
+
+/* line 1672, _base.scss */
+#registerpassword .contentform {
+  margin: 0; }
+
+/* line 1675, _base.scss */
+#registration .value {
+  width: 100%; }
+
+/* line 1678, _base.scss */
+#registration input.inputitem,
+#registration select.inputitem {
+  width: 93%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  background: #fff;
+  height: 30px;
+  padding: 5px;
+  margin-left: 10px; }
+
+/* line 1690, _base.scss */
+#registration #accountdob input.inputitem {
+  width: 10%; }
+
+/* line 1693, _base.scss */
+div.welcome div.pagetitle {
+  display: none; }
+
+/* line 1696, _base.scss */
+ul.navPage li {
+  width: auto;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  float: none; }
+
+/* line 1703, _base.scss */
+ul.navPage li a,
+ul.navPage li a:link {
+  width: auto; }
+
+/* line 1707, _base.scss */
+#returning ul li#registerloginbutton {
+  margin-top: -30px;
+  float: right;
+  width: 100px; }
+
+/* line 1712, _base.scss */
+#registerforgotpassword a.button {
+  display: inline-block; }
+
+/* Text sales messages beneath navigation */
+/* line 1718, _base.scss */
+ul#salesWrap2 {
+  padding: 10px 0 8px;
+  width: 100%;
+  color: #000;
+  text-align: left;
+  border-bottom: 1px solid #aaa;
+  text-transform: uppercase; }
+
+/* line 1726, _base.scss */
+ul#salesWrap2 li {
+  list-style-type: none;
+  font-size: 1em;
+  color: #9B9B9B;
+  display: inline;
+  padding: 0 20px; }
+
+/* line 1733, _base.scss */
+ul#salesWrap2 li a {
+  display: inline;
+  line-height: 28px;
+  font-size: 1.1em;
+  -moz-transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out; }
+
+/* line 1741, _base.scss */
+ul#salesWrap2 li a:hover {
+  background-color: transparent;
+  -moz-transition: 100ms ease-in-out;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out; }
+
+/* line 1747, _base.scss */
+#nav li a {
+  padding: 0; }
+
+/* Show More */
+/* line 1753, _base.scss */
+.irMoreLink {
+  margin: 10px 0 0 0;
+  padding: 0 20px;
+  outline: 0; }
+
+/* line 1758, _base.scss */
+.irMore > div p {
+  padding: 5px 0;
+  margin: 0; }
+
+/* line 1762, _base.scss */
+.irMore {
+  margin: 20px 0;
+  padding: 0 15px; }
+
+/* line 1766, _base.scss */
+.pagebanner h1 {
+  padding: 0; }
+
+/* Homepage banner */
+/* line 1772, _base.scss */
+.irBan {
+  overflow: hidden;
+  zoom: 1;
+  display: none;
+  position: absolute;
+  line-height: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; }
+
+/* line 1785, _base.scss */
+.ban1 {
+  display: block;
+  z-index: 5; }
+
+/* line 1789, _base.scss */
+.irBanHold {
+  display: block;
+  overflow: hidden;
+  position: relative; }
+
+/* line 1794, _base.scss */
+.irBanBar {
+  height: 70px;
+  background: #000;
+  background: transparent\9;
+  background: rgba(0, 0, 0, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000',endColorstr='#99000000');
+  zoom: 1;
+  text-align: left;
+  padding: 15px;
+  color: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  line-height: normal;
+  width: 100%; }
+
+/* line 1812, _base.scss */
+.irBanBar:nth-child(n) {
+  filter: none; }
+
+/* line 1815, _base.scss */
+.irBanBar p,
+.irBanBar h2 {
+  margin: 0;
+  padding: 0;
+  color: #fff; }
+
+/* line 1821, _base.scss */
+.irBanBar p {
+  padding-left: 30px; }
+
+/* line 1824, _base.scss */
+.irBanDots {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 100px;
+  height: 25px;
+  background: #000;
+  background: transparent\9;
+  background: rgba(0, 0, 0, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000',endColorstr='#99000000');
+  zoom: 1;
+  padding: 0 5px;
+  z-index: 10; }
+
+/* line 1838, _base.scss */
+.irBanDots:nth-child(n) {
+  filter: none; }
+
+/* line 1841, _base.scss */
+.irBanDot {
+  border-radius: 100px;
+  width: 15px;
+  height: 15px;
+  margin: 5px 2.5px;
+  display: inline-block;
+  cursor: pointer;
+  opacity: .4;
+  filter: alpha(opacity="40");
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #D33794; }
+
+/* line 1858, _base.scss */
+.irBanDot.active {
+  opacity: 1;
+  filter: alpha(opacity="100"); }
+
+/* line 1862, _base.scss */
+.irBanPrev,
+.irBanNext {
+  position: absolute;
+  top: 50px;
+  height: 100px;
+  width: 50px;
+  z-index: 10;
+  cursor: pointer; }
+
+/* line 1871, _base.scss */
+.irBanPrev {
+  left: 0;
+  background-image: url(../images/banPrev.png); }
+
+/* line 1875, _base.scss */
+.irBanNext {
+  right: 0;
+  background-image: url(../images/banNext.png); }
+
+/* line 1879, _base.scss */
+.banFull .irBanBar {
+  padding: 15px 1035px; }
+
+/* line 1882, _base.scss */
+.banFull .irBanDots {
+  right: 1030px; }
+
+/* line 1885, _base.scss */
+.irBan a {
+  display: block; }
+
+/*Header - Currency flags*/
+/* line 1891, _base.scss */
+.irFlags {
+  list-style: none;
+  margin: 5px 0 0 10px;
+  float: none;
+  padding: 0;
+  display: block;
+  height: 20px;
+  overflow: hidden;
+  text-align: right; }
+
+/* line 1901, _base.scss */
+.irFlags li {
+  display: inline-block;
+  height: 18px;
+  cursor: pointer;
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity="60"); }
+
+/* line 1909, _base.scss */
+.irFlags span {
+  vertical-align: top;
+  height: 20px;
+  display: inline-block; }
+
+/*Header - Basket*/
+/* line 1915, _base.scss */
+.miniBasket {
+  height: 0;
+  overflow: hidden; }
+
+/* line 1919, _base.scss */
+#headerbasket.miniBasketHold {
+  overflow: hidden;
+  float: none;
+  text-align: right;
+  width: auto;
+  height: auto;
+  position: absolute;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 10px;
+  z-index: 50;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: 400ms ease-in;
+  -moz-transition: 400ms ease-in;
+  transition: 400ms ease-in; }
+
+/* line 1940, _base.scss */
+#headerbasket.miniBasketHold.open {
+  -webkit-box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.3); }
+
+/* line 1945, _base.scss */
+.miniBasket:before {
+  content: "";
+  padding: 10px 0 0;
+  display: block; }
+
+/* line 1950, _base.scss */
+.miniBasket #basketcontenttable,
+.miniBasket #basketsubtotal,
+.miniBasket ul.majorbasketsubtotal li,
+.miniBasket ul.majorbasketsubtotal,
+.mbBottom a:link {
+  float: none;
+  width: auto; }
+
+/* line 1958, _base.scss */
+.mbBottom a:link {
+  display: block;
+  text-align: center; }
+
+/* line 1962, _base.scss */
+.mbAlign {
+  width: 100px;
+  display: inline-block;
+  padding-left: 5px; }
+
+/* line 1967, _base.scss */
+.miniBasket div.listtable ul.basketline {
+  margin: 0;
+  padding: 10px;
+  width: auto;
+  background: none; }
+
+/* line 1973, _base.scss */
+.miniBasket div.listtable ul.basketline:first-of-type {
+  border-top: 1px solid #aaa; }
+
+/* line 1976, _base.scss */
+.miniBasket div#basketcontenttable li {
+  display: block;
+  width: auto; }
+
+/* line 1980, _base.scss */
+.miniBasket #basketsubtotal {
+  padding: 10px; }
+
+/* line 1983, _base.scss */
+.miniBasket div#basketcontenttable li.basketitem {
+  float: left;
+  margin-right: 5px; }
+
+/* line 1987, _base.scss */
+.miniBasket div#basketcontenttable li.basketitem a:link {
+  width: 40px;
+  height: 40px;
+  display: table-cell;
+  padding: 5px;
+  vertical-align: middle;
+  text-align: center;
+  background: #fff; }
+
+/* line 1996, _base.scss */
+.miniBasket div#basketcontenttable li.basketitem a img {
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 50px;
+  max-height: 50px; }
+
+/* line 2002, _base.scss */
+.miniBasket div.listtable li.basketdescription a {
+  font-weight: bold; }
+
+/*Header - Logo*/
+/* line 2006, _base.scss */
+#logo {
+  padding: 0 0 0;
+  margin: 0;
+  float: none; }
+
+/*Header - Search*/
+/* line 2012, _base.scss */
+#headersearch {
+  margin: 0;
+  height: auto;
+  margin-top: 10px; }
+
+/*Header*/
+/* line 2018, _base.scss */
+#headerright {
+  height: auto;
+  float: right;
+  width: 350px;
+  position: relative; }
+
+/* line 2024, _base.scss */
+#headerleft {
+  height: auto;
+  float: left; }
+
+/* line 2028, _base.scss */
+#header {
+  height: 150px;
+  margin: 0 0 85px; }
+
+/* line 2032, _base.scss */
+#nav {
+  top: 150px; }
+
+/* Dropdown Menu */
+/* line 2038, _base.scss */
+.menubox table {
+  margin: 0; }
+
+/* line 2041, _base.scss */
+.menubox td {
+  padding: 0 10px; }
+
+/* line 2044, _base.scss */
+#qm0 div {
+  padding: 20px 10px;
+  -moz-box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.2); }
+
+/* line 2049, _base.scss */
+#qm0 .menubox a.qmlevel0 {
+  border-bottom: 1px dotted #bbb;
+  text-transform: capitalize; }
+
+/* line 2053, _base.scss */
+#qm0 .menubox a.qmlevel1,
+#qm0 .menubox a.qmlevel2 {
+  padding-left: 15px;
+  text-transform: capitalize;
+  font-size: 0.8em; }
+
+/* line 2059, _base.scss */
+#qm0 .menubox a.qmlevel2 {
+  padding-left: 25px; }
+
+/* line 2062, _base.scss */
+#nav {
+  background: none;
+  height: auto; }
+
+/* line 2067, _base.scss */
+#nav #qm0 a:hover,
+#nav #qm0 a.qmactive {
+  background: none;
+  text-decoration: none;
+  color: #666666; }
+
+/* line 2073, _base.scss */
+#qm0 div {
+  background-color: #fff;
+  border: none;
+  border-top: 0;
+  color: #0ae0f9; }
+
+/* line 2079, _base.scss */
+#nav #qm0 div a {
+  -moz-transition: background 400ms ease-in-out;
+  -webkit-transition: background 400ms ease-in-out;
+  transition: background 400ms ease-in-out; }
+
+/* line 2084, _base.scss */
+#nav #qm0 div a:hover {
+  -moz-transition: background 100ms ease-in-out;
+  -webkit-transition: background 100ms ease-in-out;
+  transition: background 100ms ease-in-out;
+  background-color: #f0f0f0;
+  text-decoration: none; }
+
+/* line 2091, _base.scss */
+#qm0 > a {
+  height: auto;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: none;
+  display: inline-block; }
+
+/*Footer*/
+/* line 2102, _base.scss */
+#footer div.footerDiv {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+  width: 24%;
+  display: inline-block;
+  vertical-align: top; }
+
+/* line 2111, _base.scss */
+a.secureLogos {
+  float: right;
+  margin: 30px 0 10px; }
+
+/* line 2115, _base.scss */
+.socialLinks a.lnk,
+.tyPgLinks a.lnk {
+  -moz-transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  width: 65px;
+  height: 65px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #D33794;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  -moz-box-shadow: 0 3px 5px 0 rgba(255, 255, 255, 0.2), 0 -2px 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(255, 255, 255, 0.2), 0 -2px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 5px 0 rgba(255, 255, 255, 0.2), 0 -2px 3px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 5px 5px 0; }
+
+/* line 2134, _base.scss */
+.socialLinks a.lnk:hover,
+.tyPgLinks a.lnk:hover {
+  -moz-transition: 200ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  background-color: #0a4769;
+  -moz-box-shadow: 0 -3px 5px 0 rgba(255, 255, 255, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 -3px 5px 0 rgba(255, 255, 255, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -3px 5px 0 rgba(255, 255, 255, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.2); }
+
+/* line 2144, _base.scss */
+#footer {
+  background-color: #171717;
+  height: auto; }
+
+/* line 2148, _base.scss */
+#footer .copyright .small {
+  float: right; }
+
+/* line 2151, _base.scss */
+#footer div.copyright {
+  padding: 0;
+  font-size: 0.6em;
+  overflow: hidden;
+  zoom: 1;
+  margin: 10px 0 10px; }
+
+/* line 2159, _base.scss */
+#footer div#pagetimestamp {
+  float: left; }
+
+/* line 2162, _base.scss */
+#footer div {
+  float: none;
+  padding: 0;
+  width: auto;
+  margin: 0; }
+
+/* line 2168, _base.scss */
+#footer h2 {
+  padding-bottom: 30px;
+  margin: 0; }
+
+/* line 2172, _base.scss */
+.secureLogos > img {
+  padding: 0 3px;
+  vertical-align: top; }
+
+/* line 2176, _base.scss */
+#footer .secureLogos .payDiv {
+  display: inline-block;
+  height: 30px;
+  border-right: 1px solid #ddd;
+  margin: 0 3px; }
+
+/* line 2182, _base.scss */
+#footer div.signUpSent {
+  padding-left: 8px; }
+
+/* line 2185, _base.scss */
+#footer a.lnk-facebook,
+.tyPgLinks a.lnk-facebook {
+  background-image: url(../images/lnk-facebook.png); }
+
+/* line 2189, _base.scss */
+#footer a.lnk-google,
+.tyPgLinks a.lnk-google {
+  background-image: url(../images/lnk-google.png); }
+
+/* line 2193, _base.scss */
+#footer a.lnk-instagram,
+.tyPgLinks a.lnk-instagram {
+  background-image: url(../images/lnk-instagram.png); }
+
+/* line 2197, _base.scss */
+#footer a.lnk-linkedin,
+.tyPgLinks a.lnk-linkedin {
+  background-image: url(../images/lnk-linkedin.png); }
+
+/* line 2201, _base.scss */
+#footer a.lnk-pinterest,
+.tyPgLinks a.lnk-pinterest {
+  background-image: url(../images/lnk-pinterest.png); }
+
+/* line 2205, _base.scss */
+#footer a.lnk-twitter,
+.tyPgLinks a.lnk-twitter {
+  background-image: url(../images/lnk-twitter.png); }
+
+/* line 2209, _base.scss */
+#footer a.lnk-youtube,
+.tyPgLinks a.lnk-youtube {
+  background-image: url(../images/lnk-youtube.png); }
+
+/*Checkout - Thank You*/
+/* line 2216, _base.scss */
+.tyPgLinks {
+  margin-top: 40px;
+  text-align: center; }
+
+/* line 2220, _base.scss */
+.tyPage {
+  text-align: center; }
+
+/* line 2223, _base.scss */
+.tyPage h1 {
+  text-align: left; }
+
+/* line 2226, _base.scss */
+.tyPage h2 {
+  margin: 30px 0; }
+
+/*Product Page - Right*/
+/* line 2232, _base.scss */
+div.component_stockdetail .detailInfo {
+  padding: 20px;
+  margin: 0 0 10px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+  position: relative; }
+
+/* line 2244, _base.scss */
+.addthisHold {
+  float: right;
+  margin: 0 0 10px 10px;
+  text-align: right; }
+
+/* line 2249, _base.scss */
+.addthis_toolbox {
+  margin: 0;
+  display: inline-block; }
+
+/* line 2253, _base.scss */
+div.addthis_toolbox a.at300b {
+  float: none;
+  display: inline-block; }
+
+/* line 2257, _base.scss */
+.productprice {
+  margin: 0; }
+
+/* line 2260, _base.scss */
+.qtyaddtobasket {
+  overflow: hidden;
+  zoom: 1; }
+
+/* line 2264, _base.scss */
+.productdetailwrap form {
+  margin: 0;
+  overflow: hidden;
+  zoom: 1;
+  text-align: left; }
+
+/* line 2270, _base.scss */
+ul.detailextras {
+  width: auto;
+  float: none;
+  margin: 10px 0 0;
+  left: 0;
+  text-align: center; }
+
+/* line 2277, _base.scss */
+a.buttonaddtobasket {
+  padding: 5px 0;
+  height: 30px;
+  font-size: 1.2em;
+  float: right;
+  width: 57%;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top; }
+
+/* line 2288, _base.scss */
+.productpricediscountname {
+  margin-bottom: 10px; }
+
+/* line 2291, _base.scss */
+.productprice {
+  margin: 0;
+  font-size: 1em; }
+
+/* line 2295, _base.scss */
+.basketSpacer {
+  padding-top: 50px; }
+
+/* line 2298, _base.scss */
+.productprice strong {
+  font-size: 1.8em; }
+
+/* line 2301, _base.scss */
+.productprice .detailRRP,
+.productprice strike {
+  display: block;
+  margin-bottom: 2px; }
+
+/* line 2306, _base.scss */
+#stockindicatorAjax {
+  margin: 0;
+  position: relative; }
+
+/* line 2310, _base.scss */
+#stockindicatorAjax li {
+  text-align: left;
+  height: 25px;
+  line-height: 25px; }
+
+/* line 2315, _base.scss */
+div#pagevalidation_ajax ul.labelpairleft .validationtext {
+  color: #bb0000;
+  margin-top: 5px; }
+
+/* line 2319, _base.scss */
+div#pagevalidation_ajax ul.labelpairleft {
+  border: 2px #bb0000 solid;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  background: #fff; }
+
+/* line 2328, _base.scss */
+.detailInfo #stockindicatorAjax li.basketqty {
+  float: none;
+  margin: 0;
+  position: absolute;
+  width: 100%; }
+
+/* line 2334, _base.scss */
+.detailInfo #stockindicatorAjax li.basketqty a {
+  padding: 5px;
+  border: 1px solid #d33794;
+  line-height: 25px;
+  text-align: center;
+  height: 35px;
+  display: inline-block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 2346, _base.scss */
+.detailOurPriceText {
+  display: none; }
+
+/* line 2349, _base.scss */
+.productdetailwrap .stockStatus span {
+  font-size: 1em;
+  position: relative;
+  top: 30px; }
+
+/* line 2354, _base.scss */
+.qtyaddtobasket select.inputitem {
+  width: 100%;
+  margin: 0 auto 5px;
+  padding: 5px;
+  height: 30px;
+  outline: 0;
+  border: 1px solid #aaa;
+  background: #fff; }
+
+/* line 2363, _base.scss */
+.qtyaddtobasket .optionslist {
+  text-align: center; }
+
+/* line 2366, _base.scss */
+.addtobasketqty {
+  text-align: center;
+  margin-bottom: 10px; }
+
+/* line 2370, _base.scss */
+.addtobasketqty > * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 25px;
+  display: inline-block;
+  vertical-align: top; }
+
+/* line 2378, _base.scss */
+ul.detailextras li {
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px; }
+
+/* line 2383, _base.scss */
+#div_giftwrapoptions {
+  border: 0;
+  background: none;
+  padding: 10px 0 0;
+  margin: 10px 0 0;
+  width: 100%;
+  border-top: 1px #ccc solid;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-align: left; }
+
+/* line 2395, _base.scss */
+#div_giftwrapoptions textarea {
+  width: 100%;
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #aaa;
+  background: #fff;
+  margin: 0; }
+
+/* line 2406, _base.scss */
+#div_giftwrapoptions h3 {
+  margin-top: 5px;
+  font-size: 1.2em;
+  font-weight: bold; }
+
+/* line 2411, _base.scss */
+#div_giftwrapoptions select {
+  width: 100%;
+  margin: 5px 0 0;
+  padding: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 30px;
+  border: 1px solid #aaa; }
+
+/* line 2421, _base.scss */
+.detailextras .extras {
+  cursor: pointer; }
+
+/* line 2424, _base.scss */
+.text_qtyinbasket {
+  float: none; }
+
+/* line 2427, _base.scss */
+.addtobasketqty > * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 20%;
+  height: 30px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  font-size: 12px; }
+
+/* line 2439, _base.scss */
+div.component_stockdetail .detailInfo .qtyaddtobasket .inputitem_productqty {
+  border: 1px solid #aaa;
+  margin: 0 5%;
+  width: 50%;
+  text-align: center; }
+
+/* line 2445, _base.scss */
+.addtobasketqty a {
+  height: 30px;
+  background-color: #aaa;
+  padding: 5px;
+  font-size: 12px; }
+
+/* line 2451, _base.scss */
+.addtobasketqty a:hover {
+  background-color: #888; }
+
+/* line 2454, _base.scss */
+.addtobasketqty a:active {
+  background-color: #ccc;
+  -webkit-transition: 50ms ease-in-out;
+  -moz-transition: 50ms ease-in-out;
+  transition: 50ms ease-in-out; }
+
+/* line 2460, _base.scss */
+.addtobasketqty {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 0;
+  width: 40%;
+  display: inline-block;
+  vertical-align: top; }
+
+/* line 2468, _base.scss */
+div.component_stockdetail .detailInfo .qtyaddtobasket .inputitem_productqty:nth-of-type(n) {
+  margin: 0;
+  border-width: 1px 0;
+  width: 60%; }
+
+/* line 2473, _base.scss */
+.addtobasketqty a:nth-of-type(2n+1) {
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+/* line 2481, _base.scss */
+.addtobasketqty a:nth-of-type(2n+2) {
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+/* line 2489, _base.scss */
+.detailquantitytext {
+  display: none; }
+
+/* line 2492, _base.scss */
+.detailInfo h1 {
+  font-size: 1.2em;
+  font-weight: bold; }
+
+/* line 2496, _base.scss */
+.productdetailwrap form[name="emailenq"] {
+  text-align: left;
+  margin-bottom: 5px; }
+
+/* line 2500, _base.scss */
+.productdetailwrap form[name="emailenq"] input[type="submit"] {
+  width: 20%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  vertical-align: top;
+  margin-top: 10px; }
+
+/* line 2516, _base.scss */
+.productdetailwrap form[name="emailenq"] input[type="text"] {
+  height: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #aaa;
+  width: 80%;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
+  vertical-align: top;
+  margin-top: 10px; }
+
+/* line 2534, _base.scss */
+.discount {
+  margin-bottom: 5px; }
+
+/* line 2537, _base.scss */
+.prodPgRight {
+  float: right;
+  width: 44%;
+  position: relative;
+  display: inline-block; }
+
+/* line 2543, _base.scss */
+.detail .navPage.blocklistright li a {
+  float: none;
+  width: auto;
+  display: inline-block; }
+
+/*Product Page - Left*/
+/* line 2549, _base.scss */
+.component_stockdetail #imagescontainer img.left {
+  z-index: 11; }
+
+/* line 2552, _base.scss */
+div.component_stockdetail .productimageholder#imagescontainer {
+  margin: 0;
+  width: 522px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+  margin-right: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 0; }
+
+/* line 2565, _base.scss */
+div#ajax_image_wrap {
+  padding: 10px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 10px;
+  display: block;
+  float: none;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  position: relative;
+  z-index: 10; }
+
+/* line 2580, _base.scss */
+div#ajax_image_wrap .productimageholder {
+  width: 100%;
+  margin: 0;
+  line-height: 0; }
+
+/* line 2585, _base.scss */
+.component_stockdetail #imagescontainer img.left {
+  left: 0;
+  pointer-events: none;
+  background: url("trans.gif");
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='trans.gif',sizingMethod='scale');
+  background: none !important; }
+
+/* line 2592, _base.scss */
+.component_stockdetail #imagescontainer > a {
+  padding: 0 10px 10px;
+  vertical-align: middle; }
+
+/* line 2596, _base.scss */
+.MagicBoxShadow {
+  -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3); }
+
+/* line 2601, _base.scss */
+.MagicZoomHeader {
+  display: none; }
+
+/* line 2604, _base.scss */
+.MagicZoomBigImageCont {
+  border: 1px solid #aaa; }
+
+/* line 2607, _base.scss */
+.MagicThumb-expanded {
+  cursor: url(images/zoomout.cur), pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  cursor: zoom-out;
+  border: 1px solid #aaa;
+  -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3); }
+
+/* line 2617, _base.scss */
+.MagicZoomPlus,
+.MagicZoomPlus:hover,
+.MagicZoomPup {
+  cursor: url(images/zoomin.cur), pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in; }
+
+/* line 2625, _base.scss */
+.MagicThumb-buttons a {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none; }
+
+/* line 2630, _base.scss */
+.MagicThumb-buttons {
+  background-image: url(../images/buttons1.png); }
+
+/* line 2633, _base.scss */
+.MagicZoomPlusHint {
+  padding-right: 10px !important; }
+
+/* line 2636, _base.scss */
+a#mainZoomer,
+a#mainZoomer:link,
+a#mainZoomer:visited {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none; }
+
+/* line 2643, _base.scss */
+#magicZoomPos {
+  position: absolute;
+  width: 100%; }
+
+/*Product Page - Tabs*/
+/* line 2648, _base.scss */
+#tabsholder {
+  float: none;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 2657, _base.scss */
+#tabsholder > * {
+  float: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative; }
+
+/* line 2664, _base.scss */
+ul.tabs li {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0 2px 0 0;
+  border: 0;
+  background: none;
+  width: auto;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: visible; }
+
+/* line 2677, _base.scss */
+ul.tabs li .tab,
+ul.tabs li .tab#tabcurrent {
+  border: 1px #aaa solid;
+  background-color: #eee;
+  width: auto;
+  display: inline-block;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 29px; }
+
+/* line 2691, _base.scss */
+ul.tabs li .tab#tabcurrent,
+ul.tabs li .tab:hover {
+  background-color: #fff;
+  border-bottom: 0;
+  height: 30px; }
+
+/* line 2697, _base.scss */
+ul.tabs {
+  z-index: 2;
+  border: 0; }
+
+/* line 2701, _base.scss */
+#tabsholder .tab_container {
+  z-index: 1;
+  border: 0;
+  padding: 0 20px 0 0;
+  width: auto;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 300px;
+  overflow-y: scroll;
+  float: none; }
+
+/* line 2713, _base.scss */
+#tabsholder .tabBorder {
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-top: -2px; }
+
+/* line 2724, _base.scss */
+ul.tabs li a:hover {
+  background: none; }
+
+/* line 2727, _base.scss */
+ul.tabs li .tab:hover {
+  background-color: #fff; }
+
+/* line 2730, _base.scss */
+ul.tabs li a {
+  padding: 0 10px;
+  text-align: center; }
+
+/*Product Page - Extras*/
+/* line 2735, _base.scss */
+#linkedproductswrapper {
+  width: 522px;
+  float: left;
+  clear: none;
+  margin-top: 10px; }
+
+/* line 2741, _base.scss */
+.stockStatus span {
+  font-size: 1em; }
+
+/* line 2744, _base.scss */
+.stocklistingwrapper .stockthumbFormat1 {
+  height: 200px; }
+
+/* line 2747, _base.scss */
+#linkedproductswrapper ul.detailstocklisting li.stockThumb {
+  border: solid 1px #aaa; }
+
+/* line 2750, _base.scss */
+#recentlyviewedbody .stockThumb {
+  height: auto;
+  width: 16.66666666%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0 5px 10px; }
+
+/* line 2760, _base.scss */
+#recentlyviewedbody .stockThumb .stockthumbwrapper {
+  height: 335px; }
+
+/* line 2763, _base.scss */
+ul.detailstocklisting li.stockThumb:hover {
+  background-color: transparent; }
+
+/* line 2766, _base.scss */
+#recentlyviewedbody .stockThumb .productThumbImage a {
+  height: 128px; }
+
+/* line 2769, _base.scss */
+#component_stockdetail_recentlyviewed #component_scrollbox ul.detailstocklisting {
+  height: auto; }
+
+/* line 2772, _base.scss */
+#wrapper .detail ul.crumb {
+  float: left; }
+
+/* line 2775, _base.scss */
+#linkedproductswrapper .stocklistingbody {
+  padding: 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%; }
+
+/* line 2782, _base.scss */
+#linkedproductswrapper h2 {
+  margin: 0;
+  font-weight: bold;
+  padding-bottom: 20px; }
+
+/* line 2787, _base.scss */
+#linkedproductswrapper ul.detailstocklisting li.stockThumb {
+  width: 45%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 2.5% 10px;
+  height: 215px; }
+
+/* line 2795, _base.scss */
+#linkedproductswrapper ul.detailstocklisting li.stockThumb .stockthumbprice,
+#linkedproductswrapper ul.detailstocklisting li.stockThumb .formwrap {
+  display: none; }
+
+/* line 2799, _base.scss */
+#linkedproductswrapper ul.detailstocklisting li.stockThumb .stockthumbFormat1 {
+  height: auto; }
+
+/* line 2802, _base.scss */
+#linkedproductswrapper ul.detailstocklisting li.stockThumb li.productThumbName {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0; }
+
+/* line 2809, _base.scss */
+#linkedproductswrapper ul.detailstocklisting li.productThumbImage {
+  height: 163px; }
+
+/* line 2812, _base.scss */
+#recentlyviewedbody .stockthumbFormat3 {
+  padding: 10px; }
+
+/* line 2815, _base.scss */
+#recentlyviewedbody ul.detailstocklisting li.productThumbImage {
+  height: auto;
+  padding-bottom: 5px; }
+
+/* line 2819, _base.scss */
+#recentlyviewedbody .stockthumbprice {
+  width: 100%;
+  float: none;
+  text-align: left; }
+
+/* line 2824, _base.scss */
+#recentlyviewedbody .productThumbName a {
+  font-weight: bold; }
+
+/* line 2827, _base.scss */
+#component_stockdetail_recentlyviewed h2 {
+  margin: 0 0 20px;
+  padding: 20px 0 10px;
+  border-bottom: 1px solid #aaa;
+  float: none;
+  width: 100%;
+  font-weight: bold; }
+
+/*Basket*/
+/* line 2838, _base.scss */
+.barGrad {
+  background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.12) 40%, rgba(0, 0, 0, 0.3) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(40%, rgba(0, 0, 0, 0.12)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.12) 40%, rgba(0, 0, 0, 0.3) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.12) 40%, rgba(0, 0, 0, 0.3) 100%);
+  background: -ms-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.12) 40%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.12) 40%, rgba(0, 0, 0, 0.3) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000',endColorstr='#4d000000',GradientType=0 );
+  background-color: #D33794; }
+
+/* line 2848, _base.scss */
+.barBord {
+  border: 1px solid #777;
+  height: 10px;
+  width: 100%; }
+
+/* line 2853, _base.scss */
+li.promocodes ul,
+li.vouchercode ul {
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%; }
+
+/* line 2861, _base.scss */
+#facebox,
+#facebox .popup,
+#facebox .content {
+  max-height: 500px;
+  height: 500px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 2870, _base.scss */
+#facebox .content {
+  overflow-y: auto;
+  display: block;
+  height: 494px; }
+
+/* line 2875, _base.scss */
+#facebox .close {
+  right: 20px; }
+
+/* line 2878, _base.scss */
+li.basketitem {
+  width: 300px; }
+
+/* line 2881, _base.scss */
+li.basketdescription {
+  width: 245px; }
+
+/* line 2884, _base.scss */
+div#basketcontenttable li {
+  vertical-align: middle; }
+
+/*Stock Thumbs*/
+/* line 2890, _base.scss */
+.stockThumb .productThumbImage a {
+  height: auto;
+  display: table-cell;
+  vertical-align: middle; }
+
+/* line 2895, _base.scss */
+.stockThumb li.productThumbImage {
+  display: table;
+  position: relative; }
+
+/* line 2899, _base.scss */
+.stockThumb li ul.formwrapper li {
+  display: block;
+  width: 100%;
+  float: none;
+  position: static;
+  margin: 0; }
+
+/* line 2906, _base.scss */
+ul.formwrapper li.basketqty a .text_qtyinbasket,
+ul.stockthumbwrapper li.basketqty a .text_qtyinbasket {
+  float: none;
+  position: static;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center; }
+
+/* line 2915, _base.scss */
+.stockThumb li ul.formwrapper li.stockStatus,
+.stockThumb li ul.formwrapper li.stockStatusFormat4 {
+  height: 25px;
+  text-align: center; }
+
+/* line 2920, _base.scss */
+.stockThumb li ul.formwrapper li.basketqty,
+.stockThumb ul.stockthumbwrapper li.basketqty {
+  height: 25px;
+  margin-top: -25px;
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+  text-align: center; }
+
+/* line 2929, _base.scss */
+.stockThumb ul.stockthumbwrapper li.basketqty {
+  margin-top: 0;
+  width: 100%; }
+
+/* line 2933, _base.scss */
+.stockThumb li ul.formwrapper li.stockQuantity {
+  height: 25px;
+  margin-top: -25px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  text-align: center; }
+
+/* line 2941, _base.scss */
+ul.productsLayoutModeThumb li.stockThumb {
+  margin: 0;
+  border: 0;
+  width: 25%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  height: auto; }
+
+/* line 2954, _base.scss */
+ul.productsLayoutModeThumb div.stockthumb {
+  width: 100%;
+  overflow: hidden;
+  zoom: 1;
+  height: 365px;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative; }
+
+/* line 2965, _base.scss */
+ul.blocklist li.formwrap {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  float: none; }
+
+/* line 2971, _base.scss */
+ul.blocklist {
+  float: none;
+  overflow: hidden;
+  zoom: 1; }
+
+/* line 2976, _base.scss */
+.stockThumb .stockthumbwrapper > li {
+  float: none; }
+
+/* line 2979, _base.scss */
+.stockthumbwrapper {
+  position: relative;
+  height: 100%; }
+
+/* line 2983, _base.scss */
+ul.productsLayoutModeThumb li.stockthumbprice {
+  height: 45px;
+  float: none; }
+
+/* line 2988, _base.scss */
+ul.productsLayoutModeList .text_qtyinbasket {
+  top: -25px;
+  position: relative;
+  left: 50px; }
+
+/* line 2993, _base.scss */
+ul.blocklist li.formwrap a.catpageaddtobasket {
+  width: 100%;
+  float: none; }
+
+/* line 2997, _base.scss */
+.stockThumb li ul.formwrapper li.productqty > * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 20%;
+  height: 20px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0; }
+
+/* line 3008, _base.scss */
+.stockThumb li ul.formwrapper li.productqty input {
+  border: 1px solid #aaa;
+  margin: 0 5%;
+  width: 50%;
+  text-align: center; }
+
+/* line 3014, _base.scss */
+.stockThumb li ul.formwrapper li.productqty a {
+  height: 20px;
+  background-color: #aaa;
+  padding: 0; }
+
+/* line 3019, _base.scss */
+.stockThumb li ul.formwrapper li.productqty a:hover {
+  background-color: #888; }
+
+/* line 3022, _base.scss */
+.stockThumb li ul.formwrapper li.productqty a:active {
+  background-color: #ccc;
+  -webkit-transition: 50ms ease-in-out;
+  -moz-transition: 50ms ease-in-out;
+  transition: 50ms ease-in-out; }
+
+/* line 3028, _base.scss */
+.stockThumb li ul.formwrapper li.productqty {
+  margin-bottom: 5px;
+  text-align: center; }
+
+/* line 3032, _base.scss */
+.stockThumb li ul.formwrapper li.productqty input:nth-of-type(n) {
+  margin: 0;
+  border-width: 1px 0;
+  width: 60%; }
+
+/* line 3037, _base.scss */
+.stockThumb li ul.formwrapper li.productqty a:nth-of-type(2n+1) {
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+/* line 3045, _base.scss */
+.stockThumb li ul.formwrapper li.productqty a:nth-of-type(2n+2) {
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+/*Homepage Item Alignment*/
+/* line 3054, _base.scss */
+#homepage ul.productsLayoutModeThumb li.stockThumb {
+  width: 20%;
+  margin: 0;
+  border: 0; }
+
+/* line 3059, _base.scss */
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(5n+1) {
+  padding-right: 10px;
+  padding-left: 0; }
+
+/* line 3063, _base.scss */
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(5n+2) {
+  padding-right: 7.5px;
+  padding-left: 2.5px; }
+
+/* line 3067, _base.scss */
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(5n+4) {
+  padding-right: 2.5px;
+  padding-left: 7.5px; }
+
+/* line 3071, _base.scss */
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(5n+5) {
+  padding-right: 0;
+  padding-left: 10px; }
+
+/*Category Page Item Alignment*/
+/* line 3076, _base.scss */
+ul.productsLayoutModeThumb li.stockThumb {
+  width: 25%;
+  margin: 0;
+  border: 0; }
+
+/* line 3081, _base.scss */
+ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+1) {
+  padding-right: 10px;
+  padding-left: 0; }
+
+/* line 3085, _base.scss */
+ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+2) {
+  padding-right: 6.25px;
+  padding-left: 2.5px; }
+
+/* line 3089, _base.scss */
+ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+3) {
+  padding-right: 2.5px;
+  padding-left: 6.25px; }
+
+/* line 3093, _base.scss */
+ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+4) {
+  padding-right: 0;
+  padding-left: 10px; }
+
+/*Homepage 4 items per line*/
+/*
+#homepage ul.productsLayoutModeThumb li.stockThumb{
+	width:25%;
+	margin:0;
+	border:0;
+}
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+1){
+	padding-right: 10px;
+	padding-left: 0;
+}
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+2){
+	padding-right: 6.25px;
+	padding-left: 2.5px;
+}
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+3){
+	padding-right: 2.5px;
+	padding-left: 6.25px;
+}
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+4){
+	padding-right: 0;
+	padding-left: 10px;
+}
+*/
+/*Category Page 3 items per line*/
+/*
+ul.productsLayoutModeThumb li.stockThumb{
+	width:33.333333%;
+	margin:0;
+	border:0;
+}
+ul.productsLayoutModeThumb li.stockThumb:nth-of-type(3n+1){
+	padding-right: 10px;
+	padding-left: 0;
+}
+ul.productsLayoutModeThumb li.stockThumb:nth-of-type(3n+2){
+	padding-right: 2.5px;
+	padding-left: 2.5px;
+}
+ul.productsLayoutModeThumb li.stockThumb:nth-of-type(3n+3){
+	padding-right: 0;
+	padding-left: 10px;
+}
+*/
+/* line 3141, _base.scss */
+ul.productsLayoutModeThumb li.stockThumb li.productThumbName {
+  font-weight: bold; }
+
+/*List View*/
+/* line 3145, _base.scss */
+ul.productsLayoutModeList li.stockThumb {
+  float: none;
+  position: static;
+  overflow: hidden;
+  zoom: 1;
+  border-bottom: 1px solid #aaa;
+  padding: 10px 0; }
+
+/* line 3153, _base.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper {
+  float: none;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+  zoom: 1; }
+
+/* line 3161, _base.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper .stockthumbfulltextFormat4 {
+  float: none;
+  margin: 15px 0 0 5px;
+  display: inline-block; }
+
+/* line 3166, _base.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper li.formwrap {
+  width: 20%;
+  right: 0; }
+
+/* line 3170, _base.scss */
+.stockthumbFormat4 a.catpageaddtobasketlistlayout {
+  float: none;
+  width: 100%; }
+
+/* line 3174, _base.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper li.productThumbName,
+ul.productsLayoutModeList li ul.stockthumbwrapper li.productThumbImage {
+  display: inline-block;
+  vertical-align: top;
+  float: left; }
+
+/* line 3180, _base.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper li.productThumbName {
+  margin: 5px 0 0 5px; }
+
+/* line 3183, _base.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper li.stockthumbprice li {
+  float: none; }
+
+/* line 3186, _base.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper li.stockthumbprice {
+  margin: 15px 0 0 5px;
+  float: left; }
+
+/* line 3190, _base.scss */
+#homepage ul.productsLayoutModeList li ul.stockthumbwrapper li.productThumbName {
+  width: 600px; }
+
+/* line 3193, _base.scss */
+.stockthumbFormat4 ul.formwrapper li.productqty {
+  display: inline-block; }
+
+/* line 3196, _base.scss */
+.component_stockdetail #imagescontainer > img,
+.stockthumbwrapper .productThumbImage img.discount {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+/* line 3202, _base.scss */
+ul.productsLayoutModeList li.stockThumb:last-of-type {
+  border: 0; }
+
+/* line 3205, _base.scss */
+#homepage .stockthumbFormat4 .stockthumbwrapper .productThumbImage {
+  width: 160px;
+  padding-right: 10px; }
+
+/* line 3209, _base.scss */
+#homepage .stockthumbfulltextFormat4 {
+  width: 580px; }
+
+/*Category Thumbs*/
+/* line 3215, _base.scss */
+.stocklisting ul.blocklist.layoutModeThumb > li,
+.stocklisting ul.blocklist.layoutModeList > li {
+  overflow: hidden;
+  zoom: 1;
+  height: 250px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  width: 25%;
+  margin: 0;
+  border: 0; }
+
+/* line 3232, _base.scss */
+.stocklisting ul.blocklist.layoutModeThumb > li:nth-of-type(4n+1),
+.stocklisting ul.blocklist.layoutModeList > li:nth-of-type(4n+1) {
+  padding-right: 10px;
+  padding-left: 0; }
+
+/* line 3237, _base.scss */
+.stocklisting ul.blocklist.layoutModeThumb > li:nth-of-type(4n+2),
+.stocklisting ul.blocklist.layoutModeList > li:nth-of-type(4n+2) {
+  padding-right: 6.25px;
+  padding-left: 2.5px; }
+
+/* line 3242, _base.scss */
+.stocklisting ul.blocklist.layoutModeThumb > li:nth-of-type(4n+3),
+.stocklisting ul.blocklist.layoutModeList > li:nth-of-type(4n+3) {
+  padding-right: 2.5px;
+  padding-left: 6.25px; }
+
+/* line 3247, _base.scss */
+.stocklisting ul.blocklist.layoutModeThumb > li:nth-of-type(4n+4),
+.stocklisting ul.blocklist.layoutModeList > li:nth-of-type(4n+4) {
+  padding-right: 0;
+  padding-left: 10px; }
+
+/* line 3252, _base.scss */
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper {
+  float: none;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center; }
+
+/* line 3264, _base.scss */
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupimage,
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupname,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper li.groupimage,
+.stocklisting ul.layoutModeListul.groupthumbwrapper li.groupname {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  float: none; }
+
+/* line 3273, _base.scss */
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupimage img,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper li.groupimage img {
+  max-width: 100%;
+  max-height: 100%; }
+
+/* line 3278, _base.scss */
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupimage a,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper li.groupimage a {
+  display: table-cell;
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  text-align: center; }
+
+/* line 3286, _base.scss */
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupname a,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper li.groupname a {
+  font-weight: bold; }
+
+/* line 3290, _base.scss */
+.stocklisting ul.layoutModeThumb ul.groupthumbwrapper li.groupname,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper li.groupname {
+  padding-top: 10px;
+  float: none;
+  text-align: center; }
+
+/* line 3296, _base.scss */
+.stocklisting ul.blocklist.layoutModeThumb,
+.stocklisting ul.blocklist.layoutModeList {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #aaa; }
+
+/*Error Page*/
+/* line 3305, _base.scss */
+.errorPg {
+  text-align: left;
+  padding-top: 10px; }
+
+/* Price Slider */
+/* line 3312, _base.scss */
+.browsePrice {
+  margin-top: 20px; }
+
+/* line 3315, _base.scss */
+.browseTitle {
+  margin-bottom: 8px; }
+
+/* line 3318, _base.scss */
+.psSlider {
+  height: 15px;
+  position: relative;
+  margin-bottom: 10px;
+  margin-right: 5px; }
+
+/* line 3324, _base.scss */
+.psBar {
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 3px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 3335, _base.scss */
+.psMark {
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #aaa;
+  background: #fff;
+  cursor: pointer; }
+
+/* line 3343, _base.scss */
+.psMark1 {
+  left: 0; }
+
+/* line 3346, _base.scss */
+.psMark2 {
+  left: 50px; }
+
+/* line 3349, _base.scss */
+.psBarFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #D33794; }
+
+/* line 3357, _base.scss */
+.psButtonHold {
+  text-align: right;
+  display: inline-block;
+  vertical-align: top; }
+
+/* line 3362, _base.scss */
+.priceInput {
+  width: 45px;
+  padding: 5px;
+  border: 1px solid #aaa;
+  background: #fff;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 3376, _base.scss */
+.psFormHold {
+  text-align: center;
+  overflow: hidden;
+  zoom: 1;
+  line-height: 29px;
+  display: inline-block;
+  width: 130px; }
+
+/* line 3384, _base.scss */
+.psFormHold span:first-of-type {
+  float: left; }
+
+/* line 3387, _base.scss */
+.psFormHold span:last-of-type {
+  float: right; }
+
+/* line 3390, _base.scss */
+.psButtonHold {
+  float: right; }
+
+/* line 3393, _base.scss */
+#refinefurther #taghdrsearch ul {
+  padding: 0; }
+
+/*Refine minimiser*/
+/* line 3399, _base.scss */
+.irRefClick {
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: ease-in-out 500ms;
+  -moz-transition: ease-in-out 500ms;
+  transition: ease-in-out 500ms; }
+
+/* line 3406, _base.scss */
+.irRefClick:after {
+  content: "-";
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  background: #aaa;
+  border-radius: 3px;
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  text-align: center;
+  line-height: 17px;
+  -webkit-transition: ease-in-out 400ms;
+  -moz-transition: ease-in-out 400ms;
+  transition: ease-in-out 400ms; }
+
+/* line 3423, _base.scss */
+.irRefClick.irRefClose:after {
+  content: "+"; }
+
+/* line 3426, _base.scss */
+.irRefClick:hover:after {
+  background: #777;
+  -webkit-transition: ease-in-out 100ms;
+  -moz-transition: ease-in-out 100ms;
+  transition: ease-in-out 100ms; }
+
+/* line 3432, _base.scss */
+#refinefurther .irRefClick:hover {
+  color: #000;
+  -webkit-transition: ease-in-out 100ms;
+  -moz-transition: ease-in-out 100ms;
+  transition: ease-in-out 100ms; }
+
+/*irMenu*/
+/* line 3442, _base.scss */
+#nav .topNav {
+  background: #fff;
+  position: relative;
+  z-index: 30;
+  border-bottom: 1px solid #aaa; }
+
+/* line 3448, _base.scss */
+#nav .topNav li {
+  padding: 0;
+  height: auto;
+  list-style: none; }
+
+/* line 3453, _base.scss */
+#nav .topNav li a {
+  color: #ffffff;
+  height: auto;
+  padding: 0 10px;
+  font-size: 1em; }
+
+/* line 3459, _base.scss */
+#nav .topNav > li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative; }
+
+/* line 3464, _base.scss */
+#nav .topNav li.irMenuLvl1 a {
+  font-size: 1em; }
+
+/* line 3467, _base.scss */
+#nav .topNav li.irMenuLvl2 a {
+  padding-left: 25px;
+  font-size: 0.85em; }
+
+/* line 3471, _base.scss */
+#nav .topNav li.irMenuLvl1:nth-of-type(n) {
+  border-top: 1px dotted #555; }
+
+/* line 3474, _base.scss */
+#nav .topNav li.irMenuLvl1:first-of-type {
+  border: 0;
+  margin: 0; }
+
+/* line 3478, _base.scss */
+#nav .topNav li.irMenuLvl2 a:before {
+  content: "-";
+  position: relative;
+  left: -10px;
+  top: 0; }
+
+/* line 3484, _base.scss */
+#nav .topNav li li {
+  min-width: 100px; }
+
+/* line 3487, _base.scss */
+#nav .topNav li li a {
+  padding-right: 25px; }
+
+/* line 3490, _base.scss */
+#nav .topNav .irMenuCol {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 20px; }
+
+/* line 3495, _base.scss */
+#nav .topNav .irMenuCol0 {
+  padding: 0; }
+
+/* line 3498, _base.scss */
+#nav .topNav a, #nav .topNav a:hover {
+  background: none; }
+
+/* line 3501, _base.scss */
+#nav .topNav a.menu:hover {
+  background-color: #ddd; }
+
+/* line 3504, _base.scss */
+#nav .topNav > li > a:hover,
+#nav .topNav li.irMenuOpen > a,
+#nav .topNav ul {
+  background-color: #fff; }
+
+/* line 3509, _base.scss */
+#nav .topNav > li > a:hover,
+#nav .topNav li.irMenuOpen > a {
+  text-decoration: underline; }
+
+/* line 3513, _base.scss */
+.no-js #nav .topNav ul {
+  display: none;
+  opacity: 1; }
+
+/* line 3517, _base.scss */
+.no-js #nav .topNav li.irMenuOpen ul {
+  display: block; }
+
+/* line 3520, _base.scss */
+#nav .topNav ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 6px 5px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  white-space: nowrap;
+  z-index: 30;
+  display: none;
+  border: 1px solid #aaa;
+  border-top-width: 0; }
+
+/* line 3532, _base.scss */
+#nav .topNav li.irMenuOpen ul {
+  z-index: 31; }
+
+/* line 3535, _base.scss */
+#nav .topNav .irMenu a {
+  position: relative;
+  line-height: 30px; }
+
+/* line 3539, _base.scss */
+#nav .topNav .irMenu a .irMenuImg {
+  position: absolute;
+  right: 5px;
+  top: 5px; }
+
+/* line 3544, _base.scss */
+#nav .topNav .irMenuImg a {
+  padding-right: 45px; }
+
+/* line 3547, _base.scss */
+#nav .topNav .irMenuActive a {
+  font-weight: bold; }
+
+/**** BUG SQUISHING ****/
+/* Metakey admin fixes */
+/* line 3555, _base.scss */
+#adminstoredineditor,
+#adminbody {
+  background-color: transparent; }
+
+/* line 3559, _base.scss */
+#admincontainer .checkoutcontainer form {
+  margin: 0;
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  padding: 0;
+  color: #000;
+  float: none;
+  width: auto; }
+
+/* line 3569, _base.scss */
+#admincontainer .checkoutcontainer form input {
+  width: auto; }
+
+/* line 3572, _base.scss */
+#admincontainer textarea {
+  width: 612px;
+  height: 50px; }
+
+/* line 3576, _base.scss */
+#admincontainer a {
+  color: #444444; }
+
+/* line 3579, _base.scss */
+#admincontainer a:hover,
+#admincontainer a:active {
+  color: #444444;
+  text-decoration: underline; }
+
+/*Remove Massive Update Basket*/
+/* line 3585, _base.scss */
+.checkoutcontainer form {
+  width: 100%; }
+
+/* line 3588, _base.scss */
+.checkoutcontainer form input.btnaddressaddupd {
+  width: auto;
+  max-width: 100%; }
+
+/*Website Management Area*/
+/* line 3593, _base.scss */
+.editorcolourrow {
+  background-color: #ddd; }
+
+/* line 3596, _base.scss */
+textarea[name="stylefilecontents2"] {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px; }
+
+/*Safari inline button spacing*/
+@font-face {
+  font-family: 'inline-block';
+  src: url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAREAA8AAAAABjAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABWAAAABwAAAAcZhKVeUdERUYAAAF0AAAAHAAAACAAMgAET1MvMgAAAZAAAABDAAAAYG8LT11jbWFwAAAB1AAAAE0AAAFawBQnGWN2dCAAAAIkAAAABAAAAAQARAURZ2FzcAAAAigAAAAIAAAACAAAABBnbHlmAAACMAAAAGEAAABoJ54Dp2hlYWQAAAKUAAAALgAAADb7cuTdaGhlYQAAAsQAAAAdAAAAJAgAB95obXR4AAAC5AAAABQAAAAUFuwARGxvY2EAAAL4AAAADAAAAAwAWACMbWF4cAAAAwQAAAAfAAAAIABJADluYW1lAAADJAAAAOMAAAHgJGtDI3Bvc3QAAAQIAAAAMQAAAEPCf+Zpd2ViZgAABDwAAAAGAAAABpymUMgAAAABAAAAAMw9os8AAAAAzOalhQAAAADM7k0keNpjYGRgYOADYgkGEGBiYARCFjAG8RgABHYAN3jaY2BmY2CcwMDKwMJqzHKWgYFhFoRmOsuQxpQG5AOl4ICRAQmEeof7MTgw8D5gYEv7B1TJOotBA02NAgMjABIYCh4AeNpjYGBgZoBgGQZGBhAIAfIYwXwWBgsgzcXAwcAEhAwMvAwKDxj+/wergrEZ/3/9/1iBBaoXChjZGOACjCCdTAyogBFi5XAGAHUwCw0AAAAARAURAAEAAf//AA942mNgYnBhYGBKYQ1lYGZgZ9DbyMigb7OJnYXhrdFGNtY7NpuYmYBMho3MIGFWkPAmdjbGPzabGEHixoKKgqqKgoouTAr/VBhn/MtgDf212oXlLAMDAyMDEjBkAACuEhZiAAAAeNpjYGRgYGBkcJSTmSUez2/zlUGegwEEzrzzVUWmmVJYQ4EUBwMTiAcA8dIIFwAAeNpjYGRgYJ31/wYDAwcDCDClMDAyoAJWAFJhAuwAAAAC7ABECAAAAAgAAAAAAAAABAAAAAAAACwALAAsACwANHjaY2BkYGBgZeBgYGIAARDJyAASc2DQAwkAAAScAIMAeNqljs1OwkAUhb8RMLAxxgVL06UbSFsk/CWsCBsTQjTK2lZUAkLCnz4ivApPwWE61NitaebOd86993SAEktymHwJwzU4vuBKKuEc99w6zuPx6LjAT7p7qYmD4xs8U3S8o2zuHO/xTZc5Y76V0mchXittzAcbZrwqLaCKry+gwzMPjBiIkp3zRiWzk030Mv0XqSUrJrbv/fnHkCc5ifp1PzW5Jrbz23SjSkO1w5dSp8o8zbzLnSk5IhTV7WlSk2r989UjqUj5527yhpP7JtXTHVs3tNWnrVOzNZAT2js8As27QLYAeNpjYGIAg//pDGkM2AArAwMjEyMzAzMjC1t6TmVBhiF7aV6mgYGBC4h2BTIAv3wIjQAAAAABUMicpQAA) format("woff"); }
+/* line 3608, _base.scss */
+.addtobasketqty {
+  font-family: 'inline-block'; }
+
+/********** QA Edits *********/
+/********** Live Edits *********/
+/*Basket-V2*/
+/* line 3640, _base.scss */
+.basket h1,
+.basket h2 {
+  float: none;
+  margin: 0 0 10px; }
+
+/* line 3645, _base.scss */
+#basketcontenttable.basketV2 {
+  float: none;
+  margin-top: 30px; }
+
+/* line 3649, _base.scss */
+.basketV2 #basketheader {
+  margin: 0;
+  padding: 10px;
+  width: auto; }
+
+/* line 3654, _base.scss */
+.basketV2 #basketheader li {
+  float: none;
+  font-weight: bold;
+  text-transform: capitalize; }
+
+/* line 3659, _base.scss */
+.basketV2 li.basketitem {
+  width: 325px; }
+
+/* line 3662, _base.scss */
+.basketV2 li.basketitemimg {
+  width: 50px; }
+
+/* line 3665, _base.scss */
+.basketV2 li.basketprice {
+  width: 70px; }
+
+/* line 3668, _base.scss */
+.basketV2 li.basketquantity {
+  width: 75px; }
+
+/* line 3671, _base.scss */
+.basketV2 li.basketremove {
+  width: 120px; }
+
+/* line 3674, _base.scss */
+.basketV2 li.baskettotprice {
+  width: 90px; }
+
+/* line 3677, _base.scss */
+.basketV2 li.basketExtras {
+  width: 50px;
+  text-align: center; }
+
+/* line 3681, _base.scss */
+div.basketV2.listtable ul.listtableline {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin: 0 10px;
+  width: auto; }
+
+/* line 3687, _base.scss */
+div.basketV2.listtable ul.listtableline:last-of-type {
+  border-bottom: 0; }
+
+/* line 3690, _base.scss */
+div.basketV2.listtable ul.listtableline:nth-of-type(n) {
+  background: none; }
+
+/* line 3693, _base.scss */
+div#basketsubtotal,
+div#basketdelivery,
+ul.majorbasketsubtotal.labelpairleft li,
+.basket ul.labelpairleft li {
+  float: none; }
+
+/* line 3699, _base.scss */
+.basket ul.majorbasketsubtotal.labelpairleft,
+ul.majorbasketdeliverytotal.labelpairleft,
+ul.majorbaskettotal.labelpairleft {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  float: none;
+  margin-bottom: 5px; }
+
+/* line 3711, _base.scss */
+ul#subtotaloptions ul.majorbasketsubtotal.labelpairleft li,
+.basket ul.labelpairleft li {
+  display: inline-block; }
+
+/* line 3715, _base.scss */
+li.subtotaltitle,
+li.totaltitle {
+  width: 600px; }
+
+/* line 3719, _base.scss */
+.basket #subtotaloptions,
+.basket #ordertotal {
+  padding-bottom: 30px; }
+
+/* line 3724, _base.scss */
+.basket #subtotaloptions {
+  display: none; }
+
+/* line 3728, _base.scss */
+div#basketdelivery div#subtotalfreedelivery,
+div#basketdelivery form {
+  float: none;
+  display: block;
+  width: 100%; }
+
+/* line 3734, _base.scss */
+div#basketdelivery div#subtotalfreedelivery {
+  margin: 10px 0; }
+
+/* line 3737, _base.scss */
+.basket .pagetitle {
+  padding-top: 10px; }
+
+/* line 3740, _base.scss */
+.basketExtrasHolder {
+  padding: 10px;
+  margin-bottom: 5px;
+  position: relative; }
+
+/* line 3745, _base.scss */
+.basketExtrasName {
+  font-weight: bold;
+  padding-right: 120px; }
+
+/* line 3749, _base.scss */
+.basketExtrasBtn {
+  text-align: right;
+  position: absolute;
+  right: 10px;
+  bottom: 10px; }
+
+/* line 3755, _base.scss */
+.basketExtrasHold {
+  margin-bottom: 15px; }
+
+/* line 3758, _base.scss */
+.basketExtrasText {
+  padding-right: 120px; }
+
+/* line 3761, _base.scss */
+.basketExtrasPrice {
+  padding-left: 10px; }
+
+/* line 3764, _base.scss */
+div#voucherandpromo {
+  margin-top: 30px;
+  float: none; }
+
+/* line 3768, _base.scss */
+div#basketdelivery form {
+  margin-bottom: 10px; }
+
+/* line 3771, _base.scss */
+.basket ul.carriageregion select.inputitem {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #aaa;
+  background: #fff;
+  height: 30px; }
+
+/* line 3778, _base.scss */
+.basket div.pagebottomnav {
+  margin: 0;
+  width: 100%;
+  margin-top: 5px;
+  float: none; }
+
+/* line 3784, _base.scss */
+.basket ul.navPage.blocklistright {
+  width: 30%; }
+
+/* line 3787, _base.scss */
+.basket ul.navPage li, .basket ul.navPage li:hover {
+  width: 100%;
+  margin: 5px 0 0; }
+
+/* line 3791, _base.scss */
+.basket ul.navPage li a {
+  width: 100%; }
+
+/* line 3794, _base.scss */
+.basket ul.navPage li.buttoncheckout a {
+  height: 50px;
+  padding-top: 15px;
+  font-size: 1.2em; }
+
+/* line 3799, _base.scss */
+.promocodes ul,
+.vouchercode ul {
+  float: none; }
+
+/* line 3803, _base.scss */
+.promocodes ul input.inputitem,
+.vouchercode ul input.inputitem {
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+  border: 1px solid #aaa;
+  background: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 3814, _base.scss */
+.promocodes ul li.promocodebutton,
+.vouchercode ul li.vouchercodebutton {
+  width: 20%;
+  display: inline-block;
+  text-align: right; }
+
+/* line 3820, _base.scss */
+.voucherocode1input,
+.voucherocode2input,
+.promocodeinput {
+  display: inline-block;
+  width: 80%; }
+
+/* line 3826, _base.scss */
+.promocodes ul li.promocodebutton a,
+.vouchercode ul li.vouchercodebutton a {
+  width: 90%; }
+
+/* line 3830, _base.scss */
+div#voucherandpromo ul.componentFill1 {
+  background: #f9f9f9; }
+
+/* line 3833, _base.scss */
+.basket div.listtable ul.basketline li {
+  vertical-align: middle; }
+
+/* line 3836, _base.scss */
+.basket div.listtable ul.basketline li.basketimage {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #aaa;
+  background: #fff;
+  padding: 4px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative; }
+
+/* line 3847, _base.scss */
+.basket div.listtable ul.basketline li.basketimage a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 40px;
+  height: 40px; }
+
+/* line 3854, _base.scss */
+.basket div.listtable ul.basketline li.basketimage a img {
+  max-width: 40px;
+  max-height: 40px;
+  vertical-align: middle; }
+
+/* line 3859, _base.scss */
+.basket div.listtable ul.basketline li.basketimage a img.giftwrapImg {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  max-width: none;
+  max-height: none; }
+
+/* line 3866, _base.scss */
+.basket div.listtable ul.basketline li.basketdescription {
+  width: 250px;
+  padding: 0 10px; }
+
+/* line 3870, _base.scss */
+.basket div.listtable ul.basketline li.basketdescription a {
+  font-weight: bold; }
+
+/* line 3873, _base.scss */
+.basket div.listtable ul.basketline li.basketdescription a.basketlinediscount {
+  font-weight: normal;
+  display: block;
+  font-size: 0.9em; }
+
+/* line 3878, _base.scss */
+.basket div.listtable ul.basketline li.basketremove a:link,
+.basket div.listtable ul.basketline li.basketremove input {
+  display: block;
+  width: 100%;
+  padding: 0 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding-left: 20px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1em;
+  outline: 0;
+  height: 20px;
+  -moz-transition: ease-in-out 500ms;
+  -webkit-transition: ease-in-out 500ms;
+  transition: ease-in-out 500ms; }
+
+/* line 3899, _base.scss */
+.basket div.listtable ul.basketline li.basketremove a:link {
+  background: url(../images/basketRemove.png) no-repeat left center;
+  margin-bottom: 5px; }
+
+/* line 3903, _base.scss */
+.basket div.listtable ul.basketline li.basketremove input {
+  background: url(../images/basketUpdate.png) no-repeat left center; }
+
+/* line 3906, _base.scss */
+.basket div.listtable ul.basketline li.basketremove a:hover,
+.basket div.listtable ul.basketline li.basketremove a:active,
+.basket div.listtable ul.basketline li.basketremove input:hover,
+.basket div.listtable ul.basketline li.basketremove input:active {
+  opacity: 0.6;
+  filter: alpha(opacity="60");
+  -moz-transition: ease-in-out 100ms;
+  -webkit-transition: ease-in-out 100ms;
+  transition: ease-in-out 100ms; }
+
+/* line 3916, _base.scss */
+.basket div.listtable ul.basketline li.basketquantity input.inputitem {
+  padding: 5px;
+  margin: 0;
+  border: 1px solid #aaa;
+  background: #fff;
+  outline: 0;
+  text-align: center;
+  width: 30px;
+  margin-left: 10px;
+  position: relative; }
+
+/* line 3927, _base.scss */
+.basket div.listtable ul.basketline li.basketExtras img {
+  max-width: 16px;
+  margin-top: 5px;
+  padding: 2px;
+  vertical-align: top; }
+
+/* line 3933, _base.scss */
+a.basketlinediscount {
+  position: static; }
+
+/* line 3936, _base.scss */
+#facebox,
+#facebox .popup,
+#facebox .content {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  max-height: none; }
+
+/* line 3945, _base.scss */
+#facebox .content {
+  max-height: 500px;
+  height: 500px;
+  overflow-y: auto;
+  display: block;
+  height: 494px;
+  padding: 20px;
+  background: none; }
+
+/* line 3954, _base.scss */
+#facebox .close {
+  right: 5px;
+  background: none;
+  padding: 0;
+  line-height: 0; }
+
+/* line 3960, _base.scss */
+#facebox .popup {
+  padding: 30px;
+  background: #fff;
+  overflow: hidden;
+  -moz-box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.3);
+  width: 600px; }
+
+/*CheckoutV2*/
+/* line 3981, _base.scss */
+.pageTemp-checkoutv2 #header {
+  margin: 0; }
+
+/* line 3984, _base.scss */
+.checkoutv2Login,
+.checkoutv2Address,
+.checkoutv2Basket,
+.checkoutv2DeliveryIn,
+.checkoutv2Checkout,
+.checkoutv2IframeHold {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 10px;
+  background: #fff; }
+
+/* line 3996, _base.scss */
+.checkoutv2Left, .checkoutv2Right {
+  width: 75%;
+  display: inline-block;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top; }
+
+/* line 4005, _base.scss */
+.checkoutv2Right {
+  width: 25%;
+  padding: 0;
+  position: relative; }
+
+/* line 4010, _base.scss */
+.pageTemp-checkoutv2 label {
+  font-size: 1em;
+  color: #575757;
+  font-weight: normal; }
+
+/* line 4015, _base.scss */
+.checkoutLoginButtons {
+  padding-top: 10px;
+  text-align: left; }
+
+/* line 4019, _base.scss */
+.checkoutLoginButtons > * {
+  display: inline-block; }
+
+/* line 4022, _base.scss */
+.checkoutLoginButtons button {
+  float: right;
+  width: 150px; }
+
+/* line 4026, _base.scss */
+.checkoutv2Login input,
+.checkoutv2Address input,
+.checkoutv2Address select,
+.checkoutv2DeliveryIn textarea {
+  display: block;
+  width: 93%;
+  margin: 0 0 10px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  background: #fff;
+  padding: 5px;
+  height: 30px;
+  border-radius: 8px; }
+
+/* line 4042, _base.scss */
+.checkoutv2Address input.error {
+  background-color: #a00;
+  color: #fff; }
+
+/* line 4046, _base.scss */
+.checkoutv2Address input.error::-webkit-input-placeholder {
+  color: #d88; }
+
+/* line 4049, _base.scss */
+.checkoutv2Address input.error:-moz-placeholder {
+  color: #d88; }
+
+/* line 4052, _base.scss */
+.checkoutv2Address input.error::-moz-placeholder {
+  color: #d88; }
+
+/* line 4055, _base.scss */
+.checkoutv2Address input.error:-ms-input-placeholder {
+  color: #d88; }
+
+/* line 4058, _base.scss */
+.checkoutv2DeliveryIn textarea {
+  max-width: 93%;
+  min-width: 93%;
+  height: 150px; }
+
+/* line 4063, _base.scss */
+.checkoutv2Login p {
+  margin: 0; }
+
+/* line 4066, _base.scss */
+.pclForm {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background: #eee;
+  margin: 20px 0 10px; }
+
+/* line 4073, _base.scss */
+.pclForm .buttonHold {
+  text-align: right; }
+
+/* line 4076, _base.scss */
+.checkoutv2Address input.inputCheck {
+  display: inline-block;
+  width: auto;
+  margin: 0 10px 10px;
+  padding: 0;
+  height: auto; }
+
+/* line 4083, _base.scss */
+.checkoutv2Btns {
+  margin-top: 10px;
+  text-align: right; }
+
+/* line 4087, _base.scss */
+.checkoutBtn {
+  height: 50px;
+  width: 250px;
+  font-size: 1.2em;
+  margin-left: 5px; }
+
+/* line 4093, _base.scss */
+.checkoutv2BasketDetails {
+  text-align: right;
+  padding-top: 20px; }
+
+/* line 4097, _base.scss */
+.checkoutv2BasketDetails span {
+  display: inline-block;
+  width: 65px;
+  font-weight: bold;
+  font-size: 0.9em; }
+
+/* line 4103, _base.scss */
+.checkoutv2BasketDiv {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #ddd; }
+
+/* line 4108, _base.scss */
+.checkoutv2BasketLineTitle {
+  overflow: hidden;
+  text-align: left; }
+
+/* line 4112, _base.scss */
+.checkoutv2BasketImg {
+  float: right;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  margin-left: 10px; }
+
+/* line 4119, _base.scss */
+.checkoutv2BasketImg span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px; }
+
+/* line 4126, _base.scss */
+.checkoutv2BasketImg img {
+  vertical-align: middle; }
+
+/* line 4129, _base.scss */
+.checkoutv2BasketLine {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd; }
+
+/* line 4134, _base.scss */
+.checkoutv2BasketPrice {
+  text-align: right;
+  word-spacing: 10px;
+  padding-top: 10px;
+  padding-right: 5px; }
+
+/* line 4140, _base.scss */
+.checkoutv2BasketPrice span {
+  width: 60px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.9em; }
+
+/* line 4146, _base.scss */
+.checkoutv2Basket {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 4151, _base.scss */
+.checkoutv2ValidationMsg {
+  color: #a00; }
+
+/*CUSTOM*/
+/* line 4157, _base.scss */
+#nav #qm0 a {
+  color: #FFF;
+  font-size: 14px;
+  padding: 8px 10px 10px; }
+  /* line 4162, _base.scss */
+  #nav #qm0 a:first-child {
+    margin-left: 0; }
+
+/* line 4167, _base.scss */
+#qm0 .menubox a.qmlevel0 {
+  color: #000000 !important;
+  font-size: 14px;
+  padding: 8px 10px 10px; }
+
+/* line 4174, _base.scss */
+#headerbasket.miniBasketHold {
+  border: 0px; }
+
+/* line 4179, _base.scss */
+#headeraccount a {
+  color: #cc2036;
+  font-weight: bold; }
+
+/* line 4185, _base.scss */
+#myaccountpasswordchange {
+  font-weight: bold; }
+
+/* line 4190, _base.scss */
+.psBarFill {
+  background-color: #cc2036; }
+
+/* line 4194, _base.scss */
+.socialLinks a.lnk,
+.tyPgLinks a.lnk {
+  background-color: #cc2036; }
+
+/* line 4200, _base.scss */
+#header {
+  margin: 0 0 50px;
+  background-color: #e3e3e3;
+  clear: both;
+  padding: 0;
+  position: relative;
+  background-image: url(../images/bg-header.png);
+  background-repeat: repeat-x; }
+
+/* line 1, _fonts.scss */
+p {
+  line-height: 1.4em;
+  font-size: 14px; }
+
+/* line 6, _fonts.scss */
+#nav > #qm0 > a,
+h1,
+h2,
+h3 {
+  font-size: 16px; }
+  /* line 14, _fonts.scss */
+  #nav > #qm0 > a:first-child,
+  h1:first-child,
+  h2:first-child,
+  h3:first-child {
+    margin-left: 0;
+    padding-left: 0; }
+
+/* line 19, _fonts.scss */
+#nav > #qm0 > a {
+  margin-left: 13px; }
+  /* line 23, _fonts.scss */
+  #nav > #qm0 > a:hover {
+    color: #22c7b7; }
+
+/* line 28, _fonts.scss */
+h1, h2, h3, h4, h5, h6, .refinetitle, #refinefurther .refinetitle {
+  color: #0f6797;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-left: 0; }
+
+/* line 39, _fonts.scss */
+h1 {
+  font-size: 24px; }
+
+/* line 42, _fonts.scss */
+.pagetitle h1 {
+  color: #222; }
+
+/* line 46, _fonts.scss */
+h2,
+#refinecategory .refinetitle,
+#refinefurther .refinetitle, #quickshop .refinetitle {
+  background: url(../images/dash.gif) bottom center no-repeat;
+  color: #0f6797;
+  padding-bottom: 25px;
+  display: block; }
+
+/* line 58, _fonts.scss */
+.about-home h3 {
+  font-size: 34px;
+  padding: 0;
+  margin: 0 0 20px;
+  color: #0f6797; }
+/* line 65, _fonts.scss */
+.about-home p {
+  font-size: 18px;
+  color: #777;
+  line-height: 25px; }
+
+/* line 75, _fonts.scss */
+.article h2 {
+  background: none;
+  PADDING-BOTTOM: 10PX; }
+
+/* line 81, _fonts.scss */
+#footer li a:hover, #footer li a:active, #footer a:hover, #footer a:active {
+  color: #000; }
+
+/* line 85, _fonts.scss */
+#footer ul.vcard li a {
+  text-transform: none; }
+
+/* line 90, _fonts.scss */
+#footer .small a:link {
+  text-transform: none;
+  font-size: 9px; }
+
+/* line 96, _fonts.scss */
+#nav > a:hover {
+  color: #0f6797 !important; }
+
+/* line 100, _fonts.scss */
+#footer h2 {
+  font-size: 18px; }
+
+/* line 3, _customise.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 10, _customise.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 14, _customise.scss */
+clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+/* line 29, _customise.scss */
+.top-area {
+  width: 100%;
+  background: #f9f9f9;
+  height: 30px; }
+  /* line 34, _customise.scss */
+  .top-area p, .top-area a {
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #999; }
+
+/* line 46, _customise.scss */
+.slides .flex-direction-nav a {
+  background: url(../images/bg_direction_nav.png) no-repeat 0 0 !important; }
+
+/* line 50, _customise.scss */
+.flex-direction-nav a {
+  background: url(../images/bg_direction_nav.png) no-repeat 0 0; }
+
+/* line 58, _customise.scss */
+.alt-font {
+  color: #fff;
+  text-transform: none;
+  font-size: 36px;
+  background: url("../images/divider.png") bottom center no-repeat;
+  padding-bottom: 25px; }
+
+/* line 70, _customise.scss */
+.slides li {
+  position: relative;
+  display: table;
+  width: 100%;
+  z-index: 2; }
+  /* line 76, _customise.scss */
+  .slides li .button {
+    padding: 15px 30px;
+    border: 3px solid #fff;
+    background: none;
+    font-size: 18px;
+    color: #fff; }
+  /* line 86, _customise.scss */
+  .slides li h1.h-large {
+    font-size: 103px;
+    margin-bottom: 20px; }
+  /* line 90, _customise.scss */
+  .slides li h1 {
+    font-size: 56px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 54px;
+    text-shadow: 1px 2px 0px rgba(22, 22, 22, 0.6); }
+
+/* line 107, _customise.scss */
+.text-wrap {
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  left: 0%;
+  text-align: center;
+  top: 21%;
+  bottom: auto; }
+
+/* line 122, _customise.scss */
+ul.ctas li {
+  list-style: none;
+  display: table;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s; }
+  /* line 129, _customise.scss */
+  ul.ctas li:hover {
+    opacity: .7; }
+/* line 132, _customise.scss */
+ul.ctas a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 27px;
+  color: #fff;
+  max-width: 190px;
+  line-height: 1em;
+  position: relative; }
+
+/* line 161, _customise.scss */
+.cta1,
+.cta2,
+.cta3 {
+  height: 160px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  float: left; }
+
+/* line 170, _customise.scss */
+.cta1 {
+  background-image: url("../images/cta1.jpg"); }
+
+/* line 174, _customise.scss */
+.cta2 {
+  background-image: url("../images/cta2.jpg"); }
+
+/* line 178, _customise.scss */
+.cta3 {
+  background-image: url("../images/cta3.jpg"); }
+
+/* line 186, _customise.scss */
+h3.section-title {
+  margin: 0 auto 30px;
+  max-width: 1050px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #f1f1f1;
+  font-size: 21px; }
+
+/* line 195, _customise.scss */
+h3.section-title.title_center {
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 22px; }
+
+/* line 200, _customise.scss */
+h3.section-title.title_center span {
+  border: 0;
+  background: #f3f9f9;
+  bottom: -12px;
+  position: relative;
+  padding: 0 30px;
+  font-size: 21px;
+  color: #333333; }
+
+/* line 212, _customise.scss */
+ul.productsLayoutModeThumb li.stockThumb li.productThumbName {
+  text-align: center;
+  color: #333;
+  text-transform: none; }
+
+/* line 219, _customise.scss */
+li.stockThumb li.productThumbName a,
+li.productThumbName a {
+  text-transform: none;
+  font-size: 16px;
+  color: #333; }
+
+/* line 227, _customise.scss */
+ul.productsLayoutModeThumb li {
+  text-align: center;
+  width: 100%; }
+
+/* line 234, _customise.scss */
+ul.productsLayoutModeThumb li.stockthumbprice {
+  position: relative;
+  margin: 10px 0 0 0;
+  top: 0;
+  font-size: 22px; }
+
+/* line 242, _customise.scss */
+.productThumbName {
+  text-align: center;
+  text-transform: none; }
+
+/* line 248, _customise.scss */
+ul.blocklist li.formwrap a.catpageaddtobasket {
+  height: 45px;
+  line-height: 45px; }
+
+/* line 253, _customise.scss */
+.pull-left {
+  float: left !important; }
+
+/* line 256, _customise.scss */
+.pull-right {
+  float: right !important; }
+
+/* line 262, _customise.scss */
+.index .main-wrap {
+  padding: 0;
+  background: none;
+  width: 1040px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 0; }
+
+/* line 273, _customise.scss */
+.main-wrap {
+  padding: 20px;
+  background: #fff;
+  width: 1040px;
+  margin: 20px auto;
+  overflow: hidden;
+  padding-top: 10px; }
+
+/* line 284, _customise.scss */
+.mbBottom a,
+a.button,
+.inputBtn {
+  line-height: 20px; }
+  /* line 288, _customise.scss */
+  .mbBottom a:hover,
+  a.button:hover,
+  .inputBtn:hover {
+    background: #0a4769; }
+
+/* line 294, _customise.scss */
+#homepage ul.productsLayoutModeThumb li.stockThumb {
+  width: 25%;
+  margin: 0;
+  border: 0; }
+
+/* line 300, _customise.scss */
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+4) {
+  padding-right: 0;
+  padding-left: 10px; }
+
+/* line 305, _customise.scss */
+#homepage ul.productsLayoutModeThumb li.stockThumb:nth-of-type(5n+5) {
+  padding-right: 10px;
+  padding-left: 0; }
+
+/* line 311, _customise.scss */
+#footer div.wrap960, .wrap960 {
+  width: 1040px;
+  margin: 0 auto;
+  text-align: left;
+  overflow: hidden; }
+
+/* line 318, _customise.scss */
+#footer div.footer-top {
+  margin-bottom: 60px; }
+
+/* line 323, _customise.scss */
+#header {
+  margin: 0 0 0;
+  background-color: #FFFFFF;
+  clear: both;
+  padding: 0;
+  position: relative;
+  background-repeat: repeat-x;
+  background-image: none;
+  border-bottom: 55px solid #0f6797;
+  height: 190px; }
+
+/* line 335, _customise.scss */
+#facebox .content {
+  border: none; }
+
+/* line 339, _customise.scss */
+#accountbuttons li.accountbutton a,
+#webmngmntareainner a,
+#myaccountupdate a.actionbutton,
+#quickpaydeliverydetails a.newaddress,
+input#quickpaygetaddress,
+.tyPage .btn {
+  text-indent: 0;
+  background-color: #0f6797;
+  background-image: none;
+  margin: 0;
+  padding: 0 10px;
+  line-height: 30px;
+  height: 30px;
+  display: inline-block; }
+
+/* line 356, _customise.scss */
+div.pagetopnavextra {
+  margin-bottom: -10px; }
+
+/* line 362, _customise.scss */
+#nav {
+  top: 147px; }
+
+/* line 367, _customise.scss */
+.qmmc.blocklist {
+  padding-left: 0; }
+
+/* line 371, _customise.scss */
+#logo {
+  margin-left: -10px;
+  margin: 17px 0 0 0; }
+
+/* line 378, _customise.scss */
+#headerright {
+  height: auto;
+  float: right;
+  width: 557px;
+  position: relative;
+  margin: 35px 0 0 0;
+  font-size: 11px; }
+
+/* line 389, _customise.scss */
+.sortSearch {
+  background-color: #FFFFFF;
+  border: none; }
+
+/* line 395, _customise.scss */
+#headerbasket.miniBasketHold {
+  border: 0px;
+  width: 54%;
+  float: left;
+  position: relative;
+  top: 0;
+  margin: 0;
+  padding-top: 0;
+  line-height: 1.3em;
+  font-size: 12px;
+  padding: 0;
+  margin: 4px 0 0 0; }
+
+/* line 409, _customise.scss */
+#headersearch {
+  margin: 0;
+  height: auto;
+  margin-top: 0;
+  width: 43%;
+  float: right;
+  border: 3px solid #f6f6f6; }
+  /* line 417, _customise.scss */
+  #headersearch input {
+    border-radius: 0;
+    background: #fff; }
+
+/* line 424, _customise.scss */
+.header-nav-links {
+  margin: 5px 0 70px;
+  float: right; }
+  /* line 431, _customise.scss */
+  .header-nav-links li {
+    float: left;
+    list-style: none;
+    display: inline;
+    font-size: 12px; }
+    /* line 437, _customise.scss */
+    .header-nav-links li a {
+      padding: 4px; }
+  /* line 442, _customise.scss */
+  .header-nav-links .global-nav {
+    text-transform: uppercase; }
+  /* line 449, _customise.scss */
+  .header-nav-links .active {
+    background: #0f6797;
+    border-radius: 5px; }
+    /* line 454, _customise.scss */
+    .header-nav-links .active a {
+      color: #fff;
+      border-radius: 5px; }
+
+/* line 466, _customise.scss */
+.headeraccount {
+  margin-left: 10px; }
+
+/* line 470, _customise.scss */
+.index .article {
+  margin-top: 420px;
+  margin-bottom: 20px; }
+
+/* line 475, _customise.scss */
+ul.productsLayoutModeThumb div.stockthumb {
+  border: 1px solid #ccc; }
+
+/* line 479, _customise.scss */
+.productThumbName {
+  text-align: center; }
+
+/* line 483, _customise.scss */
+.ul.productsLayoutModeThumb.blocklist li.stockThumb li.productThumbName {
+  height: auto; }
+
+/* line 491, _customise.scss */
+.index #wrapper > .container > .article {
+  width: 1040px;
+  float: none; }
+
+/* line 498, _customise.scss */
+#header + #wrapper {
+  width: 100%;
+  background: url(../images/header-bg-grey.gif) top left repeat;
+  overflow: hidden; }
+
+/* line 504, _customise.scss */
+#header + #wrapper > .container {
+  margin: 0 auto;
+  width: 1040px;
+  float: none;
+  min-height: 100%;
+  padding: 20px 0;
+  overflow: hidden; }
+
+/* line 513, _customise.scss */
+#wrapper > .container > .article {
+  float: none; }
+
+/* line 520, _customise.scss */
+#wrapper > .container > .article {
+  margin-bottom: 20px;
+  margin: 0 auto 30px;
+  float: none;
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  float: right;
+  width: 75%;
+  float: right; }
+
+/* line 532, _customise.scss */
+#footer {
+  background-color: #0f6797;
+  padding: 60px 0 0; }
+
+/* line 538, _customise.scss */
+.home-banner {
+  display: none; }
+
+/* line 542, _customise.scss */
+.index .home-banner {
+  display: block;
+  border-bottom: 6px solid red; }
+
+/* line 547, _customise.scss */
+ul.productsLayoutModeThumb div.stockthumb {
+  border: none;
+  background: #fff; }
+
+/* line 552, _customise.scss */
+.index .home-banner {
+  display: block;
+  border-bottom: 5px solid #cc2036; }
+
+/*Footer Links*/
+/* line 558, _customise.scss */
+#footer li a,
+#footer li a:link,
+#footer li a:visited,
+#footer a,
+#footer a:link,
+#footer a:visited {
+  font-size: 12px;
+  line-height: 1.3em; }
+
+/* line 569, _customise.scss */
+#footer-wrap {
+  padding-top: 30px; }
+
+/* line 573, _customise.scss */
+#webmngmntareainner, #accountbuttons, #myaccount ul.contentaddressform, #myaccount ul.contentaccountform, #salesBlock, #salesWrap .salesMessage a, #refinefurther, #refinecurrent, .asidebox, #quickshop, form.contact, #registration ul.contentform, #registration ul.contentaddressform, #registration ul.contentaccountform, #addressupdatecontent div.checkoutcontainer > form, li.promocodes ul, li.vouchercode ul, div.component_stockdetail .detailInfo, #linkedproductswrapper .stocklistingbody, #asidebrowse, .basketV2 #basketheader, .basket ul.majorbasketsubtotal.labelpairleft, ul.majorbasketdeliverytotal.labelpairleft, ul.majorbaskettotal.labelpairleft {
+  background: #F2F2F2; }
+
+/* line 577, _customise.scss */
+#webmngmntareainner, #accountbuttons, #myaccount ul.contentaddressform, div.changepwd form, #myaccount ul.contentaccountform, #salesBlock, #salesWrap .salesMessage a, ul.productsLayoutModeThumb div.stockthumb, #refinefurther, #refinecurrent, .asidebox, #quickshop, form.contact, #registration ul.contentform, #registration ul.contentaddressform, #registration ul.contentaccountform, #addressupdatecontent div.checkoutcontainer > form, li.promocodes ul, li.vouchercode ul, div.component_stockdetail .detailInfo, #recentlyviewedbody .stockthumbFormat3, div.component_stockdetail .productimageholder#imagescontainer, #asidetopselling li a.class2, #linkedproductswrapper .stocklistingbody, #tabsholder .tabBorder, #asidebrowse, ul.layoutModeThumb ul.groupthumbwrapper, .catBanHold, .stocklisting ul.layoutModeList ul.groupthumbwrapper, #headerbasket.miniBasketHold, .miniBasket div#basketcontenttable li.basketitem a:link, .basketV2 #basketheader, .basket ul.majorbasketsubtotal.labelpairleft, ul.majorbasketdeliverytotal.labelpairleft, ul.majorbaskettotal.labelpairleft, .basketExtrasHolder {
+  border: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* line 584, _customise.scss */
+.crumb.blocklist li a {
+  font-weight: bold; }
+
+/* line 590, _customise.scss */
+#headersearch a:visited,
+.refineblock input[type="submit"],
+form.contact .send, .vouchercodebutton a, .promocodebutton a, ul.navPage li a, a.buttonaddtobasket {
+  background-image: none;
+  background-image: none;
+  text-transform: uppercase;
+  line-height: 20px; }
+
+/* line 600, _customise.scss */
+#headersearch a:link {
+  text-indent: -9999px;
+  background: transparent url(../images/search-icon.gif) 13px 8px no-repeat;
+  width: 31px; }
+
+/* line 606, _customise.scss */
+.buttonbacktoshop a {
+  background-color: #000; }
+
+/* line 610, _customise.scss */
+.basket ul.carriageregion select.inputitem {
+  border: none; }
+
+/* line 614, _customise.scss */
+#registration ul.contentform input {
+  width: 93%;
+  margin: 0 0 10px 10px;
+  border-radius: none;
+  border: none;
+  padding: 5px;
+  height: 30px; }
+
+/* line 623, _customise.scss */
+.asidebox, .sortSearch, .catBanHold,
+#refinecategory, #refinefurther, #quickshop {
+  webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+/* line 629, _customise.scss */
+#headersearch input {
+  background: #fff;
+  border: none;
+  width: 80%; }
+  /* line 634, _customise.scss */
+  #headersearch input:focus {
+    width: 80%; }
+
+/* line 638, _customise.scss */
+.priceInput,
+#taghdrsearchstr input#search,
+#quickshop #search, #newsformwrap input {
+  border: none;
+  moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0; }
+
+/* line 650, _customise.scss */
+.catBanHold {
+  background: #ededed; }
+
+/* line 654, _customise.scss */
+div.listtable ul.listtableheader,
+div.listtable ul.listtableline {
+  border-bottom: none; }
+
+/* line 663, _customise.scss */
+form.contact input, form.contact textarea, form.contact select {
+  border: none; }
+
+/* line 668, _customise.scss */
+div#quickshop select {
+  border: none; }
+
+/* line 673, _customise.scss */
+#newsformwrap a.nlsSub {
+  color: #fff;
+  background: #0f6797; }
+  /* line 676, _customise.scss */
+  #newsformwrap a.nlsSub:hover {
+    background: #0a4769; }
+
+/* line 682, _customise.scss */
+#headersearch #headersearchform input {
+  border-bottom: 1px solid !important; }
+
+/* line 689, _customise.scss */
+.border-btm {
+  background: url(../images/border.gif) bottom left repeat-x;
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding-bottom: 30px; }
+
+/* line 695, _customise.scss */
+.col-50 {
+  width: 49%;
+  float: left; }
+
+/* line 707, _customise.scss */
+#menu {
+  padding: 0;
+  margin-top: 25px; }
+
+/* line 708, _customise.scss */
+#menu li {
+  display: inline; }
+
+/* line 709, _customise.scss */
+#menu li a {
+  padding: 10px;
+  float: left;
+  border-bottom: none;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold; }
+
+/* line 711, _customise.scss */
+#menu li.active a {
+  background: #fff; }
+
+/* line 712, _customise.scss */
+.content {
+  float: left;
+  clear: both;
+  border: 1px solid #ccf;
+  border-top: none;
+  border-left: none;
+  background: #eef;
+  padding: 10px 20px 20px;
+  width: 400px; }
+
+/* line 715, _customise.scss */
+.tab-content {
+  background: #fff;
+  width: 100%;
+  clear: both;
+  -webkit-border-radius: 5px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius: 5px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  padding: 10px; }
+
+/* line 730, _customise.scss */
+.module-wrapper h2 {
+  margin-left: 0; }
+
+/* line 737, _customise.scss */
+#footer h2 {
+  background: none;
+  font-size: 18px; }
+
+/* line 745, _customise.scss */
+.tyPage h2 {
+  text-align: left;
+  background: none;
+  color: #222; }
+
+/* line 752, _customise.scss */
+#nls.newsletter-input {
+  border-radius: 0; }
+
+/* line 756, _customise.scss */
+div.changepwd form {
+  width: 300px;
+  float: left; }
+
+/* line 761, _customise.scss */
+.psMark {
+  width: 5px; }
+
+/* line 765, _customise.scss */
+ul#accountdob input[name="dob1"]:first-child {
+  margin-left: 0; }
+
+/* line 769, _customise.scss */
+.actionbutton {
+  line-height: 20px; }
+
+/* line 773, _customise.scss */
+.module-wrap {
+  width: 100%;
+  padding: 60px 0; }
+  /* line 777, _customise.scss */
+  .module-wrap h2 {
+    font-size: 34px;
+    text-transform: uppercase;
+    text-align: center; }
+  /* line 785, _customise.scss */
+  .module-wrap .btn {
+    padding: 0 50px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 20px 0 0;
+    height: 53px;
+    line-height: 53px;
+    font-size: 18px; }
+
+/* line 801, _customise.scss */
+.header-wrap-bg {
+  background: url(../images/header-bg-grey.gif) top left repeat; }
+
+/* line 807, _customise.scss */
+#header + #wrapper > .container.homepage-area {
+  padding: 40px 0; }
+
+/* line 810, _customise.scss */
+.white-module {
+  background: #fff;
+  text-align: center; }
+
+/* line 820, _customise.scss */
+.store-menu {
+  position: relative;
+  width: 1040px;
+  margin: 0 auto;
+  height: 600px; }
+  /* line 826, _customise.scss */
+  .store-menu li {
+    float: left;
+    width: 252px;
+    top: 0;
+    list-style: none;
+    height: 600px;
+    margin-right: 14px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+    /* line 837, _customise.scss */
+    .store-menu li:hover {
+      opacity: .6; }
+    /* line 841, _customise.scss */
+    .store-menu li a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  /* line 848, _customise.scss */
+  .store-menu .cta-1 {
+    width: 508px;
+    background: url(../images/c1.jpg) top left no-repeat; }
+  /* line 854, _customise.scss */
+  .store-menu .cta-2 {
+    background: url(../images/c2.jpg) top left no-repeat; }
+  /* line 860, _customise.scss */
+  .store-menu .cta-3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 292px;
+    margin-right: -0px;
+    background: url(../images/c3.jpg) top left no-repeat; }
+  /* line 869, _customise.scss */
+  .store-menu .cta-4 {
+    position: absolute;
+    top: 307px;
+    right: 0;
+    height: 292px;
+    margin-right: -0px;
+    background: url(../images/c4.jpg) top left no-repeat; }
+
+/* line 886, _customise.scss */
+#social-links {
+  margin: 0;
+  text-align: center;
+  padding-left: 0;
+  float: left; }
+
+/* line 893, _customise.scss */
+#social-links li {
+  display: inline;
+  float: left;
+  width: 29px; }
+
+/* line 899, _customise.scss */
+.profile-detail #social-links li a {
+  background: url(../images/icons.png) no-repeat; }
+
+/* line 903, _customise.scss */
+#footer #social-links li a {
+  display: block;
+  background: url(../images/icons2.png) no-repeat;
+  width: 29PX;
+  text-indent: -99999PX;
+  height: 30PX; }
+
+/* line 911, _customise.scss */
+#social-links li#fb a {
+  background-position: 3px 0; }
+
+/* line 912, _customise.scss */
+#social-links li#twitter a {
+  background-position: -32PX 0PX; }
+
+/* line 913, _customise.scss */
+#social-links li#pinterest a {
+  background-position: -63PX 0; }
+
+/* line 916, _customise.scss */
+#social-links li#youtube a {
+  background-position: -100PX 0; }
+
+/* line 917, _customise.scss */
+#social-links li#google-plus a {
+  background-position: -130PX 0;
+  width: 31PX; }
+
+/* line 922, _customise.scss */
+#social-links li a:hover {
+  opacity: .5; }
+
+/* line 929, _customise.scss */
+#footer .footerDiv.col-1 {
+  padding-left: 0; }
+
+/* line 934, _customise.scss */
+.payment-methods {
+  margin: 15px 20px 0 0; }
+
+/* line 939, _customise.scss */
+.footer-secondary {
+  background: #0a4769;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  margin-top: 60px; }
+
+/* line 947, _customise.scss */
+.color-2 {
+  background: #22c7b7; }
+  /* line 950, _customise.scss */
+  .color-2 h2,
+  .color-2 p {
+    color: #fff; }
+  /* line 957, _customise.scss */
+  .color-2 #newsform {
+    overflow: hidden;
+    width: 800px;
+    margin: 0 auto; }
+    /* line 963, _customise.scss */
+    .color-2 #newsform #newsformwrap {
+      width: 100%;
+      height: auto; }
+      /* line 967, _customise.scss */
+      .color-2 #newsform #newsformwrap input[type="text"] {
+        width: 75%;
+        height: 50px;
+        line-height: 50px;
+        float: left; }
+        /* line 972, _customise.scss */
+        .color-2 #newsform #newsformwrap input[type="text"]:focus {
+          background: #111;
+          color: #fff; }
+      /* line 978, _customise.scss */
+      .color-2 #newsform #newsformwrap a.nlsSub {
+        width: 25%;
+        float: right;
+        height: 50px;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 0; }
+
+/* line 1005, _customise.scss */
+li.stockThumb li.productThumbName a,
+li.productThumbName a {
+  text-transform: none;
+  font-size: 16px; }
+
+/* line 1013, _customise.scss */
+.barBord {
+  width: 100%;
+  margin: 20px 0; }
+
+/* line 1025, _customise.scss */
+.basket ul.carriageregion select.inputitem,
+#myaccountaddressdetails input.inputitem,
+#myaccountaddressdetails select.inputitem,
+#myaccountaccountdetails select {
+  background: #ededed; }
+
+/* line 1033, _customise.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper {
+  border: 1px solid #F2F2F2; }
+
+/* line 1041, _customise.scss */
+#wrapper form.contact {
+  border-radius: 0;
+  webkit-border-radius: 0;
+  -moz-border-radius: 0; }
+/* line 1047, _customise.scss */
+#wrapper form.contact input.contactFormInput,
+#wrapper form.contact textarea.contactFormInput {
+  background: #fff; }
+
+/* line 1057, _customise.scss */
+#footer div,
+#footer div#pagetimestamp {
+  font-size: 9px; }
+
+/* line 1062, _customise.scss */
+#footer p {
+  font-size: 12px; }
+
+/* line 1067, _customise.scss */
+├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬»├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬╗├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬¥├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬¥├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬á├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬¥├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇÜ├é┬ª├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬á├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├â┬ó├óÔé¼┼¥├é┬ó├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┼í├âÔÇÜ├é┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬¼├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├é┬ª├âãÆ├óÔé¼┼í├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├óÔé¼┬á├â┬ó├óÔÇÜ┬¼├óÔÇ×┬ó├âãÆ├åÔÇÖ├âÔÇÜ├é┬ó├âãÆ├é┬ó├â┬ó├óÔÇÜ┬¼├à┬í├âÔÇÜ├é┬¼├âãÆ├óÔé¼┬ª├âÔÇÜ├é┬í├âãÆ├åÔÇÖ├âÔÇá├óÔé¼Ôäó├âãÆ├é┬ó├â┬ó├óÔé¼┼í├é┬¼├âÔÇª├é┬í├âãÆ├åÔÇÖ├â┬ó├óÔÇÜ┬¼├à┬í├âãÆ├óÔé¼┼í├âÔÇÜ├é┬┐#nav #qm0 a {
+  color: #222;
+  font-size: 14px;
+  padding: 8px 10px 10px; }
+
+/* line 1076, _customise.scss */
+a.pageNumActive {
+  width: 30px;
+  background-color: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 30px;
+  line-height: 28px;
+  border-bottom: 1px solid; }
+
+/* line 1087, _customise.scss */
+a.pageNum {
+  width: 30px;
+  height: 30px;
+  border: 1px #aaa solid;
+  background-color: #eee;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 28px;
+  padding-top: 0;
+  margin-to: 0;
+  padding-bottom: 0; }
+
+/* line 1101, _customise.scss */
+.main-wrap div.pagetopnavextra, .main-wrap div.pagebottomnavextra {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #ededed;
+  position: relative; }
+
+/* line 1108, _customise.scss */
+#nav #qm0 a {
+  color: #222; }
+
+/* line 1111, _customise.scss */
+#nav > #qm0 > a {
+  margin-left: 13px;
+  color: #fff; }
+
+/* line 1116, _customise.scss */
+#pagenumber {
+  position: absolute;
+  top: 10px;
+  left: 262px; }
+
+/* line 1123, _customise.scss */
+a.pageNumActive {
+  border: none; }
+
+/* line 1127, _customise.scss */
+#registration input.inputitem, #registration select.inputitem {
+  border: none;
+  background: #ededed; }
+
+/* line 1132, _customise.scss */
+.header-wrap-bg,
+#header + #wrapper {
+  background: #f3f9f9; }
+
+/* line 1137, _customise.scss */
+.module-wrap.cat-header-home {
+  padding: 30px 0; }
+
+/* line 1142, _customise.scss */
+#pagenumber a {
+  margin: 0 2px 0 0; }
+
+/* line 1146, _customise.scss */
+.sale {
+  width: 100%;
+  margin-left: 0; }
+  /* line 1151, _customise.scss */
+  .sale a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  /* line 1156, _customise.scss */
+  .sale li {
+    width: 252px;
+    height: 221px;
+    list-style: none;
+    float: left;
+    margin: 0 10px 20px 0;
+    padding: 0;
+    background-position: top left;
+    background-repeat: none;
+    text-indent: -9999px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+    /* line 1169, _customise.scss */
+    .sale li:hover {
+      opacity: .6; }
+  /* line 1174, _customise.scss */
+  .sale .widget-1 {
+    background: url(../images/widget-1.jpg); }
+  /* line 1178, _customise.scss */
+  .sale .widget-2 {
+    background: url(../images/widget-2.jpg); }
+  /* line 1182, _customise.scss */
+  .sale .widget-3 {
+    background: url(../images/widget-3.jpg); }
+  /* line 1186, _customise.scss */
+  .sale .widget-4 {
+    background: url(../images/widget-4.jpg); }
+  /* line 1190, _customise.scss */
+  .sale .widget-5 {
+    background: url(../images/sale-large.jpg);
+    clear: both;
+    width: 100%;
+    height: 137px; }
+  /* line 1197, _customise.scss */
+  .sale .last {
+    margin-right: 0; }
+
+/* line 1203, _customise.scss */
+.header-wrap-bg.module-wrap {
+  padding: 30px 0; }
+
+/* line 2, _product-listing.scss */
+#productsCatProdHdr h1 {
+  color: #111;
+  font-size: 21px;
+  margin: 10px 0 10px;
+  padding-bottom: 0;
+  overflow: hidden;
+  padding-bottom: 10px;
+  text-transform: none; }
+
+/* line 17, _product-listing.scss */
+ul.productsLayoutModeThumb li.stockThumb li.productThumbName {
+  height: auto; }
+
+/* line 21, _product-listing.scss */
+ul.productsLayoutModeThumb li.stockthumbprice {
+  height: auto;
+  float: none; }
+
+/* line 27, _product-listing.scss */
+ul.blocklist li.formwrap a.catpageaddtobasket {
+  text-transform: uppercase;
+  line-height: 30px;
+  width: 100%;
+  padding: 0;
+  font-size: 16px;
+  height: 30px;
+  padding: 0; }
+
+/* line 37, _product-listing.scss */
+.stockThumb li ul.formwrapper li.productqty a:nth-of-type(2n+2) {
+  line-height: 19px; }
+
+/* line 46, _product-listing.scss */
+.main-wrap div.pagetopnavextra,
+.main-wrap div.pagebottomnavextra {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #ededed; }
+/* line 54, _product-listing.scss */
+.main-wrap div.stocklistingSortOptions {
+  float: none;
+  display: inline-block;
+  margin-bottom: 0; }
+/* line 60, _product-listing.scss */
+.main-wrap div.pagebottomnavextra div.stocklistingSortOptions {
+  position: relative; }
+/* line 64, _product-listing.scss */
+.main-wrap div.pagebottomnavextra div.stocklistingmodeandpagenumber,
+.main-wrap div.stocklistingmodeandpagenumber {
+  position: relative;
+  top: 9px;
+  right: 0; }
+/* line 73, _product-listing.scss */
+.main-wrap ul.productsLayoutModeThumb div.stockthumb,
+.main-wrap div.component_stockdetail .productimageholder#imagescontainer,
+.main-wrap div.component_stockdetail .detailInfo,
+.main-wrap #tabsholder .tabBorder,
+.main-wrap #recentlyviewedbody .stockthumbFormat3 {
+  background: #fff;
+  border: 1px solid #F2F2F2; }
+/* line 83, _product-listing.scss */
+.main-wrap ul.productsLayoutModeThumb div.stockthumb,
+.main-wrap #recentlyviewedbody .stockthumbFormat3 {
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s; }
+  /* line 89, _product-listing.scss */
+  .main-wrap ul.productsLayoutModeThumb div.stockthumb:hover,
+  .main-wrap #recentlyviewedbody .stockthumbFormat3:hover {
+    border: 1px solid #22c7b7; }
+
+/* line 1, _sidebar.scss */
+.ir-testim .testim span {
+  text-align: left;
+  font-weight: normal; }
+
+/* line 6, _sidebar.scss */
+.ir-testim .testim {
+  font-weight: bold; }
+
+/* line 11, _sidebar.scss */
+.ir-testim p {
+  font-size: 12px; }
+
+/* line 16, _sidebar.scss */
+.aside h2 {
+  color: #0f6797;
+  font-size: 18px;
+  text-align: left;
+  background-position: bottom left; }
+
+/* line 31, _sidebar.scss */
+.psMark {
+  border: 1px solid #0f6797;
+  background: #0f6797;
+  cursor: pointer; }
+
+/* line 38, _sidebar.scss */
+.psBarFill {
+  background-color: #999;
+  border: 1px solid #999; }
+
+/* line 44, _sidebar.scss */
+.psBar {
+  border: 1px solid #999;
+  background-color: #222; }
+
+/* line 49, _sidebar.scss */
+#refinefurther .refineitems li a:before {
+  border: none;
+  background: #fff; }
+
+/* line 55, _sidebar.scss */
+.aside #refinefurther,
+.aside .asidebox,
+.aside #quickshop {
+  background: #f2f2f2;
+  border-radius: 0; }
+
+/* line 1, _detail-page.scss */
+#wrapper > .container > .article.full,
+.article.full {
+  width: 1000px; }
+
+/* line 8, _detail-page.scss */
+.prodPgRight {
+  vertical-align: top; }
+
+/* line 12, _detail-page.scss */
+#webmngmntareainner, #accountbuttons,
+#myaccount ul.contentaddressform,
+#myaccount ul.contentaccountform,
+#salesBlock, #salesWrap .salesMessage a,
+#refinefurther, #refinecurrent, .asidebox,
+#quickshop, form.contact,
+#registration ul.contentform,
+#registration ul.contentaddressform,
+#registration ul.contentaccountform,
+#addressupdatecontent div.checkoutcontainer > form,
+li.promocodes ul, li.vouchercode ul,
+div.component_stockdetail .detailInfo,
+#recentlyviewedbody .stockthumbFormat3,
+div.component_stockdetail .productimageholder#imagescontainer,
+#asidetopselling li a.class2,
+#linkedproductswrapper .stocklistingbody, #tabsholder .tabBorder, #asidebrowse,
+ul.layoutModeThumb ul.groupthumbwrapper,
+.catBanHold,
+.stocklisting ul.layoutModeList ul.groupthumbwrapper,
+.miniBasket div#basketcontenttable li.basketitem a:link,
+.basketV2 #basketheader,
+.basket ul.majorbasketsubtotal.labelpairleft,
+ul.majorbasketdeliverytotal.labelpairleft,
+ul.majorbaskettotal.labelpairleft,
+.basketExtrasHolder {
+  background: #ededed; }
+
+/* line 40, _detail-page.scss */
+.basket ul.majorbasketsubtotal,
+ul.majorbasketdeliverytotal,
+ul.majorbaskettotal {
+  background: #B6B6B6;
+  color: #fff; }
+
+/* line 47, _detail-page.scss */
+ul.productsLayoutModeThumb div.stockthumb,
+div.component_stockdetail .productimageholder#imagescontainer,
+div.component_stockdetail .detailInfo,
+#tabsholder .tabBorder,
+#recentlyviewedbody .stockthumbFormat3 {
+  background: #fff; }
+
+/* line 57, _detail-page.scss */
+div.component_stockdetail .productimageholder#imagescontainer {
+  float: left;
+  margin-right: 0; }
+
+/* line 62, _detail-page.scss */
+.detail .navPage.blocklistright li a {
+  line-height: 18px; }
+
+/* line 66, _detail-page.scss */
+a.buttonaddtobasket span {
+  text-transform: uppercase;
+  line-height: 16px;
+  font-size: 14px;
+  display: inline; }
+
+/* line 74, _detail-page.scss */
+#tabcurrent {
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0; }
+
+/* line 83, _detail-page.scss */
+ul.tabs li .tab,
+ul.tabs li .tab,
+ul.tabs li .tab#tabcurrent {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  height: 30px;
+  border: 1px solid #ededed;
+  border-bottom: 1px solid #fff; }
+
+/* line 97, _detail-page.scss */
+ul.tabs li .tab#tabcurrent {
+  background-color: #FFF; }
+
+/* line 101, _detail-page.scss */
+ul.tabs {
+  height: 32px; }
+
+/* line 105, _detail-page.scss */
+#tabsholder .tab_container {
+  padding: 0; }
+
+/* line 111, _detail-page.scss */
+#component_stockdetail_recentlyviewed h2 {
+  border-bottom: none;
+  font-weight: normal;
+  padding-bottom: 0;
+  padding-top: 20px; }
+
+/* line 122, _detail-page.scss */
+#component_stockdetail_recentlyviewed {
+  background: url(../images/border.gif) top left repeat-x;
+  margin-top: 30px;
+  width: 100%;
+  float: left; }
+
+/* line 130, _detail-page.scss */
+ul.navPage li {
+  margin: 0 0 10px 10px; }
+
+/* line 135, _detail-page.scss */
+a.buttonaddtobasket:hover {
+  background-image: none;
+  background: #0a4769; }
+
+/* line 143, _detail-page.scss */
+.stockthumbFormat4 a.catpageaddtobasketlistlayout,
+a.buttonaddtobasket {
+  background: #0f6797;
+  text-transform: uppercase;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 0 0 0; }
+  /* line 152, _detail-page.scss */
+  .stockthumbFormat4 a.catpageaddtobasketlistlayout:hover,
+  a.buttonaddtobasket:hover {
+    background: #0a4769; }
+
+/* line 160, _detail-page.scss */
+.basket div.listtable ul.basketline li.basketdescription {
+  width: 226px;
+  padding: 0 10px; }
+
+/* line 165, _detail-page.scss */
+.promocodes ul li.promocodebutton a,
+.vouchercode ul li.vouchercodebutton a {
+  text-transform: none; }
+
+/* line 170, _detail-page.scss */
+#basketheader li {
+  text-transform: uppercase;
+  padding: 7px 4px; }
+
+/* line 175, _detail-page.scss */
+.promocodes ul li.promocodebutton, .vouchercode ul li.vouchercodebutton {
+  text-align: left; }
+
+/* line 178, _detail-page.scss */
+.detailInfo h1 {
+  color: #222;
+  font-weight: normal;
+  font-size: 24px; }
+
+/* line 185, _detail-page.scss */
+.productprice strong {
+  font-size: 1.8em;
+  color: #0f6797; }
+
+/* line 197, _detail-page.scss */
+.inputitem,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: none !important; }
+
+/* line 204, _detail-page.scss */
+.inputitem_productqty[type="text"] {
+  border: 1px solid #ccc !important; }
+
+/* line 208, _detail-page.scss */
+#addressupdatecontent div.checkoutcontainer input,
+#addressupdatecontent div.checkoutcontainer select,
+#addressupdatecontent div.checkoutcontainer textarea,
+#addressupdatecontent div.checkoutcontainer form[name="addresslookup"] input {
+  margin-left: 0;
+  width: 100%; }
+
+/* line 218, _detail-page.scss */
+ul#accountdob input {
+  border: none; }
+
+/* line 222, _detail-page.scss */
+#registration input.inputitem,
+#registration select.inputitem,
+#registration ul.contentform input,
+#registration ul.contentform input[type="password"],
+#myaccountaddressdetails input.inputitem,
+#myaccountaddressdetails select.inputitem,
+#myaccountaccountdetails select {
+  width: 100%;
+  border: none;
+  margin-left: 0;
+  border-radius: none; }
+
+/* line 234, _detail-page.scss */
+#registerpassword {
+  margin: 10px 0 10px;
+  float: left; }
+
+/* line 239, _detail-page.scss */
+#registration ul.contentaddressform,
+#registration ul.contentform,
+#registration ul.contentaccountform,
+#myaccount ul.contentaddressform,
+#accountbuttons,
+#myaccount ul.contentaccountform,
+div#voucherandpromo ul.componentFill1,
+.delivery {
+  background: #ededed;
+  border-radius: 8px; }
+
+/* line 251, _detail-page.scss */
+.delivery {
+  padding: 8px;
+  overflow: hidden; }
+  /* line 255, _detail-page.scss */
+  .delivery ul.labelpairleft {
+    background-color: none;
+    border: none;
+    margin-top: 2px;
+    padding: 4px;
+    font-size: 12px;
+    margin-bottom: 4px;
+    margin-left: 0;
+    width: 100%;
+    color: #fff; }
+
+/* line 270, _detail-page.scss */
+.grey-btn,
+.detail .navPage.blocklistright li a.grey-btn {
+  background-color: #B6B6B6; }
+
+/* line 274, _detail-page.scss */
+#basketheader {
+  background-color: none;
+  border: none;
+  margin-top: 2px;
+  padding: 4px;
+  font-size: 12px;
+  margin-bottom: 4px;
+  margin-left: 0;
+  width: 100%;
+  background: #866F8B;
+  color: #fff; }
+
+/* line 287, _detail-page.scss */
+.navPage .buttoncheckout {
+  float: right;
+  margin-left: 10px; }
+
+/* line 296, _detail-page.scss */
+.buttoncheckout + li.buttonbacktoshop a {
+  margin-right: 10px; }
+
+/* line 300, _detail-page.scss */
+#wrapper #returning ul li#registerloginbutton {
+  margin-top: -20px; }
+
+/* line 305, _detail-page.scss */
+#registration ul.contentform input {
+  width: 100%;
+  margin: 10px 0 10px 0;
+  border-radius: none;
+  border: none;
+  padding: 5px;
+  height: 30px; }
+
+/* line 314, _detail-page.scss */
+#registration input.inputitem, #registration select.inputitem {
+  border: none;
+  margin: 10px 0 10px 0; }
+
+/* line 319, _detail-page.scss */
+ul.navPage li a, ul.navPage li a:link {
+  width: auto;
+  line-height: 1.6em; }
+
+/* line 325, _detail-page.scss */
+.basket ul.navPage li,
+.basket ul.navPage li:hover {
+  width: auto; }
+
+/* line 330, _detail-page.scss */
+.basket ul.navPage li.buttoncheckout a {
+  height: 30px;
+  padding-top: 0;
+  font-size: 12px;
+  line-height: 30px;
+  float: right; }
+
+/* line 338, _detail-page.scss */
+.basket h1,
+.basket h2 {
+  margin: 0 0 10px;
+  background: none;
+  padding: 0 0 10px; }
+
+/* line 345, _detail-page.scss */
+.promocodes li,
+.vouchercode li {
+  margin: 5px 0; }
+
+/* line 350, _detail-page.scss */
+div.pagebottomnavextra {
+  padding-top: 54px; }
+
+/* line 369, _detail-page.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper li.productThumbName {
+  margin: 10px 0 0 5px; }
+
+/* line 373, _detail-page.scss */
+ul.productsLayoutModeList li ul.stockthumbwrapper li.productThumbImage {
+  margin: 10px 0 0 10px; }
+
+/* line 379, _detail-page.scss */
+ul.productsLayoutModeList li.stockThumb {
+  border-bottom: none; }
+
+/* line 382, _detail-page.scss */
+ul.navPage li.buttonbacktoshop a {
+  background: #B6B6B6; }
+
+/* line 388, _detail-page.scss */
+#registration ul.contentform,
+#registration ul.contentaddressform,
+#registration ul.contentaccountform,
+#myaccount ul.contentaddressform,
+#myaccount ul.contentaccountform,
+div.changepwd, .checkoutcontainer form {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  float: left;
+  margin-top: 10px; }
+
+/* line 401, _detail-page.scss */
+.checkoutcontainer form input,
+#adddeliveryaddress input {
+  width: 100%; }
+
+/* line 406, _detail-page.scss */
+ul.majorbasketsubtotal li,
+ul.majorbasketdeliverytotal li,
+ul.majorbaskettotal li {
+  color: #222;
+  font-weight: bold; }
+
+/* line 415, _detail-page.scss */
+.delivery ul.labelpairleft li {
+  color: #222;
+  width: 100%; }
+/* line 421, _detail-page.scss */
+.delivery form input[type="text"] {
+  width: 100%;
+  height: 30px;
+  line-height: 30px; }
+
+/* line 432, _detail-page.scss */
+#adddeliveryaddress input,
+#adddeliveryaddress textarea {
+  border: none;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 3px;
+  width: 100%; }
+
+/* line 441, _detail-page.scss */
+#addressupdatecontent div.checkoutcontainer > form {
+  background: none; }
+
+/* line 446, _detail-page.scss */
+#wrapper input[type="submit"].inputBtn {
+  background: #0f6797 !important; }
+  /* line 448, _detail-page.scss */
+  #wrapper input[type="submit"].inputBtn:hover {
+    background: #0a4769; }
+/* line 454, _detail-page.scss */
+#wrapper form.contact input,
+#wrapper form.contact textarea,
+#wrapper #div_tellafriend input,
+#wrapper #div_tellafriend textarea,
+#wrapper #div_giftwrapoptions textarea,
+#wrapper #quickpay input,
+#wrapper #quickpay textarea,
+#wrapper form.contact input,
+#wrapper form.contact textarea,
+#wrapper #div_tellafriend input,
+#wrapper #div_tellafriend textarea,
+#wrapper #registration ul.contentform input,
+#wrapper #registration ul.contentform textarea,
+#wrapper #quickpay input, #wrapper #quickpay textarea,
+#wrapper ul#customerdetails input,
+#wrapper #returning input,
+#wrapper .salesMessage,
+#wrapper #registration ul ul li input,
+#wrapper #myaccountaddressdetails input,
+#wrapper #myaccountaddressdetails textarea,
+#wrapper #myaccountaccountdetails input,
+#wrapper #myaccountaccountdetails textarea,
+#wrapper #addressupdatecontent div.checkoutcontainer input,
+#wrapper #addressupdatecontent div.checkoutcontainer textarea {
+  border-radius: none !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #ededed; }
+
+/* line 488, _detail-page.scss */
+#myaccount ul.contentaccountform ul.labelpairleft,
+#myaccount ul.contentaddressform ul.labelpairleft {
+  margin-bottom: 10px; }
+
+/* line 493, _detail-page.scss */
+#addressupdatecontent div.checkoutcontainer textarea {
+  width: 100%;
+  border: none;
+  max-width: none; }
+
+/* line 499, _detail-page.scss */
+.label + .value {
+  margin-top: 5px; }
+
+/* line 503, _detail-page.scss */
+div#pagevalidation_ajax ul.labelpairleft .validationtext {
+  width: 90%; }
+
+/* line 507, _detail-page.scss */
+#returning ul li#registerloginbutton {
+  margin-top: -30px; }
+
+/* line 512, _detail-page.scss */
+.productdetailwrap form[name="emailenq"] input[type="text"] {
+  background: #ededed; }
+
+/* line 517, _detail-page.scss */
+#adddeliveryaddress input,
+#adddeliveryaddress textarea {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+<link rel="stylesheet" href="dialog.css" type="text/css">
+<script language="javascript" src="../../../include/dialog.js"></script>
+<SCRIPT>
+
+var language = "EN";
+var design   = "";
+var objElementId = "";
+var doc = null;
+
+// use id and not the object because in ASP.Net object can be changed through blur
+if(browser.ie) {
+	language            = dialogArguments[0];
+	design              = dialogArguments[1];
+	doc                 = dialogArguments[4];
+	objElementId        = dialogArguments[5] ? dialogArguments[5] : "";
+	params              = dialogArguments;
+} else {
+	aParam = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	design              = aParam[1];
+	doc                 = aParam[4];
+	objElementId        = aParam[5] ? aParam[5] : "";
+	params              = aParam;
+}
+
+document.title = getLanguageString(language,1101) + document.title;
+
+
+function save()
+{
+  var ret = ""
+
+  try {
+    if(document.getElementById("txtName").value != "") {
+      if(objElementId != "") {
+        doc.getElementById(objElementId).parentNode.name = document.getElementById("txtName").value;
+      } else {
+        ret = document.getElementById("txtName").value;
+      }
+    }
+  } catch(Error) {}
+  
+  if(browser.ns) {
+    if(ret != "")
+      window.opener.callbackMozilla("ANCHOR", ret);
+  } else {
+    window.returnValue = ret;
+  }
+
+  window.close();
+}
+
+function Load()
+{
+  try {
+    if(objElementId != "") 
+      document.getElementById("txtName").value = doc.getElementById(objElementId).parentNode.name;
+
+    document.getElementById("lblOK").value = getLanguageString(language,899);
+    document.getElementById("lblCancel").value = getLanguageString(language,900);
+    document.getElementById("lbl1").innerHTML = getLanguageString(language,964);
+    document.getElementById("lbl2").innerHTML = getLanguageString(language,1102);
+  } catch(Error) {}
+
+}
+
+      </SCRIPT>
+  </HEAD>
+  <BODY class="bodypage" onload="javascript: Load();">
+    <fieldset>
+      <legend class="head">
+        <span id="lbl1">_ID/Name</span>
+      </legend>
+      <TABLE cellSpacing="0" cellPadding="1" width="100%" border="0">
+        <TR>
+          <TD nowrap>
+            <div id="lbl2" class="label">_Anchor name:</div>
+          </TD>
+          <TD><INPUT id="txtName" style="FONT-SIZE: 11px; WIDTH: 260px; FONT-FAMILY: arial; HEIGHT: 18px"
+              value=""></TD>
+        </TR>
+      </TABLE>
+    </fieldset>
+    <table>
+      <tr>
+        <td height="4"></td>
+      </tr>
+    </table>
+    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+      <TR>
+        <TD>
+          <P align="right"><INPUT id="lblOK" style="WIDTH: 83px; HEIGHT: 24px" type="button" value="OK" onClick="save()">&nbsp;<INPUT id="lblCancel" style="WIDTH: 79px; HEIGHT: 24px" type="button" value="Cancel" onclick="window.returnValue='';window.close();"></P>
+        </TD>
+      </TR>
+    </TABLE>
+  </BODY>
+</HTML>

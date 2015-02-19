@@ -1,0 +1,138 @@
+<HEAD>
+  <title></title>
+  <LINK href="../../design/style/dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../include/dialog.js"></script>
+    <SCRIPT>
+
+function save()
+{
+  try {
+    if(document.getElementById("txtLeft").value != "" && !isNaN(document.getElementById("txtLeft").value))
+      parent.parent.params[15] = document.getElementById("txtLeft").value;
+        
+    if(document.getElementById("txtTop").value != "" && !isNaN(document.getElementById("txtTop").value))
+      parent.parent.params[16] = document.getElementById("txtTop").value;
+      
+    if(document.getElementById("txtRight").value != "" && !isNaN(document.getElementById("txtRight").value))
+      parent.parent.params[17] = document.getElementById("txtRight").value;
+      
+    if(document.getElementById("txtBottom").value != "" && !isNaN(document.getElementById("txtBottom").value))
+      parent.parent.params[18] = document.getElementById("txtBottom").value;
+      
+    if(document.getElementById("txtHHeight").value != "" && !isNaN(document.getElementById("txtHHeight").value))
+      parent.parent.params[19] = document.getElementById("txtHHeight").value;
+      
+    if(document.getElementById("txtFHeight").value != "" && !isNaN(document.getElementById("txtFHeight").value))
+      parent.parent.params[20] = document.getElementById("txtFHeight").value;
+  } catch(Error) { }
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+    // set language strings
+    setStrings();
+    
+    document.getElementById("txtLeft").value = params[15];
+    document.getElementById("txtTop").value = params[16];
+    document.getElementById("txtRight").value = params[17];
+    document.getElementById("txtBottom").value = params[18];
+    document.getElementById("txtHHeight").value = params[19];
+    document.getElementById("txtFHeight").value = params[20];
+    
+    // set unit
+    var unit;
+    if(params[26] == 1)
+      unit = " (inches)";
+    if(params[26] == 2)
+      unit = " (mm)";
+    if(params[26] == 3)
+      unit = " (cm)";
+      
+    document.getElementById("5018").innerHTML = document.getElementById("5018").innerHTML + unit;
+    document.getElementById("5024").innerHTML = document.getElementById("5024").innerHTML + unit;
+
+  } catch(Error) {
+  }
+
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td>
+        <fieldset>
+          <legend class="head">
+            <span id="5018">_Margin Page</span>
+          </legend>
+          <table height="100%" cellspacing="0" cellpadding="1" border="0">
+            <tr>
+              <td nowrap style="width:1%">
+                <div id="5020" class="label80">_Left Margin:</div>
+              </td>
+              <td>
+                <input type="text" style="width:200px" value="" ID="txtLeft">
+              </td>
+            </tr>
+            <tr>
+              <td nowrap>
+                <div id="5021" class="label80">_Top Margin:</div>
+              </td>
+              <td>
+                <input type="text" style="width:200px" value="" ID="txtTop">
+              </td>
+            </tr>
+            <tr>
+              <td nowrap>
+                <div id="5022" class="label80">_Right Margin:</div>
+              </td>
+              <td>
+                <input type="text" style="width:200px" value="" ID="txtRight">
+              </td>
+            </tr>
+            <tr>
+              <td nowrap>
+                <div id="5023" class="label80">_Bottom Margin:</div>
+              </td>
+              <td>
+                <input type="text" style="width:200px" value="" ID="txtBottom">
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+      </td>
+      <td rowspan="2" align="center" valign="middle"><img src="margin.png" border="0">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <fieldset>
+          <legend class="head">
+            <span id="5024">_Headersize</span>
+          </legend>
+          <table height="100%" cellspacing="0" cellpadding="1" border="0" ID="Table1">
+            <tr>
+              <td nowrap style="width:1%">
+                <div id="5025" class="label80">_Headerheight:</div>
+              </td>
+              <td>
+                <input type="text" style="width:200px" value="" ID="txtHHeight">
+              </td>
+            </tr>
+            <tr>
+              <td nowrap>
+                <div id="5026" class="label80">_Footerheight:</div>
+              </td>
+              <td>
+                <input type="text" style="width:200px" value="" ID="txtFHeight">
+              </td>
+            </tr>
+        </fieldset>
+      </td>
+    </tr>
+  </table>
+</BODY>

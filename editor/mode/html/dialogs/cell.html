@@ -1,0 +1,230 @@
+<HTML>
+  <HEAD>
+    <title></title>
+    <link rel="stylesheet" href="dialog.css" type="text/css">
+<script language="javascript" src="../../../include/dialog.js"></script>
+      <SCRIPT>
+var language = "";
+var design = "";
+var objElement;
+var isDebug = false;
+
+function save()
+{
+  try {
+    var objElementStyle = objElement.style;
+    var width = objElementStyle.width;
+    var height = objElementStyle.height;
+    var nowrap = objElement.noWrap;
+    var textAlign = objElementStyle.textAlign;
+    var verticalAlign = objElementStyle.verticalAlign;
+    var changed = false;
+    var win = params[11];
+
+    // id
+    if(document.getElementById("txtID").value != "")
+      objElement.id = document.getElementById("txtID").value;
+
+    // width
+    if(document.getElementById("txtWidth").value != "")
+      objElementStyle.width = document.getElementById("txtWidth").value;
+    else
+      objElementStyle.width = "";
+    // height
+    if(document.getElementById("txtHeight").value != "")
+      objElementStyle.height = document.getElementById("txtHeight").value;
+    else
+      objElementStyle.height = "";
+
+    objElement.noWrap = document.getElementById("cmbWrap").value > 0 ? false: true;
+    //objElementStyle.textAlign  = document.getElementById("cmbHAlign").value;
+    objElement.align = document.getElementById("cmbHAlign").value;
+    //objElementStyle.verticalAlign = document.getElementById("cmbVAlign").value;
+    objElement.vAlign = document.getElementById("cmbVAlign").value;
+    
+    objElement.colSpan = document.getElementById("txtColspan").value;
+    objElement.rowSpan = document.getElementById("txtRowspan").value;
+
+    if(width != objElementStyle.width)
+      changed = true;
+    if(height != objElementStyle.height)
+      changed = true;
+    if(nowrap != objElement.noWrap)
+      changed = true;
+    if(textAlign != objElementStyle.textAlign)
+      changed = true;
+    if(verticalAlign != objElementStyle.verticalAlign)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) { 
+    if(isDebug)
+      alert("Error in cell: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+
+    // set language strings
+    setStrings();
+
+    var objElementStyle = objElement.style;
+
+    document.getElementById("txtID").value          = objElement.id;
+    document.getElementById("txtWidth").value       = objElementStyle.width;
+    document.getElementById("txtHeight").value      = objElementStyle.height;
+
+    if(objElement.noWrap)
+      document.getElementById("cmbWrap").selectedIndex = 0;
+    else
+      document.getElementById("cmbWrap").selectedIndex = 1;
+
+    if(objElement.align != null) {
+    //if(objElementStyle.textAlign != null) {
+      var combo = document.getElementById("cmbHAlign");
+      setCombo(combo,objElement.align);
+    }
+    if(objElement.vAlign != null) {
+    //if(objElementStyle.verticalAlign != null) {
+      var combo = document.getElementById("cmbVAlign");
+      setCombo(combo,objElement.vAlign);
+    }
+    document.getElementById("txtColspan").value = objElement.colSpan;
+    document.getElementById("txtRowspan").value = objElement.rowSpan;
+
+    if(params[24] > 0)
+      document.getElementById("cmbWrap").disabled = true;
+
+  } catch(Error) { 
+  }
+}
+</SCRIPT>
+  </HEAD>
+  <BODY class="bodypage">
+    <fieldset>
+      <legend class="head">
+        <span id="964">_ID/Name</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+        <tr>
+          <td>
+            <div id="962" class="label">_ID:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtID">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="4006">_Size</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table2">
+        <tr>
+          <td>
+            <div id="4000" class="label">_Width:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtWidth" size="1">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="4001" class="label">_Height:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtHeight" size="1">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="3333">_Alignment</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0">
+        <tr>
+          <td>
+            <div id="912" class="label">_Horizontal:</div>
+          </td>
+          <td>
+            <SELECT id="cmbHAlign" style="FONT-SIZE: 11px; WIDTH: 76px; FONT-FAMILY: arial; HEIGHT: 18px">
+              <OPTION value="" selected>-</OPTION>
+              <OPTION value="left">Left</OPTION>
+              <OPTION value="center">Center</OPTION>
+              <OPTION value="right">Right</OPTION>
+            </SELECT>&nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="914" class="label">_Vertical:</div>
+          </td>
+          <td>
+            <SELECT id="cmbVAlign" style="FONT-SIZE: 11px; WIDTH: 76px; FONT-FAMILY: arial; HEIGHT: 18px">
+              <OPTION value="" selected>-</OPTION>
+              <OPTION value="top">Top</OPTION>
+              <OPTION value="middle">Middle</OPTION>
+              <OPTION value="baseline">Baseline</OPTION>
+              <OPTION value="bottom">Bottom</OPTION>
+            </SELECT>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="3334">_Span</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table3">
+        <tr>
+          <td>
+            <div id="3336" class="label">_Colspan:</div>
+          </td>
+          <td width="96">
+            <input type="text" ID="txtColspan" size="1">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="3335" class="label">_Rowspan:</div>
+          </td>
+          <td width="96">
+            <input type="text" ID="txtRowspan" size="1">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="4007">_Misc</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table4">
+        <tr>
+          <td>
+            <div id="915" class="label">_Wrap:</div>
+          </td>
+          <td>
+            <SELECT id="cmbWrap" style="FONT-SIZE: 11px; WIDTH: 76px; FONT-FAMILY: arial; HEIGHT: 18px">
+              <OPTION value="0" selected>False</OPTION>
+              <OPTION value="1">True</OPTION>
+            </SELECT>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </BODY>
+</HTML>

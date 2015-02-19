@@ -1,0 +1,354 @@
+<HEAD>
+<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../../include/listbox.js"></script>
+<script language="javascript" src="../../../include/dialog.js"></script>
+<SCRIPT>
+// browser detection
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+var browser = new Browser();
+
+var language = "EN";
+var design = "";
+var mode = "";
+var objElement;
+var aStyles = null;
+var params = null;
+var tab = null;
+var tabDesign = "";
+var styleSheet = new Array();
+var objPreview = null;
+
+if(browser.ie) {
+	language            = dialogArguments[0];
+	design              = dialogArguments[1];
+	mode                = dialogArguments[2];
+	doc                 = dialogArguments[4];
+	objElement          = dialogArguments[5];
+	aStyles             = dialogArguments[12];
+	tabDesign           = dialogArguments[13];
+ 	params              = dialogArguments;
+} else {
+	var aParam          = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	design              = aParam[1];
+	mode                = aParam[2];
+	doc                 = aParam[4];
+	objElement          = aParam[5];
+	aStyles             = aParam[12];
+	tabDesign           = aParam[13];
+ 	params              = aParam;
+}
+
+  document.title = getLanguageString(language,4203) + document.title;
+
+
+function updateListItem()
+{
+  try {
+    //get selected item
+    var item = lbStyleSheet.selectedItem;
+    //get "style[i]" of div
+    var tag = item.tag;
+    //get name of item
+    var name = item.value;
+    //read new Style from updated div
+    var newStyle = document.getElementById(tag).style.cssText;
+    //write new text of selected item
+    item.text = '<div id="'+tag+'" style="'+newStyle+'">'+ name +'</div>'
+  } catch(Error) {}
+}
+
+function onStyleClick(item) 
+{
+  objPreview = document.getElementById(item.tag);
+  objItem = item;
+  var items = tab.getItems();
+  for(var i=0;i<items.length;i++) {
+    items[i].call("update()");
+  }  
+}
+
+
+function getLanguageString(lng,id)
+{
+  var aLanguage = params[14];
+  return aLanguage[id];
+}
+
+function tabCreate(objTab,id)
+{
+  var dlgPath = "../mode/wp/dialogs/";
+  
+  tab = objTab;
+  objTab.design      = tabDesign;
+	objTab.orientation = "0";
+	objTab.tabarea     = true;
+	objTab.designmode  = "IMAGE";
+	
+	var item = objTab.createItem();
+	item.tag = "CHAR";
+	item.active = true;
+	item.url = dlgPath + "css_char.html";
+  item.text = getLanguageString("",4200);
+	item.title = getLanguageString("",4200);  
+	objTab.add(item);
+	
+	var item = objTab.createItem();
+	item.tag = "SHADE";
+	item.url = dlgPath + "css_shade.html";
+  item.text = getLanguageString("",4202);
+	item.title = getLanguageString("",4202);  
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.tag = "BORDER";
+	item.url = dlgPath + "css_border.html";
+  item.text = getLanguageString("",4201);
+	item.title = getLanguageString("",4201);  
+	objTab.add(item);
+	objTab.create();
+}
+
+function tabEventPageLoaded(item,id)
+{
+  item.getWindow().initDialog(params);
+}
+
+function tabEventLoaded()
+{
+  onStyleClick(lbStyleSheet.selectedItem);
+}
+
+function save()
+{
+
+  try {
+    if(doc.styleSheets.length > 0) {
+      for(var count=0;count<doc.styleSheets.length;count++) {
+        var objStyleSheet = doc.styleSheets[count];
+        var objRules = null;
+
+        if(browser.ns) {
+	        objRules = objStyleSheet.cssRules;
+        } else {
+	        objRules = objStyleSheet.rules;
+        }
+        
+        try {
+          for(var i=0;i<objRules.length;i++) {
+            var value = objRules[i].selectorText;
+            if (value.substring(0,1) == "." && value.indexOf(' ')< 0) {
+              if (browser.ns) {
+                objStyleSheet.deleteRule(i);
+              } else {
+                objStyleSheet.removeRule(i);
+              }
+              i--;
+            }
+          }
+        } catch(Error) {
+        }
+      }
+    }  
+
+    var ss = null;
+    if(doc.styleSheets.length ==0) {
+      if(browser.ie) {
+        ss = doc.createStyleSheet();
+      } else {
+        ss = doc.createElement("style");
+        var head = doc.getElementsByTagName("head");
+        head[0].appendChild(ss);
+      }
+    } else {
+      if(browser.ie) {
+        ss = doc.styleSheets[0];
+      } else {
+        ss = doc.getElementsByTagName("style")[0];
+      }
+    }
+     
+    var temp = "";  
+    for (var i=0;i<lbStyleSheet.aListItems.length;i++) {
+      removeAttribute(document.getElementById(lbStyleSheet.aListItems[i].tag).style, "width");
+      removeAttribute(document.getElementById(lbStyleSheet.aListItems[i].tag).style, "height");
+      removeAttribute(document.getElementById(lbStyleSheet.aListItems[i].tag).style, "overflow");
+      if (document.getElementById(lbStyleSheet.aListItems[i].tag).style.cssText != "") {
+        if (browser.ns) {
+          //ss.insertRule("." + lbStyleSheet.aListItems[i].value + " { " + document.getElementById(lbStyleSheet.aListItems[i].tag).style.cssText + " } ",0);
+          temp += " ." + lbStyleSheet.aListItems[i].value + " { " + document.getElementById(lbStyleSheet.aListItems[i].tag).style.cssText + " } ";
+        } else {
+          ss.addRule("." + lbStyleSheet.aListItems[i].value,document.getElementById(lbStyleSheet.aListItems[i].tag).style.cssText,0);
+        }
+      }
+    }
+    if(browser.ns)
+      ss.innerHTML = temp;
+      
+    // refresh style dropdown
+    if (browser.ns) {
+      aParam[11].editSetStyleSheetRules();
+      aParam[11].__eventOnFileLoaded();
+    } else {
+      dialogArguments[11].editSetStyleSheetRules();
+      dialogArguments[11].__eventOnFileLoaded();
+    }
+  } catch(Error) {
+  }
+  
+  window.close();
+ 
+}
+
+function init()
+{
+  try {
+    generateStyleListBox();
+    document.getElementById("lblOK").value = getLanguageString(language,899);
+    document.getElementById("lblCancel").value = getLanguageString(language,900);
+    document.getElementById("btnNew").value = getLanguageString(language,4204);
+    document.getElementById("btnDelete").value = getLanguageString(language,4205);
+		document.getElementById("lblNewStyle").innerHTML = getLanguageString(language,4208);
+    lbStyleSheet.selectItem(lbStyleSheet.aListItems[0].value);
+  } catch(Error) {}
+}
+
+function btnNewStyle()
+{
+  try {
+    var i = lbStyleSheet.aListItems.length;
+    var name = document.getElementById('newStyle').value;
+
+		//is there always an item with that name?
+		for (var z=0; z<i; z++) {
+			if (lbStyleSheet.aListItems[z].value == name) {
+				alert(getLanguageString(language,4206));
+				return;
+			}
+		}
+
+    if (name != "") {
+      var item = new ListItem('<div id="style'+ i +'" style="width:100%; height:40px; overflow:hidden;">'+ name +'</div>', 'tooltip', name, 'style'+i);
+      lbStyleSheet.add(item);  
+      var temp = lbStyleSheet.create();
+      document.getElementById("divStyleSheet").innerHTML = temp;
+      //Select item after insert
+      lbStyleSheet.selectItem(name);
+      //Update previews
+      onStyleClick(lbStyleSheet.selectedItem);    
+			document.getElementById('newStyle').value = "";
+    } else {
+      alert(getLanguageString(language,4207));
+    }
+    
+  } catch(Error) {}
+}
+
+function btnDeleteStyle()
+{
+  
+	try {
+    var id = lbStyleSheet.selectedItem.id;
+    var newItemValue = null;
+		var len = lbStyleSheet.aListItems.length;
+		var j=0;
+		
+		var newArray = new Array();
+		for(var i=0;i<len;i++) {
+			if(lbStyleSheet.aListItems[i].id != id) {
+				newArray[j] = lbStyleSheet.aListItems[i];
+				j++;
+			} else {
+			  if (i > 0)
+			    newItemValue = lbStyleSheet.aListItems[i-1].value;
+			  else {
+					if (lbStyleSheet.aListItems.length > 1) 
+			    	newItemValue = lbStyleSheet.aListItems[i+1].value;
+			  }
+			}
+		}
+
+		lbStyleSheet.aListItems = newArray;
+	
+		var temp = lbStyleSheet.create();
+		document.getElementById("divStyleSheet").innerHTML = temp;
+		
+		//Select new item
+		lbStyleSheet.selectItem(newItemValue);
+		onStyleClick(lbStyleSheet.selectedItem);
+	} catch(Error) {}  
+}
+
+function generateStyleListBox()
+{
+  lbStyleSheet = new ListBox();
+  lbStyleSheet.onClick = "onStyleClick";
+
+  if(doc.styleSheets.length > 0) {
+    for(var count=0;count<doc.styleSheets.length;count++) {
+      var objStyleSheet = doc.styleSheets[count];
+      var objRules = null;
+
+      if(browser.ns) {
+	      objRules = objStyleSheet.cssRules;
+      } else {
+	      objRules = objStyleSheet.rules;
+      }
+      for(var i=0;i<objRules.length;i++) {
+	      var value = objRules[i].selectorText;
+	      if(value.substring(0,1) == "." && value.indexOf(' ')< 0 ) {
+		      value = value.substring(1,value.length);
+	        styleSheet[styleSheet.length] = value;
+	        var style = objRules[i].style;
+	        // 
+          var item = new ListItem('<div id="style'+ i +'" style="width:100%; height:40px; overflow:hidden; '+style.cssText+'">'+ value +'</div>', 'tooltip', value, 'style'+i);
+          lbStyleSheet.add(item);
+		    }
+		  }
+		}
+  }
+  var temp = lbStyleSheet.create();
+  document.getElementById("divStyleSheet").innerHTML = temp;
+}
+
+</SCRIPT>
+</HEAD>
+
+
+<body class="bodyframe" onload="init()">
+<table style="height:100%;width:100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td style="height:100%;width:200px;" valign="top">
+      <div id="space13" style="position: absolute; top: 18px; left:10px; width:180px;">
+				<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+					<tr>
+						<td colspan="2"><span id="lblNewStyle">_New style sheet</span></td>
+					</tr>
+					<tr>
+						<td nowrap style="width:100%"><input type="text" id="newStyle" style="width:100%"/>&nbsp;&nbsp;</td>
+						<td align="right" ><input type="button" onclick="btnNewStyle();" id="btnNew" value="_New Style" /></td>
+					</tr>
+				</table></div>
+      <div style="left: 10px; width: 180px; position: absolute; top: 60px; height: 270px; background-color:#FFFFFF; border: 1px solid #919B9C;overflow:auto" id="divStyleSheet"></div>
+      <div id="space14" style="position: absolute; top: 336px; left:10px;"><input type="button" onclick="btnDeleteStyle();" id="btnDelete" value="_Delete Style" /></div>
+    </td>
+    <td style="height:350px;width:400px;" valign="top"><iframe id="tab" style="height:100%;width:100%"	src="../../../tab/pinTab.html?id=tab" frameBorder="0"></iframe></td>
+  </tr>
+  <tr>
+    <td align="right" colspan="2" valign="top">          
+      <div style="padding-top:5px">
+        <INPUT style="WIDTH: 81px; HEIGHT: 24px" onclick="save()" id="lblOK" type="submit" size="108" value="__OK" NAME="lblOK"> <INPUT id="lblCancel" style="WIDTH: 73px; HEIGHT: 24px" onclick="window.close()" type="button" value="__Cancel" NAME="lblCancel">
+      </div>
+    </td>
+  </tr>
+</table>
+
+</body>

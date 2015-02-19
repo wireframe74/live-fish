@@ -1,0 +1,262 @@
+<HTML>
+  <HEAD>
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+    <link rel="stylesheet" href="dialog.css" type="text/css">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+      <SCRIPT>
+var language = "";
+var design   = "";
+var objElement = null;
+var doc        = null;
+var isDebug = true;
+
+function save()
+{
+  var isCharsetEdit = false;
+  var isDescEdit    = false;
+  var isAuthorEdit  = false;
+  var isKeyEdit     = false;
+  var changed       = false;
+  var win           = params[11];
+  
+  try {
+    if(browser.ie) {
+      doc.title = document.getElementById("txtTitle").value;
+      changed = true;
+    } else {
+      var titles = doc.getElementsByTagName("title");
+      if(titles && titles.length > 0) {
+		    titles[0].textContent=document.getElementById("txtTitle").value;
+        changed = true;
+      } else {
+        var title = doc.createElement("title");
+        doc.getElementsByTagName("head")[0].appendChild(title);
+        var text = doc.createTextNode(document.getElementById("txtTitle").value);
+        title.appendChild(text);
+        changed = true;
+      }
+    }
+
+    var aMeta = doc.getElementsByTagName("meta");
+    for(var i=0;i<aMeta.length;i++) {
+      if(aMeta[i].httpEquiv.toLowerCase() == "content-type") {
+        if(document.getElementById("cmbCharset").value != "") {
+          aMeta[i].content = "text/html; charset=" +  document.getElementById("cmbCharset").value;
+          isCharsetEdit = true;
+          changed = true;
+        }
+      }
+      if(aMeta[i].name.toLowerCase() == "description") {
+        if(document.getElementById("txtDescription").value != "") {
+          aMeta[i].content = document.getElementById("txtDescription").value;
+          isDescEdit = true;
+          changed = true;
+        }
+      }
+      if(aMeta[i].name.toLowerCase() == "author") {
+        if(document.getElementById("txtAuthor").value != "") {
+          aMeta[i].content = document.getElementById("txtAuthor").value;
+          isAuthorEdit = true;
+          changed = true;
+        }
+      }
+      if(aMeta[i].name.toLowerCase() == "keywords") {
+        if(document.getElementById("txtKeywords").value != "") {
+          aMeta[i].content = document.getElementById("txtKeywords").value;
+          isKeyEdit = true;
+          changed = true;
+        }
+      }
+    }
+
+    if(!isCharsetEdit) {
+      if(document.getElementById("cmbCharset").value != "") {
+        var meta = doc.createElement("meta");
+        meta.httpEquiv = "content-type";
+        meta.content = "text/html; charset=" +  document.getElementById("cmbCharset").value;
+        doc.getElementsByTagName("head")[0].appendChild(meta);
+        changed = true;
+      }
+    }
+
+    if(!isDescEdit) {
+      if(document.getElementById("txtDescription").value != "") {
+        var meta = null;
+        if(browser.ie) {
+          meta = doc.createElement("<meta name='description'>");
+        } else {
+          meta = doc.createElement("meta");
+          meta.name = "description";
+        }
+        meta.content = document.getElementById("txtDescription").value;
+        doc.getElementsByTagName("head")[0].appendChild(meta);
+        changed = true;
+      }
+    }
+
+    if(!isAuthorEdit) {
+      if(document.getElementById("txtAuthor").value != "") {
+        var meta = null;
+        if(browser.ie) {
+          meta = doc.createElement("<meta name='author'>");
+        } else {
+          meta = doc.createElement("meta");
+          meta.name = "author";
+        }
+        meta.content = document.getElementById("txtAuthor").value;
+        doc.getElementsByTagName("head")[0].appendChild(meta);
+        changed = true;
+      }
+    }
+
+    if(!isKeyEdit) {
+      if(document.getElementById("txtKeywords").value != "") {
+        var meta = null;
+        if(browser.ie) {
+          meta = doc.createElement("<meta name='keywords'>");
+        } else {
+          meta = doc.createElement("meta");
+          meta.name = "keywords";
+        }
+        meta.content = document.getElementById("txtKeywords").value;
+        doc.getElementsByTagName("head")[0].appendChild(meta);
+        changed = true;
+      }
+    }
+    if(changed)
+      win.__editOnChanged(true);
+
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in <page> page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+
+    // set language strings
+    setStrings();
+
+    // read char set
+    var aMeta = doc.getElementsByTagName("meta");
+    for(var i=0;i<aMeta.length;i++) {
+      if(aMeta[i].httpEquiv.toLowerCase() == "content-type") {
+        var content = aMeta[i].content;
+        var pos = content.indexOf("charset=");
+        var charset = content.substring(pos + 8,content.length);
+        setCombo(document.getElementById("cmbCharset"),charset);
+      }
+      if(aMeta[i].name.toLowerCase() == "description") {
+        document.getElementById("txtDescription").value = aMeta[i].content;
+      }
+      if(aMeta[i].name.toLowerCase() == "author") {
+        document.getElementById("txtAuthor").value = aMeta[i].content;
+      }
+      if(aMeta[i].name.toLowerCase() == "keywords") {
+        document.getElementById("txtKeywords").value = aMeta[i].content;
+      }
+    }
+    // read title
+    document.getElementById("txtTitle").value = doc.getElementsByTagName("title")[0].innerHTML;
+
+  } catch(Error) {
+  }
+
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="3346">_Title</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+      <tr>
+        <td class="label">
+          <div id="3347"  class="label">_Title:</div>
+        </td>
+        <td style="width:100%">
+          <input type="text" ID="txtTitle"  style="width:100%">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3348">_Charset</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td class="label">
+          <div id="3349" class="label">_Charset:</div>
+        </td>
+        <td>
+          <select id="cmbCharset">
+						<option value="">-</option>
+						<option value="iso-8859-2">Central Europe</option>
+						<option value="big5">Chinese(Big5)</option>
+						<option value="utf-8">Unicode (UTF-8)</option>
+						<option value="iso-8859-1">Western Europe</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3350">_Description</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td class="label">
+          <div id="3351"  class="label">_Description:</div>
+        </td>
+        <td style="width:100%">
+          <input type="text" ID="txtDescription" style="width:100%">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3352">_Author</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td class="label">
+          <div id="3353" class="label">_Author:</div>
+        </td>
+        <td style="width:100%">
+          <input type="text" ID="txtAuthor" style="width:100%">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3354">_Keywords</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td class="label">
+          <div id="3355" class="label">_Keywords:</div>
+        </td>
+        <td style="width:100%">
+          <input type="text" ID="txtKeywords" style="width:100%">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>
+</HTML>

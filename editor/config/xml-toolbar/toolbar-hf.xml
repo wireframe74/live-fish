@@ -1,0 +1,77 @@
+<toolbars>
+<toolbar position="top">
+  <regionstart />
+  <button image="new.gif" callback="editNew(1)" tag="NEW" tooltipid="101"></button>
+  <dropdownlist displayvalue="Value" comparemode="1" width="114" callback="editFont(dropdown.selectedItem.value)"  tag="FONT" tooltipid="3016">
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Arial'&gt;Arial&lt;/span&gt;"                        value="Arial"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Arial Black'&gt;Arial Black&lt;/span&gt;"            value="Arial Black"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Courier'&gt;Courier&lt;/span&gt;"                    value="Courier"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Courier New'&gt;Courier New&lt;/span&gt;"            value="Courier New"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Georgia'&gt;Georgia&lt;/span&gt;"                    value="Georgia"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Impact'&gt;Impact&lt;/span&gt;"                      value="Impact"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Lucida Console'&gt;Lucida Console&lt;/span&gt;"      value="Lucida Console"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Tahoma'&gt;Tahoma&lt;/span&gt;"                      value="Tahoma"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Times New Roman'&gt;Times New Roman&lt;/span&gt;"    value="Times New Roman"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Verdana'&gt;Verdana&lt;/span&gt;"                    value="Verdana"></listitem>
+  </dropdownlist>
+  <dropdownlist displayvalue="value" width="45" callback="editFontSize(dropdown.selectedItem.value)"  tag="FONTSIZE" tooltipid="3017">
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 6'&gt;6&lt;/span&gt;" value="6"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 7'&gt;7&lt;/span&gt;" value="7"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 8'&gt;8&lt;/span&gt;" value="8"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 9'&gt;9&lt;/span&gt;" value="9"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 10'&gt;10&lt;/span&gt;" value="10"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 11'&gt;11&lt;/span&gt;" value="11"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 12'&gt;12&lt;/span&gt;" value="12"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 13'&gt;13&lt;/span&gt;" value="13"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 14'&gt;14&lt;/span&gt;" value="14"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 15'&gt;15&lt;/span&gt;" value="15"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 16'&gt;16&lt;/span&gt;" value="16"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 18'&gt;18&lt;/span&gt;" value="18"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 20'&gt;20&lt;/span&gt;" value="20"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 22'&gt;22&lt;/span&gt;" value="22"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 24'&gt;24&lt;/span&gt;" value="24"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 36'&gt;36&lt;/span&gt;" value="36"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 48'&gt;48&lt;/span&gt;" value="48"></listitem>
+  </dropdownlist>
+  <button image="bold.gif" tag="BOLD" callback="editBold(!button.pressed)" tooltipid="201" ></button>
+  <separator />
+  <button image="italic.gif" tag="ITALIC" callback="editItalic(!button.pressed)" tooltipid="202"></button>
+  <separator />
+  <button image="underline.gif" tag="UNDERLINE" callback="editUnderline(!button.pressed)" tooltipid="203"></button>
+  <separator />
+  <colorbutton image="color.gif" callback="editColor(colorbutton.color)" tag="COLOR" tooltipid="215"></colorbutton>
+  <separator />
+  <colorbutton image="backcolor.gif" callback="editBackColor(colorbutton.color)" tag="BACKCOLOR" tooltipid="216"></colorbutton>
+  <separator />
+  <button image="left.gif" tag="JUSTIFYLEFT" callback="editJustifyLeft()" tooltipid="206" ></button>
+  <separator />
+  <button image="center.gif" tag="JUSTIFYCENTER" callback="editJustifyCenter()" tooltipid="207" ></button>
+  <separator />
+  <button image="right.gif" tag="JUSTIFYRIGHT" callback="editJustifyRight()" tooltipid="208" ></button>
+  <regionend />
+</toolbar>
+
+<toolbar position="top">
+  <regionstart />
+  <button image="link.gif" callback="editLink()" tag="LINK" tooltipid="109"></button>
+  <separator />
+  <button image="anchor.gif" callback="editInsertObject('ANCHOR')" tag="ANCHOR" tooltipid="407"></button>
+  <separator />
+  <popupbutton image="table.gif" tooltipid="111" url="popup/table2.html" callback="if(popup.value != ''){var temp = popup.value.split(':');eventOnCreateTable(temp[0],temp[1]);}" popupheight="132" popupwidth="120"></popupbutton>
+  <separator />
+  <menubutton image="image.gif" tooltipid="110">
+    <listitem textid="703" value="INSERTSERVER" image="image.gif" callback="editOpen(3)"></listitem>
+    <listitem textid="3005" value="INSERTUP" image="image_upload.gif" callback="editUpload('','',0,true)"></listitem>
+    <listitem textid="702" value="INSERTWEB" image="image_world.gif" callback="editInsertObject('IMAGEWEB')"></listitem>
+    <listitem textid="701" value="INSERTLOC" image="image_server.gif" callback="editInsertObject('IMAGE')"></listitem>
+  </menubutton>
+  <separator />
+  <button image="rule.gif" callback="editInsertObject('RULE')" tag="RULE" tooltipid="112"></button>
+  <dropdownlist displayvalue="Value" width="114" callback="editInsertHtml('&amp;amp;' + dropdown.selectedItem.tag1)"  tag="FONT" tooltipid="5037">
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Arial'&gt;Page Number&lt;/span&gt;"  value="Page Number" tag="p"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Arial'&gt;Page Total&lt;/span&gt;"  value="Page Total" tag="P"></listitem>
+  </dropdownlist>
+
+</toolbar>
+
+</toolbars>

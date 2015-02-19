@@ -1,0 +1,59 @@
+/*-------------------------------toadd_20071026.css----------------------*/
+h1 {
+	font-size: 1.5em;
+	font-weight:normal;
+	padding-bottom: 2px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+hr {
+	border-color:#ccc;
+	border-style:solid;
+	border-width:1px 0px 0px;
+	height:0px;
+}
+
+.smalltext {
+	color: #555555;
+	font-family: Helvetica, Verdana, Arial, "MS Sans Serif", sans-serif;
+	font-size: 11px;
+	font-weight:normal;
+}
+
+.item_price {
+	font-size: 16px;
+}
+
+.inputitem_qty {
+	margin-left: 0px;
+	margin-bottom: 5px;
+	padding:1px 0pt 0pt;
+	width:15px;
+	display:inline;
+}
+.reasons {
+	width: 31%;
+	line-height:1.5em;
+	float: left;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+.qty {
+	float:left;
+	margin-top:0px;
+	width:100px;
+}
+
+img.primaryimage {
+	border: 1px solid #ccc;
+}
+
+.left {
+	text-align: left;
+	float:left;
+}
+
+/*-------------------------------toadd_20071026.css----------------------*/

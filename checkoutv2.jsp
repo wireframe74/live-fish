@@ -1,0 +1,1 @@
+<%String templatePage = "checkoutv2";request.setAttribute("templatePage",templatePage);%><%@include file="template/template.jsp"%>

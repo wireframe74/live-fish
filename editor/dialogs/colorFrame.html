@@ -1,0 +1,491 @@
+<html>
+  <head>
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+    <STYLE TYPE="text/css">
+		.ColorTable
+		{
+		    border-top-style: solid;
+		    border-right-style: solid;
+		    border-bottom-style: solid;
+		    border-left-style: solid;
+		    border-width: 2;
+		    border-left-color: #868686;
+		    border-top-color: #868686;
+		    border-right-color: #F0F0F0;
+		    border-bottom-color: #F0F0F0;
+		}
+		.ColorTableCell
+		{
+		    height: 8;
+		    width: 8;
+		    padding: 1;
+		}
+		.ColorTableCellSelected
+		{
+		    height: 8;
+		    width: 8;
+			border-style: solid;
+			border-width: 1;
+			border-color: #000000;
+		}
+		.PredDefColorCell
+		{
+		    height: 20;
+		    width: 20;
+		    padding: 1;
+			font-size: 10;
+			font-family: Verdana;
+			color: #FFFFFF;
+		}
+		.PredDefColorCellSelected
+		{
+		    height: 20;
+		    width: 20;
+			border-style: solid;
+			border-width: 1;
+			border-color: #000000;
+		}
+		.RightColumnCell
+		{
+		    height: 8;
+		    width: 30;
+		    padding: 1;
+		}
+		.RightColumnCellSelected
+		{
+		    height: 8;
+		    width: 30;
+			border-style: solid;
+			border-width: 1;
+			border-color: #000000;
+		}
+		</STYLE>
+
+    <script language="JavaScript">
+    // browser detection
+    function Browser()
+    {
+      var agent  = navigator.userAgent.toLowerCase();
+      this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                    ((agent.indexOf('spoofer')   ==   -1) &&
+                    (agent.indexOf('compatible') ==   -1)));
+      this.ie    = (agent.indexOf("msie")       !=   -1);
+    }
+    var browser = new Browser();
+    var params = new Array();
+  	var m_color;
+  	var m_selectedCell;
+  	var m_lastSelectedCell;
+  	var objTab = null;
+  	var tabColors = null;
+  	var tabUsedColors = null;
+  	var __editLanguage = null;
+
+    if(browser.ie) {
+     	params = dialogArguments;
+    } else {
+      params = window.opener.__colorDialog_getParams();
+    }
+    
+    if (params[0].toLowerCase() == "de") {
+      __editLanguage =
+        {
+      		100 : "OK",
+      		101 : "Abbrechen",
+      		102 : "Farbe:",
+      		103 : "Verwendete Farben",
+      		104 : "Farbauswahl",
+
+          1000 : "Farbe",
+          1001 : "Farbauswahl:",
+          1002 : "Verwendete&nbsp;Farben:",
+          1003 : "Keine Farbe",
+          1004 : "",
+          1005 : "",
+
+          6000 : ""
+      }
+    } else {
+      __editLanguage =
+        {
+      		100 : "OK",
+      		101 : "Cancel",
+      		102 : "Color:",
+      		103 : "Used colors",
+      		104 : "Color selection",
+
+          1000 : "Color",
+          1001 : "Colors:",
+          1002 : "Used&nbsp;Colors:",
+          1003 : "No color",
+          1004 : "",
+          1005 : "",
+
+          6000 : ""
+      }
+    }
+    
+    function load()
+    {
+      if (params[1] != "") {
+        m_color = rgbToHex(params[1]);
+      } else {
+        m_color = "#FFFFFF";
+    	}
+      setStrings();
+      // set language
+      document.getElementById("lblOK").value = getLanguageString(100);
+      document.getElementById("lblCancel").value = getLanguageString(101);
+      
+    }
+
+    function tabCreate(objTab,id)
+    {
+      var dlgPath = "../dialogs/";
+
+      tab = objTab;
+      objTab.design      = "1";
+    	objTab.orientation = "0";
+    	objTab.tabarea     = true;
+    	objTab.designmode  = "IMAGE";
+
+    	var item = objTab.createItem();
+    	item.tag = "USEDCOLORS";
+    	item.active = true;
+    	item.url = dlgPath + "color_used.html";
+      item.text = getLanguageString(103);
+    	item.title = getLanguageString(103);
+    	objTab.add(item);
+    	tabUsedColors = item;
+
+      var item = objTab.createItem();
+    	item.tag = "COLORS";
+    	item.url = dlgPath + "color_selection.html";
+      item.text = getLanguageString(104);
+    	item.title = getLanguageString(104);
+    	objTab.add(item);
+    	tabColors = item;
+
+      objTab.create();
+
+    }
+
+    function tabEventTabClick(objTab)
+    {
+      try {
+        var win;
+        if (objTab.tag == "COLORS") {
+          win = tabColors.getWindow();
+          win.updateColorColumn(m_color);
+        }
+      } catch(Error) {}
+    }
+    
+    function tabEventPageLoaded(item,id)
+    {
+      item.getWindow().initDialog("");
+    }
+
+    function enterColor(input)
+    {
+      try {
+        var color = input.value;
+        document.getElementById("SELECTEDCOLOR").innerHTML = color;
+        document.getElementById("entercolor").value = color;
+        document.getElementById("SELECTEDCOLOR").style.backgroundColor = color;
+        setFontColor();
+        m_color = color;
+      } catch(Error) {}
+    }
+
+    function cellSelect()
+    {
+
+        var vObject = document.getElementById(m_selectedCell);
+
+        // select
+        if (m_selectedCell.indexOf("Pre") >= 0)
+            vObject.className = "PredDefColorCellSelected";
+        else if (m_selectedCell.indexOf("RC") >= 0)
+            vObject.className = "RightColumnCellSelected";
+        else
+        	vObject.className = "ColorTableCellSelected";
+
+    	// deselect
+        if(m_lastSelectedCell != null)
+        {
+            vObject = document.getElementById(m_lastSelectedCell);
+            if (m_lastSelectedCell.indexOf("Pre") >= 0)
+            	vObject.className = "PredDefColorCell";
+        	else if (m_lastSelectedCell.indexOf("RC") >= 0)
+            	vObject.className = "RightColumnCell";
+            else
+            	vObject.className = "ColorTableCell";
+        }
+        m_lastSelectedCell = m_selectedCell;
+
+     	if ((m_selectedCell.indexOf("RC") < 0)&&(m_selectedCell.indexOf("RR") <0))
+     	{
+        	visualizeRightColumn();
+        	visualizeRightColumn2();
+       	}
+        vizualizeColor();
+    }
+
+    function reactOnOKPressed()
+    {
+
+      if(browser.ie) {
+        window.returnValue = m_color;
+      } else {
+        eval("window.opener."+ params[2] + "('" + m_color + "')");
+      }
+      close();
+    }
+
+    function reactOnCancelPressed()
+    {
+    	window.returnValue = "";
+    	close();
+    }
+
+
+
+    function toHexString(base10)
+    {
+        if (base10 > 255) return "FF";
+        var result ="";
+        var first = parseInt("" + base10/16);
+
+        if (first > 9)
+        {
+            if (first == 10) result = "A";
+            if (first == 11) result = "B";
+            if (first == 12) result = "C";
+            if (first == 13) result = "D";
+            if (first == 14) result = "E";
+            if (first == 15) result = "F";
+        }
+        else
+            result = "" + first;
+
+        var second = parseInt("" + base10 - 16*first);
+        if (second > 9)
+        {
+            if (second == 10) result = result + "A";
+            if (second == 11) result = result + "B";
+            if (second == 12) result = result + "C";
+            if (second == 13) result = result + "D";
+            if (second == 14) result = result + "E";
+            if (second == 15) result = result + "F";
+        }
+        else
+            result = result + second;
+
+        return result;
+    }
+
+    function hexToDecimal(xx)
+    {
+        var result = 0;
+        var x1 = xx.charAt(0);
+        if ((x1 == 'F')||(x1 == 'f')) result = 16*15;
+        else if ((x1 == 'E')||(x1 == 'e')) result = 16*14;
+        else if ((x1 == 'D')||(x1 == 'd')) result = 16*13;
+        else if ((x1 == 'C')||(x1 == 'c')) result = 16*12;
+        else if ((x1 == 'B')||(x1 == 'b')) result = 16*11;
+        else if ((x1 == 'A')||(x1 == 'a')) result = 16*10;
+        else if (x1 == '9') result = 16*9;
+        else if (x1 == '8') result = 16*8;
+        else if (x1 == '7') result = 16*7;
+        else if (x1 == '6') result = 16*6;
+        else if (x1 == '5') result = 16*5;
+        else if (x1 == '4') result = 16*4;
+        else if (x1 == '3') result = 16*3;
+        else if (x1 == '2') result = 16*2;
+        else if (x1 == '1') result = 16*1;
+
+        var x2 = xx.charAt(1);
+        if ((x2 == 'F')||(x2 == 'f')) result += 15;
+        else if ((x2 == 'E')||(x2 == 'e')) result += 14;
+        else if ((x2 == 'D')||(x2 == 'd')) result += 13;
+        else if ((x2 == 'C')||(x2 == 'c')) result += 12;
+        else if ((x2 == 'B')||(x2 == 'b')) result += 11;
+        else if ((x2 == 'A')||(x2 == 'a')) result += 10;
+        else if (x2 == '9') result += 9;
+        else if (x2 == '8') result += 8;
+        else if (x2 == '7') result += 7;
+        else if (x2 == '6') result += 6;
+        else if (x2 == '5') result += 5;
+        else if (x2 == '4') result += 4;
+        else if (x2 == '3') result += 3;
+        else if (x2 == '2') result += 2;
+        else if (x2 == '1') result += 1;
+
+        return result;
+    }
+    function checkIfColorIsDarkCOLORSELECTION(rrggbb)
+    {
+    if (rrggbb == null) return false;
+    if (rrggbb.length != 7) return false;
+    var green = rrggbb.charAt(3);
+    if ( (green == 'A') ||
+    (green == 'B') ||
+    (green == 'C') ||
+    (green == 'D') ||
+    (green == 'E') ||
+    (green == 'F') ||
+    (green == 'a') ||
+    (green == 'b') ||
+    (green == 'c') ||
+    (green == 'd') ||
+    (green == 'e') ||
+    (green == 'f'))
+    return false;
+    var red = rrggbb.charAt(1);
+    if ((red == 'F') ||
+    (red == 'f'))
+    return false;
+    return true;
+    }
+    function determineContrastColorCOLORSELECTION(rrggbb)
+    {
+    if (checkIfColorIsDarkCOLORSELECTION(rrggbb) == true)
+    return "#FFFFFF";
+    else
+    return "#000000";
+    }
+
+    function rgbToHex(rgbColor)
+    {
+      var RGB = new Array(256);
+      var k = 0;
+      var hex = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F");
+      var temp2 = "";
+
+      try {
+        for (var i = 0; i < 16; i++) {
+    	    for (var j = 0; j < 16; j++) {
+    		    RGB[k] = hex[i] + hex[j];
+    		    k++;
+    	    }
+        }
+        rgbColor = rgbColor.replace(/\(/,"<");
+        rgbColor = rgbColor.replace(/\)/,">");
+
+        var reg = new RegExp("<[^>]+>","gi");
+        var result = rgbColor.match(reg);
+
+        rgbColor = result[0];
+        rgbColor = rgbColor.substring(1, rgbColor.length - 1);
+        rgbColor = rgbColor.replace(/ /gi,"");
+        var temp = rgbColor.split(",");
+        temp2 = "#" + RGB[temp[0]] + RGB[temp[1]] + RGB[temp[2]];
+      } catch(Error) {}
+
+      return temp2;
+
+    }
+
+    function updateColor(color)
+    {
+      document.getElementById("SELECTEDCOLOR").innerHTML = color;
+      document.getElementById("entercolor").value = color;
+      document.getElementById("SELECTEDCOLOR").style.backgroundColor = color;
+      setFontColor();
+  		document.getElementById("entercolor").value = "";
+      m_color = color;
+    }
+
+  	function setFontColor()
+  	{
+      var m_color = document.getElementById("entercolor").value;
+      var colorBox = document.getElementById("SELECTEDCOLOR");
+
+  		if (checkIfColorIsDarkCOLORSELECTION(m_color) == true)
+  	    colorBox.style.color = "#FFFFFF";
+  	  else
+  	    colorBox.style.color = "#000000";
+  	}
+  	
+    function getLanguageString(id)
+    {
+      return __editLanguage[id];
+    }
+
+    function setStrings(doc)
+    {
+      var tempDoc;
+      if (doc == null)
+        tempDoc = document;
+      else
+        tempDoc = doc;
+        
+      // set span
+      var aSpan = tempDoc.getElementsByTagName("span");
+      for(var i=0;i<aSpan.length;i++) {
+        if(!isNaN(aSpan[i].id))
+          aSpan[i].innerHTML = getLanguageString(aSpan[i].id);
+      }
+      // set div
+      var aDiv = tempDoc.getElementsByTagName("div");
+      for(var i=0;i<aDiv.length;i++) {
+        if(!isNaN(aDiv[i].id))
+          aDiv[i].innerHTML = getLanguageString(aDiv[i].id);
+      }
+    }
+    
+    function getUsedColors()
+    {
+      return params[3];
+    }
+    
+    </script>
+
+    
+  </head>
+  <body style="margin:0px; background-color: #ECE9D8; padding-top:5px;" onload="load()">
+    <table border="0" cellspacing="0" cellpadding="0" style='background-color: #ECE9D8'>
+      <!-- VDIST -->
+      <tr>
+        <td width="5">&nbsp;</td>
+        <td><span id='COLORTABLE'></span>
+          <iframe id="tab" style="height:350px;width:380px;"	src="../tab/pinTab.html" frameBorder="0"></iframe>
+        </td>
+
+        <td width="5">&nbsp;</td>
+        <td style="height:100%">
+          <table height="100%" border="0" cellspacing="0" cellpadding="0" style='background-color: #ECE9D8'>
+            <tr height="5">
+              <td >&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right">
+                <input id='lblOK' type='button' value='OK' onclick='reactOnOKPressed();' style='width: 80px;'><br>
+                <input id='lblCancel' type='button' value='Cancel' onclick='reactOnCancelPressed();' style='width: 80px;'>
+              </td>
+            </tr>
+            <tr>
+              <td style="height:100%" >&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="1%"><span id="102" style="font-family:arial;font-size:11px">__Enter color:</span></td>
+            </tr>
+            <tr>
+              <td height="1%"><input id="entercolor" style="height:20px;width:80px;font-family:arial;font-size:11px" onkeyup="javascript: enterColor(this);"></td>
+            </tr>
+            <tr>
+              <td height="1%"><div style="height:50px;width:80px;font-size:11px;font-family:arial;" id='SELECTEDCOLOR'>&nbsp;</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="width:10px">&nbsp;</td>
+      </tr>
+      <!-- VDIST -->
+      <tr height="5">
+        <td colspan="5">&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+

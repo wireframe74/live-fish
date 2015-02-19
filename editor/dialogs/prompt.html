@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+<link rel="stylesheet" href="dialog.css" type="text/css">
+<script language="javascript" src="../include/dialog.js"></script>
+<SCRIPT>
+
+var language = "EN";
+var design   = "";
+var objElementId = "";
+var doc = null;
+var callBack = "";
+var validate = "";
+var browser = new Browser();
+var promptArray = null;
+
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+
+function save()
+{
+	if (document.getElementById('txtInput').value != "") {
+
+		var cTEXT = "[a-zA-Z0-9_.-]+";
+		var regEx  = new RegExp(cTEXT);
+		var match  = regEx.exec(document.getElementById('txtInput').value);	
+		if (match != document.getElementById('txtInput').value) {
+			alert(getLanguageString("",4343));
+			return;
+		} else {
+			ret = document.getElementById('txtInput').value;
+		}
+	} else {
+		ret = "";
+	}
+
+  if(browser.ns) {
+		eval("window.opener." + callBack + "(\"" + ret +"\");");
+  } else {
+		window.returnValue = ret;
+	}
+
+  window.close();
+}
+
+function Load()
+{
+	if(browser.ie) {
+		promptArray = dialogArguments;
+	} else {
+		promptArray = window.opener.readPromptArray(); 
+	}
+
+	params = promptArray[0]
+	var title = promptArray[1];
+	var desc = promptArray[2];
+	var input = promptArray[3];	
+	callBack = promptArray[4];
+	validate = promptArray[5];
+	
+	document.title = title + document.title;
+	
+  try {
+    document.getElementById("lblTitle").innerHTML = title;
+		document.getElementById("lblDescription").innerHTML = desc;
+		document.getElementById("txtInput").value = input;
+
+    document.getElementById("lblOK").value = getLanguageString("",4341);
+    document.getElementById("lblCancel").value = getLanguageString("",4342);
+  } catch(Error) {}
+
+}
+
+</SCRIPT>
+  </HEAD>
+  <BODY class="bodypage" onload="javascript: Load();">
+    <fieldset>
+      <legend class="head">
+        <span id="lblTitle">_Title</span>
+      </legend>
+      <TABLE cellSpacing="0" cellPadding="1" width="100%" border="0">
+        <TR>
+          <TD nowrap style="width:1%">
+            <span id="lblDescription" class="label" style="width:100%">_Description:</span>&nbsp;&nbsp;
+          </TD>
+          <TD><INPUT id="txtInput" style="FONT-SIZE: 11px; WIDTH: 100%; FONT-FAMILY: arial; HEIGHT: 18px"
+              value=""></TD>
+        </TR>
+      </TABLE>
+    </fieldset>
+    <table>
+      <tr>
+        <td height="4"></td>
+      </tr>
+    </table>
+    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+      <TR>
+        <TD>
+          <P align="right"><INPUT tabindex=0 id="lblOK" style="WIDTH: 83px; HEIGHT: 24px" type="button" value="OK" onClick="save();">&nbsp;<INPUT id="lblCancel" style="WIDTH: 79px; HEIGHT: 24px" type="button" value="Cancel" onclick="window.returnValue='';window.close();"></P>
+        </TD>
+      </TR>
+    </TABLE>
+  </BODY>
+</HTML>

@@ -1,0 +1,259 @@
+<HTML>
+  <HEAD>
+    <title></title>
+    <link rel="stylesheet" href="dialog.css" type="text/css">
+<script language="javascript" src="../../../include/dialog.js"></script>
+      <SCRIPT>
+var language = "";
+var design = "";
+var objElement;
+var isDebug = true;
+
+function save()
+{
+  try {
+
+    var objElementStyle = objElement.style;
+    var width = objElementStyle.width;
+    var height = objElementStyle.height;
+    var nowrap = objElement.noWrap;
+    var textAlign = objElementStyle.textAlign;
+    var verticalAlign = objElementStyle.verticalAlign;
+    var changed = false;
+    var win = params[11];
+
+    // width
+    if(document.getElementById("txtWidth").value != "")
+      objElementStyle.width = document.getElementById("txtWidth").value;
+    else
+      removeAttribute(objElementStyle, "width");
+      
+   
+    // height
+    if(document.getElementById("txtHeight").value != "")
+      objElementStyle.height = document.getElementById("txtHeight").value;
+    else
+      removeAttribute(objElementStyle, "height");
+  
+    objElement.noWrap = document.getElementById("cmbWrap").value > 0 ? false: true;
+
+    //vertical align
+    if (document.getElementById("top").checked == true)
+      objElement.vAlign = "top";
+    else if (document.getElementById("middle").checked == true)
+      objElement.vAlign = "middle";
+    else if (document.getElementById("bottom").checked == true)
+      objElement.vAlign = "bottom";    
+    else if (document.getElementById("vnone").checked == true)
+      removeAttribute(objElement, "vAlign");  
+
+    //horizontal align
+    if (document.getElementById("left").checked == true)
+      objElement.align = "left";
+    else if (document.getElementById("center").checked == true)
+      objElement.align = "center";
+    else if (document.getElementById("right").checked == true)
+      objElement.align = "right";    
+    else if (document.getElementById("hnone").checked == true)
+      removeAttribute(objElement, "align"); 
+    
+    if(width != objElementStyle.width)
+      changed = true;
+    if(height != objElementStyle.height)
+      changed = true;
+    if(nowrap != objElement.noWrap)
+      changed = true;
+
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) { 
+    if(isDebug)
+      alert("Error in cell: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+
+    // set language strings
+    setStrings();
+
+    var objElementStyle = objElement.style;
+
+    document.getElementById("txtWidth").value       = objElementStyle.width;
+    document.getElementById("txtHeight").value      = objElementStyle.height;
+
+    if(objElement.noWrap)
+      document.getElementById("cmbWrap").selectedIndex = 0;
+    else
+      document.getElementById("cmbWrap").selectedIndex = 1;
+      
+    //vertical align
+    if (objElement.vAlign == "top")
+      document.getElementById("top").checked = true;
+    else if (objElement.vAlign == "middle")
+      document.getElementById("middle").checked = true;
+    else if (objElement.vAlign == "bottom")
+      document.getElementById("bottom").checked = true;    
+    else if (objElement.removeAttribute == "none" || !objElement.vAlign)
+      document.getElementById("vnone").checked = true; 
+
+    //horizontal align
+    if (objElement.align == "left")
+      document.getElementById("left").checked = true;
+    else if (objElement.align == "center")
+      document.getElementById("center").checked = true;
+    else if (objElement.align == "right")
+      document.getElementById("right").checked = true;    
+    else if (objElement.align == "none" || !objElement.align)
+      document.getElementById("hnone").checked = true;       
+
+
+  } catch(Error) { 
+  }
+}
+</SCRIPT>
+  </HEAD>
+  <BODY class="bodypage">
+
+    <fieldset>
+      <legend class="head">
+        <span id="4090">_Size</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table2">
+        <tr>
+          <td>
+            <div id="4091" class="label">_Width:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtWidth" size="1">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="4092" class="label">_Height:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtHeight" size="1">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="4093">_Alignment</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0">
+      <!--
+        <tr>
+          <td colspan="2"  style="padding-top:10px;">
+            <div id="912" class="label">_Horizontal:</div>
+          </td>
+        </tr>
+        -->
+        <tr>
+        <td>     
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td colspan="8" style="font-size:5px;">&nbsp;
+              </td>
+            </tr>
+            <tr  >
+              <td valign="middle">
+                <input id="left" name="horizontal" type="radio" style="width:16px; height:16px;" />    
+              </td>
+              <td  style="padding-right:12px;">
+                <img src="alignleft.gif" />
+              </td>
+              <td valign="middle">
+                <input id="center" name="horizontal" type="radio" style="width:16px; height:16px;" />
+              </td>
+              <td style="padding-right:12px;">
+                <img src="aligncenter.gif" /></td>
+              <td valign="middle">
+                <input id="right" name="horizontal" type="radio"  style="width:16px; height:16px;"/>
+              </td>
+              <td style="padding-right:12px;">
+                <img src="alignright.gif" /></td>
+              <td>
+                <input id="hnone" name="horizontal" type="radio" />
+              </td>
+              <td>
+                <span id="4094" class="label">_none</span></td>                
+            </tr>
+          </table>
+        </td>
+        </tr>
+        <!--
+        <tr>
+          <td style="padding-top:10px;">
+            <div id="914" class="label">_Vertical:</div>
+          </td>
+        </tr>
+        -->
+        <tr>
+        <td>     
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td colspan="8" style="font-size:5px;">&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td valign="middle">
+                <input id="top" name="vertical" type="radio" style="width:16px; height:16px;" />    
+              </td>
+              <td style="padding-right:12px;">
+                <img src="aligntop.gif" />
+              </td>
+              <td valign="middle">
+                <input id="middle" name="vertical" type="radio" style="width:16px; height:16px;" />
+              </td>
+              <td style="padding-right:12px;">
+                <img src="alignmiddle.gif" /></td>
+              <td valign="middle">
+                <input id="bottom" name="vertical" type="radio"  style="width:16px; height:16px;"/>
+              </td>
+              <td style="padding-right:12px;">
+                <img src="alignbottom.gif" /></td>
+              <td>
+                <input id="vnone" name="vertical" type="radio" />
+              </td>
+              <td>
+                <span id="4095" class="label">_none</span></td>                
+            </tr>
+          </table>
+        </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="4096">_Misc</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table4">
+        <tr>
+          <td>
+            <div id="4097" class="label">_Wrap:</div>
+          </td>
+          <td>
+            <SELECT id="cmbWrap" style="FONT-SIZE: 11px; WIDTH: 76px; FONT-FAMILY: arial; HEIGHT: 18px">
+              <OPTION value="0" selected>False</OPTION>
+              <OPTION value="1">True</OPTION>
+            </SELECT>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </BODY>
+</HTML>

@@ -1,0 +1,103 @@
+<html>
+<head>
+<link rel="stylesheet" href="../design/style/pinEdit.css" type="text/css">
+<style>
+td {
+border: 1px solid white;
+}
+</style>
+<script>
+var language = "";
+var design = "Office2003";
+var mode = "";
+var color = "";
+var idFrame = "";
+
+function load()
+{
+  // process parameters
+  var param = "";
+  try {
+    param = window.location.search;
+  } catch(Error) {}
+
+  if(param.length > 0) {
+    param = param.substring(1,param.length);
+    var aArray = param.split("&");
+    for(var i=0;i<aArray.length;i++) {
+      var aParam = aArray[i].split("=");
+      for(var j=0;j<aParam.length-1;j++) {
+        if(aParam[0].toUpperCase() == "LANGUAGE") {
+          language = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "STYLE") {
+          //design = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "BGCOLOR") {
+          color = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "ID") {
+          idFrame = aParam[1];
+        }
+      }
+    }
+  }
+
+}
+
+function mouseOver(id)
+{
+  document.getElementById(id).style.border = "1px solid blue";
+}
+function mouseOut(id)
+{
+  document.getElementById(id).style.border = "1px solid white";
+}
+
+function mouseUp(id)
+{
+  parent.document.getElementById(idFrame).contentWindow.toolbarPopupAction("POPUPBUTTON", id);
+}
+
+</script>
+</head>
+
+<body style="border:0;margin:0;overflow:hidden;" onload="load();">
+<HR id="line" style="width=23;LEFT: 1px; POSITION: absolute; TOP: 0px" color=white SIZE=1>
+<table id="table" style="border:1 solid #808080;background-color: white" width="100%" height="100%" border="0" cellpadding="1" cellspacing="1">
+<tr>
+  <td id="1" onmouseover="mouseOver(1)" onmouseout="mouseOut(1)" onmouseup="mouseUp(1)"><img unselectable='ON' src="../design/image/smileys/smiley1.gif" border=0></td>
+  <td id="2" onmouseover="mouseOver(2)" onmouseout="mouseOut(2)" onmouseup="mouseUp(2)"><img unselectable='ON' src="../design/image/smileys/smiley2.gif" border=0></td>
+  <td id="3" onmouseover="mouseOver(3)" onmouseout="mouseOut(3)" onmouseup="mouseUp(3)"><img unselectable='ON' src="../design/image/smileys/smiley3.gif" border=0></td>
+  <td id="4" onmouseover="mouseOver(4)" onmouseout="mouseOut(4)" onmouseup="mouseUp(4)"><img unselectable='ON' src="../design/image/smileys/smiley4.gif" border=0></td>
+</tr>
+<tr>
+  <td id="5" onmouseover="mouseOver(5)" onmouseout="mouseOut(5)" onmouseup="mouseUp(5)"><img unselectable='ON' src="../design/image/smileys/smiley5.gif" border=0></td>
+  <td id="6" onmouseover="mouseOver(6)" onmouseout="mouseOut(6)" onmouseup="mouseUp(6)"><img unselectable='ON' src="../design/image/smileys/smiley6.gif" border=0></td>
+  <td id="7" onmouseover="mouseOver(7)" onmouseout="mouseOut(7)" onmouseup="mouseUp(7)"><img unselectable='ON' src="../design/image/smileys/smiley7.gif" border=0></td>
+  <td id="8" onmouseover="mouseOver(8)" onmouseout="mouseOut(8)" onmouseup="mouseUp(8)"><img unselectable='ON' src="../design/image/smileys/smiley8.gif" border=0></td>
+</tr>
+<tr>
+  <td id="9" onmouseover="mouseOver(9)" onmouseout="mouseOut(9)" onmouseup="mouseUp(9)"><img unselectable='ON' src="../design/image/smileys/smiley9.gif" border=0></td>
+  <td id="10" onmouseover="mouseOver(10)" onmouseout="mouseOut(10)" onmouseup="mouseUp(10)"><img unselectable='ON' src="../design/image/smileys/smiley10.gif" border=0></td>
+  <td id="11" onmouseover="mouseOver(11)" onmouseout="mouseOut(11)" onmouseup="mouseUp(11)"><img unselectable='ON' src="../design/image/smileys/smiley11.gif" border=0></td>
+  <td id="12" onmouseover="mouseOver(12)" onmouseout="mouseOut(12)" onmouseup="mouseUp(12)"><img unselectable='ON' src="../design/image/smileys/smiley12.gif" border=0></td>
+</tr>
+<tr>
+  <td id="13" onmouseover="mouseOver(13)" onmouseout="mouseOut(13)" onmouseup="mouseUp(13)"><img unselectable='ON' src="../design/image/smileys/smiley13.gif" border=0></td>
+  <td id="14" onmouseover="mouseOver(14)" onmouseout="mouseOut(14)" onmouseup="mouseUp(14)"><img unselectable='ON' src="../design/image/smileys/smiley14.gif" border=0></td>
+  <td id="15" onmouseover="mouseOver(15)" onmouseout="mouseOut(15)" onmouseup="mouseUp(15)"><img unselectable='ON' src="../design/image/smileys/smiley15.gif" border=0></td>
+  <td id="16" onmouseover="mouseOver(16)" onmouseout="mouseOut(16)" onmouseup="mouseUp(16)"><img unselectable='ON' src="../design/image/smileys/smiley16.gif" border=0></td>
+</tr>
+<tr>
+  <td id="17" onmouseover="mouseOver(17)" onmouseout="mouseOut(17)" onmouseup="mouseUp(17)"><img unselectable='ON' src="../design/image/smileys/smiley17.gif" border=0></td>
+  <td id="18" onmouseover="mouseOver(18)" onmouseout="mouseOut(18)" onmouseup="mouseUp(18)"><img unselectable='ON' src="../design/image/smileys/smiley18.gif" border=0></td>
+  <td id="19" onmouseover="mouseOver(19)" onmouseout="mouseOut(19)" onmouseup="mouseUp(19)"><img unselectable='ON' src="../design/image/smileys/smiley19.gif" border=0></td>
+  <td id="20" onmouseover="mouseOver(20)" onmouseout="mouseOut(20)" onmouseup="mouseUp(20)"><img unselectable='ON' src="../design/image/smileys/smiley20.gif" border=0></td>
+</tr>
+
+</div
+
+
+</body>
+</html>

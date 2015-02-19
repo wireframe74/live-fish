@@ -1,0 +1,180 @@
+<HEAD>
+  <title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+  <LINK href="../../../design/style/dialog.css" type="text/css" rel="stylesheet">
+    <SCRIPT>
+// browser detection
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+var browser = new Browser();
+
+var params = null;
+var tab = null;
+var tabDesign = "";
+var lastMode = "";
+
+function getLanguageString(lng,id)
+{
+  var aLanguage = params[14];
+  return aLanguage[id];
+}
+
+function initDialog(para)
+{
+  params = para;
+  // set body style
+  if(para[13] == "3")
+    document.body.className = "bodyframestyle";
+  else
+    document.body.className = "bodyframe";
+    
+  if(para[1] == "Office2003")
+    document.body.style.backgroundColor = "#9EBEF5";
+  else  
+    document.body.style.backgroundColor = "#E8E8F0";
+
+  // init tab
+  document.getElementById("tab").src = "../../../tab/pinTab.html";
+  
+  document.getElementById("lblOK").value = getLanguageString("",3395);
+
+}
+
+function updateDialog(param)
+{
+  var dlgPath = "../mode/html/dialogs/";
+  params = param;
+  
+  var mode = params[2];
+
+  try {  
+    if(mode != lastMode) {  
+      // get first item
+      var item = tab.getItemByIndex(0);
+      if(mode == "FORM")
+        item.setUrl(dlgPath + "form.html");
+      else if(mode == "TABLE")
+        item.setUrl(dlgPath + "table.html");
+      else if(mode == "CELL")
+        item.setUrl(dlgPath + "cell.html");
+      else if(mode == "SELECT")
+        item.setUrl(dlgPath + "select.html");
+      else if(mode == "BODY")
+        item.setUrl(dlgPath + "page.html");
+      else if(mode == "LINK")
+        item.setUrl(dlgPath + "link.html");
+      else if(mode == "IMAGE")
+        item.setUrl(dlgPath + "image.html");
+      else
+        item.setUrl(dlgPath + "input.html");
+      lastMode = mode;
+    } else {
+      var items = tab.getItems();
+      items[0].getWindow().initDialog(params);
+    }
+
+    var items = tab.getItems();
+    for(var i=1;i<items.length;i++) {
+      items[i].getWindow().updateDialog(params);
+    }
+  } catch(Error) {}
+}
+
+function tabCreate(objTab,id)
+{
+  var dlgPath = "../mode/html/dialogs/";
+  var mode = params[2];
+
+  tab = objTab;
+  objTab.design      = params[13];
+	objTab.orientation = "0";
+	objTab.tabarea     = true;
+	objTab.designmode  = "IMAGE";
+	objTab.isHooverEnabled = false;
+	
+	var item = objTab.createItem();
+	item.text = getLanguageString("",3401);
+	item.title = getLanguageString("",3401);
+	item.tag = "OBJECT";
+	item.active = true;
+  if(mode == "FORM")
+    item.url = dlgPath + "form.html";
+  else if(mode == "TABLE")
+    item.url = dlgPath + "table.html";
+  else if(mode == "CELL")
+    item.url = dlgPath + "cell.html";
+  else if(mode == "SELECT")
+    item.url = dlgPath + "select.html";
+  else if(mode == "BODY")
+    item.url = dlgPath + "page.html";
+  else if(mode == "LINK")
+    item.url = dlgPath + "link.html";
+  else if(mode == "IMAGE")
+    item.url = dlgPath + "image.html";
+  else
+    item.url = dlgPath + "input.html";
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.text = getLanguageString("",3399);
+	item.title = getLanguageString("",3399);
+	item.tag = "CLASS";
+	item.active = false;
+	item.url = dlgPath + "class.html";
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.text = getLanguageString("",3400);
+	item.title = getLanguageString("",3400);
+	item.tag = "STYLE";
+	item.active = false;
+	item.url = "../mode/html/styleeditor/styleeditor.html";
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.text = getLanguageString("",4016);
+	item.title = getLanguageString("",4016);
+	item.tag = "ACC";
+	item.active = false;
+	item.url = dlgPath + "accessability.html";
+	objTab.add(item);
+
+	objTab.create();
+}
+
+function tabEventPageLoaded(item,id)
+{
+  item.getWindow().initDialog(params);
+}
+
+function save()
+{
+  var items = tab.getItems();
+  for(var i=0;i<items.length;i++) {
+    items[i].call("save()");
+  }
+  window.close();
+}
+
+    </SCRIPT>
+</HEAD>
+<body style="overflow:hidden" class="bodyframe">
+  <table style="height:100%;width:100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td style="height:100%;width:100%"><iframe id="tab" style="height:100%;width:100%" src="dummy.html" frameBorder="0"></iframe></td>
+    </tr>
+    <tr>
+      <td align="center">
+        <div style="padding-top:5px">
+          <INPUT style="WIDTH: 81px; HEIGHT: 24px" onclick="save()" id="lblOK" type="submit" size="108"
+            value="__OK" NAME="lblOK">
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>

@@ -1,0 +1,221 @@
+<HEAD>
+<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../include/listbox.js"></script>
+<script language="javascript" src="../include/dialog.js"></script>
+
+<script language="javascript" >
+
+var language = "EN";
+var design = "";
+var mode = "";
+var objElement;
+var aStyles = null;
+var params = null;
+var tab = null;
+var tabDesign = 1;
+var styleSheet = new Array();
+var lng = null;
+
+function getItems()
+{
+  return tab.getTabItems();
+}
+
+function getItem(tag)
+{
+  var items = tab.getTabItems();
+  for (var i=0;i<items.length;i++) {
+    if (tag == items[i].tag) {
+      return items[i];
+    }    
+  }
+
+}
+
+function tabCreate(objTab,id)
+{
+  var dlgPath = "../dialogs/";
+	lng = parent.parent.getLocalizationResource();
+  
+  tab = objTab;
+  objTab.design      = tabDesign;
+	objTab.orientation = "0";
+	objTab.tabarea     = true;
+	objTab.designmode  = "IMAGE";
+
+	var item = objTab.createItem();
+	item.tag = "CHAR";
+	item.active = true;
+	item.url = dlgPath + "css_char.html";
+  item.text = getLanguageString(1310);
+	item.title = getLanguageString(1310); 
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.tag = "SHADE";
+	item.url = dlgPath + "css_shade.html";
+  item.text = getLanguageString(1311);
+	item.title = getLanguageString(1311);
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.tag = "BORDER";
+	item.url = dlgPath + "css_border.html";
+  item.text = getLanguageString(1312);
+	item.title = getLanguageString(1312);
+	objTab.add(item);
+	
+	var item = objTab.createItem();
+	item.tag = "PADDING";
+	item.url = dlgPath + "css_padding.html";
+  item.text = getLanguageString(1313);
+	item.title = getLanguageString(1313);
+	objTab.add(item);	
+	
+	var item = objTab.createItem();
+	item.tag = "TEXT";
+	item.url = dlgPath + "css_text.html";
+  item.text = getLanguageString(1315);
+	item.title = getLanguageString(1315);
+	objTab.add(item);
+
+  var item = objTab.createItem();
+	item.tag = "LAYOUT";
+	item.url = dlgPath + "css_layout.html";
+  item.text = getLanguageString(1314);
+	item.title = getLanguageString(1314);
+	objTab.add(item);		
+
+	objTab.create();
+}
+
+function tabEventPageLoaded(item,id)
+{
+  item.getWindow().initDialog("");
+  var doc = item.getDocument();
+  doc.onclick = function(){ parent.parent.menuReset(); };
+}
+
+function tabEventLoaded()
+{
+  //onStyleClick(lbStyleSheet.selectedItem);
+}
+
+function tabEventTabClick(objTab)
+{
+  document.getElementById("tab").focus();
+}
+
+function save()
+{
+
+  try {
+    if(doc.styleSheets.length > 0) {
+      for(var count=0;count<doc.styleSheets.length;count++) {
+        var objStyleSheet = doc.styleSheets[count];
+        var objRules = null;
+
+        if(browser.ns) {
+	        objRules = objStyleSheet.cssRules;
+        } else {
+	        objRules = objStyleSheet.rules;
+        }
+        
+        try {
+          for(var i=0;i<objRules.length;i++) {
+            var value = objRules[i].selectorText;
+            if (value.substring(0,1) == "." && value.indexOf(' ')< 0) {
+              if (browser.ns) {
+                objStyleSheet.deleteRule(i);
+              } else {
+                objStyleSheet.removeRule(i);
+              }
+              i--;
+            }
+          }
+        } catch(Error) {
+        }
+      }
+    }  
+
+    var ss = null;
+    if(doc.styleSheets.length ==0) {
+      if(browser.ie) {
+        ss = doc.createStyleSheet();
+      } else {
+        ss = doc.createElement("style");
+        var head = doc.getElementsByTagName("head");
+        head[0].appendChild(ss);
+      }
+    } else {
+      if(browser.ie) {
+        ss = doc.styleSheets[0];
+      } else {
+        ss = doc.getElementsByTagName("style")[0];
+      }
+    }
+     
+    var temp = "";  
+    for (var i=0;i<lbStyleSheet.aListItems.length;i++) {
+      removeAttribute(document.getElementById(lbStyleSheet.aListItems[i].tag).style, "width");
+      removeAttribute(document.getElementById(lbStyleSheet.aListItems[i].tag).style, "height");
+      removeAttribute(document.getElementById(lbStyleSheet.aListItems[i].tag).style, "overflow");
+      if (document.getElementById(lbStyleSheet.aListItems[i].tag).style.cssText != "") {
+        if (browser.ns) {
+          //ss.insertRule("." + lbStyleSheet.aListItems[i].value + " { " + document.getElementById(lbStyleSheet.aListItems[i].tag).style.cssText + " } ",0);
+          temp += " ." + lbStyleSheet.aListItems[i].value + " { " + document.getElementById(lbStyleSheet.aListItems[i].tag).style.cssText + " } ";
+        } else {
+          ss.addRule("." + lbStyleSheet.aListItems[i].value,document.getElementById(lbStyleSheet.aListItems[i].tag).style.cssText,0);
+        }
+      }
+    }
+    if(browser.ns)
+      ss.innerHTML = temp;
+      
+    // refresh style dropdown
+    if (browser.ns) {
+      aParam[11].editSetStyleSheetRules();
+      aParam[11].__eventOnFileLoaded();
+    } else {
+      dialogArguments[11].editSetStyleSheetRules();
+      dialogArguments[11].__eventOnFileLoaded();
+    }
+  } catch(Error) {
+  }
+  
+  window.close();
+ 
+}
+
+function getLanguageString(id)
+{
+	return lng[id];
+}
+
+function initDialog()
+{
+  try {
+//		lng = parent.parent.getLocalizationResource();	
+//			alert(lng[101]);
+  } catch(Error) {alert(Error);}
+}
+function init()
+{
+		
+}
+
+
+
+</SCRIPT>
+</HEAD>
+
+
+<body class="bodyframe" onload="init()">
+<table style="height:100%;width:100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top"><iframe id="tab" style="height:100%;width:100%"	src="../tab/pinTab.html?id=tab" frameBorder="0"></iframe></td>
+  </tr>
+</table>
+
+</body>

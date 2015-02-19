@@ -1,0 +1,196 @@
+<HTML>
+  <HEAD>
+    <title></title>
+    <link rel="stylesheet" href="../design/style/dialog.css" type="text/css">
+      <script language="javascript" src="../include/dialog.js"></script>
+      <SCRIPT>
+      
+var __objRange = null;
+var language   = "";
+var design     = "";
+var doc        = null;
+var win        = null;
+var editorwin  = null;
+var __objSelectedRange = null;
+var __moz_found = false;
+var findTextMatches = new Array();
+var runSearch = false;
+
+function search()
+{
+  var curRange;
+  var search = "";
+
+  if(document.getElementById("txtSearch").value == "") {
+    alert(getLanguageString(language,996));
+    return;
+  } else {
+    search = document.getElementById("txtSearch").value;
+  }
+
+	if(browser.ie) {
+		if(__objRange != null) {
+			curRange = __objRange;
+		} else {
+			curRange = doc.body.createTextRange();
+			__objRange = curRange;
+		}
+		var searchtype = 0;
+    if(document.getElementById("chkWord").checked)
+      searchtype = 2;
+    if(document.getElementById("chkCase").checked)
+      searchtype = searchtype + 4;
+      
+
+		if(curRange.findText(search,1,searchtype)) {
+			curRange.select();
+			curRange.scrollIntoView();
+			__objSelectedRange = curRange;
+			__objRange.setEndPoint("StartToEnd", curRange)
+		} else {
+		  curRange.collapse(true);
+		  curRange.select();
+			alert(getLanguageString(language,997))
+			__objRange = null;
+			__objSelectedRange = null;
+		}
+	} else {
+
+/*
+    try {
+		  if(!runSearch) {
+	      findText(editorwin.document.getElementById("pinEdit").contentWindow.document.body,search,document.getElementById("chkCase").checked ? false:true,document.getElementById("chkWord").checked ? true:false);
+	    }
+		  if(findTextMatches.length > 0) {
+	      highlightText();
+      }	else {
+			  runSearch = false;
+			  findTextMatches = new Array();
+			  alert(getLanguageString(language,997))
+			  var selection = editorwin.getWindow().getSelection();
+			  var range = selection.getRangeAt( selection.rangeCount-1 ).cloneRange();
+			  selection.removeAllRanges();
+			  return;
+      }    
+     	      
+		} catch(Error) {
+		}
+*/
+
+    try {
+      //findTextMatches = new Array();
+		  if(!runSearch) {
+	      findText(editorwin.document.getElementById("pinEdit").contentWindow.document.body,search,document.getElementById("chkCase").checked ? false:true,document.getElementById("chkWord").checked ? true:false);
+	    }
+
+		  if(findTextMatches.length > 0) {
+	      highlightText();
+      }	else {
+			  runSearch = false;
+			  findTextMatches = new Array();
+			  alert(getLanguageString(language,997))
+			  var selection = editorwin.getWindow().getSelection();
+			  var range = selection.getRangeAt( selection.rangeCount-1 ).cloneRange();
+			  selection.removeAllRanges();
+			  return;
+      }    
+     	      
+		} catch(Error) {
+		}
+
+	}
+  runSearch = true;
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+	  editorwin           = params[11];	  
+	  userMode            = params[21];
+	  	  
+    // set language strings
+    setStrings();
+    document.getElementById("lblSearch").value = getLanguageString(language,4324);
+    
+  } catch(Error) {}
+}
+
+function findText(body, query, ignoreCase, wholeWord) 
+{
+	findTextMatches.length = 0;
+	if (ignoreCase)
+		query = query.toLowerCase();
+
+	var tw = body.ownerDocument.createTreeWalker(body, NodeFilter.SHOW_TEXT, { acceptNode: function(node) {	return NodeFilter['FILTER_' + (RegExp(query, (ignoreCase ? 'i' : '')).test(node.nodeValue) ? 'ACCEPT' : 'REJECT')] } }, true);
+
+	var offsets = [];
+	offsets[-1] = query.length * -1;
+	var totalMatches, trueOffsetDiff;
+	var range = body.ownerDocument.createRange();
+
+	while (tw.nextNode()) {
+		totalMatches = tw.currentNode.nodeValue.split(RegExp(query, (ignoreCase ? 'i' : ''))).length - 1;
+		for (var i = 0; i < totalMatches; i++) {
+		  var checkWord = true;
+		  if(wholeWord) {
+		    if(tw.currentNode.nodeValue.length != query.length)
+		      checkWord = false;
+		  }
+      if(checkWord) {
+			  trueOffsetDiff = offsets[offsets.length - 1] + query.length;
+			  offsets[offsets.length] = tw.currentNode.nodeValue.substr(trueOffsetDiff)[ignoreCase ? 'toLowerCase' : 'toString']().indexOf(query) + trueOffsetDiff;
+
+			  range.selectNode(tw.currentNode);
+			  range.setStart(tw.currentNode, offsets[offsets.length - 1]);
+			  range.setEnd(tw.currentNode, range.startOffset + query.length);
+			  findTextMatches[findTextMatches.length] = range.cloneRange();
+      }
+		}
+		offsets.length = 0;
+	}
+	return (tw.currentNode != body);
+}
+
+function highlightText() 
+{
+	if (findTextMatches.length > 0) {
+		with (editorwin.document.getElementById('pinEdit').contentWindow.getSelection()) {
+			removeAllRanges();
+			addRange(findTextMatches.shift());
+		}
+	}
+}
+
+function changeSearch()
+{
+  findTextMatches = new Array();
+  runSearch = false;
+}
+
+</SCRIPT>
+  </HEAD>
+  <BODY style="MARGIN:5px;OVERFLOW:hidden" onload="document.getElementById('txtSearch').focus()">
+    <table width="100%" border="0" cellSpacing="0" cellPadding="0">
+      <tr>
+        <td valign="top">
+        <br>
+          <TABLE class="maintable" cellSpacing="0" cellPadding="4" width="100%" border="0">
+            <TR>
+              <TD valign="center" nowrap><span  class="label60" id="4323">_Search:</span>&nbsp;&nbsp;<INPUT id="txtSearch" onchange="javascript: changeSearch()" style="FONT-SIZE: 11px; WIDTH: 220px; FONT-FAMILY: arial">&nbsp;<INPUT id="lblSearch" style="WIDTH: 90px" type="button" value="_Search" onClick="search()"
+                  NAME="lblSearch"></TD>
+            </TR>
+            <tr><td><input id="chkCase" type=checkbox><span id="1086">_Case</span></td></tr>
+            <tr><td><input id="chkWord" type=checkbox><span id="1087">_Word</span></td></tr>
+          </TABLE>
+        </td>
+      </tr>
+    </table>
+  </BODY>
+</HTML>

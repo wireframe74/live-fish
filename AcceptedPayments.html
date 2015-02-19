@@ -1,0 +1,44 @@
+<!-- start of AcceptedPayments.html -->
+<table border=0 align=center>
+<%
+	if (website.getPaymentProvider().trim().equalsIgnoreCase(WebSite.PAYMENT_PROVIDER_WORLDPAY)) {
+%>
+	
+	<tr>
+		<td align=center>
+			<br />
+			<font color='#5164A6' style="font.size:14px"><b>We accept:</b></font>
+		</td>
+	</tr>
+	<tr>
+		<td align=center>
+		    <img src="<%=website.getImagePath("MSCD.gif")%>" alt="MSCD" />
+		    <img src="<%=website.getImagePath("VISA.gif")%>" alt="VISA" />
+		    <img src="<%=website.getImagePath("VISD.gif")%>" alt="VISD" />
+		    <img src="<%=website.getImagePath("VIED.gif")%>" alt="VIED" />
+		    <img src="<%=website.getImagePath("JCB.gif")%>" alt="JCB" />
+		    <img src="<%=website.getImagePath("SOLO.gif")%>" alt="SOLO" />
+		    <img src="<%=website.getImagePath("SWIT.gif")%>" alt="SWIT" />
+	 	</td>
+	 </tr>
+	 <tr>
+	 	<td align=center>
+	    	<img src="<%=website.getImagePath("poweredByWorldPay.gif")%>" alt="Powered By WorldPay" /><br>
+	    	<font color='#5164A6' style="font.size:12px"><b>Part of the Royal Bank of Scotland Group</b></font>
+	    	<br /><br />
+	 	</td>
+	 </tr>
+ <% 					
+	} else if (website.getPaymentProvider().trim().equalsIgnoreCase(WebSite.PAYMENT_PROVIDER_PAYPAL)) {
+ %>
+ 	<!-- PayPal Logo -->
+	<tr>
+		<td align=center>
+    		<img src="<%=website.getImagePath("PayPalSolutionLogo.gif")%>">
+		</td>
+	</tr>	
+	<!-- PayPal Logo -->
+<% } %>
+
+</table>
+<!-- end of AcceptedPayments.html -->

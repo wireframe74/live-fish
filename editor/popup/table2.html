@@ -1,0 +1,185 @@
+<html>
+<head>
+<link rel="stylesheet" href="../design/style/popuptable.css" type="text/css">
+<style>
+body 
+{
+	margin:		0px;
+}
+
+td 
+{
+	background: 	white;
+	cursor: 			pointer;
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:		ButtonShadow;
+	border-bottom-color:	ButtonHighlight;
+    	FONT-SIZE: 10px;
+    	FONT-FAMILY: Arial;
+}
+</style>
+<script>
+var language = "";
+var design = "";
+var idFrame = "";
+var s1 = "";
+
+function mouseOver(row,col)
+{
+  for(var i=1;i<8;i++) {
+    for(var j=1;j<8;j++) {
+      var id = row + "" + col;
+      if(j<= col && i<= row) {
+        var cell = document.getElementById(i + "" + j);
+        cell.style.backgroundColor="darkblue";
+        document.getElementById("lblText").innerHTML = row + "x" + col;
+      } else {
+        var cell = document.getElementById(i + "" + j);
+        cell.style.backgroundColor="white";
+      }
+    }
+  }
+}
+
+function mouseUp(row,col)
+{
+  clearTable();
+  parent.document.getElementById(idFrame).contentWindow.toolbarPopupAction("POPUPBUTTON", row + ":" + col);
+}
+
+function cancel()
+{
+  clearTable();
+  parent.document.getElementById(idFrame).contentWindow.toolbarPopupAction("POPUPBUTTON", "");
+}
+
+function clearTable()
+{
+  for(var i=1;i<8;i++) {
+    for(var j=1;j<8;j++) {
+      var cell = document.getElementById(i + "" + j);
+      cell.style.backgroundColor="white";
+    }
+  }
+  document.getElementById('lblText').innerHTML = s1;
+}
+
+function load()
+{
+//  if(browser.ns) {
+//    document.getElementById("line").style.visibility = "hidden";
+//  }
+
+  // process parameters
+  var param = "";
+  try {
+    param = window.location.search;
+  } catch(Error) {}
+
+  if(param.length > 0) {
+    param = param.substring(1,param.length);
+    var aArray = param.split("&");
+    for(var i=0;i<aArray.length;i++) {
+      var aParam = aArray[i].split("=");
+      for(var j=0;j<aParam.length-1;j++) {
+        if(aParam[0].toUpperCase() == "LANGUAGE") {
+          language = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "STYLE") {
+          design = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "ID") {
+          idFrame = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "LB") {
+          idFrame = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "S1") {
+          s1 = aParam[1];
+          if(s1 == "")
+            s1 = "&nbsp;";
+        }
+      }
+    }
+  }
+
+  clearTable();
+}
+</script>
+</head>
+<body style="border:0;overflow:hidden" onload="load();">
+<HR id="line" style="width=20;LEFT: 1px; POSITION: absolute; TOP: 0px" color=white SIZE=1>
+<table id="table" style="border:1 solid #808080;background-color: buttonface" width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+  <td  unselectable='ON' id="11" onmouseover="mouseOver(1,1)" onmouseup="mouseUp(1,1)">&nbsp;</td>
+  <td unselectable='ON' id="12" onmouseover="mouseOver(1,2)" onmouseup="mouseUp(1,2)">&nbsp;</td>
+  <td unselectable='ON' id="13" onmouseover="mouseOver(1,3)" onmouseup="mouseUp(1,3)">&nbsp;</td>
+  <td unselectable='ON' id="14" onmouseover="mouseOver(1,4)" onmouseup="mouseUp(1,4)">&nbsp;</td>
+  <td unselectable='ON' id="15" onmouseover="mouseOver(1,5)" onmouseup="mouseUp(1,5)">&nbsp;</td>
+  <td unselectable='ON' id="16" onmouseover="mouseOver(1,6)" onmouseup="mouseUp(1,6)">&nbsp;</td>
+  <td  unselectable='ON' id="17" onmouseover="mouseOver(1,7)" onmouseup="mouseUp(1,7)">&nbsp;</td>
+</tr>
+<tr>
+  <td unselectable='ON' id="21" onmouseover="mouseOver(2,1)" onmouseup="mouseUp(2,1)">&nbsp;</td>
+  <td unselectable='ON' id="22" onmouseover="mouseOver(2,2)" onmouseup="mouseUp(2,2)">&nbsp;</td>
+  <td unselectable='ON' id="23" onmouseover="mouseOver(2,3)" onmouseup="mouseUp(2,3)">&nbsp;</td>
+  <td unselectable='ON' id="24" onmouseover="mouseOver(2,4)" onmouseup="mouseUp(2,4)">&nbsp;</td>
+  <td unselectable='ON' id="25" onmouseover="mouseOver(2,5)" onmouseup="mouseUp(2,5)">&nbsp;</td>
+  <td unselectable='ON' id="26" onmouseover="mouseOver(2,6)" onmouseup="mouseUp(2,6)">&nbsp;</td>
+  <td unselectable='ON' id="27" onmouseover="mouseOver(2,7)" onmouseup="mouseUp(2,7)">&nbsp;</td>
+</tr>
+<tr>
+  <td unselectable='ON' id="31" onmouseover="mouseOver(3,1)" onmouseup="mouseUp(3,1)">&nbsp;</td>
+  <td unselectable='ON' id="32" onmouseover="mouseOver(3,2)" onmouseup="mouseUp(3,2)">&nbsp;</td>
+  <td unselectable='ON' id="33" onmouseover="mouseOver(3,3)" onmouseup="mouseUp(3,3)">&nbsp;</td>
+  <td unselectable='ON' id="34" onmouseover="mouseOver(3,4)" onmouseup="mouseUp(3,4)">&nbsp;</td>
+  <td unselectable='ON' id="35" onmouseover="mouseOver(3,5)" onmouseup="mouseUp(3,5)">&nbsp;</td>
+  <td unselectable='ON' id="36" onmouseover="mouseOver(3,6)" onmouseup="mouseUp(3,6)">&nbsp;</td>
+  <td unselectable='ON' id="37" onmouseover="mouseOver(3,7)" onmouseup="mouseUp(3,7)">&nbsp;</td>
+</tr>
+<tr>
+  <td unselectable='ON' id="41" onmouseover="mouseOver(4,1)" onmouseup="mouseUp(4,1)">&nbsp;</td>
+  <td unselectable='ON' id="42" onmouseover="mouseOver(4,2)" onmouseup="mouseUp(4,2)">&nbsp;</td>
+  <td unselectable='ON' id="43" onmouseover="mouseOver(4,3)" onmouseup="mouseUp(4,3)">&nbsp;</td>
+  <td unselectable='ON' id="44" onmouseover="mouseOver(4,4)" onmouseup="mouseUp(4,4)">&nbsp;</td>
+  <td unselectable='ON' id="45" onmouseover="mouseOver(4,5)" onmouseup="mouseUp(4,5)">&nbsp;</td>
+  <td unselectable='ON' id="46" onmouseover="mouseOver(4,6)" onmouseup="mouseUp(4,6)">&nbsp;</td>
+  <td unselectable='ON' id="47" onmouseover="mouseOver(4,7)" onmouseup="mouseUp(4,7)">&nbsp;</td>
+</tr>
+<tr>
+  <td unselectable='ON'  id="51" onmouseover="mouseOver(5,1)" onmouseup="mouseUp(5,1)">&nbsp;</td>
+  <td unselectable='ON'  id="52" onmouseover="mouseOver(5,2)" onmouseup="mouseUp(5,2)">&nbsp;</td>
+  <td unselectable='ON'  id="53" onmouseover="mouseOver(5,3)" onmouseup="mouseUp(5,3)">&nbsp;</td>
+  <td unselectable='ON'  id="54" onmouseover="mouseOver(5,4)" onmouseup="mouseUp(5,4)">&nbsp;</td>
+  <td unselectable='ON'  id="55" onmouseover="mouseOver(5,5)" onmouseup="mouseUp(5,5)">&nbsp;</td>
+  <td unselectable='ON'  id="56" onmouseover="mouseOver(5,6)" onmouseup="mouseUp(5,6)">&nbsp;</td>
+  <td unselectable='ON'  id="57" onmouseover="mouseOver(5,7)" onmouseup="mouseUp(5,7)">&nbsp;</td>
+</tr>
+<tr>
+  <td unselectable='ON'  id="61" onmouseover="mouseOver(6,1)" onmouseup="mouseUp(6,1)">&nbsp;</td>
+  <td unselectable='ON'  id="62" onmouseover="mouseOver(6,2)" onmouseup="mouseUp(6,2)">&nbsp;</td>
+  <td unselectable='ON'  id="63" onmouseover="mouseOver(6,3)" onmouseup="mouseUp(6,3)">&nbsp;</td>
+  <td unselectable='ON'  id="64" onmouseover="mouseOver(6,4)" onmouseup="mouseUp(6,4)">&nbsp;</td>
+  <td unselectable='ON'  id="65" onmouseover="mouseOver(6,5)" onmouseup="mouseUp(6,5)">&nbsp;</td>
+  <td unselectable='ON'  id="66" onmouseover="mouseOver(6,6)" onmouseup="mouseUp(6,6)">&nbsp;</td>
+  <td unselectable='ON'  id="67" onmouseover="mouseOver(6,7)" onmouseup="mouseUp(6,7)">&nbsp;</td>
+</tr>
+<tr>
+  <td unselectable='ON'  id="71" onmouseover="mouseOver(7,1)" onmouseup="mouseUp(7,1)">&nbsp;</td>
+  <td unselectable='ON'  id="72" onmouseover="mouseOver(7,2)" onmouseup="mouseUp(7,2)">&nbsp;</td>
+  <td unselectable='ON'  id="73" onmouseover="mouseOver(7,3)" onmouseup="mouseUp(7,3)">&nbsp;</td>
+  <td unselectable='ON'  id="74" onmouseover="mouseOver(7,4)" onmouseup="mouseUp(7,4)">&nbsp;</td>
+  <td unselectable='ON'  id="75" onmouseover="mouseOver(7,5)" onmouseup="mouseUp(7,5)">&nbsp;</td>
+  <td unselectable='ON'  id="76" onmouseover="mouseOver(7,6)" onmouseup="mouseUp(7,6)">&nbsp;</td>
+  <td unselectable='ON'  id="77" onmouseover="mouseOver(7,7)" onmouseup="mouseUp(7,7)">&nbsp;</td>
+</tr>
+<tr>
+  <td colspan="7" align="center" onmouseup="cancel();" onmouseover="clearTable()"><p id="lblText"></p></td>
+</tr>
+</table>
+
+</body>
+</html>

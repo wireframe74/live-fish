@@ -1,0 +1,219 @@
+<HEAD>
+  <TITLE></TITLE>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+
+var language = "";
+var design = "";
+var objElement;
+var technology = "";
+var baseUrl    = "";
+var basePath   = "";
+var filter     = "";
+var relpath    = "";
+var win        = null;
+var origWidth  = 0;
+var origHeight = 0;
+
+
+function save()
+{
+
+  try {
+    var objElementStyle = objElement.style;
+    var vspace          = objElement.vspace;
+    var hspace          = objElement.hspace;
+    var styleFloat      = objElementStyle.styleFloat;
+    var changed = false;
+    var win = params[11];
+
+    // hspace
+    if(document.getElementById("txtHSpace").value != "") {
+      objElement.hspace = document.getElementById("txtHSpace").value;
+      if(objElement.hspace == 0)
+        objElement.removeAttribute("hspace");
+    } else {
+      objElement.removeAttribute("hspace");
+    }
+        
+    if(document.getElementById("txtVSpace").value != "") {
+      objElement.vspace = document.getElementById("txtVSpace").value;
+      if(objElement.vspace == 0)
+        objElement.removeAttribute("vspace");
+    } else {
+      objElement.removeAttribute("vspace");
+    }
+
+    var floatObject = "";
+    if(browser.ie)
+      sFloat = objElementStyle.styleFloat;
+    else
+      sFloat = objElementStyle.cssFloat;
+
+    //float
+    if (document.getElementById("left").checked == true) {
+      if(browser.ie)
+        objElementStyle.styleFloat = "left";
+      else
+        objElementStyle.cssFloat = "left";
+    } else if (document.getElementById("right").checked == true) {
+      if(browser.ie)
+        objElementStyle.styleFloat = "right";
+      else
+        objElementStyle.cssFloat = "right";
+    } else if (document.getElementById("none").checked == true) {
+      if(browser.ie)
+        objElementStyle.styleFloat = "";
+      else
+        objElementStyle.cssFloat = "";
+    }
+      
+    if(hspace          != objElement.hspace)
+      changed = true;
+    if(vspace          != objElement.vspace)
+      changed = true;
+    if(styleFloat      != objElementStyle.styleFloat)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) { }
+  
+  window.close();
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = param[0];
+	  design              = param[1];
+	  objElement          = param[5];
+	  baseUrl             = param[6];
+	  basePath            = param[7];
+	  technology          = param[8];
+	  filter              = param[9];
+	  relpath             = param[10];
+	  win                 = param[11];
+
+    // set language strings
+    setStrings();
+
+    var objElementStyle = objElement.style;
+    var temp = objElement.src;
+    document.getElementById("txtHSpace").value      = objElement.hspace;
+    document.getElementById("txtVSpace").value      = objElement.vspace;
+
+    var sFloat = "";
+    if(browser.ie)
+      sFloat = objElementStyle.styleFloat;
+    else
+      sFloat = objElementStyle.cssFloat;
+    
+    if (sFloat == "left")
+      document.getElementById("left").checked = true;
+    else if (sFloat == "right")
+      document.getElementById("right").checked = true;
+    else if (sFloat == "" || sFloat == "none")
+      document.getElementById("none").checked = true;
+
+  } catch(error) { }
+}
+
+function onUrlSelect()
+{
+  // set the predefined values from config.js
+	if(browser.ie) {
+		var path = window.showModalDialog(technology + "/dialog.html",params,"dialogHeight:300px;dialogWidth:600px;resizable:1;status:0;scroll:0");
+		if(path != "0" && path != null) {
+ 			document.getElementById("txtSource").value = win.__editRelativeGetRelFromAbs(path,"IMAGE");
+	  }
+	} else {
+		var left = screen.width/2 - 600/2;
+		var top = screen.height/2 - 300/2;
+		window.open(technology + "/dialog.html","dialog","modal=1,left=" + left + ",top=" + top + ",height=300,width=600,resizable=1,status=0,scrollbars=0");
+	}
+}
+
+function __editGetParam()
+{
+  return params;
+}
+
+function callbackMozilla(mode, para1, para2)
+{
+  if(mode == "OPENIMAGE") {
+    if(para1 != "0" && para1 != null) {
+ 			document.getElementById("txtSource").value = win.__editRelativeGetRelFromAbs(para1,"IMAGE");
+    }
+  }
+}
+
+function onWidthChange()
+{
+  if(document.getElementById("chkConstrain").checked) {
+    var width = document.getElementById("txtWidth").value;
+    if(width != "") {
+      if(parseInt(width) > 0) {
+        var height = parseInt(origWidth/origHeight * width);
+        document.getElementById("txtHeight").value = height;
+      }
+    }
+  }
+}
+</SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="4053">_Space</span>
+    </legend>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td>
+          <div id="4054" class="label">_Horizontal:</div>
+        </td>
+        <td>
+          <INPUT id="txtHSpace" style="FONT-SIZE: 11px; WIDTH: 40px; FONT-FAMILY: arial; HEIGHT: 20px">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="4055" class="label">_Vertical:</div>
+        </td>
+        <td>
+          <INPUT id="txtVSpace" style="FONT-SIZE: 11px; WIDTH: 40px; FONT-FAMILY: arial; HEIGHT: 20px">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4056">_Float</span>
+    </legend>
+      <table cellpadding="0" cellspacing="0" border="0">
+      <tr style="padding-top:5px;">
+        <td >
+          <input id="left" name="float" type="radio" />    
+        </td>
+        <td style="padding-right:12px;">
+          <img src="floatleft.gif" />
+        </td>
+        <td>
+          <input id="right" name="float" type="radio" />
+        </td>
+        <td style="padding-right:12px;">
+          <img src="floatright.gif" /></td>
+        <td>
+          <input id="none" name="float" type="radio" />
+        </td>
+        <td>
+          <span id="4060" class="label">_none</span></td>
+      </tr>
+      </table>
+    </fieldset>
+</BODY>

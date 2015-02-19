@@ -1,0 +1,34 @@
+<!--
+pinEdit security file for 
+ - limiting access paths for file/image dialog and file upload
+ - limiting file filter for file/image dialog and file upload
+-->
+<security>
+  <path>
+    <!-- 
+      All paths that load/upload files from files system have to stzart with one of the limitpath parameters
+      Sample: d:\myfiles\data
+      You can add as many limitations for different folders you like
+     
+      i.e.
+      <limitpath value="d:\data\images" />
+      <limitpath value="e:\data\files" />
+      <limitpath value="f:\data\users" />
+      <limitpath value="g:" />
+      <limitpath value="/home/webservice/tempurl/webapps/ROOT" />
+      <limitpath value="/home/webservice/tempurl/webapps/ROOT/images" />
+
+      At least one parameter has to be specified
+    -->
+    <limitpath value="c:\" />
+    <limitpath value="d:\" />
+    <limitpath value="[webpath]" />
+    <limitpath value="[webpath]/images" />
+    <limitpath value="[webpath]/template" />
+    <limitpath value="[webpath]/meta" />
+  </path>
+  <extension>
+    <!-- All extensions used have to part of this list -->
+    <limitextension value="doc;docx;xls;xlsx;ppt;txt;jpg;jpeg;png;gif;bmp;xml;html;htm;css;swf;avi;wmv;mov;mp3;mpeg" />
+  </extension>
+</security>

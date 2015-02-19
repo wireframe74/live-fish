@@ -1,0 +1,101 @@
+<!-- start of bannerregister.html -->
+<% 
+boolean showNewWebMesage = true;
+String paramNewPwd = request.getParameter("fn"); %>
+
+<% if (paramNewPwd != null) { %>
+		<%		boolean emailSent = false;
+				try {
+
+					String emailAdd = request.getParameter("emailaddress");
+					Connection internetConn = null;
+        				Statement stmt = null;
+					 java.sql.PreparedStatement pstmt = null;
+        				try {
+    						internetConn = website.getConnection();
+            					stmt = internetConn.createStatement();
+						pstmt = internetConn.prepareStatement("update customer set user_password = ? where email_address = '"+ emailAdd+"'");
+
+
+						String sql = "select concat(substring(email_address,3,1),substring(email_address,2,1),substring('333',1,1), substring(email_address,1,1),substring(email_address,5,1),substring(email_address,2,1)) from "+Customer.TABLE_NAME+" where "+Customer.EMAIL_ADDRESS+" = '"+emailAdd+"'";
+ 					       ResultSet rs = stmt.executeQuery(sql);
+ 						if (rs.next()) {
+							String newPass = rs.getString(1);
+							byte[] userPassEnc = WebSite.encryptPassword(newPass);
+						
+							pstmt.setBytes(1,userPassEnc);
+           						pstmt.executeUpdate();
+            						internetConn.commit();
+
+							sql = "select "+Customer.PASSWORD+" from "+Customer.TABLE_NAME+" where "+Customer.EMAIL_ADDRESS+" = '"+emailAdd+"'";
+ 					       	rs = stmt.executeQuery(sql);
+ 					       	if (rs.next()) {
+ 								byte[] encPassword = rs.getBytes(1);
+ 								String password = WebSite.decryptPassword(encPassword);
+ 							
+ 								String textEmailBody = website.getWebsiteName()+"\n\rYou have received this email because you requested your new password for clicked on 'Forgotten your password?' on our website.\n\rYour password is: "+password+"\n\r"+website.getWebSiteURL();
+ 								String htmlEmailBody = "<br>You have received this email because you clicked on <i>'Forgotten your password?'</i> on our website.<br><br>Your password is: <b>"+password+"</b><br><br><a href='"+website.getWebSiteURL()+"'>"+website.getWebsiteName()+"</a>";
+ 								website.sendEmail(emailAdd, website.getWebsiteName(), textEmailBody, htmlEmailBody);
+
+								emailSent = true;
+							}
+ 						} else {
+							%>
+		       	                     <script language="Javascript">
+								alert ("Your email address is not registered with us. Please register.");   
+       		       	              </script>
+                     			       <%
+ 						}
+
+        				} finally {
+           					 if (stmt != null) stmt.close();
+						 if (pstmt != null) pstmt.close();
+           					 if (internetConn != null) website.releaseConnection(internetConn);
+        				}
+   				   
+		if (emailSent) {		     
+		%>
+			<tr valign="middle" align="center">
+	       		<td colspan="2" class="smallertext">
+					<span style="color:darkred;"><BR><strong>Your new password has been sent</strong></span><BR><BR>
+	   			</td>
+	     	</tr>
+		<%
+		}
+					showNewWebMesage = false;
+                            } catch (Exception eas1) {
+validationString = "Failed to send your new password. Please check your email and try again. Reason: "+eas1.getMessage();
+out.write(""+validationString);
+	                            %>
+       	                     <script type="text/javascript">
+								<!--
+								alert ("Failed to send your new password. Please check your email and try again.");   
+  								//-->
+  
+              	              </script>
+<% }  %>
+<% } %>
+
+<% if (showNewWebMesage) { %>
+
+
+<form name="getnewpassword" action='register.jsp?src=myacc' method="POST" onsubmit='return true;' style="margin:0 0 0 0;">  
+<input type=hidden name="fn" value="newe" />
+
+<tr>
+	<td class="discount" style="padding-left:14px;padding-top:10px;" align="center">
+		<div width="90%">
+			********************************************************************
+			<br /> Existing customers wishing to log-on to our new website for the first time, will need to be issued with a new password.
+			<br /><br />This is for security reasons. 
+			<br /><br />Please enter your email address <input class="inputitem" type=text name="emailaddress" value='<%=request.getAttribute("emailaddress")%>'>then <a href="javascript:document.getnewpassword.submit();" class="discount"><u><b>click here</b></u></a> and we will email your new password.
+			<br />
+			********************************************************************
+			<br /><br />
+		</div>
+	</td>
+</tr>
+
+</form> 
+<% }  %>
+<!-- end of bannerregister.html -->

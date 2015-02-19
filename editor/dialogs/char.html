@@ -1,0 +1,380 @@
+<HTML>
+  <HEAD>
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+    <link rel="stylesheet" href="../design/style/dialog.css" type="text/css">
+    <style>
+    .char{
+      font-family:arial;
+      font-size:16px;
+	    cursor: 		Hand;
+	    cursor: 		pointer;
+    }
+    .td{
+      width:16px;
+      height:16px;
+      text-align: center;
+      background-color:  #F0F0F0;
+    }
+    .link{
+     font-size:16px;
+    }
+    </style>
+      <script language="javascript" src="../include/dialog.js"></script>
+      <SCRIPT>
+
+var language = "";
+var design = "";
+var aChar = null;
+
+if(browser.ie) {
+	language            = dialogArguments[0];
+	params              = dialogArguments;
+} else {
+	aParam = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	params              = aParam;
+}
+
+document.title = getLanguageString(language,1076) + document.title;
+
+function Load()
+{
+  try {
+    document.getElementById("lblHead").innerHTML = getLanguageString(language,1075);
+    document.getElementById("lblNumber").innerHTML = getLanguageString(language,1072);
+    document.getElementById("lblCode").innerHTML = getLanguageString(language,1073);
+    document.getElementById("lblCancel").value = getLanguageString(language,1074);
+  } catch(Error) {}
+
+  createCharArray();
+  createCharMap();
+}
+
+function createCharMap()
+{
+  var temp = "<table style='background-color:white' width='100%' cellspacing=1 cellpadding=1 border=0><tr>"
+  var charPerRow = 19;
+  var j =0;
+  for(var i=0;i<aChar.length;i++) {
+    j++;
+    var curChar = aChar[i];
+    temp+= "<td id='" + i + "' class='td' onclick='onInsert(this)' onmouseover='onOver(this)' onmouseout='onOut(this)'>";
+    temp+= "<div class='char' title='" + curChar[2] + "'>" + curChar[0] + "</div></a>";
+    temp+= "</td>";
+
+    if( j>1 && (j % charPerRow) == 0) {
+      temp+= "</tr><tr>";
+    }
+    
+  } 
+  temp+= "</tr>";
+  temp+= "</table>";
+  document.getElementById("char").innerHTML = temp;
+}
+
+function onOver(cell)
+{
+  cell.style.backgroundColor = "#FFDC81";
+  document.getElementById("lblChar").innerHTML = aChar[cell.id][0];
+  document.getElementById("lblDescription").innerHTML = aChar[cell.id][2];
+  document.getElementById("lblHtmlCode").innerHTML = "&amp;" + aChar[cell.id][1] + ";";
+  document.getElementById("lblNumCode").innerHTML = "&amp;" + aChar[cell.id][0].substring(1);
+}
+function onOut(cell)
+{
+  cell.style.backgroundColor = "#F0F0F0";
+}
+function onInsert(cell)
+{
+  params[11].editSetFocus();
+  params[11].editInsertHtml(aChar[cell.id][0]);
+  params[11].__editOnChanged(true);
+  if(browser.ns) {
+    window.close();
+  }
+  
+}
+
+
+
+function createCharArray()
+{
+  aChar = new Array();
+
+  aChar = 
+  [
+	  ['&#160;', 'nbsp', 'no-break space', 1],
+	  ['&#161;', 'iexcl', 'inverted exclamation mark', 1],
+	  ['&#8364;', 'euro', 'euro sign', 1],
+	  ['&#162;', 'cent', 'cent sign', 1],
+	  ['&#163;', 'pound', 'pound sign', 1],
+	  ['&#164;', 'curren', 'currency sign', 1],
+	  ['&#165;', 'yen', 'yen sign', 1],
+	  ['&#166;', 'brvbar', 'broken bar', 1],
+	  ['&#167;', 'sect', 'section sign', 1],
+	  ['&#168;', 'uml', 'diaeresis', 1],
+	  ['&#169;', 'copy', 'copyright sign', 1],
+	  ['&#170;', 'ordf', 'feminine ordinal indicator', 1],
+	  ['&#171;', 'laquo', 'left-pointing double angle quotation mark', 1],
+	  ['&#172;', 'not', 'not sign', 1],
+	  ['&#173;', 'shy', 'soft hyphen', 1],
+	  ['&#174;', 'reg', 'registered sign', 1],
+	  ['&#175;', 'macr', 'macron', 1],
+	  ['&#176;', 'deg', 'degree sign', 1],
+	  ['&#177;', 'plusmn', 'plus-minus sign', 1],
+	  ['&#178;', 'sup2', 'superscript two', 1],
+	  ['&#179;', 'sup3', 'superscript three', 1],
+	  ['&#180;', 'acute', 'acute accent', 1],
+	  ['&#181;', 'micro', 'micro sign', 1],
+	  ['&#182;', 'para', 'pilcrow sign', 1],
+	  ['&#183;', 'middot', 'middle dot', 1],
+	  ['&#184;', 'cedil', 'cedilla', 1],
+	  ['&#185;', 'sup1', 'superscript one', 1],
+	  ['&#186;', 'ordm', 'masculine ordinal indicator', 1],
+	  ['&#187;', 'raquo', 'right-pointing double angle quotation mark', 1],
+	  ['&#188;', 'frac14', 'vulgar fraction one quarter', 1],
+	  ['&#189;', 'frac12', 'vulgar fraction one half', 1],
+	  ['&#190;', 'frac34', 'vulgar fraction three quarters', 1],
+	  ['&#191;', 'iquest', 'inverted question mark', 1],
+	  ['&#192;', 'Agrave', 'latin capital letter A with grave', 1],
+	  ['&#193;', 'Aacute', 'latin capital letter A with acute', 1],
+	  ['&#194;', 'Acirc', 'latin capital letter A with circumflex', 1],
+	  ['&#195;', 'Atilde', 'latin capital letter A with tilde', 1],
+	  ['&#196;', 'Auml', 'latin capital letter A with diaeresis', 1],
+	  ['&#197;', 'Aring', 'latin capital letter A with ring above', 1],
+	  ['&#198;', 'AElig', 'latin capital letter AE', 1],
+	  ['&#199;', 'Ccedil', 'latin capital letter C with cedilla', 1],
+	  ['&#200;', 'Egrave', 'latin capital letter E with grave', 1],
+	  ['&#201;', 'Eacute', 'latin capital letter E with acute', 1],
+	  ['&#202;', 'Ecirc', 'latin capital letter E with circumflex', 1],
+	  ['&#203;', 'Euml', 'latin capital letter E with diaeresis', 1],
+	  ['&#204;', 'Igrave', 'latin capital letter I with grave', 1],
+	  ['&#205;', 'Iacute', 'latin capital letter I with acute', 1],
+	  ['&#206;', 'Icirc', 'latin capital letter I with circumflex', 1],
+	  ['&#207;', 'Iuml', 'latin capital letter I with diaeresis', 1],
+	  ['&#208;', 'ETH', 'latin capital letter ETH', 1],
+	  ['&#209;', 'Ntilde', 'latin capital letter N with tilde', 1],
+	  ['&#210;', 'Ograve', 'latin capital letter O with grave', 1],
+	  ['&#211;', 'Oacute', 'latin capital letter O with acute', 1],
+	  ['&#212;', 'Ocirc', 'latin capital letter O with circumflex', 1],
+	  ['&#213;', 'Otilde', 'latin capital letter O with tilde', 1],
+	  ['&#214;', 'Ouml', 'latin capital letter O with diaeresis', 1],
+	  ['&#215;', 'times', 'multiplication sign', 1],
+	  ['&#216;', 'Oslash', 'latin capital letter O with stroke', 1],
+	  ['&#217;', 'Ugrave', 'latin capital letter U with grave', 1],
+	  ['&#218;', 'Uacute', 'latin capital letter U with acute', 1],
+	  ['&#219;', 'Ucirc', 'latin capital letter U with circumflex', 1],
+	  ['&#220;', 'Uuml', 'latin capital letter U with diaeresis', 1],
+	  ['&#221;', 'Yacute', 'latin capital letter Y with acute', 1],
+	  ['&#222;', 'THORN', 'latin capital letter THORN', 1],
+	  ['&#223;', 'szlig', 'latin small letter sharp s', 1],
+	  ['&#224;', 'agrave', 'latin small letter a with grave', 1],
+	  ['&#225;', 'aacute', 'latin small letter a with acute', 1],
+	  ['&#226;', 'acirc', 'latin small letter a with circumflex', 1],
+	  ['&#227;', 'atilde', 'latin small letter a with tilde', 1],
+	  ['&#228;', 'auml', 'latin small letter a with diaeresis', 1],
+	  ['&#229;', 'aring', 'latin small letter a with ring above', 1],
+	  ['&#230;', 'aelig', 'latin small letter ae', 1],
+	  ['&#231;', 'ccedil', 'latin small letter c with cedilla', 1],
+	  ['&#232;', 'egrave', 'latin small letter e with grave', 1],
+	  ['&#233;', 'eacute', 'latin small letter e with acute', 1],
+	  ['&#234;', 'ecirc', 'latin small letter e with circumflex', 1],
+	  ['&#235;', 'euml', 'latin small letter e with diaeresis', 1],
+	  ['&#236;', 'igrave', 'latin small letter i with grave', 1],
+	  ['&#236;', 'igrave', 'latin small letter i with grave', 1],
+	  ['&#237;', 'iacute', 'latin small letter i with acute', 1],
+	  ['&#238;', 'icirc', 'latin small letter i with circumflex', 1],
+	  ['&#239;', 'iuml', 'latin small letter i with diaeresis', 1],
+	  ['&#240;', 'eth', 'latin small letter eth', 1],
+	  ['&#241;', 'ntilde', 'latin small letter n with tilde', 1],
+	  ['&#242;', 'ograve', 'latin small letter o with grave', 1],
+	  ['&#243;', 'oacute', 'latin small letter o with acute', 1],
+	  ['&#244;', 'ocirc', 'latin small letter o with circumflex', 1],
+	  ['&#245;', 'otilde', 'latin small letter o with tilde', 1],
+	  ['&#246;', 'ouml', 'latin small letter o with diaeresis', 1],
+	  ['&#247;', 'divide', 'division sign', 1],
+	  ['&#248;', 'oslash', 'latin small letter o with stroke', 1],
+	  ['&#249;', 'ugrave', 'latin small letter u with grave', 1],
+	  ['&#250;', 'uacute', 'latin small letter u with acute', 1],
+	  ['&#251;', 'ucirc', 'latin small letter u with circumflex', 1],
+	  ['&#252;', 'uuml', 'latin small letter u with diaeresis', 1],
+	  ['&#253;', 'yacute', 'latin small letter y with acute', 1],
+	  ['&#254;', 'thorn', 'latin small letter thorn', 1],
+	  ['&#255;', 'yuml', 'latin small letter y with diaeresis', 1],
+	  ['&#402;', 'fnof', 'latin small f with hook = function', 1],
+	  ['&#913;', 'Alpha', 'greek capital letter alpha', 1],
+	  ['&#914;', 'Beta', 'greek capital letter beta', 1],
+	  ['&#915;', 'Gamma', 'greek capital letter gamma', 1],
+	  ['&#916;', 'Delta', 'greek capital letter delta', 1],
+	  ['&#917;', 'Epsilon', 'greek capital letter epsilon', 1],
+	  ['&#918;', 'Zeta', 'greek capital letter zeta', 1],
+	  ['&#919;', 'Eta', 'greek capital letter eta', 1],
+	  ['&#920;', 'Theta', 'greek capital letter theta', 1],
+	  ['&#921;', 'Iota', 'greek capital letter iota', 1],
+	  ['&#922;', 'Kappa', 'greek capital letter kappa', 1],
+	  ['&#923;', 'Lambda', 'greek capital letter lambda', 1],
+	  ['&#924;', 'Mu', 'greek capital letter mu', 1],
+	  ['&#925;', 'Nu', 'greek capital letter nu', 1],
+	  ['&#926;', 'Xi', 'greek capital letter xi', 1],
+	  ['&#927;', 'Omicron', 'greek capital letter omicron', 1],
+	  ['&#928;', 'Pi', 'greek capital letter pi', 1],
+	  ['&#929;', 'Rho', 'greek capital letter rho', 1],
+	  ['&#931;', 'Sigma', 'greek capital letter sigma', 1],
+	  ['&#932;', 'Tau', 'greek capital letter ta', 1],
+	  ['&#933;', 'Upsilon', 'greek capital letter upsilon', 1],
+	  ['&#934;', 'Phi', 'greek capital letter phi', 1],
+	  ['&#935;', 'Chi', 'greek capital letter chi', 1],
+	  ['&#936;', 'Psi', 'greek capital letter psi', 1],
+	  ['&#937;', 'Omega', 'greek capital letter omega', 1],
+	  ['&#945;', 'alpha', 'greek small letter alpha', 1],
+	  ['&#946;', 'beta', 'greek small letter beta', 1],
+	  ['&#947;', 'gamma', 'greek small letter gamma', 1],
+	  ['&#948;', 'delta', 'greek small letter delta', 1],
+	  ['&#949;', 'epsilon', 'greek small letter epsilon', 1],
+	  ['&#950;', 'zeta', 'greek small letter zeta', 1],
+	  ['&#951;', 'eta', 'greek small letter eta', 1],
+	  ['&#952;', 'theta', 'greek small letter theta', 1],
+	  ['&#953;', 'iota', 'greek small letter iota', 1],
+	  ['&#954;', 'kappa', 'greek small letter kappa', 1],
+	  ['&#955;', 'lambda', 'greek small letter lambda', 1],
+	  ['&#956;', 'mu', 'greek small letter mu', 1],
+	  ['&#957;', 'nu', 'greek small letter nu', 1],
+	  ['&#958;', 'xi', 'greek small letter xi', 1],
+	  ['&#959;', 'omicron', 'greek small letter omicron', 1],
+	  ['&#960;', 'pi', 'greek small letter pi', 1],
+	  ['&#961;', 'rho', 'greek small letter rho', 1],
+	  ['&#962;', 'sigmaf', 'greek small letter final sigma', 1],
+	  ['&#963;', 'sigma', 'greek small letter sigma', 1],
+	  ['&#964;', 'tau', 'greek small letter tau', 1],
+	  ['&#965;', 'upsilon', 'greek small letter upsilon', 1],
+	  ['&#966;', 'phi', 'greek small letter phi', 1],
+	  ['&#967;', 'chi', 'greek small letter chi', 1],
+	  ['&#968;', 'psi', 'greek small letter psi', 1],
+	  ['&#969;', 'omega', 'greek small letter omega', 1],
+	  ['&#977;', 'thetasym', 'greek small letter theta symbol', 1],
+	  ['&#978;', 'upsih', 'greek upsilon with hook symbol', 1],
+	  ['&#982;', 'piv', 'greek pi symbol', 1],
+	  ['&#8211;', 'ndash', 'en dash', 1],
+	  ['&#8212;', 'mdash', 'em dash', 1],
+	  ['&#8216;', 'lsquo', 'left single quotation mark', 1],
+	  ['&#8217;', 'rsquo', 'right single quotation mark', 1],
+	  ['&#8226;', 'bull', 'bullet', 1],
+	  ['&#8230;', 'hellip', 'horizontal ellipsis', 1],
+	  ['&#8242;', 'prime', 'prime', 1],
+	  ['&#8243;', 'Prime', 'double prime', 1],
+	  ['&#8254;', 'oline', 'overline', 1],
+	  ['&#8260;', 'frasl', 'fraction slash', 1],
+	  ['&#8465;', 'image', 'blackletter capital I', 1],
+	  ['&#8472;', 'weierp', 'script capital P', 1],
+	  ['&#8476;', 'real', 'blackletter capital R', 1],
+	  ['&#8482;', 'trade', 'trade mark sign', 1],
+	  ['&#8501;', 'alefsym', 'alef symbol', 1],
+	  ['&#8592;', 'larr', 'leftwards arrow', 1],
+	  ['&#8593;', 'uarr', 'upwards arrow', 1],
+	  ['&#8594;', 'rarr', 'rightwards arrow', 1],
+	  ['&#8595;', 'darr', 'downwards arrow', 1],
+	  ['&#8596;', 'harr', 'left right arrow', 1],
+	  ['&#8629;', 'crarr', 'downwards arrow with corner leftwards', 1],
+	  ['&#8656;', 'lArr', 'leftwards double arrow', 1],
+	  ['&#8657;', 'uArr', 'upwards double arrow', 1],
+	  ['&#8658;', 'rArr', 'rightwards double arrow', 1],
+	  ['&#8659;', 'dArr', 'downwards double arrow', 1],
+	  ['&#8660;', 'hArr', 'left right double arrow', 1],
+	  ['&#8704;', 'forall', 'for all', 1],
+	  ['&#8706;', 'part', 'partial differential', 1],
+	  ['&#8707;', 'exist', 'there exists', 1],
+	  ['&#8709;', 'empty', 'empty set', 1],
+	  ['&#8711;', 'nabla', 'nabla', 1],
+	  ['&#8712;', 'isin', 'element of', 1],
+	  ['&#8713;', 'notin', 'not an element of', 1],
+	  ['&#8715;', 'ni', 'contains as member', 1],
+	  ['&#8719;', 'prod', 'n-ary product', 1],
+	  ['&#8721;', 'sum', 'n-ary sumation', 1],
+	  ['&#8722;', 'minus', 'minus sign', 1],
+	  ['&#8727;', 'lowast', 'asterisk operator', 1],
+	  ['&#8733;', 'prop', 'proportional to', 1],
+	  ['&#8734;', 'infin', 'infinity', 1],
+	  ['&#8736;', 'ang', 'angle', 1],
+	  ['&#8743;', 'and', 'logical and', 1],
+	  ['&#8744;', 'or', 'logical or', 1],
+	  ['&#8745;', 'cap', 'intersection', 1],
+	  ['&#8746;', 'cup', 'union', 1],
+	  ['&#8747;', 'int', 'integral', 1],
+	  ['&#8756;', 'there4', 'therefore', 1],
+	  ['&#8764;', 'sim', 'tilde operator', 1],
+	  ['&#8773;', 'cong', 'approximately equal to', 1],
+	  ['&#8776;', 'asymp', 'almost equal to', 1],
+	  ['&#8800;', 'ne', 'not equal to', 1],
+	  ['&#8801;', 'equiv', 'identical to', 1],
+	  ['&#8804;', 'le', 'less-than or equal to', 1],
+	  ['&#8805;', 'ge', 'greater-than or equal to', 1],
+	  ['&#8834;', 'sub', 'subset of', 1],
+	  ['&#8835;', 'sup', 'superset of', 1],
+	  ['&#8836;', 'nsub', 'not a subset of', 1],
+	  ['&#8838;', 'sube', 'subset of or equal to', 1],
+	  ['&#8839;', 'supe', 'superset of or equal to', 1],
+	  ['&#8853;', 'oplus', 'circled plus', 1],
+	  ['&#8855;', 'otimes', 'circled times', 1],
+	  ['&#8869;', 'perp', 'up tack', 1],
+	  ['&#8901;', 'sdot', 'dot operator', 1],
+	  ['&#8968;', 'lceil', 'left ceiling', 1],
+	  ['&#8969;', 'rceil', 'right ceiling', 1],
+	  ['&#8970;', 'lfloor', 'left floor', 1],
+	  ['&#8971;', 'rfloor', 'right floor', 1],
+	  ['&#9001;', 'lang', 'left-pointing angle bracket', 1],
+	  ['&#9002;', 'rang', 'right-pointing angle bracket', 1],
+	  ['&#9674;', 'loz', 'lozenge', 1],
+	  ['&#9824;', 'spades', 'black spade suit', 1],
+	  ['&#9827;', 'clubs', 'black club suit', 1],
+	  ['&#9829;', 'hearts', 'black heart suit', 1],
+	  ['&#9830;', 'diams', 'black diamond suit', 1]  
+  ];
+
+}
+
+      </SCRIPT>
+  </HEAD>
+  <BODY  class="bodyframe" onload="Load()">
+    <table style="height:100%;width:100%" cellpadding=2 cellspacing=2>
+        <tr>
+          <td id="lblHead">__Select special characters</td>
+        </tr>
+      <tr><td height="100%" >
+        <div id="char" style="height:100%;width:100%;overflow:auto;"></div>
+      </td>
+      <td width=100>
+        <table width="100%" cellspacing=0 cellpadding=0 height="100%">
+        <tr>
+          <td id="lblChar" height="90" align=center valign=center style="font-size:48px;background-color:#FFDC81"></td>
+        </tr>
+        <tr>
+                <td id="lblDescription" align=center></td>
+        </tr>
+        <tr>
+          <td height="100%"></td>
+        </tr>
+        <tr>
+          <td id="lblCode">__Code:</td>
+        </tr>
+        <tr>
+          <td id="lblHtmlCode" height="25" align=center valign=center style="font-size:16px;background-color:#FFDC81"></td>
+        </tr>
+        <tr>
+          <td id="lblNumber">__Number:</td>
+        </tr>
+        <tr>
+          <td  id="lblNumCode" height="25" align=center valign=center style="font-size:16px;background-color:#FFDC81"></td>
+        </tr>
+        </table>
+      </td>
+      </tr>
+      <tr>
+      <td height=10></td></tr>
+      <TR>
+        <TD colspan=2>
+          <P align="right"><INPUT id="lblCancel" style="WIDTH: 79px; HEIGHT: 24px" type="button" value="__Close" onclick="window.close();"></P>
+        </TD>
+      </TR>
+    </TABLE>
+  </BODY>
+</HTML>

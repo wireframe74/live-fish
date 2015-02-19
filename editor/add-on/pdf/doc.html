@@ -1,0 +1,87 @@
+<HEAD>
+<title></title>
+<LINK href="../../design/style/dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../include/dialog.js"></script>
+<SCRIPT>
+
+function save()
+{
+  try {
+    parent.parent.params[6] = document.getElementById("txtTitle").value;
+    parent.parent.params[7] = document.getElementById("txtAuthor").value;
+    parent.parent.params[8] = document.getElementById("txtSubject").value;
+    parent.parent.params[9] = document.getElementById("txtKeywords").value;
+    parent.parent.params[10] = document.getElementById("txtCreator").value;
+  } catch(Error) { }
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+    // set language strings
+    setStrings();
+    
+    document.getElementById("txtTitle").value = params[6];
+    document.getElementById("txtAuthor").value = params[7];
+    document.getElementById("txtSubject").value = params[8];
+    document.getElementById("txtKeywords").value = params[9];
+    document.getElementById("txtCreator").value = params[10];
+
+  } catch(Error) {
+  }
+
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="5007">_DocInfo</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td style="width:1%">
+          <div id="5008" class="label">_Title:</div>
+        </td>
+        <td>
+          <input type="text" style="width:100%" value="" ID="txtTitle">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="5009" class="label">_Author:</div>
+        </td>
+        <td>
+          <input type="text" style="width:100%" value="" ID="txtAuthor">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="5010" class="label">_Subject:</div>
+        </td>
+        <td>
+          <input type="text" style="width:100%" value="" ID="txtSubject">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="5012" class="label">_Creator:</div>
+        </td>
+        <td>
+          <input type="text" style="width:100%" value="" ID="txtCreator">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="5011" class="label">_Keywords:</div>
+        </td>
+        <td>
+          <input type="text" style="width:100%" value="" ID="txtKeywords">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

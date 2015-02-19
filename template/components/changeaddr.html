@@ -1,0 +1,45 @@
+<!-- start of components/changeaddr.html -->
+<% 
+	final String initialValidationString = "Please enter the recipients ";
+	String validationString = initialValidationString ;
+	if (request.getAttribute("validationString") != null) validationString = (String)request.getAttribute("validationString");
+
+	String paramAction = "";
+	if (request.getAttribute("action") != null) paramAction = (String)request.getAttribute("action");
+
+	int paramAddressId = 0;
+	if (request.getParameter("addressid") != null) {
+		paramAddressId = Integer.parseInt(request.getParameter("addressid"));
+	}
+%>
+
+
+        <%=HTMLComponents2.getTrail(request, userSession, "Address Details")%>
+
+
+
+
+<a href=<%="'"+userSession.getLastURL()+"'"%> class="button">&nbsp;&nbsp;<img src="<%=website.getImagePath("btnleft.gif")%>" alt="Back" class="btnLeft" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br></td>
+
+
+
+    <%
+        if (!validationString.equals(initialValidationString)) {
+    %>
+
+                            <img src="<%=website.getImagePath("icon_error.gif")%>" alt="" />
+
+                            <font class="discount" style="font.size:12px"><b><%=validationString%></b></font>
+                           
+
+	<script type='text/javascript'><!--
+		location.replace('#addressdetail');
+	//--></script>
+    <% } %>
+
+
+		<%=HTMLComponents2.getAddressDetails(request, userSession, "Change Address Details", "changeaddr.jsp", false, "You do not have to give the email and telephone number though it can save time if there are questions raised by the delivery company").toString()%>
+
+<a href=<%="'"+userSession.getLastURL()+"'"%> class="button"> <img src="<%=website.getImagePath("btnleft.gif")%>" alt="Back" class="btnLeft" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br></td>
+           
+<!-- end of components/changeaddr.html -->

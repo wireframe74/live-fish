@@ -1,0 +1,19 @@
+<div class="headerbasketcontents">
+	<strong>Items:</strong> <%=userSession.getShoppingBasket().getTotalQuantityString()%>
+	|
+	<strong>Total:</strong> <%=userSession.formatPrice(userSession.getShoppingBasket().getOrderTotalIncVATexclDelivery())%>
+	|
+	<a href="#" onClick="toggleMiniBasket();return false;" id="basketName" data-html="<strong>Hide Basket</strong>"><strong>Show Basket</strong></a>
+	|
+	<a class="checkout" href="basket.jsp"><strong>Checkout</strong></a>
+</div>
+
+<% if (userSession.isLoggedIn()) { %>
+	<div class="headeraccount">Welcome <%=userSession.getLoggedInCustomerName().substring(0,userSession.getLoggedInCustomerName().indexOf(" "))%> | <a class="myAccount" href="myaccount.jsp">Account</a></div>
+<% } else { %>
+	<div class="headeraccount"><a href="register.jsp">Login / Create an Account</a></div>
+<% } %>
+
+<div class="miniBasket">
+	<jsp:include page="template/components/shoppingbasketmini.jsp" />
+</div>

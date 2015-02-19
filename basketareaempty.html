@@ -1,0 +1,11 @@
+<div class="headerbasketcontents">
+	<strong>Items:</strong> 0
+	|
+	<strong>Total:</strong> &pound;0.00
+</div>
+
+<% if (userSession.isLoggedIn()) { %>
+	<div class="headeraccount">Welcome <%=userSession.getLoggedInCustomerName().substring(0,userSession.getLoggedInCustomerName().indexOf(" "))%> | <a class="myAccount" href="myaccount.jsp">Account</a></div>
+<% } else { %>
+	<div class="headeraccount"><a href="register.jsp">Login / Create an Account</a></div>
+<% } %>

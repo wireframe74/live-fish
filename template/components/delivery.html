@@ -1,0 +1,78 @@
+<!-- start of components/delivery.html -->
+<% 
+	final String initialValidationString = "Please enter the recipients ";
+	String validationString = initialValidationString ;
+	if (request.getAttribute("validationString") != null) validationString = (String)request.getAttribute("validationString");
+
+	String paramAction = "";
+	if (request.getAttribute("action") != null) paramAction = (String)request.getAttribute("action");
+%>
+
+<div class="pagetopnav">
+	<ul class="crumb blocklist">
+		<%=HTMLComponents2.getTrail(request, userSession, "Delivery")%>
+	</ul>
+	<ul class="navPage blocklistright">
+		<li class="gotocheckoutbutton">
+			<a href="javascript: document.delform.submit();"> <%=website.getText("deliverycheckoutbutton","Checkout")%> </a>
+ 
+		</li>
+		<li class="buttonbacktoshop">
+			<a href="basket.jsp"> <%=website.getText("deliverybacktoshopbutton","Back to Shop")%> </a>
+		</li>
+	</ul>
+</div>
+<% if (!validationString.equals(initialValidationString)) {%>
+		<div id="pagevalidation_ajax">
+			<ul class="validation labelpairleft" >
+                            <li class="validationicon"><img src="<%=website.getImagePath("icon_error.gif")%>" alt="" /></li>		 
+                             <li class="validationtext"><%=validationString%></li>
+			</ul>
+		</div>  
+	<script type='text/javascript'><!--
+		location.replace('#addressdetail');
+	//--></script>
+<% } %>
+<div class="pagetitle">
+	<h1><%=website.getText("deliveryheaderone","Delivery Details")%></h1>
+</div>
+
+
+<div >
+	<img src="<%=website.getImagePath("checkoutprocess3.gif")%>" alt="" />         
+</div>
+      
+<div id="deliveryaddresslist">
+	<div class="pagesubtitle">
+		<h2><%=website.getText("deliveryheadertwo","Choose Existing Address")%></h2>
+	</div>
+
+	<%=HTMLComponents2.getDeliveryAddressList(userSession, "Choose delivery address", "confirm.jsp", true, false).toString()%>
+</div>
+
+
+
+<div id="adddeliveryaddress">
+	<div class="pagesubtitle">
+		<h2><%=website.getText("deliveryheaderthree","Or Add a New Address")%></h2>
+	</div>
+
+	<%=HTMLComponents2.getAddressDetails(request, userSession, "Or add new delivery details", "delivery.jsp", false,null).toString()%>
+</div>
+
+<div class="pagebottomnav">
+	<ul class="crumb blocklist">
+		<%=HTMLComponents2.getTrail(request, userSession, "Delivery")%>
+	</ul>
+	<ul class="navPage blocklistright">
+		<li class="gotocheckoutbutton">
+			<a href="javascript: document.delform.submit();"> <%=website.getText("deliverycheckoutbutton","Checkout")%> </a>
+ 
+		</li>
+		<li class="buttonbacktoshop">
+			<a href="basket.jsp"> <%=website.getText("deliverybacktoshopbutton","Back to Shop")%> </a>
+		</li>
+	</ul>
+</div>
+  
+<!-- end of components/delivery.html -->

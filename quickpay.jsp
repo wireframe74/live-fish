@@ -1,0 +1,1 @@
+<%String templatePage = "quickpay";request.setAttribute("templatePage",templatePage);%><%@include file="template/template.jsp"%>

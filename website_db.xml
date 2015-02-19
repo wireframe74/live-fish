@@ -1,0 +1,32 @@
+<Website>
+   <website_title>Demo Website</website_title>
+   <carriage_paid_order_value>5.00</carriage_paid_order_value>
+   <carriage_mode>H</carriage_mode>
+   <epayment_services_provider>DEMO</epayment_services_provider>
+   <epayment_user_id></epayment_user_id>
+   <epayment_store_id></epayment_store_id>
+   <epayment_security_key></epayment_security_key>
+   <email_to_customers_from>demo@intelligentretail.com</email_to_customers_from>
+   <email_to_customers_bcc>demo@intelligentretail.com</email_to_customers_bcc>
+   <code_to_use_as_primary_code>A</code_to_use_as_primary_code>
+   <show_text_on_groups>1</show_text_on_groups>
+   <show_categories_on_homepage>0</show_categories_on_homepage>
+   <show_out_of_stock_items>0</show_out_of_stock_items>
+   <allways_show_in_stock>0</allways_show_in_stock>
+   <offer_gift_wrapping>0</offer_gift_wrapping>
+   <offer_hand_writing>0</offer_hand_writing>
+   <default_customer_access>Y</default_customer_access>
+   <customer_access_after_reg>Y</customer_access_after_reg>
+   <website_mode>R</website_mode>
+   <auto_suggest_meta_keywords>1</auto_suggest_meta_keywords>
+   <auto_suggest_meta_desc>1</auto_suggest_meta_desc>
+   <meta_keyword_prefix></meta_keyword_prefix>
+   <meta_desc_prefix>Demo SHop</meta_desc_prefix>
+   <num_stock_items_across>3</num_stock_items_across>
+   <num_stock_items_down>5</num_stock_items_down>
+   <group_image_size>180</group_image_size>
+   <stock_image_size>200</stock_image_size>
+   <address_lookup_account_code></address_lookup_account_code>
+   <address_lookup_license_key></address_lookup_license_key>
+   <root_vendor_article_id>9</root_vendor_article_id>
+</Website>

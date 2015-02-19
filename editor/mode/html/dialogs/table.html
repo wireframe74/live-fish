@@ -1,0 +1,203 @@
+<HTML>
+  <HEAD>
+    <title></title>
+    <link rel="stylesheet" href="dialog.css" type="text/css">
+      <script language="javascript" src="../../../include/dialog.js"></script>
+      <script>
+
+var language = "";
+var design = "";
+var objElement;
+var win;
+
+function save()
+{
+  var objElementStyle = objElement.style;
+  var width = objElementStyle.width;
+  var cellSpacing = objElement.cellSpacing;
+  var cellPadding = objElement.cellPadding;
+  var border = objElement.border;
+  var borderColor = objElement.borderColor;
+  var backgroundColor = objElementStyle.backgroundColor; 
+  var changed = false;
+  var win = params[11];
+  
+  try {
+    // id
+    if(document.getElementById("txtID").value != "")
+      objElement.id = document.getElementById("txtID").value;
+
+    // width
+    if(document.getElementById("txtWidth").value != "")
+      objElementStyle.width = document.getElementById("txtWidth").value;
+    else
+      objElementStyle.width = "";
+    // height
+    if(document.getElementById("txtHeight").value != "")
+      objElementStyle.height = document.getElementById("txtHeight").value;
+    else
+      objElementStyle.height = "";
+
+    if(document.getElementById("txtSpacing").value != "") {
+      objElement.cellSpacing = document.getElementById("txtSpacing").value;
+    } else {
+      objElement.cellSpacing = 0;
+    }
+    if(document.getElementById("txtPadding").value != "") {
+      objElement.cellPadding = document.getElementById("txtPadding").value
+    } else {
+      objElement.cellPadding = 0;
+    }
+    // border
+    if(document.getElementById("txtBorder").value != "" && document.getElementById("txtBorder").value != "0") {
+      objElement.border = document.getElementById("txtBorder").value;
+      win.editSetTableHighlight(false);
+    } else {
+      objElement.border = 0;
+      win.editSetTableHighlight(true);
+    }
+    if(document.getElementById("txtBorderColor").value != "") {
+      objElement.borderColor = document.getElementById("txtBorderColor").value
+    } else {
+      objElement.removeAttribute("borderColor");
+    }
+
+    if(width != objElementStyle.width)
+      changed = true;
+    if(cellSpacing != objElement.cellSpacing)
+      changed = true;
+    if(cellPadding != objElement.cellPadding)
+      changed = true;
+    if(border != objElement.border)
+      changed = true;
+
+    if(changed)
+      win.__editOnChanged(true);
+
+  } catch(Error) {}
+
+  window.close();
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+
+    // set language strings
+    setStrings();
+
+    var objElementStyle = objElement.style;
+
+    document.getElementById("txtID").value       = objElement.id;
+    document.getElementById("txtWidth").value    = objElementStyle.width;
+    document.getElementById("txtHeight").value   = objElementStyle.height;
+    document.getElementById("txtBorder").value   = objElement.border;
+    if(objElement.borderColor) {
+      document.getElementById("txtBorderColor").value   = objElement.borderColor;
+      document.getElementById("txtBorderColor").style.backgroundColor = objElement.borderColor;
+    }
+
+    if(objElement.cellSpacing)
+      document.getElementById("txtSpacing").value = objElement.cellSpacing;
+    if(objElement.cellPadding)
+      document.getElementById("txtPadding").value = objElement.cellPadding;
+
+  } catch(Error) {}
+
+}
+      </script>
+  </HEAD>
+  <BODY class="bodypage">
+    <fieldset>
+      <legend class="head">
+        <span id="964">_ID/Name</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+        <tr>
+          <td>
+            <div id="962" class="label">_ID:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtID">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="4006">_Size</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table2">
+        <tr>
+          <td>
+            <div id="4000" class="label">_Width:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtWidth" size="5">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="4001" class="label">_Height:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtHeight" size="5">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="3363">_Spacing</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table3">
+        <tr>
+          <td nowrap>
+            <div id="904" class="label">_Cell spacing:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtSpacing" size="1">
+          </td>
+        </tr>
+        <tr>
+          <td nowrap>
+            <div id="906" class="label">_Cell padding:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtPadding" size="1">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+        <span id="3364">_Border</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table4">
+        <tr>
+          <td>
+            <div id="3365" class="label">_Border:</div>
+          </td>
+          <td>
+            <input type="text" ID="txtBorder" size="1">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="1043" class="label">_BorderColor:</div>
+          </td>
+          <td>
+             <input type="text" value="" ID="txtBorderColor" style="width:50px" NAME="txtBorderColor">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColor('txtBorderColor')">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </BODY>
+</HTML>

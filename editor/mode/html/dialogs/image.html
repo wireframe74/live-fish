@@ -1,0 +1,362 @@
+<HEAD>
+  <TITLE></TITLE>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+
+var language = "";
+var design = "";
+var objElement;
+var technology = "";
+var baseUrl    = "";
+var basePath   = "";
+var filter     = "";
+var relpath    = "";
+var win        = null;
+var origWidth  = 0;
+var origHeight = 0;
+
+
+function save()
+{
+  try {
+    var objElementStyle = objElement.style;
+    var width           = objElementStyle.width;
+    var height          = objElementStyle.height;
+    var title           = objElement.title;
+    var borderWidth     = objElementStyle.borderWidth;
+    var borderStyle     = objElementStyle.borderStyle;
+    var borderColor     = objElementStyle.borderColor;
+    var verticalAlign   = objElementStyle.verticalAlign;
+    var align           = objElement.align;
+    var styleFloat      = objElementStyle.styleFloat;
+    var vspace          = objElement.vspace;
+    var hspace          = objElement.hspace;
+    var border          = objElement.border;
+    var changed = false;
+    var win = params[11];
+
+    // id
+    if(document.getElementById("txtID").value != "")
+      win.__editRelativeSetId(objElement,document.getElementById("txtID").value);
+    
+    // src
+    if(document.getElementById("txtSource").value != "") {
+      win.__editRelativeSetUrl(objElement,document.getElementById("txtSource").value);
+    }
+
+    // width
+    objElement.removeAttribute("width");
+    if(document.getElementById("txtWidth").value != "")
+      objElementStyle.width = document.getElementById("txtWidth").value
+    else
+      objElementStyle.width = "";
+
+    // height
+    objElement.removeAttribute("height");
+    if(document.getElementById("txtHeight").value != "")
+      objElementStyle.height = document.getElementById("txtHeight").value
+    else
+      objElementStyle.height = "";
+
+    // title
+    if(document.getElementById("txtTitle").value != "")
+      objElement.title = document.getElementById("txtTitle").value
+    else
+      objElement.removeAttribute("title");
+
+    // border
+    if(document.getElementById("txtBorder").value != "") {
+      // do we haxe XHTML strict or 1.1
+      if(params[24] > 0) {
+        objElement.removeAttribute("border");
+        objElementStyle.border = document.getElementById("txtBorder").value + "px solid " + document.getElementById("txtBorderColor").value;
+      } else {
+        objElement.border = document.getElementById("txtBorder").value
+      }
+    } else {
+      objElement.removeAttribute("border");
+      objElementStyle.borderWidth = "";
+      objElementStyle.borderStyle = "";
+      objElementStyle.borderColor = "";
+    }
+
+/*
+    // verticalAlign
+    if(document.getElementById("cmbVAlign").value != "")
+      objElementStyle.verticalAlign = document.getElementById("cmbVAlign").value;
+*/
+    
+    // halign
+    if(document.getElementById("cmbHAlign").value != "")
+      objElement.align = document.getElementById("cmbHAlign").value;
+    // hspace
+    if(document.getElementById("txtHSpace").value != "") {
+      objElement.hspace = document.getElementById("txtHSpace").value;
+      if(objElement.hspace == 0)
+        objElement.removeAttribute("hspace");
+    }
+    if(document.getElementById("txtVSpace").value != "") {
+      objElement.vspace = document.getElementById("txtVSpace").value;
+      if(objElement.vspace == 0)
+        objElement.removeAttribute("vspace");
+    }
+
+    if(width != objElementStyle.width)
+      changed = true;
+    if(height          != objElementStyle.height)
+      changed = true;
+    if(border          != objElement.border)
+      changed = true;
+    if(title           != objElement.title)
+      changed = true;
+    if(align           != objElement.align)
+      changed = true;
+    if(hspace          != objElement.hspace)
+      changed = true;
+    if(vspace          != objElement.vspace)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) { 
+  }
+  
+  window.close();
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = param[0];
+	  design              = param[1];
+	  objElement          = param[5];
+	  baseUrl             = param[6];
+	  basePath            = param[7];
+	  technology          = param[8];
+	  filter              = param[9];
+	  relpath             = param[10];
+	  win                 = param[11];
+
+    // set language strings
+    setStrings();
+
+    var objElementStyle = objElement.style;
+    var temp = objElement.src;
+
+    document.getElementById("txtID").value       = win.__editRelativeGetId(objElement);
+
+		// check relative
+    document.getElementById("txtSource").value = win.__editRelativeGetUrl(objElement,"IMAGE");
+
+    document.getElementById("txtWidth").value       = objElementStyle.width > 0 ? objElementStyle.width : objElement.width;
+    origWidth = document.getElementById("txtWidth").value;
+    document.getElementById("txtHeight").value      = objElementStyle.height > 0 ? objElementStyle.height : objElement.height;;
+    origHeight = document.getElementById("txtHeight").value;
+    document.getElementById("txtTitle").value       = objElement.title;
+    document.getElementById("txtHSpace").value      = objElement.hspace;
+    document.getElementById("txtVSpace").value      = objElement.vspace;
+    if(params[24] > 0) {
+      if(objElementStyle.borderWidth && objElementStyle.borderWidth != "medium")
+        document.getElementById("txtBorder").value      = parseInt(objElementStyle.borderWidth);
+      if(objElementStyle.borderColor) {
+        document.getElementById("txtBorderColor").value                  = objElementStyle.borderColor;
+        document.getElementById("txtBorderColor").style.backgroundColor  = objElementStyle.borderColor;
+      }
+    } else {
+      document.getElementById("txtBorder").value      = objElement.border;
+    }
+
+
+/*
+    if(objElementStyle.verticalAlign != null) {
+      var combo = document.getElementById("cmbVAlign");
+      setCombo(combo,objElementStyle.verticalAlign);
+    }
+*/
+    if(objElement.align != null) {
+      var combo = document.getElementById("cmbHAlign");
+      setCombo(combo,objElement.align);
+    }
+
+/*
+    if(objElementStyle.styleFloat != null) {
+      var combo = document.getElementById("cmbFloat");
+      setCombo(combo,objElementStyle.styleFloat);
+    }
+*/
+    if(!param[18])
+      document.getElementById("btnUrl").style.display = "none";
+
+
+  } catch(error) { }
+}
+
+function onUrlSelect()
+{
+  // set the predefined values from config.js
+	if(browser.ie) {
+		var path = window.showModalDialog("../../../server/" + technology + "/dialog.html",params,"dialogHeight:300px;dialogWidth:600px;resizable:1;status:0;scroll:0");
+		if(path != "0" && path != null) {
+ 			document.getElementById("txtSource").value = win.__editRelativeGetRelFromAbs(path,"IMAGE");
+	  }
+	} else {
+		var left = screen.width/2 - 600/2;
+		var top = screen.height/2 - 300/2;
+		window.open("../../../server/" + technology + "/dialog.html","dialog","modal=1,left=" + left + ",top=" + top + ",height=300,width=600,resizable=1,status=0,scrollbars=0");
+	}
+}
+
+function __editGetParam()
+{
+  return params;
+}
+
+function callbackMozilla(mode, para1, para2)
+{
+  if(mode == "OPENIMAGE") {
+    if(para1 != "0" && para1 != null) {
+ 			document.getElementById("txtSource").value = win.__editRelativeGetRelFromAbs(para1,"IMAGE");
+    }
+  }
+}
+
+function onWidthChange()
+{
+  if(document.getElementById("chkConstrain").checked) {
+    var width = document.getElementById("txtWidth").value;
+    if(width != "") {
+      if(parseInt(width) > 0) {
+        var height = parseInt(width / (origWidth/origHeight));
+        document.getElementById("txtHeight").value = height;
+      }
+    }
+  }
+}
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="964">_ID/Name</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+      <tr>
+        <td>
+          <div id="962" class="label">_ID:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtID">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4006">_Size</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table2">
+      <tr>
+        <td>
+          <div id="4000" class="label">_Width:</div>
+        </td>
+        <td>
+          <input type="text" style="WIDTH:60px" ID="txtWidth" onKeyUp="onWidthChange()">
+        </td>
+        <td rowspan="2" nowrap>
+          <input type="checkbox" checked ID="chkConstrain"><span class="label" id="4023">_Constrain</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="4001" class="label">_Height:</div>
+        </td>
+        <td>
+          <input type="text" style="WIDTH:60px" ID="txtHeight">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4009">_Aligment</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="4011" class="label">_Horizontal:</div>
+        </td>
+        <td><SELECT id="cmbHAlign" style="FONT-SIZE: 11px; WIDTH: 76px; FONT-FAMILY: arial; HEIGHT: 20px">
+            <OPTION value="" selected>-</OPTION>
+            <OPTION value="left">left</OPTION>
+            <OPTION value="center">center</OPTION>
+            <OPTION value="right">right</OPTION>
+          </SELECT>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4013">_Space</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="4014" class="label">_Horizontal:</div>
+        </td>
+        <td>
+          <INPUT id="txtHSpace" style="FONT-SIZE: 11px; WIDTH: 40px; FONT-FAMILY: arial; HEIGHT: 20px">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="4015" class="label">_Vertical:</div>
+        </td>
+        <td>
+          <INPUT id="txtVSpace" style="FONT-SIZE: 11px; WIDTH: 40px; FONT-FAMILY: arial; HEIGHT: 20px">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4007">_Misc</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" width="100%">
+      <tr>
+        <td>
+          <div id="3365" class="label">_Border:</div>
+        </td>
+        <td nowrap>
+          <INPUT id="txtBorder" style="FONT-SIZE: 11px; WIDTH: 25px; FONT-FAMILY: arial; HEIGHT: 20px"
+            NAME="Text1">&nbsp;&nbsp;&nbsp;<span id="7024">_Border:</span>&nbsp;<input type="text" value="" ID="txtBorderColor" style="width:50px" NAME="txtColor">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColor('txtBorderColor')"
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3323" class="label">_Title:</div>
+        </td>
+        <td>
+          <INPUT id="txtTitle" style="FONT-SIZE: 11px; FONT-FAMILY: arial" size="32">
+        </td>
+      </tr>
+      <tr>
+        <td width="1%">
+          <div id="3341" class="label">_Source:</div>
+        </td>
+        <td nowrap>
+          <INPUT id="txtSource" style="FONT-SIZE: 11px; WIDTH: 100%; FONT-FAMILY: arial">
+        </td>
+        <td width="1%">
+          <INPUT style="FONT-SIZE: 11px; FONT-FAMILY: arial; HEIGHT: 20px" type="button" value="..."
+            onclick="onUrlSelect()" id="btnUrl">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

@@ -1,0 +1,21 @@
+<div class="psHold" ir-max-price="200">
+	
+	<div class="psSlider">
+		<div class="psBar"><div class="psBarFill"></div></div>
+		<div class="psMark1 psMark"></div>
+		<div class="psMark2 psMark"></div>
+	</div>
+	
+	<form name="refinePriceForm" onSubmit="return psSubmit()">
+		<div class="psFormHold" >
+			<span><%=currencySymbol%> <input type="text" value="<%=(request.getParameter("price1")!=null)?request.getParameter("price1"):"0"%>" name="price1" class="priceInput" id="psPrice1" /></span> - 
+			<span><%=currencySymbol%> <input type="text" value="<%=(request.getParameter("price2")!=null)?request.getParameter("price2"):"0"%>" name="price2" class="priceInput" id="psPrice2" /></span>
+		</div>
+		<input type="hidden" value="show" name="priceDesc" id="psPriceDesc" />
+		<input type="hidden" value="<%=tagParamsPrice%>" name="priceExtras" id="psPriceExtras" />
+		
+		<div class="psButtonHold"><input type="submit" value="Go" class="button" /></div>
+	
+	</form>
+	
+</div>

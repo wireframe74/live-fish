@@ -1,0 +1,244 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+
+function save()
+{
+  try {
+    var objElementStyle = params[5].style;
+
+    var fontFamily     = objElementStyle.fontFamily;
+    var fontSize       = objElementStyle.fontSize;
+    var color          = objElementStyle.color;
+    var fontWeight     = objElementStyle.fontWeight;
+    var fontStyle      = objElementStyle.fontStyle;
+    var fontVariant    = objElementStyle.fontVariant;
+    var textDecoration = objElementStyle.textDecoration;
+    var changed = false;
+    var win = params[11];
+		
+    // set font
+    if(document.getElementById("cmbFont").value != "")
+      objElementStyle.fontFamily = document.getElementById("cmbFont").value;
+    else
+      objElementStyle.removeAttribute("fontFamily");
+    
+    // font size
+    if(document.getElementById("txtFontSize").value != "" && parseInt(document.getElementById("txtFontSize").value) > 0)
+      objElementStyle.fontSize = document.getElementById("txtFontSize").value + document.getElementById("cmbFontSizeType").value;
+    else
+      objElementStyle.removeAttribute("fontSize");
+    
+    // color
+    objElementStyle.color = document.getElementById("txtColor").value;
+
+    if(document.getElementById("chkBold").checked) {
+      objElementStyle.fontWeight = "bold";
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("fontWeight");
+      else
+        objElementStyle.fontWeight = "";
+    }
+
+    if(document.getElementById("chkItalic").checked) {
+      objElementStyle.fontStyle = "italic";
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("fontStyle");
+      else
+        objElementStyle.fontStyle = "";
+    }
+
+    if(document.getElementById("chkCaps").checked) {
+      objElementStyle.fontVariant = "small-caps";
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("fontVariant");
+      else
+        objElementStyle.fontVariant = "";
+    }
+
+    if(document.getElementById("chkUnderline").checked)
+      objElementStyle.textDecoration = "underline";
+
+    if(document.getElementById("chkStrike").checked)
+      objElementStyle.textDecoration = "line-through";
+
+    if(document.getElementById("chkOverline").checked)
+      objElementStyle.textDecoration = "overline";
+
+    if(!document.getElementById("chkUnderline").checked && !document.getElementById("chkStrike").checked && !document.getElementById("chkOverline").checked) {
+      if(browser.ie)
+        objElementStyle.removeAttribute("textDecoration");
+      else
+        objElementStyle.textDecoration = "";
+    }
+
+    if(fontFamily != objElementStyle.fontFamily)
+      changed = true;
+    if(fontSize != objElementStyle.fontSize)
+      changed = true;
+    if(color != objElementStyle.color)
+      changed = true;
+    if(fontWeight != objElementStyle.fontWeight)
+      changed = true;
+    if(fontStyle != objElementStyle.fontStyle)
+      changed = true;
+    if(fontVariant != objElementStyle.fontVariant)
+      changed = true;
+    if(textDecoration != objElementStyle.textDecoration)
+      changed = true;
+    
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in font page during save: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+    // set language strings
+    setStrings();
+
+	  language            = param[0];
+	  design              = param[1];
+    var objElementStyle = param[5].style;
+
+    // clear values
+    comboSet(document.getElementById("cmbFont"),"");
+    document.getElementById("txtFontSize").value = "";
+    document.getElementById("txtColor").value = "";
+    document.getElementById("txtColor").style.backgroundColor = "white";
+    document.getElementById("chkBold").checked = false;
+    document.getElementById("chkItalic").checked = false;
+    document.getElementById("chkUnderline").checked = false;
+    document.getElementById("chkStrike").checked = false;
+    document.getElementById("chkOverline").checked = false;
+    document.getElementById("chkCaps").checked = false;
+
+    // set font
+    if(objElementStyle.fontFamily)
+      comboSet(document.getElementById("cmbFont"),objElementStyle.fontFamily.toUpperCase());    
+    // font size
+    if(objElementStyle.fontSize) {
+      document.getElementById("txtFontSize").value = parseInt(objElementStyle.fontSize);
+      var measure = objElementStyle.fontSize.substring(objElementStyle.fontSize.length -2, objElementStyle.fontSize.length);
+      comboSet(document.getElementById("cmbFontSizeType"),measure)
+    }
+    // color
+    if(objElementStyle.color) {
+      document.getElementById("txtColor").value = objElementStyle.color;
+      document.getElementById("txtColor").style.backgroundColor = objElementStyle.color;
+    }
+
+    document.getElementById("chkBold").checked = (objElementStyle.fontWeight == "bold") ? true:false;
+    document.getElementById("chkItalic").checked = (objElementStyle.fontStyle == "italic") ? true:false;
+    document.getElementById("chkUnderline").checked = (objElementStyle.textDecoration == "underline") ? true:false;
+    document.getElementById("chkStrike").checked = (objElementStyle.textDecoration == "line-through") ? true:false;
+    document.getElementById("chkOverline").checked = (objElementStyle.textDecoration == "overline") ? true:false;
+    document.getElementById("chkCaps").checked = (objElementStyle.fontVariant == "small-caps") ? true:false;
+
+  } catch(Error) {}
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="3367">_Font</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <span id="3368" class="label">_Family:</span>
+        </td>
+        <td>
+          <select id="cmbFont">
+            <option value="">-</option>
+            <option value="ARIAL">Arial</option>
+            <option value="ARIAL BLACK">Arial Black</option>
+            <option value="COURIER">Courier</option>
+            <option value="COURIER NEW">Courier New</option>
+            <option value="GEORGIA">Georgia</option>
+            <option value="IMPACT">Impact</option>
+            <option value="LUCIDA CONSOLE">Lucida Console</option>
+            <option value="TAHOMA">Tahoma</option>
+            <option value="TIMES NEW ROMAN">Times New Roman</option>
+            <option value="VERDANA">Verdana</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="3369" class="label">_Size:</span>
+        </td>
+        <td>
+          <input type="text" value="" ID="txtFontSize" style="width: 50px">&nbsp;
+          <select id="cmbFontSizeType">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="3370" class="label">_Color:</span>
+        </td>
+        <td>
+          <input type="text" value="" ID="txtColor" style="width:50px">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColor('txtColor')">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3371">_Type</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <input type="checkbox" ID="chkBold"><span id="201" class="label">_Bold</span>
+        </td>
+        <td nowrap>
+          <input type="checkbox" ID="chkStrike"><span id="3372" class="label">_Strike through</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" ID="chkItalic"><span id="202" class="label">_Italic</span>
+        </td>
+        <td>
+          <input type="checkbox" ID="chkOverline"><span id="3373" class="label">_Overline</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" ID="chkUnderline"><span id="203" class="label">_Underline</span>
+        </td>
+        <td>
+          <input type="checkbox" ID="chkCaps"><span id="3374" class="label">_Caps</span>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

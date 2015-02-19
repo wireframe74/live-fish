@@ -1,0 +1,132 @@
+.pinBackground
+{
+	background-image: url('tbback.png');
+	background-repeat:repeat-x;  
+}
+
+.pinButtonStandard
+{
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#9EBEF5;
+	padding:		2px 3px 2px 3px;		
+}
+
+.pinButtonHover
+{
+	cursor: 		pointer;
+	font:			Menu;
+	zzborder-width:	1px;
+	zzborder-style:	solid;
+	zzborder-color:	#000080;
+	zzpadding:		1px 2px 1px 2px;		
+	padding:		2px 3px 2px 3px;		
+	background-image: url('tbover.png');
+	background-repeat:repeat-x;  
+}
+
+.pinButtonPopup
+{
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-left-color:	#808080;
+	border-right-color:	#808080;
+	border-top-color:		#808080;
+	border-bottom-color:  	white;
+	padding:		1px 2px 1px 2px;		
+	background-image: url('tbdown.gif');
+}
+
+.pinButtonActive
+{
+	cursor: 		pointer;
+	font:			Menu;
+	padding:		2px 3px 2px 3px;		
+	background-image: url('tbdown.png');
+	background-repeat:repeat-x;  
+}
+
+
+.pinComboStandard
+{
+	cursor:		default;
+	color:		ButtonText;
+	background-color: #EAF2FB;
+	font:			Menu;
+	border-left:	1px solid #84A7D3;
+	border-right:	1px solid #84A7D3;
+}
+
+.pinComboHover
+{
+	cursor: 		pointer;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+}
+
+.pinComboPopup
+{
+	cursor: 		pointer;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	orange;
+}
+
+.pinMenuItemStandard
+{
+	cursor: 		Default;
+	border:		1px solid white;
+	background:		white;
+	font-family: 	arial;
+	font-size: 		11px;
+}
+
+.pinMenuItemHover
+{
+	cursor: 		pointer;
+	border:		1px solid #000080;
+	font-family: 	arial;
+	font-size: 	11px;
+	background-image: url('tbdown.gif');
+}
+
+.pinToolbarIn
+{
+}
+
+.pinToolbarOut
+{
+	margin-left:0px;
+	margin-top:0px;
+	border-width: 3px;
+	border-style: solid;
+}
+
+.pinToolbarInput
+{
+	font-family: arial;
+	font-size: 11px;
+}
+
+.pinToolbarInputHover
+{
+	border: 1px solid #000080;
+	height: 18px;
+	font-family: arial;
+	font-size: 11px;
+}
+
+pinToolbarLabel
+{
+	font-family: arial;
+	font-size: 11px;
+}

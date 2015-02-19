@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+<link rel="stylesheet" href="dialog.css" type="text/css">
+<script language="javascript" src="../include/dialog.js"></script>
+<SCRIPT>
+
+var language     = "";
+var aStyleSheets = null;
+var win          = null;
+if(browser.ie) {
+	language            = dialogArguments[0];
+	aStyleSheets        = dialogArguments[1]
+	win                 = dialogArguments[2]
+	params              = dialogArguments;
+} else {
+	aParam = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	aStyleSheets        = aParam[1]
+	win                 = aParam[2]
+	params              = aParam;
+}
+
+document.title = getLanguageString(language,1050) + document.title;
+
+function Load()
+{
+  //try {
+    document.getElementById("lblOK").value = getLanguageString(language,1054);
+    document.getElementById("lbl2").innerHTML = getLanguageString(language,1052);
+    document.getElementById("lblHead").innerHTML = getLanguageString(language,1050);
+    document.getElementById("btnRemove").value = getLanguageString(language,1051);
+    
+
+    // add entries
+    for(var i=0;i<aStyleSheets.length;i++) {
+      // get file name
+      var path = aStyleSheets[i].href;
+      var j = path.length-1;
+      while(j>0) {
+        if(path.substring(j,j+1) == "/")
+          break;
+        j--;
+      }
+      var name = path.substring(j+1);
+      comboAdd(document.getElementById("cmbStyles"),name,aStyleSheets[i].href);
+    }
+  //} catch(Error) {}
+}
+
+function onRemove()
+{
+  var combo = document.getElementById("cmbStyles");
+
+  if(combo.length <=0)
+    return;
+    
+  if(combo.selectedIndex <0) {
+    alert(getLanguageString(language,1053));
+  } else {
+    //
+    try {
+      var value = combo.options[combo.selectedIndex].value;
+      combo.remove(combo.selectedIndex);
+      win.editRemoveExternalStyleSheet(value);
+    } catch(Error) {}
+  }
+}
+      </SCRIPT>
+  </HEAD>
+  <BODY class="bodypage" onload="Load()">
+    <fieldset>
+      <legend class="head"><span id="lblHead">__Remove Stylesheet</span></legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+        <tr>
+          <td nowrap valign="top">
+            <div id="lbl2" class="label">__Enter URL:</div>
+          </td>
+          <td>
+            <select id="cmbStyles" size="4" style="WIDTH:180px">
+            </select>
+          </td>
+          <td valign="top"><INPUT id="btnRemove" onclick="onRemove()" type="button" value="__Remove">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <table>
+      <tr>
+        <td height="4"></td>
+      </tr>
+    </table>
+    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+      <TR>
+        <TD>
+          <P align="right"><INPUT id="lblOK" style="WIDTH: 79px; HEIGHT: 24px" type="button" value="__OK" onclick="window.returnValue='';window.close();"></P>
+        </TD>
+      </TR>
+    </TABLE>
+  </BODY>
+</HTML>

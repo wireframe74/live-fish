@@ -1,0 +1,207 @@
+<%@page import="co.simplypos.model.website.*, co.simplypos.model.utils.*, co.simplypos.model.utils.helpers.*, co.simplypos.persistence.Address,	co.simplypos.persistence.*, co.simplypos.model.*, co.simplypos.model.website.utils.Logger, co.simplypos.persistence.Currency, java.text.*, javax.mail.*, java.io.*, java.awt.*, java.util.*, java.sql.*, java.net.*, java.util.Date, javax.imageio.ImageWriter, com.sun.imageio.plugins.jpeg.JPEGImageWriter, java.math.BigDecimal, javax.net.ssl.HttpsURLConnection, javax.swing.table.DefaultTableModel, co.simplypos.model.website.page.view.*, co.simplypos.model.website.page.controller.*, co.simplypos.model.website.page.model.*, javax.swing.text.html.HTML, com.clearcommerce.CpiTools.security.HashGenerator, co.simplypos.model.dataexchange.service.RackSpaceCloudHelper"%>
+
+<jsp:useBean id="website" scope="application" class="co.simplypos.model.website.WebSite"><%website.initialise(request.getRequestURL().toString(), application.getRealPath("/"), 170);%></jsp:useBean>
+<jsp:useBean id="userSession" scope="session" class="co.simplypos.model.website.UserSession"><%userSession.initialise(website, request);%></jsp:useBean>
+
+<%website.detectMobileMode(request, userSession);
+String forwardPage = userSession.getWebController().processRequestParameters(request); 
+if (forwardPage != null) {
+	if (forwardPage.equals("websitenull!")) {
+		if (website == null || (website != null && !website.isInitialising() && website.getWebsiteStatus() != WebSite.WEBSITE_STATUS_VALID)) {
+			website = new WebSite();
+			website.initialise(request.getRequestURL().toString(), application.getRealPath("/"), 170);
+		}
+
+	} else {
+		try {
+				response.sendRedirect(forwardPage); 
+		} catch (Exception e102) {
+			out.write("<script type='text/javascript'>document.location.href='"+forwardPage+"';</script>"); 
+		}	
+	}	
+	return;
+}
+
+int paramPid = 0;
+int paramId = 0;
+co.simplypos.model.utils.Triplet metaInfo = null;
+try {
+	if (request.getParameter("invalidate") != null) {
+		website.setWebsiteStatus(WebSite.WEBSITE_STATUS_INVALID);
+		throw new Exception("invalidated"); //test harness
+	}
+
+	paramPid = userSession.getWebController().getPid();
+	paramId = userSession.getWebController().getId();
+
+	website.getArticleMenu().setCurrentCategoryId(paramPid);
+
+	metaInfo = website.getMetaController().getMetaInfo(request, userSession);
+
+} catch (Exception e) {   
+	website.writeToLog(e);
+	forwardPage = "reloading.jsp?pg="+request.getRequestURI()+(request.getQueryString()==null?"":"&params="+StringHelper.replace(request.getQueryString(),"invalidate","valid"));
+	try {
+			response.sendRedirect(forwardPage);
+	} catch (Exception e102) {
+		out.write("<script type='text/javascript'>document.location.href='"+forwardPage+"';</script>"); 
+	}		
+	return;	
+}%>
+
+<%@ taglib uri="http://ajaxtags.org/tags/ajax" prefix="ajax" %>
+<%@ taglib uri="http://www.opensymphony.com/oscache" prefix="cache" %>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><!-- Disable IE Compatibility Mode - TB -->
+
+<%if (userSession != null) {
+	try {
+		((javax.servlet.http.HttpServletResponse)response).addCookie(new javax.servlet.http.Cookie("IR-HEADER-sessionid",""+userSession.getSessionPersistenceId()));
+	} catch (Exception ee2238) {}
+}%>
+
+<%=website.prePageLoadChecks(request,website,userSession,application.getRealPath("/"))%>
+
+<title><%=metaInfo.get(0)%></title>
+
+<%if (
+	request.getRequestURI().indexOf("index.jsp") == -1 && 
+	request.getRequestURI().indexOf("host.jsp") == -1 && 
+	request.getRequestURI().indexOf("sitemap.jsp") == -1 && 
+	(
+		request.getRequestURI().indexOf("flightdeck.jsp") != -1 || 
+		request.getRequestURI().indexOf("quickpay.jsp") != -1 || 
+		request.getRequestURI().indexOf("basket.jsp") != -1
+	)
+){%>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="expires" content="-1" />
+<%}%>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="<%=metaInfo.get(1)%>" />
+<meta name="keywords" content="<%=metaInfo.get(2)%>" />
+
+
+<%if(
+	(
+		(""+request.getRequestURL()).indexOf("/index.jsp") > -1 || 
+		(""+request.getRequestURL()).indexOf("/detail.jsp") > -1 || 
+		(""+request.getRequestURL()).indexOf("/host.jsp") > -1
+	) && 
+	request.getAttribute("origPageName") == null
+){%>
+	<meta name="robots" content="noindex, nofollow">
+<%}%>
+
+<%@include file="../../meta/metaheader.html"%>
+
+
+<% if (!website.getAllowMobileMode() || !userSession.getMobileWebsiteMode()) { %>
+		<link rel="stylesheet" href="template/framework.css" type="text/css" />
+<% } else { %>
+        <link rel="stylesheet" href="template/mobileframework.css" type="text/css" />
+<% } %>
+
+
+
+<%if (userSession.isUsingIE()) { %>
+	<link rel="stylesheet" href="template/framework_ie.css" type="text/css" />
+<% } %>
+
+
+<link rel="stylesheet" href="template/menu.css" type="text/css" />
+<link rel="stylesheet" href="template/greybox_styles.css" type="text/css" />
+<link rel="stylesheet" href="template/magiczoomplus.css" type="text/css" />
+
+
+<% if (!website.getAllowMobileMode() || !userSession.getMobileWebsiteMode()) { %>
+	<link rel="stylesheet" href="template/style.css" type="text/css" />
+<% } %>
+
+
+<% if (userSession.isUsingIE()) { %>
+	<link rel="stylesheet" href="template/style_ie.css" type="text/css" />
+<% } %>
+
+
+<script type="text/javascript">var GB_ROOT_DIR="<%=website.getComponentUrl(request, WebSite.getBaseURL(request)+"/template/js/allPages/greybox/")%>"</script>
+
+
+<%if (!website.getAllowMobileMode() || !userSession.getMobileWebsiteMode()) {
+    String[] jsIncludes;
+    
+    jsIncludes = website.getScriptIncludes(request, website.getJsAllPages());
+    
+    for (int i = 0; i < jsIncludes.length; i++) {
+		out.write(jsIncludes[i]);
+		out.write("\n");
+	}
+    
+    if (WebSite.isThisPageInList(request, "index")) {
+    	if (request.getQueryString() == null) {
+    		jsIncludes = website.getScriptIncludes(request, website.getJsHomePage());
+    		
+    		for (int i = 0; i < jsIncludes.length; i++) {
+    			out.write(jsIncludes[i]);
+    			out.write("\n");
+    		}
+    	}
+    	
+    	jsIncludes = website.getScriptIncludes(request, website.getJsIndexPage());
+    	
+    	for (int i = 0; i < jsIncludes.length; i++) {
+    		out.write(jsIncludes[i]);
+    		out.write("\n");
+    	}
+    
+    }
+    
+    if (WebSite.isThisPageInList(request, "basket")) {
+    	jsIncludes = website.getScriptIncludes(request, website.getJsBasketPage());
+    	
+    	for (int i = 0; i < jsIncludes.length; i++) {
+    		out.write(jsIncludes[i]);
+    		out.write("\n");
+    	}
+    
+    }
+    
+    if (WebSite.isThisPageInList(request, "postpp")) {
+    	jsIncludes = website.getScriptIncludes(request, website.getJsPostPayment());
+    	
+    	for (int i = 0; i < jsIncludes.length; i++) {
+    		out.write(jsIncludes[i]);
+    		out.write("\n");
+    	}
+    }
+    
+    if (WebSite.isThisPageInList(request, "confirm")) {
+    	jsIncludes = website.getScriptIncludes(request, website.getJsCheckoutPage());
+    	
+    	for (int i = 0; i < jsIncludes.length; i++) {
+    		out.write(jsIncludes[i]);
+    		out.write("\n");
+    	} 
+    }
+    
+    if (WebSite.isThisPageInList(request, "detail")) {
+    	jsIncludes = website.getScriptIncludes(request, website.getJsDetailPage());
+    	
+    	for (int i = 0; i < jsIncludes.length; i++) {
+    		out.write(jsIncludes[i]);
+    		out.write("\n");
+    	}
+    }
+} else { %>
+	<script type="text/javascript" src="template/js_mobile/allPages/1-jquery-1.5.min.js" ></script>
+	<script type="text/javascript" src="template/js_mobile/allPages/2-qty.js" ></script>
+	<script type="text/javascript" src="template/js_mobile/allPages/addToBasket.js" ></script>
+	<script type="text/javascript" src="template/js_mobile/allPages/facebox.js" ></script>
+	<script type="text/javascript" src="template/js_mobile/allPages/greybox/1-AJS.js" ></script>
+	<script type="text/javascript" src="template/js_mobile/allPages/greybox/2-AJS_fx.js" ></script>
+	<script type="text/javascript" src="template/js_mobile/allPages/greybox/3-gb_scripts.js" ></script>
+	<script type="text/javascript" src="template/js_mobile/allPages/jquery-ui-1.8.13.custom.min.js" ></script>
+	<script type="text/javascript" src="template/js_mobile/allPages/jquery.lazy.min.js" ></script>
+	<script type="text/javascript" src="template/js_mobile/pageDetail/magiczoomplus.js" ></script>
+<% } %>

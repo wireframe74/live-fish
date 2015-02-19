@@ -1,0 +1,83 @@
+<HTML>
+  <HEAD>
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+    <link rel="stylesheet" href="dialog.css" type="text/css">
+      <script language="javascript" src="../include/dialog.js"></script>
+      <SCRIPT>
+
+var language = "";
+var design = "";
+
+if(browser.ie) {
+	language            = dialogArguments[0];
+	design              = dialogArguments[1];
+	params              = dialogArguments;
+} else {
+	aParam = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	design              = aParam[1];
+	params              = aParam;
+}
+
+document.title = getLanguageString(language,981) + document.title;
+
+function getLanguageString(lng,id)
+{
+  var aLanguage = params[14];
+  return aLanguage[id];
+}
+
+function save()
+{
+  var ret = ""
+  if(document.getElementById("txtUrl").value != "")
+    ret = document.getElementById("txtUrl").value;
+
+  if(browser.ns) {
+     window.opener.callbackMozilla("WEBIMAGE", ret);
+  } else {
+    window.returnValue = ret;
+  }
+
+  window.close();
+}
+
+function Load()
+{
+  try {
+    document.getElementById("lblOK").value = getLanguageString(language,899);
+    document.getElementById("lblCancel").value = getLanguageString(language,900);
+    document.getElementById("lbl2").innerHTML = getLanguageString(language,982);
+    document.getElementById("lbl3").innerHTML = getLanguageString(language,1094);
+  } catch(Error) {}
+}
+
+      </SCRIPT>
+  </HEAD>
+  <BODY class="bodypage" onload="Load()">
+    <fieldset>
+      <legend id="lbl3" class="head">Web Image</legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+        <tr>
+          <td nowrap>
+            <div id="lbl2" class="label">Enter URL:</div>
+          </td>
+          <td width="100%"><INPUT id="txtUrl" style="FONT-SIZE: 11px; WIDTH: 100%; FONT-FAMILY: arial; HEIGHT: 18px" value="http://">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <table>
+      <tr>
+        <td height="4"></td>
+      </tr>
+    </table>
+    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+      <TR>
+        <TD>
+          <P align="right"><INPUT id="lblOK" style="WIDTH: 83px; HEIGHT: 24px" type="button" value="OK" onClick="save()">&nbsp;<INPUT id="lblCancel" style="WIDTH: 79px; HEIGHT: 24px" type="button" value="Cancel" onclick="window.returnValue='';window.close();"></P>
+        </TD>
+      </TR>
+    </TABLE>
+  </BODY>
+</HTML>

@@ -1,0 +1,290 @@
+<HEAD>
+  <TITLE></TITLE>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+var language = "";
+var design   = "";
+var mode     = "";
+var doc      = null;
+var objElement;
+var win;
+var aParam;
+var technology = "";
+var baseUrl    = "";
+var basePath   = "";
+var filter     = "";
+var emailUrl   = "";
+var httpUrl    = "";
+
+function save()
+{
+   
+  try {
+
+    //set mailto: in front of txtUrl if cmbType is email
+    var url = document.getElementById("txtUrl").value;
+    if (document.getElementById("cmbType").value == "email")
+      url = "mailto:" + url;  
+
+    if(mode == "0") {
+      // href
+      if(document.getElementById("txtUrl").value != "") {
+        win.__editRelativeSetUrl(objElement,url);
+      } else {
+        // remove link
+        win.editRemoveLink();
+      }
+      // target
+      if(document.getElementById("cmbTarget").value == "") {
+        objElement.removeAttribute("target");      
+        win.__editOnChanged(true);
+      } else if(document.getElementById("cmbTarget").value != objElement.target) {
+        objElement.target = document.getElementById("cmbTarget").value;
+        win.__editOnChanged(true);
+      }
+      // title
+      if(document.getElementById("txtTitle").value == "") {
+        objElement.removeAttribute("title");      
+        win.__editOnChanged(true);
+      } else if(document.getElementById("txtTitle").value != objElement.title) {
+        objElement.title = document.getElementById("txtTitle").value;
+        win.__editOnChanged(true);
+      }
+      // visible
+      var value = objElement.style.textDecoration;
+      if(value != (document.getElementById("chkVisible").checked ? "":"none")) {
+        objElement.style.textDecoration = document.getElementById("chkVisible").checked ? "":"none";
+        win.__editOnChanged(true);
+      }
+    } else {
+      // we have to create a new link
+      var target = document.getElementById("cmbTarget").value;
+      var title  = document.getElementById("txtTitle").value;
+      //var url    = document.getElementById("txtUrl").value;
+
+      if(url != "") {
+				win.editCreateLink(url,target,title,'','','');
+      }
+    }
+  } catch(Error) { }
+  window.close();
+}
+
+function remove()
+{
+  document.getElementById("txtUrl").value = "";
+  save();
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[3];
+	  doc                 = params[4];
+    objElement          = params[5];
+    technology          = params[8];
+    filter              = params[9];
+	  win                 = params[11];
+    baseUrl             = params[16];
+    basePath            = params[17];
+
+    // set language strings
+    setStrings();
+    
+    var url = null;
+    (mode == "0")?url = win.__editRelativeGetUrl(objElement):url = "";
+    var mailto = "mailto:";
+    var email = null;
+    if (url.indexOf(mailto) > -1 ) {
+       url = url.substr(mailto.length);
+       email = true;
+    }
+    
+    if (mode == "0") {
+      document.getElementById("txtUrl").value = url;   
+      document.getElementById("txtTitle").value = objElement.title;   
+      document.getElementById("chkVisible").checked = objElement.style.textDecoration == "none" ? false : true;
+    } else {
+      document.getElementById("txtUrl").value = "http://";
+      document.getElementById("txtTitle").value = win.editGetSelectedText();
+      document.getElementById("chkVisible").disabled = true;
+    }
+
+    if(params[18])
+      document.getElementById("btnUrl").title = getLanguageString("",3030);
+    else
+      document.getElementById("btnUrl").style.display = "none";
+
+    comboClear(document.getElementById("cmbAnchor"));
+    // get anchor list
+    var aLinks = doc.getElementsByTagName("a");
+    comboAdd(document.getElementById("cmbAnchor"),"-");
+    for(var i=0;i<aLinks.length;i++) {
+      if(aLinks[i].name != "") {
+        comboAdd(document.getElementById("cmbAnchor"),aLinks[i].name,aLinks[i].name);
+      }
+    }        
+
+    comboClear(document.getElementById("cmbType"));
+    comboAdd(document.getElementById("cmbType"),getLanguageString("",4049),'address');
+    comboAdd(document.getElementById("cmbType"),getLanguageString("",4048),'email');
+    if (email == true) {
+      comboSet(document.getElementById("cmbType"), 'email');
+      document.getElementById("btnUrl").style.visibility = "hidden";
+    }
+
+    comboClear(document.getElementById("cmbTarget"));
+
+    // XHTML support
+    if(parseInt(params[24]) > 0) {
+      comboAdd(document.getElementById("cmbTarget"),"-", "");
+      document.getElementById("cmbTarget").disabled = true;
+    } else {
+      comboAdd(document.getElementById("cmbTarget"),"-", "");
+      comboAdd(document.getElementById("cmbTarget"),getLanguageString("",4050), '_self');
+      comboAdd(document.getElementById("cmbTarget"),getLanguageString("",4051), '_blank');
+      if(mode == "0")
+        comboSet(document.getElementById("cmbTarget"), objElement.target);
+    }
+
+    document.getElementById("btnRemove").value = getLanguageString("",4044);
+    document.getElementById("btnUrl").value = getLanguageString("",4043);
+    
+    //show remove link only if mode = 0
+    var btnRemoveStyle = document.getElementById("btnRemove").style;
+    (mode == "0")?btnRemoveStyle.visibility="visible":btnRemoveStyle.visibility = "hidden";
+    
+  } catch(Error) { 
+    alert(Error);
+  }
+}
+
+function onTypeChange(value)
+{
+  if (document.getElementById("cmbType").value == "email") {
+    httpUrl = document.getElementById("txtUrl").value;
+    document.getElementById("btnUrl").style.visibility = "hidden";
+    if (emailUrl == "")
+      document.getElementById("txtUrl").value = "";
+    else
+      document.getElementById("txtUrl").value = emailUrl;
+  } else {
+    emailUrl = document.getElementById("txtUrl").value;
+    document.getElementById("btnUrl").style.visibility = "visible";
+    if (httpUrl == "")
+      document.getElementById("txtUrl").value = "http://";
+    else
+      document.getElementById("txtUrl").value = httpUrl;  }
+
+}
+
+function onAnchorChange(value)
+{
+  document.getElementById("txtUrl").value = "#" + value;
+}
+
+function onUrlSelect()
+{
+  params[2] = "OPEN";
+  // set the predefined values from config.js
+	if(browser.ie) {
+		var path = window.showModalDialog("../../../server/" + technology + "/dialog.html",params,"dialogHeight:500px;dialogWidth:600px;resizable:1;status:0;scroll:0");
+		if(path != "0" && path != null) {
+ 			document.getElementById("txtUrl").value = win.__editRelativeGetRelFromAbs(path,"LINK");
+		}
+	} else {
+		var left = screen.width/2 - 600/2;
+		var top = screen.height/2 - 500/2;
+		window.open("../../../server/" + technology + "/dialog.html","dialog","modal=1,left=" + left + ",top=" + top + ",height=500,width=600,resizable=1,status=0,scrollbars=0");
+	}
+}
+
+function __editGetParam()
+{
+  return params;
+}
+
+function callbackMozilla(mode, para1, para2)
+{
+  if(mode == "OPENDOC") {
+    if(para1 != "0" && para1 != null) {
+ 			document.getElementById("txtUrl").value = win.__editRelativeGetRelFromAbs(para1,"LINK");
+    }
+  }
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="4040">_Link</span>
+    </legend>
+    <table cellspacing="3" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td valign="bottom" style="padding-bottom:3px;">
+          <div id="4041" class="label40">_Type:</div>
+        </td>
+        <td valign="bottom" colspan="2">
+          <SELECT id="cmbType" style="FONT-SIZE: 11px; FONT-FAMILY: arial; margin-top:10px; HEIGHT: 20px"
+            onchange="javascript:onTypeChange(this.value);">
+          </SELECT>
+      </tr>
+      <tr>
+        <td valign="top">
+          <div id="4042" class="label40" style="margin-top: 3px">_Url:</div>
+        </td>
+        <td valign="top" style="width:100%">
+          <INPUT id="txtUrl" style="FONT-SIZE: 11px; WIDTH: 100%; FONT-FAMILY: arial; HEIGHT: 20px; margin-bottom:10px;"
+            NAME="Text1"> &nbsp;&nbsp;
+        </td>
+        <td align="right" valign="top">
+          <INPUT id="btnUrl" onclick="javascript: onUrlSelect();" style="WIDTH: 90px; HEIGHT: 20px; margin-bottom:10px;"
+            type="button" size="32" value="_Durchsuchen">
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top:3px;">
+          <div id="4045" class="label40">_Anchor:</div>
+        </td>
+        <td colspan="2">
+          <SELECT id="cmbAnchor" style="FONT-SIZE: 11px; FONT-FAMILY: arial; HEIGHT: 20px" onchange="javascript:onAnchorChange(this.value);"
+            NAME="Select1" language="javascript">
+          </SELECT>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" style="padding-top:3px;">
+          <div id="4046" class="label40">_Target:</div>
+        </td>
+        <td colspan="2">
+          <SELECT id="cmbTarget" style="FONT-SIZE: 11px; FONT-FAMILY: arial; HEIGHT: 20px">
+          </SELECT>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" style="padding-top:3px;">
+          <div id="4047" class="label40">_Title:</div>
+        </td>
+        <td colspan="2">
+          <INPUT id="txtTitle" style="FONT-SIZE: 11px; WIDTH: 100%; FONT-FAMILY: arial; HEIGHT: 20px; margin-bottom: 10px;">
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" style="padding-top:3px;">
+          <div id="1039" class="label40">_Visible:</div>
+        </td>
+        <td colspan="2">
+          <INPUT id="chkVisible" type="checkbox" style="FONT-SIZE: 11px;FONT-FAMILY: arial;">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <br>
+  <INPUT id="btnRemove" type="button" value="_Remove Link" onclick="remove()">
+</BODY>

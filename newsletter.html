@@ -1,0 +1,41 @@
+<% String paramEmailAddressNLS = request.getParameter("nls"); %>
+
+<form id="newsform" name="newsform" action="<%=userSession.isHomePage()?"signup.irs#footer":"#footer"%>" method="post">
+
+	<div id="newsformwrap">
+		
+		<input id="nls" type="text" class="newsletter-input" name="nls" placeholder="Email Address" value="<%=paramEmailAddressNLS==null?"":paramEmailAddressNLS%>" /><!-- 
+		
+		 --><a class="nlsSub" onClick="newsFormSub(document.newsform,document.newsform.nls);">Send</a>
+		
+		<%=co.simplypos.model.utils.helpers.HTMLHelper.getRequestParamsAsFormFields(request)%>
+		
+		<div class="signUpSent">
+		
+			<%if (paramEmailAddressNLS != null) {
+					
+				if( paramEmailAddressNLS.indexOf("@") < 1 ){ %>
+					
+					An error has occurred, please try again				
+				<% }
+				else{
+					try {
+						String textEmailBody = website.getWebsiteName()+"\n\rThank you for signing up for our newsletter service.\n\r"+website.getWebSiteURL();
+						String htmlEmailBody = "<br>Thank you for signing up for our newsletter service.<br><br><a href='"+website.getWebSiteURL()+"'>"+website.getWebsiteName()+"</a>";
+						website.sendEmail(paramEmailAddressNLS, website.getWebsiteName(), textEmailBody, htmlEmailBody);%>
+						
+						Sign-up request sent
+						
+					<% } catch (Exception eas1) { %>
+					
+						An error has occurred, please try again	
+						
+					<% }
+				}
+			} %>
+		
+		</div>
+	
+	</div>
+	
+</form>

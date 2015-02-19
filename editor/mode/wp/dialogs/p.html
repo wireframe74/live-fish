@@ -1,0 +1,217 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <script>
+
+var params = null;
+
+function save()
+{
+  try {
+    var changed = false;
+    
+	  var sel = new params[11].Selection(params[4]);
+    if(sel.type == "NONE") {
+      var activeObject = sel.getActiveObject("p");
+      if(activeObject) {
+        var curLeftMargin = activeObject.style.marginLeft;
+        var curRightMargin = activeObject.style.marginRight;
+        var curTopMargin = activeObject.style.marginTop;
+        var curBottomMargin = activeObject.style.marginBottom;
+        var curTextIndent = activeObject.style.textIndent;
+        
+        if(document.getElementById("txtLeftMargin").value != "") {
+  	      activeObject.style.marginLeft = document.getElementById("txtLeftMargin").value;
+      	  if(curLeftMargin != document.getElementById("txtLeftMargin").value)
+      	    changed = true;
+  	    } else {
+  	      activeObject.style.removeAttribute("marginLeft");
+  	    }
+        if(document.getElementById("txtRightMargin").value != "") {
+    	    activeObject.style.marginRight = document.getElementById("txtRightMargin").value;
+      	  if(curRightMargin != document.getElementById("txtRightMargin").value)
+      	    changed = true;
+  	    } else {
+  	      activeObject.style.removeAttribute("marginRight");
+    	  }
+        if(document.getElementById("txtBefore").value != "") {
+    	    activeObject.style.marginTop = document.getElementById("txtBefore").value;
+      	  if(curTopMargin != document.getElementById("txtBefore").value)
+      	    changed = true;
+  	    } else {
+  	      activeObject.style.removeAttribute("marginTop");
+    	  }
+        if(document.getElementById("txtAfter").value != "") {
+    	    activeObject.style.marginBottom = document.getElementById("txtAfter").value;
+      	  if(curBottomMargin != document.getElementById("txtAfter").value)
+      	    changed = true;
+  	    } else {
+  	      activeObject.style.removeAttribute("marginBottom");
+    	  }
+    	  
+    	  if(document.getElementById("txtTextIndent").value != "") {
+    	    activeObject.style.textIndent = document.getElementById("txtTextIndent").value;
+      	  if(curTextIndent != document.getElementById("txtTextIndent").value)
+      	    changed = true;
+  	    } else {
+  	      activeObject.style.removeAttribute("textIndent");
+    	  }
+      }      
+    }
+    
+    if(sel.type == "TEXT") {
+      var aObjects = sel.getSelectedObjects(true);
+      for(var i=0;i<aObjects.length;i++) {
+        if(aObjects[i].tagName.toLowerCase() == "p" || aObjects[i].tagName.toLowerCase() == "ol" || aObjects[i].tagName.toLowerCase() == "ul" || aObjects[i].tagName.toLowerCase() == "li") {
+          activeObject = aObjects[i];
+          if(document.getElementById("txtLeftMargin").value != "")
+  	        activeObject.style.marginLeft = document.getElementById("txtLeftMargin").value;
+          if(document.getElementById("txtRightMargin").value != "")
+    	      activeObject.style.marginRight = document.getElementById("txtRightMargin").value;
+          if(document.getElementById("txtBefore").value != "")
+    	      activeObject.style.marginTop = document.getElementById("txtBefore").value;
+          if(document.getElementById("txtAfter").value != "")
+    	      activeObject.style.marginBottom = document.getElementById("txtAfter").value;
+    	    if(document.getElementById("txtTextIndent").value != "")
+    	      activeObject.style.textIndent = document.getElementById("txtTextIndent").value;
+        }
+        changed = true;
+      }
+    }
+    
+    if(changed) {
+      params[11].__editOnChanged(true);
+    }
+
+  } catch(Error) {
+    if(params[31])
+      alert("An error occured in p.html: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+
+    // set language strings
+    setStrings();
+
+    // fill data into firstrow dropdown
+    var combo = document.getElementById("cmbFirstRow");
+    comboAdd(combo,"-","");
+    comboAdd(combo,getString(7009),"FIRSTROW");
+
+	  var activeObject = null;
+	  var sel = new params[11].Selection(params[4]);
+    if(sel.type == "NONE") {
+      // search for p tag
+      activeObject = sel.getActiveObject("p");
+    }
+    // we have no active object
+    if(!activeObject) {
+      // search in selection for p
+      var aObjects = sel.getSelectedObjects(true,"p");
+      // if we have 1
+      if(aObjects.length == 1)
+        activeObject = aObjects[0];
+    }
+    if(activeObject) {
+      // now set the values
+  	  document.getElementById("txtLeftMargin").value = activeObject.style.marginLeft;
+  	  document.getElementById("txtRightMargin").value = activeObject.style.marginRight;
+  	  document.getElementById("txtBefore").value = activeObject.style.marginTop;
+  	  document.getElementById("txtAfter").value = activeObject.style.marginBottom;
+  	  // do we have a default p tag ?
+  	  if(activeObject.style.marginTop == "" && activeObject.style.marginBottom == "") {
+  	    document.getElementById("txtBefore").value = "0";
+  	    document.getElementById("txtAfter").value = "14pt";
+  	  }
+  	  
+  	  // first row dropdown
+  	  if(activeObject.style.textIndent != "") {
+  	    // show
+  	    document.getElementById("txtTextIndent").value = activeObject.style.textIndent;
+  	    document.getElementById("txtTextIndent").style.visibility = "visible";
+  	    comboSet(combo,"FIRSTROW");
+  	  }
+  	}
+    
+  } catch(Error) {
+    if(params[31])
+      alert("An error occured in p.html: " + Error);
+  }
+}
+
+function onFirstRowChange()
+{
+  if(document.getElementById("cmbFirstRow").value == "FIRSTROW") {
+    document.getElementById("txtTextIndent").style.visibility = "visible";
+  } else {
+    document.getElementById("txtTextIndent").value = "";
+    document.getElementById("txtTextIndent").style.visibility = "hidden";
+  }
+}
+
+</script>
+</head>
+
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="7002">_Einzug</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="7003" class="label80">_Left:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtLeftMargin" size="4">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="7004" class="label">_Right:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtRightMargin" size="4">
+        </td>
+      </tr>
+      <tr>
+        <td nowrap>
+          <div id="7005" class="label">_Specialmargin:</div>
+        </td>
+        <td nowrap>
+          <select id="cmbFirstRow" onchange="onFirstRowChange()">
+          </select>&nbsp; <input type="text" id="txtTextIndent" style="visibility:hidden" size=4>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="7006">_Margin</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="7007" class="label">_Before:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtBefore" size="4">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="7008" class="label">_After:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtAfter" size="4">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

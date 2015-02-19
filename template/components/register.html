@@ -1,0 +1,241 @@
+<!-- start of components/register.html -->
+<%@page import="co.simplypos.model.website.HTMLComponents2" %>
+<%if ((new File(website.getWebSitePath()+"STOPMYSITE.STOP").exists() || website.getTestMode().equals("100")) && session.getAttribute("stopmysiteloggedin") == null) {
+
+	if (request.getAttribute("passcode") != null && (""+request.getAttribute("passcode")).equalsIgnoreCase("owner987")) {   
+		// owner passcode entered - allow continue
+		session.setAttribute("stopmysiteloggedin","y");
+
+	} else { %>
+		
+		<h1>This website is currently not available to accept online purchases.Please call back very soon....</h1>
+		<form action='register.jsp?<%=request.getQueryString()%>' method='post'><input type='text' name='passcode'/><input type='submit' value='Submit'/></form>		
+		<% return;
+	}
+}
+
+String alertMessage = null;
+if (request.getAttribute("alertMessage") != null) alertMessage = (String)request.getAttribute("alertMessage");
+
+final String initialValidationString = "Please enter your ";
+String validationString = initialValidationString ;
+if (request.getAttribute("validationString") != null) validationString = (String)request.getAttribute("validationString");
+
+String paramAction = "";
+if (request.getAttribute("action") != null) paramAction = (String)request.getAttribute("action");
+
+String paramSource = "";
+if (request.getAttribute("src") != null) paramSource = (String)request.getAttribute("src");
+
+int postcodeLookedup = 0;
+if (request.getAttribute("postcodeLookedup") != null) postcodeLookedup = Integer.parseInt((String)request.getAttribute("postcodeLookedup"));
+if (postcodeLookedup == 0 && userSession.isLoggedIn()) postcodeLookedup = 1;%>
+
+<% if (postcodeLookedup == 0) { %>
+	    <%@include file="../../bannerregister.html"%>
+<% } %>
+
+<div class="pagetopnav">
+	<ul class="crumb blocklist">
+		<%=userSession.getTrailHTML("My Account", UserSession.getFullURL(request), true)%>
+	</ul>
+	<ul class="navPage blocklistright">
+		<li class="buttonbacktoshop">
+			<a href=<%="'"+userSession.getLastURL()+"'"%> class="button"><%=website.getText("registerbacktoshop","Back To Shop")%></a>
+		</li>
+	</ul>
+</div>
+
+	
+<div id="registration">
+
+    <%if (paramSource.equals("del")) {%>									
+  
+		<img src="<%= website.getImagePath("checkoutprocess2.gif")%>" alt="" class="checkoutprocess2" />       
+      
+    <%}%>
+   
+    <% if (validationString != null && !validationString.equals(initialValidationString)) {%>	
+		<div id="pagevalidation_ajax">
+			<ul class="validation labelpairleft" >
+				<li class="validationicon"><img src="<%=website.getImagePath("icon_error.gif")%>" alt="" /></li>		 
+				<li class="validationtext"><%=validationString%></li>
+			</ul>
+		</div>      
+    <% } %>
+	
+	<div id="pagetitle"><h1><%=website.getText("registerheaderone","My Account")%></h1></div>
+
+   <form name="accountdetails" action="<%=website.getWebSiteBaseURL().replace("http://", (website.isUseSecureRegistration()?"https://":"http://"))%>/register.jsp" method="POST">
+   
+		<% if (website.getPcaAccountCode() != null && postcodeLookedup == 0) { %>
+			<div id="newregister">
+			
+				<h2><%=website.getText("registerregisterhead","Register")%></h2>
+				
+				<div id="registertext">
+					<%=website.getText("registerregistertext","New customers register here")%>
+				</div>
+				
+				<ul id="customerdetails" class="contentform componentBorder componentFill1">			
+					<li>
+						<ul id="registername" class="registerline labelpairleft">
+							<li class="label"> <%=website.getText("registerregistername","Name*")%> </li>
+							<li class="value"> <input class="inputitem" type=text name="name" value='<%=(request.getAttribute("firstnames")+" "+request.getAttribute("surname")).trim()%>'> </li>
+						</ul>
+					</li>
+					<li>
+						<ul id="registername" class="registerline labelpairleft">
+							<li class="label"> <%=website.getText("registerregisteremail","Email Address*")%> </li>
+							<li class="value"> <input class="inputitem" type=text name="emailaddress" value='<%=request.getAttribute("emailaddress")%>'> </li>
+						</ul>
+					</li>
+					<li>
+						<ul id="registername" class="registerline labelpairleft">
+							<li class="label"> <%=website.getText("registerregisterpostcode","Post Code/Zip*")%> </li>
+							<li class="value"> <input class="inputitem" type=text name="addrlu1" value='<%=request.getAttribute("addrlu1")%>'> </li>
+						</ul>        
+					</li>
+					<li>
+						<ul id="registername" class="registerline labelpairleft">
+							<li class="label">House Number/Street</li>   
+							<li class="value"> <input class="inputitem" type=text name="addrlu2" value='<%=request.getAttribute("addrlu2")%>'> </li>
+						</ul>
+					</li>    
+					
+					<li class="message"><%=website.getText("registerregistermessage","Fields marked with an * are required")%></li>
+					
+					<li class="nextbutton">
+						<%=HTMLComponents.duplicateRequestParams(request, true)%>
+						<input type=hidden name="action" value='getAddr'>
+						
+						<!-- <a class="actionbutton mediumButton" href="javascript:document.accountdetails.submit();" >
+							<%=website.getText("registerregisternextbutton","Next >")%> 
+						</a> -->
+						
+						<input class="inputBtn" type="submit" value="<%=website.getText("registerregisternextbutton","Next >")%> "/>
+					</li>
+				</ul> 
+				
+			</div>
+
+		<% } else { %>
+			
+			<div id="registeraddressdetails" class="addressform">
+			
+				<%=HTMLComponents2.getAddressDetails(request, userSession, true)%>
+			
+			</div>
+
+			<%if (website.isShowNonMandatoryAccountFields()) { %>
+				<div id="registeraccountdetials" class="accountdetailsform">
+					<%=HTMLComponents2.getAccountDetails(request, userSession)%>
+				</div>
+			<%}%>
+			
+			<div id="registerpassword" >
+				<ul class="contentform componentBorder componentFill1">
+					<li>
+						<ul id="choosepass" class="labelpairleft">    
+							<li class="label"> <%=website.getText("registerchoosepass","Choose Password*")%>  </li>
+							<li class="value"> <input class="inputitem" type=password name="password1" autocomplete="off"> </li>
+						</ul>
+					</li>
+					<li>    
+						<ul id="confirmpass" class="labelpairleft">  
+							<li class="label"><%=website.getText("registerconfirmpass","Confirm Password*")%></li>
+							<li class="value"><input class="inputitem" type=password name="password2" autocomplete="off"></li>
+						</ul>
+					</li>
+					<li class="textnote" id="registernote"> <%=website.getText("registerpassnote","Note")%> </li>
+					<li class="textnote" id="registernotepass"> <%=website.getText("registerpassnotepass","Passwords must be at least 4 characters long")%> </li>
+					<li class="textnote" id="registernoteadd"> <%=website.getText("registerpassnoteadd","For card orders, this must be the cardholder's registered address")%> </li>
+					<li class="textnote" id="registernoteman"> <%=website.getText("registerpassnoteman","Fields marked with an * are required")%> </li>	    
+				 
+					<input type=hidden name="action" value='register'>
+					<input type=hidden name="src" value='<%=paramSource%>'>
+					<input type=hidden name="postcodeLookedup" value='<%=postcodeLookedup%>'>
+					
+					<li id="registerregisterbutton" class="formbutton">
+						<!-- <a class="actionbutton mediumButton" href="javascript:document.accountdetails.submit();" >
+							<%=website.getText("registerregisternextbutton","Register")%> 
+						</a> -->
+						<input class="inputBtn" type="submit" value="<%=website.getText("registerregisternextbutton","Register")%>"/>
+					</li>
+				</ul>
+			</div>
+	 
+		<% } %>
+		
+	</form>
+ 
+ 
+	<% if (postcodeLookedup == 0) { %>
+     
+		<div id="returning">
+		
+			<h2><%=website.getText("registerloginhead","Login")%></h2>
+			
+			<div id="returningtext">
+				<%=website.getText("registerreturningtext","Existing customers login here")%>
+			</div>
+			
+			<form name="logindetails" action='<%=website.getWebSiteBaseURL().replace("http://", (website.isUseSecureRegistration()?"https://":"http://"))%>/register.jsp' method="POST" onsubmit='return true;' >  
+			
+				<input type=hidden name="action" value='login'>
+				<input type=hidden name="src" value='<%=paramSource%>'>
+				<input type="hidden" name="cName" value="<%=(request.getParameter("cName") != null ? request.getParameter("cName"): "")%>" />
+				<input type="hidden" name="pName" value="<%=(request.getParameter("pName") != null ? request.getParameter("pName"): "")%>" />
+				
+				<ul class="contentform loginform componentBorder componentFill1">
+					<li>
+						<ul id="registerloginemail" class="loginline labelpairleft">
+							<li class="label"><%=website.getText("registerloginemaillabel","Email Address")%></li>
+							<li class="value"><input class="inputitem" type="text" name="emailaddress" value='<%=request.getAttribute("emailaddress")%>'></li>
+						</ul>
+					</li>
+					<li>
+						<ul id="registerpasswordlogin" class="loginline labelpairleft">
+							<li class="label"><%=website.getText("registerloginpasslabel","Password")%></li>
+							<li class="value"><input class="inputitem" type="password" name="password" autocomplete="off"></li>
+						</ul>
+					<li id="registerforgotpassword">
+						<a href="javascript: document.logindetails.action.value='forgot'; document.logindetails.submit();" class="trail">
+						<%=website.getText("registerloginforgotpasslabel","Forgotten your password?")%>
+						</a> 
+					</li>
+					<li id="registerloginbutton">
+						<!-- <a class="actionbutton mediumButton" href="javascript:document.logindetails.submit();" >
+							<%=website.getText("registerregisternextbutton","Login")%> 
+						</a> -->
+						<input class="inputBtn" type="submit" value="<%=website.getText("registerregisternextbutton","Login")%>"/>
+					</li>
+				</ul>
+			</form>
+			
+		</div>
+      
+	<% } %>
+	
+	<div class="pagetopnav">
+		<ul class="crumb blocklist">
+			<%=userSession.getTrailHTML("My Account", UserSession.getFullURL(request), true)%>
+		</ul>
+		<ul class="navPage blocklistright">
+			<li class="buttonbacktoshop">
+				<a href=<%="'"+userSession.getLastURL()+"'"%> class="button"><%=website.getText("registerbacktoshop","Back To Shop")%></a>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<% if (paramAction.equals("getAddr")) { %>
+	<script language="javascript">document.accountdetails.password1.focus();</script>
+<% } %>
+
+<% if (alertMessage != null && !alertMessage.trim().equals("")) {%>
+    <script language="javascript">alert("<%=alertMessage%>");</script>
+<% } %>
+
+<!-- end of components/register.html -->

@@ -1,0 +1,84 @@
+<HEAD>
+  <title></title>
+  <LINK href="../../design/style/dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../include/dialog.js"></script>
+    <SCRIPT>
+
+function save()
+{
+  try {
+    parent.parent.params[11] = document.getElementById("txtHeader").contentWindow.document.getElementById("editor").contentWindow.editGetDocument().body.innerHTML;
+    if(parent.parent.params[11] != "" && parent.parent.params[19] == 0)
+      alert(getLanguageString("",5033));
+    
+    parent.parent.params[12] = document.getElementById("txtFooter").contentWindow.document.getElementById("editor").contentWindow.editGetDocument().body.innerHTML;
+    if(parent.parent.params[12] != "" && parent.parent.params[20] == 0)
+      alert(getLanguageString("",5034));
+    
+  } catch(Error) {}
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+    // set language strings
+    setStrings();
+
+  } catch(Error) { 
+  }
+}
+
+function onEditorLoaded(objEditor)
+{
+
+  var id = objEditor.frameElement.document.parentWindow.frameElement.id;
+  
+  objEditor.editGetDocument().body.style.margin = 0;
+
+  if(id == "txtHeader") {
+    if(params[11] != "")
+      objEditor.editWrite(params[11]);
+  }
+    
+  if(id == "txtFooter") {
+    if(params[12] != "")
+      objEditor.editWrite(params[12]);
+  }
+}
+
+function onTabClick()
+{
+  document.getElementById("txtHeader").src= "../../server/" + params[5] + "/headfoot." + params[5];
+  document.getElementById("txtFooter").src= "../../server/" + params[5] + "/headfoot." + params[5];
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="5014">_Header</span>
+    </legend>
+    <table width="100%" cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <iframe id="txtHeader" style="height:220px;width:100%" frameborder="0"></iframe>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="5015">_Footer</span>
+    </legend>
+    <table width="100%" cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <iframe id="txtFooter" style="height:220px;width:100%" frameborder="0"></iframe>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

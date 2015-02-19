@@ -1,0 +1,111 @@
+<HEAD>
+  <LINK href="../design/style/dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../include/dialog.js"></script>
+    <SCRIPT>
+
+var type = "";
+var start = 1;
+var selectedObject = null;
+
+function save()
+{
+  if(params[2] == "UL") {
+
+    selectedObject.removeAttribute("type");
+    selectedObject.style.listStyleType = type;
+
+    params[11].__editOnChanged(true);
+  }  
+}
+
+function initDialog(para)
+{
+  params = para;
+
+  // set language strings
+  setStrings();
+  
+  var sel = new params[11].Selection(params[4]);
+  var parent = sel.getParent();
+  var aHierarchy = params[11].__editGetTagHierarchy(parent,1);
+  for(var j=0;j<aHierarchy.length;j++) {
+    if(aHierarchy[j].tagName.toLowerCase() == "ul") {
+      selectedObject = aHierarchy[j];
+      break;
+    }
+  }
+
+  if(params[2] == "UL") {
+
+    if(selectedObject.type) { 
+      type = selectedObject.type;
+    } else if(selectedObject.style.listStyleType) {
+      type = selectedObject.style.listStyleType;
+    } else {
+      type = "disc";
+    }
+
+    showSelection(document.getElementById(type));
+  }
+}
+
+function updateDialog(para)
+{
+  initDialog(para)
+}
+
+function select(obj)
+{
+  type = obj.id;
+  showSelection(obj);
+}
+
+function showSelection(obj) 
+{
+  try {
+    var objElement = document.getElementById("tblColor");
+    for(var i=0;i<objElement.rows.length;i++) {
+	    var tr = objElement.rows[i];
+      for (var y=0;y<tr.cells.length;y++) {
+	      var curtd = tr.cells[y];
+	      if (curtd == obj) {
+          curtd.style.borderLeftColor = "blue"
+          curtd.style.borderTopColor = "blue"
+          curtd.style.borderBottomColor = "blue"
+          curtd.style.borderRightColor = "blue"
+        } else {
+          curtd.style.borderLeftColor = "white"
+          curtd.style.borderTopColor = "white"
+          curtd.style.borderBottomColor = "white"
+          curtd.style.borderRightColor = "white"        
+        }                
+	    }
+    }      
+  } catch(Error) {}
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="1065" class="label">_type</span>
+    </legend>
+    <table style="margin:10px;" border="1" cellpadding="1" cellspacing="2" id="tblColor">
+      <tr>
+        <td id="disc" style="border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;"
+          onclick="select(this);">
+          <img src="list_disc.png" border="0">
+        </td>
+        <td id="circle" style="border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;"
+          onclick="select(this);">
+          <img src="list_circle.png" border="0">
+        </td>
+        <td id="square" style="border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;"
+          onclick="select(this);">
+          <img src="list_square.png" border="0">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

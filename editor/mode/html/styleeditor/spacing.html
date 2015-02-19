@@ -1,0 +1,364 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+
+function save()
+{
+  try {
+    var objElementStyle = params[5].style;
+    var marginLeft    = objElementStyle.marginLeft;
+    var marginTop     = objElementStyle.marginTop;
+    var marginRight   = objElementStyle.marginRight;
+    var marginBottom  = objElementStyle.marginBottom;
+    var paddingLeft   = objElementStyle.paddingLeft;
+    var paddingTop    = objElementStyle.paddingTop;
+    var paddingRight  = objElementStyle.paddingRight;
+    var paddingBottom = objElementStyle.paddingBottom;
+    var changed = false;
+    var win = params[11];
+		
+    // set margin
+    if(document.getElementById("txtMarginLeft").value != "")
+      objElementStyle.marginLeft = document.getElementById("txtMarginLeft").value + document.getElementById("cmbMarginLeft").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("marginLeft");
+      else
+        objElementStyle.marginLeft = null;;
+    }
+      
+    if(document.getElementById("txtMarginTop").value != "")
+      objElementStyle.marginTop = document.getElementById("txtMarginTop").value + document.getElementById("cmbMarginTop").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("marginTop");
+      else
+        objElementStyle.marginTop = null;;
+    }
+
+    if(document.getElementById("txtMarginRight").value != "")
+      objElementStyle.marginRight = document.getElementById("txtMarginRight").value + document.getElementById("cmbMarginRight").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("marginRight");
+      else
+        objElementStyle.marginRight = null;;
+    }
+
+    if(document.getElementById("txtMarginBottom").value != "")
+      objElementStyle.marginBottom = document.getElementById("txtMarginBottom").value + document.getElementById("cmbMarginBottom").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("marginBottom");
+      else
+        objElementStyle.marginBottom = null;;
+    }
+
+
+    // set padding
+    if(document.getElementById("txtPaddingLeft").value != "")
+      objElementStyle.paddingLeft = document.getElementById("txtPaddingLeft").value + document.getElementById("cmbPaddingLeft").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("paddingLeft");
+      else
+        objElementStyle.paddingLeft = null;;
+    }
+
+    if(document.getElementById("txtPaddingTop").value != "")
+      objElementStyle.paddingTop = document.getElementById("txtPaddingTop").value + document.getElementById("cmbPaddingTop").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("paddingTop");
+      else
+        objElementStyle.paddingTop = null;;
+    }
+
+    if(document.getElementById("txtPaddingRight").value != "")
+      objElementStyle.paddingRight = document.getElementById("txtPaddingRight").value + document.getElementById("cmbPaddingRight").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("paddingRight");
+      else
+        objElementStyle.paddingRight = null;;
+    }
+
+    if(document.getElementById("txtPaddingBottom").value != "")
+      objElementStyle.paddingBottom = document.getElementById("txtPaddingBottom").value + document.getElementById("cmbPaddingBottom").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("paddingBottom");
+      else
+        objElementStyle.paddingBottom = null;;
+    }
+
+    if(marginLeft != objElementStyle.marginLeft)
+      changed = true;
+    if(marginTop != objElementStyle.marginTop)
+      changed = true;
+    if(marginRight != objElementStyle.marginRight)
+      changed = true;
+    if(marginBottom != objElementStyle.marginBottom)
+      changed = true;
+    if(paddingLeft != objElementStyle.paddingLeft)
+      changed = true;
+    if(paddingTop != objElementStyle.paddingTop)
+      changed = true;
+    if(paddingRight != objElementStyle.paddingRight)
+      changed = true;
+    if(paddingBottom != objElementStyle.paddingBottom)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+    
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in border page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+    // set language strings
+    setStrings();
+
+	  language            = param[0];
+	  design              = param[1];
+    var objElementStyle = param[5].style;
+
+    // clear values
+    document.getElementById("txtMarginLeft").value = "";
+    document.getElementById("txtMarginTop").value = "";
+    document.getElementById("txtMarginRight").value = "";
+    document.getElementById("txtMarginBottom").value = "";
+    document.getElementById("txtPaddingLeft").value = "";
+    document.getElementById("txtPaddingTop").value = "";
+    document.getElementById("txtPaddingRight").value = "";
+    document.getElementById("txtPaddingBottom").value = "";
+    comboSet(document.getElementById("cmbMarginLeft"),"px");
+    comboSet(document.getElementById("cmbMarginTop"),"px");
+    comboSet(document.getElementById("cmbMarginBottom"),"px");
+    comboSet(document.getElementById("cmbMarginRight"),"px");
+    comboSet(document.getElementById("cmbPaddingLeft"),"px");
+    comboSet(document.getElementById("cmbPaddingTop"),"px");
+    comboSet(document.getElementById("cmbPaddingRight"),"px");
+    comboSet(document.getElementById("cmbPaddingBottom"),"px");
+    
+    // set margin
+    if(objElementStyle.marginLeft) {
+      document.getElementById("txtMarginLeft").value = parseInt(objElementStyle.marginLeft);
+      var type = objElementStyle.marginLeft;
+      comboSet(document.getElementById("cmbMarginLeft"),type.substring(type.length-2,type.length));
+    }   
+    if(objElementStyle.marginTop) {
+      document.getElementById("txtMarginTop").value = parseInt(objElementStyle.marginTop);
+      var type = objElementStyle.marginTop;
+      comboSet(document.getElementById("cmbMarginTop"),type.substring(type.length-2,type.length));
+    }    
+    if(objElementStyle.marginRight) {
+      document.getElementById("txtMarginRight").value = parseInt(objElementStyle.marginRight);
+      var type = objElementStyle.marginRight;
+      comboSet(document.getElementById("cmbMarginRight"),type.substring(type.length-2,type.length));
+    }    
+    if(objElementStyle.marginBottom) {
+      document.getElementById("txtMarginBottom").value = parseInt(objElementStyle.marginBottom);
+      var type = objElementStyle.marginBottom;
+      comboSet(document.getElementById("cmbMarginBottom"),type.substring(type.length-2,type.length));
+    }    
+
+    // set padding
+    if(objElementStyle.paddingLeft) {
+      document.getElementById("txtPaddingLeft").value = parseInt(objElementStyle.paddingLeft);
+      var type = objElementStyle.paddingLeft;
+      comboSet(document.getElementById("cmbPaddingLeft"),type.substring(type.length-2,type.length));
+    }    
+    if(objElementStyle.paddingTop) {
+      document.getElementById("txtPaddingTop").value = parseInt(objElementStyle.paddingTop);
+      var type = objElementStyle.paddingTop;
+      comboSet(document.getElementById("cmbPaddingTop"),type.substring(type.length-2,type.length));
+    }    
+    if(objElementStyle.paddingRight) {
+      document.getElementById("txtPaddingRight").value = parseInt(objElementStyle.paddingRight);
+      var type = objElementStyle.paddingRight;
+      comboSet(document.getElementById("cmbPaddingRight"),type.substring(type.length-2,type.length));
+    }    
+    if(objElementStyle.paddingBottom) {
+      document.getElementById("txtPaddingBottom").value = parseInt(objElementStyle.paddingBottom);
+      var type = objElementStyle.paddingBottom;
+      comboSet(document.getElementById("cmbPaddingBottom"),type.substring(type.length-2,type.length));
+    }    
+
+  } catch(Error) {}
+
+}
+
+</SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head"><span id="3379">_Margin</span></legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <span id="4002" class="label">_Left:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtMarginLeft" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbMarginLeft">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="4003" class="label">_Top:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtMarginTop" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbMarginTop">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="4005" class="label">_Right:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtMarginRight" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbMarginRight">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="4004" class="label">_Bottom:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtMarginBottom" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbMarginBottom" NAME="Select3">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head"><span id="3380">_Padding</span></legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+      <tr>
+        <td>
+          <span id="4002" class="label">_Left:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtPaddingLeft" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbPaddingLeft">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="4003" class="label">_Top:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtPaddingTop" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbPaddingTop">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="4005" class="label">_Right:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtPaddingRight" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbPaddingRight">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="4004" class="label">_Bottom:</span>
+        </td>
+        <td>
+          <input type="text" ID="txtPaddingBottom" style="width: 30px">
+        </td>
+        <td>
+          <select id="cmbPaddingBottom">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

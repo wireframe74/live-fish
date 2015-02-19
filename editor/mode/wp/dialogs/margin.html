@@ -1,0 +1,138 @@
+<HTML>
+  <HEAD>
+    <title></title>
+    <link rel="stylesheet" href="dialog.css" type="text/css">
+<script language="javascript" src="../../../include/dialog.js"></script>
+      <SCRIPT>
+var language = "";
+var design = "";
+var objElement;
+var isDebug = false;
+
+function save()
+{
+  try {
+
+    var objElementStyle = objElement.style;
+    var nowrap = objElement.noWrap;
+    var changed = false;
+    var win = params[11];
+       
+    var top = document.getElementById('txtTop').value;
+    var bottom = document.getElementById('txtBottom').value;
+    var left = document.getElementById('txtLeft').value;
+    var right = document.getElementById('txtRight').value;      
+
+    //if (mode == "BODY") {
+      var before = objElementStyle.margin;
+      (top != "") ? objElementStyle.marginTop = top:null;
+      (bottom != "") ? objElementStyle.marginBottom = bottom:null;
+      (left != "") ? objElementStyle.marginLeft = left:null;
+      (right != "") ? objElementStyle.marginRight = right:null;
+      var after = objElementStyle.margin;
+/*
+    } else {
+      var before = objElementStyle.padding;
+      objElementStyle.paddingTop = top;
+      objElementStyle.paddingBottom = bottom;
+      objElementStyle.paddingLeft = left;
+      objElementStyle.paddingRight = right;
+      var after = objElementStyle.padding;      
+    }
+*/
+
+    if (before != after)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) { 
+    if(isDebug)
+      alert("Error in cell: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+
+    // set language strings
+    setStrings();
+    
+    var objElementStyle = objElement.style;
+   
+//    if (mode == "BODY") {
+      var left = objElementStyle.marginLeft;
+      var right = objElementStyle.marginRight;
+      var top = objElementStyle.marginTop;
+      var bottom = objElementStyle.marginBottom;  
+      (left != "") ? document.getElementById('txtLeft').value = parseInt(left):null;
+      (right != "") ? document.getElementById('txtRight').value = parseInt(right):null;
+      (top != "") ? document.getElementById('txtTop').value = parseInt(top):null;
+      (bottom != "") ? document.getElementById('txtBottom').value = parseInt(bottom):null;
+/*
+    } else {
+      var left = objElementStyle.paddingLeft;
+      var right = objElementStyle.paddingRight;
+      var top = objElementStyle.paddingTop;
+      var bottom = objElementStyle.paddingBottom;    
+      (left != "") ? document.getElementById('txtLeft').value = parseInt(left):null;
+      (right != "") ? document.getElementById('txtRight').value = parseInt(right):null;
+      (top != "") ? document.getElementById('txtTop').value = parseInt(top):null;
+      (bottom != "") ? document.getElementById('txtBottom').value = parseInt(bottom):null;      
+    }
+*/
+
+  } catch(Error) {}
+}
+</SCRIPT>
+  </HEAD>
+  <BODY class="bodypage">
+
+    <fieldset>
+      <legend class="head">
+        <span id="4330">_Inner Margin</span>
+      </legend>
+      <table cellspacing="0" cellpadding="1" border="0" ID="Table2" style="margin-top:5px;">
+        <tr>
+          <td style="width:40px;">
+            <span id="4331" class="label">_Left:</span>
+          </td>
+          <td style="width:70px;">
+            <input type="text" ID="txtLeft" size="1">
+          </td>
+          <td style="width:40px;">
+            <span id="4333" class="label">_Top:</span>
+          </td>
+          <td style="width:70px;">
+            <input type="text" ID="txtTop" size="1">
+          </td>          
+        </tr>
+        <tr>
+          <td>
+            <span id="4332" class="label">_Right:</span>
+          </td>
+          <td>
+            <input type="text" ID="txtRight" size="1">
+          </td>
+          <td>
+            <span id="4334" class="label">_Bottom:</span>
+          </td>
+          <td>
+            <input type="text" ID="txtBottom" size="1">
+          </td>          
+        </tr>
+      </table>
+    </fieldset>
+ 
+  </BODY>
+</HTML>

@@ -1,0 +1,403 @@
+.pinCombo 
+{
+  	font-family: Arial; 
+  	font-size: 11px;
+}
+
+td
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial;
+}
+
+/* pinEdit */
+.pinEditFrame
+{
+	width:100%;
+	height:100%;
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	#808080;
+	border-right-color:	#808080;
+	border-top-color:		#808080;
+	border-bottom-color:	#808080;
+}
+
+.pinEditBody {
+	color: 		black; 
+	background: 	white;
+	font: 		11px arial;
+}
+
+/* ------------------*/
+/* Standard Button   */
+/* ------------------*/
+.pinButtonStandard {
+	font:			Menu;
+	cursor: 		Default;
+	border:		1px solid ButtonFace;
+	background:		ButtonFace;
+	color:		ButtonText;
+	padding:		1px 2px 1px 2px;		
+}
+.pinButtonHover {
+	font:			Menu;
+	cursor: 			Hand;
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:		ButtonHighlight;
+	border-bottom-color:	ButtonShadow;
+	padding:			1px 2px 1px 2px;		
+}
+.pinButtonActive {
+	font:			Menu;
+	cursor: 			Hand;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+	padding:			2px 1px 0px 3px;
+}
+.pinButtonPopup {
+	font:			Menu;
+	cursor: 			Hand;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+	padding:			2px 1px 0px 3px;
+}
+.pinButtonDisabled {
+	font:			Menu;
+	cursor: 			Default;
+	padding:			1px 2px 1px 2px;		
+	color:			GrayText;
+	border:			1px solid ButtonFace;
+}
+.pinMenuItemStandard {
+	font:			Menu;
+	cursor: 		Default;
+	border:		1px solid ButtonFace;
+	background:		ButtonFace;
+	color:		ButtonText;
+}
+.pinMenuItemHover {
+	font:			Menu;
+	cursor: 			Hand;
+	border:		1px solid #316AC5;
+	background:		#316AC5;
+	color:		White;
+}
+.pinToolbarIn
+{
+	background-color: ButtonFace;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonHighlight;
+	border-bottom-color:ButtonShadow;
+}
+.pinToolbarOut
+{
+	margin-left:  0px;
+	margin-top:   0px;
+	border-width: 0px;
+	border-style: solid;
+	border-color: ButtonFace;
+}
+
+.pinComboStandard {
+	cursor:		default;
+	color:		ButtonText;
+	background-color: white;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	white;
+}
+.pinComboHover {
+	cursor: 		Hand;
+	font:			Menu;
+	background-color: white;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+}
+.pinComboPopup {
+	cursor: 		Hand;
+	font:			Menu;
+	background-color: white;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+}
+
+
+/* ------------------*/
+/* Office 2000       */
+/*-------------------*/
+.pinButtonStandardOffice {
+	cursor:		default;
+	background:		ButtonFace;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	ButtonFace;
+	padding:		1px 2px 1px 2px;		
+}
+.pinButtonHoverOffice {
+	cursor: 		Hand;
+	background:		#C1D2EE;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#316AC5;
+	padding:		1px 2px 1px 2px;		
+}
+.pinButtonPopupOffice {
+	background:		white;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-left-color:	#808080;
+	border-right-color:	#808080;
+	border-top-color:		#808080;
+	border-bottom-color:  	white;
+	padding:		1px 2px 1px 2px;		
+}
+.pinButtonActiveOffice {
+	font:			Menu;
+	cursor: 		Hand;
+	background:		#C1D2EE;
+	padding:		2px 1px 0px 3px;
+	border:		1px solid #316AC5;
+}
+.pinToolbarInOffice
+{
+	background-color: ButtonFace;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonHighlight;
+	border-bottom-color:ButtonShadow;
+}
+.pinToolbarOutOffice
+{
+	margin-left:  0px;
+	margin-top:   0px;
+	border-width: 0px;
+	border-style: solid;
+	border-color: ButtonFace;
+}
+
+.pinMenuItemStandardOffice {
+	cursor: 		Default;
+	border:		1px solid white;
+	background:		white;
+	font-family: 	arial;
+	font-size: 		11px;
+}
+.pinMenuItemHoverOffice {
+	cursor: 		hand;
+	border:		1px solid #316AC5;
+	background:		#C1D2EE;
+	font-family: 	arial;
+	font-size: 	11px;
+}
+
+.pinComboStandardOffice {
+	cursor:		default;
+	color:		ButtonText;
+	background-color: white;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	white;
+}
+.pinComboHoverOffice {
+	cursor: 		Hand;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#316AC5;
+}
+.pinComboPopupOffice {
+	cursor: 		Hand;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#316AC5;
+}
+
+
+/* ------------------*/
+/* Office 2003       */
+/*-------------------*/
+.pinButtonStandardOffice2003 {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#9EBEF5;
+	padding:		2px 3px 2px 3px;		
+}
+.pinButtonHoverOffice2003 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#000080;
+	padding:		1px 2px 1px 2px;		
+	background-image: url('../image/Office2003/tbover.gif');
+}
+.pinButtonPopupOffice2003 {
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-left-color:	#808080;
+	border-right-color:	#808080;
+	border-top-color:		#808080;
+	border-bottom-color:  	white;
+	padding:		1px 2px 1px 2px;		
+	background-image: url('../image/Office2003/tbdown.gif');
+}
+.pinButtonActiveOffice2003 {
+	cursor: 		Hand;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#666666;
+	padding:		2px 1px 0px 3px;
+	background-image: url('../image/Office2003/tbdown.gif');
+}
+
+
+.pinComboStandardOffice2003 {
+	cursor:		default;
+	color:		ButtonText;
+	background-color: white;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	white;
+}
+.pinComboHoverOffice2003 {
+	cursor: 		Hand;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#000080;
+}
+.pinComboPopupOffice2003 {
+	cursor: 		Hand;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#000080;
+}
+
+
+
+.pinMenuItemStandardOffice2003 {
+	cursor: 		Default;
+	border:		1px solid white;
+	background:		white;
+	font-family: 	arial;
+	font-size: 		11px;
+}
+.pinMenuItemHoverOffice2003 {
+	cursor: 		hand;
+	border:		1px solid #000080;
+	font-family: 	arial;
+	font-size: 	11px;
+	background-image: url('../image/Office2003/tbdown.gif');
+}
+
+.pinToolbarInOffice2003
+{
+	background-color: #9EBEF5;
+	background-image: url('../image/Office2003/tbback.gif');
+}
+.pinToolbarOutOffice2003
+{
+	margin-left:0px;
+	margin-top:0px;
+	border-width:1px;
+	border-style: solid;
+	border-color:#9EBEF5;
+}
+
+.pinToolbarDistanceOffice2003
+{
+	background-color: #9EBEF5;
+}
+
+
+/* ------------ */
+/*  Common      */
+/* ------------ */
+.pinButtonDisabled .pinButtonDisabledContainer {
+	display:			block;
+	background:			GrayText;
+	filter:				chroma(color=#010101) dropshadow(color=ButtonHighlight, offx=1, offy=1);
+	width:				100%;
+	height:				100%;
+	vertical-align:		center;
+}
+.pinButtonDisabled .pinButtonDisabledContainer .pinButtonDisabledContainer {
+	background:			Transparent;
+	filter:				gray()
+						chroma(color=#ffffff) chroma(color=#fefefe) chroma(color=#fdfdfd)
+						chroma(color=#fcfcfc) chroma(color=#fbfbfb) chroma(color=#fafafa)
+						chroma(color=#f9f9f9) chroma(color=#f8f8f8) chroma(color=#f7f7f7)
+						chroma(color=#f6f6f6) chroma(color=#f5f5f5) chroma(color=#f4f4f4)
+						chroma(color=#f3f3f3) 
+						mask(color=#010101);
+}
+
+.pinButtonActiveTab {
+	background:		#9EBEF5;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-left-color:	#FFFFFF;
+	border-right-color:	#808080;
+	border-top-color:		#9EBEF5;
+	border-bottom-color:  	#808080;
+}
+
+.pinButtonStandardTab {
+	background:		#81A9E2;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-left-color:	#81A9E2;
+	border-right-color:	#81A9E2;
+	border-top-color:		#808080;
+	border-bottom-color:  	#81A9E2;
+}
+

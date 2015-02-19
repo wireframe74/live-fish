@@ -1,0 +1,263 @@
+<HEAD>
+<title></title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../../include/dialog.js"></script>
+<script language="javascript" src="../../../include/listbox.js"></script>
+<SCRIPT>
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var lbStyle = null;
+var lbWidth = null;
+
+function setColor(obj, element)
+{  
+  //alert (obj);
+  var targetObj = document.getElementById(element);
+  targetObj.style.backgroundColor = obj.style.backgroundColor;
+}
+
+function colorClick(obj)
+{
+  var targetObj = document.getElementById('preview');
+  targetObj.style.backgroundColor = obj.style.backgroundColor;  
+  showSelection(obj);
+}
+
+function noColorClick(obj)
+{
+  var targetObj = document.getElementById('preview');
+  removeAttribute(targetObj.style, "backgroundColor");  
+  showSelection(obj);
+}
+
+function showSelection(obj) 
+{
+var objElement = document.getElementById("tblColor");
+  for(var i=0;i<objElement.rows.length;i++) {
+	  var tr = objElement.rows[i];
+    for (var y=0;y<tr.cells.length;y++) {
+	    var curtd = tr.cells[y];
+	    if (curtd == obj) {
+        curtd.style.borderLeftColor = "blue"
+        curtd.style.borderTopColor = "blue"
+        curtd.style.borderBottomColor = "blue"
+        curtd.style.borderRightColor = "blue"
+      } else {
+        curtd.style.borderLeftColor = "white"
+        curtd.style.borderTopColor = "white"
+        curtd.style.borderBottomColor = "white"
+        curtd.style.borderRightColor = "white"        
+      }                
+	  }
+  }      
+
+}
+
+function clearSelection() 
+{
+var objElement = document.getElementById("tblColor");
+  for(var i=0;i<objElement.rows.length;i++) {
+	  var tr = objElement.rows[i];
+    for (var y=0;y<tr.cells.length;y++) {
+	    var curtd = tr.cells[y];
+      curtd.style.borderLeftColor = "white"
+      curtd.style.borderTopColor = "white"
+      curtd.style.borderBottomColor = "white"
+      curtd.style.borderRightColor = "white"        
+	  }
+  }      
+
+}
+
+function save()
+{
+  try {
+    var objElementStyle = objElement.style;
+    var changed = false;
+    var win = params[11];
+    var bgColor = objElementStyle.backgroundColor;
+
+    if (document.getElementById("preview").style.backgroundColor != "") 
+      objElementStyle.backgroundColor = document.getElementById("preview").style.backgroundColor;
+		else
+			removeAttribute(objElementStyle, "backgroundColor");  
+    
+    if(bgColor != objElementStyle.backgroundColor)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in input page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+
+  params = param;
+
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+	  win                 = params[11];	  
+	  userMode            = params[21];
+
+    // set language strings
+    setStrings();
+    
+    var objElementStyle = objElement.style;
+
+    if (objElementStyle.backgroundColor != "") 
+      document.getElementById("preview").style.backgroundColor = objElementStyle.backgroundColor;
+      
+    document.getElementById("lblMoreColors").value = getLanguageString("", 4087);
+
+  } catch(Error) {}
+} 
+
+</SCRIPT> 
+</HEAD>
+<BODY class="bodypage">
+      <table cellspacing="0" cellpadding="3" border="0" width="1%">
+        <tr>
+          <td valign="top" width="1%">
+        <fieldset>
+          <legend class="head">
+            <span id="4084" class="label">_color</span>
+          </legend>   
+          <div style="width:160px; height:150px; overflow:hidden; margin:0px; " id="border" align="left">   
+          <table style="width:151px; " border="0" cellpadding="0" cellspacing="0" id="tblColor">
+            <tr>
+              <td colspan="8" style="font-size:5px; padding-bottom:5px;">&nbsp;</td>
+            </tr>  
+            <tr>
+              <td colspan="8" align="center" style="background-color:#E0E0E0; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="noColorClick(this);"><span id="4086" class="label">_noColor</span>
+              </td>
+            </tr>
+            <tr style="height:17px;">
+              <td style="width:17px; background-color:#000000; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>             
+              <td style="width:17px; background-color:#993300; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="width:17px; background-color:#333300; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="width:17px; background-color:#003300; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="width:17px; background-color:#003366; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="width:17px; background-color:#000080; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="width:17px; background-color:#333399; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="width:17px; background-color:#333333; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>                                                                                            
+            </tr> 
+            <tr style="height:17px;">
+              <td style="background-color:#800000; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>             
+              <td style="background-color:#FF6600; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#808000; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#008000; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#008080; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#0000FF; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#666699; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#808080; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>                                                                                            
+            </tr> 
+            <tr style="height:17px;">
+              <td style="background-color:#FF0000; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>             
+              <td style="background-color:#FF9900; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#99CC00; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#339966; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#33CCCC; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#3366FF; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#800080; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#999999; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>                                                                                            
+            </tr>   
+            <tr style="height:17px;">
+              <td style="background-color:#FF00FF; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>             
+              <td style="background-color:#FFCC00; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#FFFF00; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#00FF00; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#00FFFF; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#00CCFF; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#993366; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#C0C0C0; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>                                                                                            
+            </tr>  
+            <tr style="height:17px;">
+              <td style="background-color:#FF99CC; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>             
+              <td style="background-color:#FFCC99; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#FFFF99; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#CCFFCC; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#CCFFFF; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#99CCFF; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#CC99FF; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>
+              <td style="background-color:#FFFFFF; border-left:solid 1px white; border-top:solid 1px white; border-right:solid 1px white; border-bottom:solid 1px white;" onclick="colorClick(this);">&nbsp;
+              </td>                                                                                            
+            </tr>  
+            <tr>
+              <td colspan="8" style="font-size:8px;">&nbsp;</td>
+            </tr>   
+            <tr>
+              <td colspan="8" align="left">
+                <input type="button" onclick="selectColorWp('preview'); clearSelection();" id="lblMoreColors" value="_moreColors" />
+              </td>
+            </tr>                                        
+          </table>
+          
+              </div>
+          </fieldset>
+          </td>
+          <td valign="top">
+            <fieldset>
+              <legend class="head">
+                <span id="4085" class="label">_preview</span>
+              </legend>
+              <div style="width: 160px; height: 150px; overflow:hidden" id="borderPreview" class="label" >
+                <img id="preview" src="cell.gif" width="100px" height="100px" style="position:relative; top:25px; left:30px;" />
+              </div>
+            </fieldset>          
+          </td>
+        </tr>
+      </table>
+</BODY>

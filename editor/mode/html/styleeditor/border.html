@@ -1,0 +1,407 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = true;
+
+function save()
+{
+  try {
+    var objElementStyle = params[5].style;
+    var borderWidth = objElementStyle.borderWidth;
+    var borderStyle = objElementStyle.borderStyle;
+    var borderColor = objElementStyle.borderColor;
+    var changed = false;
+    var win = params[11];
+
+    // set border
+    if(document.getElementById("optSelect1").checked) {
+      if(document.getElementById("txtBorder").value != "" && document.getElementById("txtBorder").value > 0) {
+        objElementStyle.borderWidth = document.getElementById("txtBorder").value + document.getElementById("cmbType").value;
+        objElementStyle.borderStyle = document.getElementById("cmbStyle").value;
+        if(document.getElementById("txtColor").value != "")
+          objElementStyle.borderColor = document.getElementById("txtColor").value;
+      } else {
+        if(browser.ie) {
+          objElementStyle.removeAttribute("borderLeftWidth");
+          objElementStyle.removeAttribute("borderLeftStyle");
+          objElementStyle.removeAttribute("borderLeftColor");
+          objElementStyle.removeAttribute("borderTopWidth");
+          objElementStyle.removeAttribute("borderTopStyle");
+          objElementStyle.removeAttribute("borderTopColor");
+          objElementStyle.removeAttribute("borderRightWidth");
+          objElementStyle.removeAttribute("borderRightStyle");
+          objElementStyle.removeAttribute("borderRightColor");
+          objElementStyle.removeAttribute("borderBottomWidth");
+          objElementStyle.removeAttribute("borderBottomStyle");
+          objElementStyle.removeAttribute("borderBottomColor");
+        } else {
+          objElementStyle.border = null;
+        }
+      }
+    } else {
+      if(document.getElementById("txtBorderLeft").value != "") {
+        objElementStyle.borderLeftWidth = document.getElementById("txtBorderLeft").value + document.getElementById("cmbTypeLeft").value;
+        objElementStyle.borderLeftStyle = document.getElementById("cmbStyleLeft").value;
+        if(document.getElementById("txtColorLeft").value != "")
+          objElementStyle.borderLeftColor = document.getElementById("txtColorLeft").value;
+      } else {
+        if(browser.ie) {
+          objElementStyle.removeAttribute("borderLeftWidth");
+          objElementStyle.removeAttribute("borderLeftStyle");
+          objElementStyle.removeAttribute("borderLeftColor");
+        } else {
+          objElementStyle.borderLeft = null;
+        }
+      }
+
+      if(document.getElementById("txtBorderTop").value != "") {
+        objElementStyle.borderTopWidth = document.getElementById("txtBorderTop").value + document.getElementById("cmbTypeTop").value;
+        objElementStyle.borderTopStyle = document.getElementById("cmbStyleTop").value;
+        if(document.getElementById("txtColorTop").value != "")
+          objElementStyle.borderTopColor = document.getElementById("txtColorTop").value;
+      } else {
+        if(browser.ie) {
+          objElementStyle.removeAttribute("borderTopWidth");
+          objElementStyle.removeAttribute("borderTopStyle");
+          objElementStyle.removeAttribute("borderTopColor");
+        } else {
+          objElementStyle.borderTop = null;
+        }
+      }
+      
+      if(document.getElementById("txtBorderRight").value != "") {
+          objElementStyle.borderRightWidth = document.getElementById("txtBorderRight").value + document.getElementById("cmbTypeRight").value;
+        objElementStyle.borderRightStyle = document.getElementById("cmbStyleRight").value;
+        if(document.getElementById("txtColorRight").value != "")
+          objElementStyle.borderRightColor = document.getElementById("txtColorRight").value;
+      } else {
+        if(browser.ie) {
+          objElementStyle.removeAttribute("borderRightWidth");
+          objElementStyle.removeAttribute("borderRightStyle");
+          objElementStyle.removeAttribute("borderRightColor");
+        } else {
+          objElementStyle.borderRight = null;
+        }
+      }
+      
+      if(document.getElementById("txtBorderBottom").value != "") {
+          objElementStyle.borderBottomWidth = document.getElementById("txtBorderBottom").value + document.getElementById("cmbTypeBottom").value;
+        objElementStyle.borderBottomStyle = document.getElementById("cmbStyleBottom").value;
+        if(document.getElementById("txtColorBottom").value != "")
+          objElementStyle.borderBottomColor = document.getElementById("txtColorBottom").value;
+      } else {
+        if(browser.ie) {
+          objElementStyle.removeAttribute("borderBottomWidth");
+          objElementStyle.removeAttribute("borderBottomStyle");
+          objElementStyle.removeAttribute("borderBottomColor");
+        } else {
+          objElementStyle.borderBottom = null;
+        }
+      }
+    }
+
+    if(borderWidth != objElementStyle.borderWidth)
+      changed = true;
+    if(borderStyle != objElementStyle.borderStyle)
+      changed = true;
+    if(borderColor != objElementStyle.borderColor)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in border page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+    // set language strings
+    setStrings();
+
+	  language            = param[0];
+	  design              = param[1];
+    var objElementStyle = param[5].style;
+
+    // clear values
+    document.getElementById("txtBorder").value = "";
+    document.getElementById("txtColor").value = "";
+    document.getElementById("txtColor").style.backgroundColor = "white";
+    comboSet(document.getElementById("cmbType"),"px");
+    comboSet(document.getElementById("cmbStyle"),"solid");
+
+    document.getElementById("txtBorderTop").value = "";
+    document.getElementById("txtBorderLeft").value = "";
+    document.getElementById("txtBorderRight").value = "";
+    document.getElementById("txtBorderBottom").value = "";
+    comboSet(document.getElementById("cmbTypeLeft"),"px");
+    comboSet(document.getElementById("cmbStyleLeft"),"solid");
+    comboSet(document.getElementById("cmbTypeTop"),"px");
+    comboSet(document.getElementById("cmbStyleTop"),"solid");
+    comboSet(document.getElementById("cmbTypeRight"),"px");
+    comboSet(document.getElementById("cmbStyleRight"),"solid");
+    comboSet(document.getElementById("cmbTypeBottom"),"px");
+    comboSet(document.getElementById("cmbStyleBottom"),"solid");
+    document.getElementById("txtColorLeft").value = "";
+    document.getElementById("txtColorLeft").style.backgroundColor = "white";
+    document.getElementById("txtColorTop").value = "";
+    document.getElementById("txtColorTop").style.backgroundColor = "white";
+    document.getElementById("txtColorRight").value = "";
+    document.getElementById("txtColorRight").style.backgroundColor = "white";
+    document.getElementById("txtColorBottom").value = "";
+    document.getElementById("txtColorBottom").style.backgroundColor = "white";
+
+    // set border
+    if(objElementStyle.border && objElementStyle.borderColor != param[23]) {
+      document.getElementById("optSelect1").checked = true;
+      document.getElementById("txtBorder").value = parseInt(objElementStyle.borderWidth);
+      var type = objElementStyle.borderWidth;
+      comboSet(document.getElementById("cmbType"),type.substring(type.length-2,type.length));
+      comboSet(document.getElementById("cmbStyle"),objElementStyle.borderStyle.toLowerCase());
+      document.getElementById("txtColor").value = objElementStyle.borderColor;
+      document.getElementById("txtColor").style.backgroundColor = objElementStyle.borderColor;
+    } else {
+      if(objElementStyle.borderLeftColor != param[23]) {
+        document.getElementById("optSelect2").checked = true;
+        if(objElementStyle.borderLeft) {
+          document.getElementById("txtBorderLeft").value = parseInt(objElementStyle.borderLeftWidth);
+          var type = objElementStyle.borderLeftWidth;
+          comboSet(document.getElementById("cmbTypeLeft"),type.substring(type.length-2,type.length));
+          comboSet(document.getElementById("cmbStyleLeft"),objElementStyle.borderLeftStyle.toLowerCase());
+          document.getElementById("txtColorLeft").value = objElementStyle.borderLeftColor;
+          document.getElementById("txtColorLeft").style.backgroundColor = objElementStyle.borderLeftColor;
+        }    
+        if(objElementStyle.borderTop) {
+          document.getElementById("txtBorderTop").value = parseInt(objElementStyle.borderTopWidth);
+          var type = objElementStyle.borderTopWidth;
+          comboSet(document.getElementById("cmbTypeTop"),type.substring(type.length-2,type.length));
+          comboSet(document.getElementById("cmbStyleTop"),objElementStyle.borderTopStyle.toLowerCase());
+          document.getElementById("txtColorTop").value = objElementStyle.borderTopColor;
+          document.getElementById("txtColorTop").style.backgroundColor = objElementStyle.borderTopColor;
+        }    
+        if(objElementStyle.borderRight) {
+          document.getElementById("txtBorderRight").value = parseInt(objElementStyle.borderRightWidth);
+          var type = objElementStyle.borderRightWidth;
+          comboSet(document.getElementById("cmbTypeRight"),type.substring(type.length-2,type.length));
+          comboSet(document.getElementById("cmbStyleRight"),objElementStyle.borderRightStyle.toLowerCase());
+          document.getElementById("txtColorRight").value = objElementStyle.borderRightColor;
+          document.getElementById("txtColorRight").style.backgroundColor = objElementStyle.borderRightColor;
+        }    
+        if(objElementStyle.borderBottom) {
+          document.getElementById("txtBorderBottom").value = parseInt(objElementStyle.borderBottomWidth);
+          var type = objElementStyle.borderBottomWidth;
+          comboSet(document.getElementById("cmbTypeBottom"),type.substring(type.length-2,type.length));
+          comboSet(document.getElementById("cmbStyleBottom"),objElementStyle.borderBottomStyle.toLowerCase());
+          document.getElementById("txtColorBottom").value = objElementStyle.borderBottomColor;
+          document.getElementById("txtColorBottom").style.backgroundColor = objElementStyle.borderBottomColor;
+        }    
+      }
+    }
+  } catch(Error) {
+  }
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="3375">_Border</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <input type="radio" checked value="" ID="optSelect1" style="width: 20px" NAME="optSelect">&nbsp;
+        </td>
+        <td>
+          <div id="3376" class="label">_Full:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtBorder" style="width: 20px">&nbsp;
+        </td>
+        <td>
+          <select id="cmbType">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+        <td>
+          <select id="cmbStyle">
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="double">Double</option>
+            <option value="groove">Groove</option>
+            <option value="inset">Inset</option>
+            <option value="outset">Outset</option>
+            <option value="ridge">Ridge</option>
+            <option selected value="solid">Solid</option>
+          </select>
+        </td>
+        <td>
+          <input type="text" ID="txtColor" style="width:50px">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColor('txtColor')">
+        </td>
+      </tr>
+      <tr>
+        <td style="height:5px"></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" value="" ID="optSelect2" style="width: 20px" NAME="optSelect">&nbsp;
+        </td>
+        <td>
+          <div id="4002" class="label">_Left:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtBorderLeft" style="width: 20px" NAME="Text2">&nbsp;
+        </td>
+        <td>
+          <select id="cmbTypeLeft">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+        <td>
+          <select id="cmbStyleLeft">
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="double">Double</option>
+            <option value="groove">Groove</option>
+            <option value="inset">Inset</option>
+            <option value="outset">Outset</option>
+            <option value="ridge">Ridge</option>
+            <option selected value="solid">Solid</option>
+          </select>
+        </td>
+        <td>
+          <input type="text" value="" ID="txtColorLeft" style="width:50px">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColor('txtColorLeft')">
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <div id="4003" class="label">_Top:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtBorderTop" style="width: 20px">&nbsp;
+        </td>
+        <td>
+          <select id="cmbTypeTop">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+        <td>
+          <select id="cmbStyleTop">
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="double">Double</option>
+            <option value="groove">Groove</option>
+            <option value="inset">Inset</option>
+            <option value="outset">Outset</option>
+            <option value="ridge">Ridge</option>
+            <option selected value="solid">Solid</option>
+          </select>
+        </td>
+        <td>
+          <input type="text" value="" ID="txtColorTop" style="width:50px">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColor('txtColorTop')">
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <div id="4005" class="label">_Right:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtBorderRight" style="width: 20px">&nbsp;
+        </td>
+        <td>
+          <select id="cmbTypeRight">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+        <td>
+          <select id="cmbStyleRight">
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="double">Double</option>
+            <option value="groove">Groove</option>
+            <option value="inset">Inset</option>
+            <option value="outset">Outset</option>
+            <option value="ridge">Ridge</option>
+            <option selected value="solid">Solid</option>
+          </select>
+        </td>
+        <td>
+          <input type="text" value="" ID="txtColorRight" style="width:50px">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColor('txtColorRight')"
+            ID="Button2" NAME="Button2">
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <div id="4004" class="label">_Bottom:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtBorderBottom" style="width: 20px">&nbsp;
+        </td>
+        <td>
+          <select id="cmbTypeBottom">
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+        <td>
+          <select id="cmbStyleBottom">
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="double">Double</option>
+            <option value="groove">Groove</option>
+            <option value="inset">Inset</option>
+            <option value="outset">Outset</option>
+            <option value="ridge">Ridge</option>
+            <option selected value="solid">Solid</option>
+          </select>
+        </td>
+        <td>
+          <input type="text" value="" ID="txtColorBottom" style="width:50px">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColor('txtColorBottom')">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

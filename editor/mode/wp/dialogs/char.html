@@ -1,0 +1,445 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <script language="javascript" src="../../../include/listbox.js"></script>
+    <SCRIPT>
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var lb = null;
+
+function updateColor()
+{
+  showPreview();
+}
+
+function showPreview() 
+{
+  var objPreview = document.getElementById("preview").style;
+  setAttributes(objPreview);
+}
+
+function onListItemClick(item)
+{
+  showPreview();
+}
+
+function showBorder(obj)
+{
+  lb = new ListBox();
+  
+  lb.onClick = "onListItemClick";
+  
+  var none = new ListItem('<div style="width:100%; height:5px; ">None</div>', '', 'none', true);
+  lb.add(none);
+
+  var dotted = new ListItem('<div style="font-size:1px; width:100%; height:3px; border-bottom:dotted 2px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', 'dotted', '2px');
+  lb.add(dotted);
+
+  var solid = new ListItem('<div style="font-size:1px; width:100%;  height:1px; border-bottom:solid 1px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', 'solid', '2px');
+  lb.add(solid);
+  var dashed = new ListItem('<div style="font-size:1px; width:100%;  height:1px; border-bottom:dashed 1px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', 'dashed', '2px');
+  lb.add(dashed);
+  var double1 = new ListItem('<div style="font-size:1px; width:100%;  height:3px; border-bottom:double 3px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', 'double', '3px');
+  lb.add(double1);
+
+  var temp = lb.create();
+  
+  return temp;
+
+}
+
+function setAttributes(obj)
+{
+  try {
+  
+    //font style and weight
+    if(document.getElementById("cmbFontType").value != "standard") {    
+      if (document.getElementById("cmbFontType").value.indexOf("bold") >= 0) {
+        obj.fontWeight = "bold";
+      } else {
+        removeAttribute(obj, "fontWeight");
+      } 
+      if (document.getElementById("cmbFontType").value.indexOf("italic") >= 0) {
+        obj.fontStyle = "italic";
+      } else {
+        removeAttribute(obj, "fontStyle");
+      }
+    } else {
+      removeAttribute(obj, "fontStyle");
+      removeAttribute(obj, "fontWeight");
+    }
+
+    // font size
+    if(document.getElementById("cmbFontSize").value != "") {
+      obj.fontSize = document.getElementById("cmbFontSize").value + params[32];
+    } else {
+      removeAttribute (obj, "fontSize");
+    }
+    
+    // font family
+    if(document.getElementById("cmbFont").value != "") {
+      obj.fontFamily = document.getElementById("cmbFont").value;
+    } else {
+      removeAttribute (obj, "fontFamily");
+    }
+  
+    // font color
+    if(document.getElementById("txtColor").value != "") {
+      obj.color = document.getElementById("txtColor").value;
+    } else {
+      removeAttribute (obj, "color");
+    }    
+
+    // font back color
+    if(document.getElementById("txtBackColor").value != "") {
+      obj.backgroundColor = document.getElementById("txtBackColor").value;
+    } else {
+      removeAttribute (obj, "backgroundColor");
+    }    
+
+    //text decoration
+    var text = "";
+    if(document.getElementById("chkUnderline").checked)
+      text = text + "underline ";
+    if(document.getElementById("chkStrike").checked)
+      text = text + "line-through ";
+    if(document.getElementById("chkOverline").checked)
+      text = text + "overline ";
+    if(document.getElementById("chkBlink").checked)
+      text = text + "blink ";
+
+    if (text.length > 0)
+      obj.textDecoration = text;
+    else
+      removeAttribute(obj, "textDecoration");   
+      
+    // font caps
+    if(document.getElementById("chkCaps").checked) {
+      obj.fontVariant = "small-caps";
+    } else {
+      removeAttribute (obj, "fontVariant");
+    }
+    
+    //border bottom / underline
+    if (lb.selectedItem != null) {
+      if (lb.selectedItem.value != "none") {
+        obj.borderBottomStyle = lb.selectedItem.value;
+        obj.borderBottomWidth = lb.selectedItem.tag;
+        if (document.getElementById("borderColor").style.backgroundColor != "")
+          obj.borderBottomColor = document.getElementById("borderColor").style.backgroundColor;
+        else
+          obj.borderBottomColor = "#000000";
+      } else {
+        removeAttribute (obj, "borderBottomStyle");
+        removeAttribute (obj, "borderBottomWidth");
+        removeAttribute (obj, "borderBottomColor");
+      }
+    }
+  } catch (Error) {
+  }
+}
+
+
+function save()
+{
+  try {
+    var changed = false;
+
+	  var sel = new params[11].Selection(params[4]);
+    if(sel.type == "NONE") {
+      var activeObject = sel.getActiveObject("p");
+      if(activeObject) {
+        setAttributes(activeObject);
+        changed = true;
+      }
+    }        
+    if(sel.type == "TEXT") {
+      var selectedObjects = sel.prepareSelection();
+      for(var i=0;i<selectedObjects.length;i++) {
+        var curObject = selectedObjects[i];
+        if(curObject.tagName.toLowerCase() == "span") {
+          setAttributes(curObject.style);
+        }
+      }
+      
+      changed = true;
+    }
+       
+    if(changed) {
+      params[11].__editOnChanged(true);
+    }
+    
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in input page: " + Error);
+  }
+}
+
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+    // set language strings
+    setStrings();
+
+    document.getElementById("border").innerHTML = showBorder(null);    
+
+    comboSet(document.getElementById("cmbFont"),"");
+    comboSet(document.getElementById("cmbFontSize"),"");
+    comboSet(document.getElementById("cmbFontType"),"standard");
+
+	  var sel = new params[11].Selection(params[4]);
+
+    var activeObject = null;
+    // we have no selection
+    if(sel.type == "NONE") {
+      // search for span tag
+      activeObject = sel.getActiveObject("span");
+    }
+    // we have no active object
+    if(!activeObject) {
+      // search in selection for spans
+      var aObjects = sel.getSelectedObjects(true,"span");
+      // if we have 1
+      if(aObjects.length == 1)
+        activeObject = aObjects[0];
+    }
+    if(activeObject) {
+      var objElementStyle = activeObject.style;
+      // set font
+      if(objElementStyle.fontFamily) {
+        comboSet(document.getElementById("cmbFont"),objElementStyle.fontFamily.toUpperCase());
+      } else {
+        var font = params[11].editGetCurrentStyle(activeObject,"fontFamily","font-family");
+        if(font)
+          comboSet(document.getElementById("cmbFont"),font.toUpperCase());
+      }
+
+      // set font size
+      if(objElementStyle.fontSize) {
+        comboSet(document.getElementById("cmbFontSize"),parseInt(objElementStyle.fontSize));
+      } else {
+        var fontSize = params[11].editGetCurrentStyle(activeObject,"fontSize","font-size");
+        if(fontSize)
+          comboSet(document.getElementById("cmbFontSize"),parseInt(fontSize));
+      }
+                     
+
+      // set font weight and style
+      if (objElementStyle.fontWeight == "bold")
+        var bold = true;
+      if (objElementStyle.fontStyle == "italic")
+        var italic = true;
+      
+      if (bold == true) {
+        if (italic == true) {
+          comboSet(document.getElementById("cmbFontType"),"bolditalic");
+        } else {
+          comboSet(document.getElementById("cmbFontType"),"bold");
+        }
+      } else if (italic == true) {
+        comboSet(document.getElementById("cmbFontType"),"italic");
+      } else {
+        comboSet(document.getElementById("cmbFontType"),"standard");
+      }
+      
+      // set font color
+      if(objElementStyle.color) {
+        document.getElementById("txtColor").value = objElementStyle.color;
+        document.getElementById("txtColor").style.backgroundColor = objElementStyle.color;
+      } 
+      // set font back color
+      if(objElementStyle.backgroundColor) {
+        document.getElementById("txtBackColor").value = objElementStyle.backgroundColor;
+        document.getElementById("txtBackColor").style.backgroundColor = objElementStyle.backgroundColor;
+      } 
+      
+      //set border
+      document.getElementById("borderColor").style.backgroundColor = objElementStyle.borderBottomColor;
+      document.getElementById("borderColor").value = objElementStyle.borderBottomColor;
+      
+      document.getElementById("chkUnderline").checked = (objElementStyle.textDecoration.indexOf("underline") >= 0) ? true:false;
+      document.getElementById("chkStrike").checked = (objElementStyle.textDecoration.indexOf("line-through") >= 0) ? true:false;
+      document.getElementById("chkOverline").checked = (objElementStyle.textDecoration.indexOf("overline") >= 0) ? true:false;
+      document.getElementById("chkBlink").checked = (objElementStyle.textDecoration.indexOf("blink") >= 0) ? true:false;
+      document.getElementById("chkCaps").checked = (objElementStyle.fontVariant == "small-caps") ? true:false;    
+
+      //set borderstyle
+      lb.selectItem(objElementStyle.borderBottomStyle);
+    }      
+        
+    //set preview text
+    var text = sel.getSelectedText();
+    if (text.length > 10) { 
+      text = text.slice(0,10) + "...";
+    } else if (text.length == 0) {
+      text = "Sample Text"
+    }
+    document.getElementById("preview").innerText = text;
+    document.getElementById("lblBorderColor").title = getLanguageString("",4039);
+
+    showPreview();
+
+  } catch(Error) {
+    if(params[31])
+      alert("An error occured in p.html: " + Error);
+  }
+} 
+
+
+
+ 
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="4024">_Font</span>
+    </legend>
+    <table cellspacing="0" cellpadding="3" border="0" width="1%">
+      <tr>
+        <td width="1%">
+          <span id="4025" class="label">_Family:</span><br />
+          <select id="cmbFont" language="javascript" size="5" style="width: 130px" onchange="showPreview()">
+            <option value="">-</option>
+            <option value="ARIAL">Arial</option>
+            <option value="ARIAL BLACK">Arial Black</option>
+            <option value="COURIER">Courier</option>
+            <option value="COURIER NEW">Courier New</option>
+            <option value="IMPACT">Impact</option>
+            <option value="LUCIDA CONSOLE">Lucida Console</option>
+            <option value="TAHOMA">Tahoma</option>
+            <option value="TIMES NEW ROMAN">Times New Roman</option>
+            <option value="VERDANA">Verdana</option>
+          </select>
+        </td>
+        <td><div id="space1" style="width:10px;">&nbsp;</div>
+        </td>
+        <td width="1%">
+          <span id="4026" class="label">_Type:</span><br />
+          <select id="cmbFontType" language="javascript" size="5" style="width: 80px" onchange="showPreview()">
+            <option value="standard"><span id="" class="label">Standard</span></option>
+            <option value="italic"><span id="Span1" class="label">Italic</span></option>
+            <option value="bold"><span id="" class="label">Bold</span></option>
+            <option value="bolditalic"><span id="Span2" class="label">Bold Italic</span></option>
+          </select>
+        </td>
+        <td><div id="space2" style="width:10px;">&nbsp;</div>
+        </td>
+        <td width="1%">
+          <span id="4027" class="label">_Size:</span><br />
+          <select id="cmbFontSize" size="5" style="width: 80px" onchange="showPreview()">
+            <option value="">-</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="22">22</option>
+            <option value="24">24</option>
+            <option value="26">26</option>
+            <option value="28">28</option>
+            <option value="30">30</option>
+            <option value="36">36</option>
+            <option value="48">48</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  
+  <fieldset>
+    <legend class="head">
+      <span id="7019">_Color</span>
+    </legend>
+    <table cellspacing="0" cellpadding="3" border="0" width="1%">
+      <tr>
+        <td colspan="5"><span id="4028" class="label">_Color:</span><br />
+          <input type="text" value="" ID="txtColor" style="width:108px" NAME="txtColor">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColorWp('txtColor'); showPreview();" ID="Button1" NAME="Button1">
+        </td>
+        <td style="padding-left:20px" colspan="5"><span id="7018" class="label">_Backcolor:</span><br />
+          <input type="text" value="" ID="txtBackColor" style="width:108px" NAME="txtBackColor">&nbsp;<input type="button" value="..." style="width:20px" onclick="selectColorWp('txtBackColor'); showPreview();" ID="Button2" NAME="Button1">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  
+  <fieldset>
+    <legend class="head">
+      <span id="7020">_Underline</span>
+    </legend>
+    <table cellspacing="0" cellpadding="3" border="0" width="1%">
+      <tr>
+        <td valign="top" width="1%">
+          <span id="4030" class="label">_borderStyle:</span><br />
+          <div style="width:130px; height:70px; overflow:auto;  border:2px inset" id="border"></div>
+        </td>
+        <td><div id="space3" style="width:10px;">&nbsp;</div>
+        </td>
+        <td valign="top" width="1%">
+          <span id="4031" class="label">_borderColor:</span><br />
+          <table cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td style="padding-right:3px"><div id="borderColor" style="width:108px; border:solid 1px #c0c0c0;height:20px;">&nbsp;</div>
+              </td>
+              <td><input id="lblBorderColor" style="width:20px" type="button" value="..." onclick="selectColorWp('borderColor'); showPreview();"></td>
+            </tr>
+          </table>
+        </td>
+        <td><div id="space12" style="width:10px;">&nbsp;</div>
+        </td>
+        <td valign="top">
+          <span id="space13">&nbsp;</span><br />
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4032">_effects</span>
+    </legend>
+    <table cellspacing="0" cellpadding="3" border="0" width="100%">
+      <tr>
+        <td valign="top" style="width: 33%" nowrap="nowrap">
+          <input type="checkbox" ID="chkOverline" onclick="showPreview()"><span id="4033" class="label">_Overline</span><br />
+          <input type="checkbox" ID="chkUnderline" onclick="showPreview()"><span id="4034" class="label">_Underline</span><br />
+        </td>
+        <td valign="top" style="width: 33%" nowrap="nowrap">
+          <input type="checkbox" ID="chkCaps" onclick="showPreview()"><span id="4035" class="label">_Caps</span><br />
+          <input type="checkbox" ID="chkBlink" onclick="showPreview()"><span id="4036" class="label">_Blink</span>
+        </td>
+        <td valign="top" style="width: 33%" nowrap="nowrap">
+          <input type="checkbox" ID="chkStrike" onclick="showPreview()"><span id="4037" class="label">_Strike through</span>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4038">_Preview</span>
+    </legend>
+    <div id="space5" style="width: 100%; height: 40px; background-color:White; border:solid 1px #000000; overflow:hidden;"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td width="50%">&nbsp;</td>
+          <td width="1%"><div id="preview">Text</div>
+          </td>
+          <td width="50%">&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+  </fieldset>
+</BODY>

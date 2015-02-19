@@ -1,0 +1,19 @@
+<% if (!WebSite.isThisPageInList(request, "register,delivery,confirm,paysecure,detail") && !userSession.isHomePage()) { %>
+<!-- 
+<div id="currency" class="asidebox">
+	<h2>Currency</h2>
+	
+	<%
+		int currentCurrencyId = userSession.getCurrencyId();
+	%>
+
+	<form name="currencyform" action="" method="post">
+		<select class="form-input" name="currid" <%=(userSession.isAllowEditCurrency()?"onchange='currencyform.submit();'":"disabled")%> >
+			<%=website.getCurrencyList(currentCurrencyId)%>
+		</select>
+		<%=co.simplypos.model.utils.helpers.HTMLHelper.getRequestParamsAsFormFields(request)%>
+	</form>
+</div>
+ -->
+<% } %>
+<!--  end of leftmargin030.html -->

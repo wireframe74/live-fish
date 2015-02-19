@@ -1,0 +1,11 @@
+<!-- start of leftmargin080.html -->
+<% if (!WebSite.isThisPageInList(request, "register,delivery,confirm,paysecure,detail") && !userSession.isHomePage()) { %>
+<div id="asidetopselling" class="asidebox">
+	
+	<h2>Top Selling Items</h2>		
+
+    <%=co.simplypos.model.website.HTMLComponents2.getTopSellersHTML(website,5,40,"topselling_text","class2")%>
+	
+</div>
+<% } %>
+<!-- end of leftmargin080.html -->

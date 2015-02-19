@@ -1,0 +1,60 @@
+Fri Apr 17 10:09:43 BST 2009 w3c_TG upgrade started
+ 
+Backup.....(/home/webdesig/webapps/Upgrde_auto_backup_25997)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files...........................................................DONE!
+meta folder LIVES !!!
+edit css.....toadd_20070601.css ADDED.....toadd_20070821.css NOT ADDED ADD MANUALLY.....toadd_20070921.css ADDED.....toadd_20071026.css ADDED.....toadd_20080201.css ADDED.....toadd_20080627.css ADDED.....toadd_20090316.css ADDED...DONE!
+set ownership and permissions.......DONE!
+version exists!
+Complete!!
+Sat Sep  5 12:32:55 BST 2009 basewebsite upgrade started
+ 
+Backup.....(/home/webdesig/webapps/Upgrde_auto_backup_10796)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files........................................................DONE!
+meta folder LIVES !!!
+edit css.....toadd_20070601.css ADDED.....toadd_20070821.css NOT ADDED ADD MANUALLY.....toadd_20070921.css ADDED.....toadd_20071026.css ADDED.....toadd_20080201.css ADDED.....toadd_20080627.css ADDED.....toadd_20090316.css ADDED...DONE!
+set ownership and permissions.......DONE!
+version exists!
+Complete!!
+Tue Dec  1 15:28:38 GMT 2009 basewebsite upgrade started
+ 
+Backup.....(/home/webdesig/webapps/Upgrde_auto_backup_18102)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files........................................................DONE!
+meta folder LIVES !!!
+edit css.....toadd_20091119.css NOT ADDED ADD MANUALLY...DONE!
+set ownership and permissions.......DONE!
+VERSION FILE NOT ADDED DO MANUALY!
+Complete!!
+Fri Mar 26 09:28:44 GMT 2010 basewebsite upgrade started
+ 
+Backup.....(/home/webdesig/webapps/Upgrde_auto_backup_22640)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files..............................................................DONE!
+meta folder LIVES !!!
+edit css.toadd_*.* already added!....DONE!
+set ownership and permissions.......DONE!
+VERSION FILE NOT ADDED DO MANUALY!
+Complete!!
+Mon Jun 28 15:03:44 BST 2010 basewebsite upgrade started
+ 
+Backup.....(/home/webdesig/webapps/Upgrde_auto_backup_26579)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files.............................................................DONE!
+meta folder LIVES !!!
+edit css.....toadd_*.* NOT ADDED ADD MANUALLY...DONE!
+set ownership and permissions.......DONE!
+VERSION FILE NOT ADDED DO MANUALY!
+Complete!!

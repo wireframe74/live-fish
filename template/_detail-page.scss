@@ -1,0 +1,522 @@
+#wrapper > .container >  .article.full,
+.article.full {
+	width: 1000px;
+}
+
+
+
+.prodPgRight {
+	vertical-align: top;
+}
+
+#webmngmntareainner, #accountbuttons, 
+#myaccount ul.contentaddressform, 
+#myaccount ul.contentaccountform, 
+#salesBlock, #salesWrap .salesMessage a, 
+#refinefurther, #refinecurrent, .asidebox, 
+#quickshop, form.contact, 
+#registration ul.contentform, 
+#registration ul.contentaddressform, 
+#registration ul.contentaccountform, 
+#addressupdatecontent div.checkoutcontainer > form, 
+li.promocodes ul, li.vouchercode ul, 
+div.component_stockdetail .detailInfo, 
+#recentlyviewedbody .stockthumbFormat3, 
+div.component_stockdetail .productimageholder#imagescontainer, 
+#asidetopselling li a.class2, 
+#linkedproductswrapper .stocklistingbody, #tabsholder .tabBorder, #asidebrowse, 
+ul.layoutModeThumb ul.groupthumbwrapper, 
+.catBanHold, 
+.stocklisting ul.layoutModeList ul.groupthumbwrapper,
+ .miniBasket div#basketcontenttable li.basketitem a:link,
+ .basketV2 #basketheader,
+ .basket ul.majorbasketsubtotal.labelpairleft,
+ ul.majorbasketdeliverytotal.labelpairleft,
+ ul.majorbaskettotal.labelpairleft,
+ .basketExtrasHolder, {
+
+background: $grey;
+}
+.basket ul.majorbasketsubtotal,
+ul.majorbasketdeliverytotal,
+ul.majorbaskettotal{
+	background:$med-grey;
+	color:#fff;
+}
+
+ul.productsLayoutModeThumb div.stockthumb,
+div.component_stockdetail .productimageholder#imagescontainer,
+div.component_stockdetail .detailInfo,
+#tabsholder .tabBorder,
+#recentlyviewedbody .stockthumbFormat3
+{
+	background:#fff;
+}
+
+
+div.component_stockdetail .productimageholder#imagescontainer  {
+	float:left;
+	margin-right:0;
+}
+
+.detail .navPage.blocklistright li a {
+line-height: 18px;
+}
+
+a.buttonaddtobasket span {
+@extend %primary-font;
+text-transform: uppercase;
+line-height: 16px;
+font-size: 14px;
+display:inline;
+}
+
+#tabcurrent {
+
+-moz-border-radius-topright: 0;
+-webkit-border-top-right-radius: 0;
+-moz-border-radius-topleft: 0;
+-webkit-border-top-left-radius: 0;
+
+}
+
+ul.tabs li .tab,
+
+ul.tabs li .tab,
+
+ul.tabs li .tab#tabcurrent {
+border: none;
+background-color: transparent;
+font-weight: bold;
+height: 30px;
+border:1px solid $grey;
+border-bottom: 1px solid #fff;
+}
+
+
+ul.tabs li .tab#tabcurrent  {
+	background-color: #FFF;
+}
+
+ul.tabs {
+height: 32px;
+}
+
+#tabsholder .tab_container {
+	padding:0;
+}
+
+
+
+#component_stockdetail_recentlyviewed h2 {
+border-bottom: none;
+font-weight: normal;
+padding-bottom: 0;
+padding-top:20px;
+@extend %primary-font;
+}
+
+
+
+
+#component_stockdetail_recentlyviewed {
+background:url(../images/border.gif) top left repeat-x;	
+margin-top: 30px;
+width: 100%;
+float: left;
+}
+
+
+ul.navPage li {
+margin: 0 0 10px 10px;
+}
+
+
+a.buttonaddtobasket:hover
+
+{
+	background-image: none;
+	background: darken($primary-color, 10%);
+}
+
+
+.stockthumbFormat4 a.catpageaddtobasketlistlayout,
+a.buttonaddtobasket  {
+	background: $primary-color;
+	@extend %primary-font;
+	text-transform: uppercase;
+	line-height: 30px;
+	height:30px;
+	padding:0 0 0 0;
+
+	&:hover {
+	background: darken($primary-color, 10%);
+
+	}
+}
+
+	// VIEW BASKET STYLES
+
+	.basket div.listtable ul.basketline li.basketdescription {
+	width: 226px;
+	padding: 0 10px;
+	}
+
+	.promocodes ul li.promocodebutton a,
+	.vouchercode ul li.vouchercodebutton a {
+	text-transform: none;
+	}
+
+	#basketheader li {
+	text-transform: uppercase;
+	padding: 7px 4px;
+	}
+
+	.promocodes ul li.promocodebutton, .vouchercode ul li.vouchercodebutton {
+ 	text-align: left;
+	}
+.detailInfo h1 {
+color:$dark-grey;
+font-weight: normal;
+font-size:24px;
+@extend %primary-font;
+}
+
+.productprice strong{
+	font-size: 1.8em;
+	color:$primary-color;
+}
+
+
+
+
+
+// FORM LOGGED IN STYLES
+
+
+.inputitem,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	border:none!IMPORTANT;
+}
+
+.inputitem_productqty[type="text"] {
+	border:1px solid #ccc!important;
+}
+
+#addressupdatecontent div.checkoutcontainer input, 
+#addressupdatecontent div.checkoutcontainer select, 
+#addressupdatecontent div.checkoutcontainer textarea,
+#addressupdatecontent div.checkoutcontainer form[name="addresslookup"] input {
+	margin-left:0;
+	width: 100%;
+}
+
+
+
+	ul#accountdob input {
+		border:none;
+	}
+
+	#registration input.inputitem,
+	 #registration select.inputitem,
+	 #registration ul.contentform input,
+	 #registration ul.contentform input[type="password"],
+	 #myaccountaddressdetails input.inputitem, 
+	 #myaccountaddressdetails select.inputitem, 
+	 #myaccountaccountdetails select  {
+	width: 100%;
+	border:none;
+	margin-left: 0;
+	border-radius:none;
+	}
+	#registerpassword {
+	margin: 10px 0 10px;
+	float: left;
+	}
+
+	 #registration ul.contentaddressform,
+	  #registration ul.contentform,
+	   #registration ul.contentaccountform,
+	   #myaccount ul.contentaddressform,
+	   #accountbuttons,
+	   #myaccount ul.contentaccountform,
+	   div#voucherandpromo ul.componentFill1,
+	   .delivery  {
+		background: $grey;
+		border-radius:8px;
+ }
+
+ .delivery  {
+ 	padding: 8px;
+ 	overflow: hidden;
+
+	 ul.labelpairleft  {
+	background-color: none;
+	border: none;
+	margin-top: 2px;
+	padding: 4px;
+	font-size: 12px;
+	margin-bottom: 4px;
+	margin-left: 0;
+	width: 100%;
+	
+	color:#fff;
+	}
+ }
+
+
+.grey-btn,
+.detail .navPage.blocklistright li  a.grey-btn{
+	background-color: $med-grey;
+}
+ #basketheader {
+	background-color: none;
+	border: none;
+	margin-top: 2px;
+	padding: 4px;
+	font-size: 12px;
+	margin-bottom: 4px;
+	margin-left: 0;
+	width: 100%;
+	background: #866F8B;
+	color:#fff;
+	}
+
+.navPage .buttoncheckout {
+	float: right;
+	margin-left: 10px;
+}
+
+// ul.navPage li.buttonbacktoshop a {
+// 	margin-right: 10px;
+// }
+
+.buttoncheckout + li.buttonbacktoshop a {
+	margin-right: 10px
+}
+
+#wrapper #returning ul li#registerloginbutton {
+margin-top: -20px;
+}
+
+
+	#registration ul.contentform input {
+	width: 100%;
+	margin: 10px 0 10px 0;
+	border-radius: none;
+	border: none;
+	padding: 5px;
+	height: 30px;
+	}
+
+	#registration input.inputitem, #registration select.inputitem {
+	border: none;
+	margin: 10px 0 10px 0;
+	}
+
+	ul.navPage li a, ul.navPage li a:link {
+	width: auto;
+	line-height: 1.6em;
+	}
+
+	
+.basket ul.navPage li, 
+.basket ul.navPage li:hover {
+width: auto;
+}
+
+.basket ul.navPage li.buttoncheckout a {
+height: 30px;
+padding-top: 0;
+font-size: 12px;
+line-height: 30px;
+float: right;
+}
+
+.basket h1, 
+.basket h2 {
+ margin: 0 0 10px;
+background: none;
+padding: 0 0 10px;
+}
+
+.promocodes li,
+.vouchercode li {
+	margin: 5px 0
+}
+
+div.pagebottomnavextra {
+padding-top: 54px;
+}
+
+
+// LAYOUT LIST layoutModeList
+// ul.productsLayoutModeList {
+// 	display: table;
+// 	width:100%;
+// }
+
+
+ 
+// ul.productsLayoutModeList li ul.stockthumbwrapper li.productThumbImage {
+// display: table-cell;
+// vertical-align: middle;
+// float: none;
+// }
+
+ul.productsLayoutModeList li ul.stockthumbwrapper li.productThumbName {
+margin: 10px 0 0 5px;
+}
+
+ ul.productsLayoutModeList li ul.stockthumbwrapper li.productThumbImage {
+margin: 10px 0 0 10px;
+}
+
+
+
+ul.productsLayoutModeList li.stockThumb {
+border-bottom: none;
+ }
+ul.navPage li.buttonbacktoshop  a   {
+	background: $med-grey;
+}
+
+ // CHECKOUT PAGE 
+
+ #registration ul.contentform, 
+ #registration ul.contentaddressform, 
+ #registration ul.contentaccountform, 
+ #myaccount ul.contentaddressform, 
+ #myaccount ul.contentaccountform, 
+ div.changepwd, .checkoutcontainer form {
+background-color: transparent;
+border: none;
+padding: 0;
+float: left;
+margin-top:10px;
+}
+
+.checkoutcontainer form input, 
+#adddeliveryaddress input {
+width: 100%;
+}
+
+ul.majorbasketsubtotal li,
+ul.majorbasketdeliverytotal  li,
+ul.majorbaskettotal  li {
+	color:$dark-grey;
+	font-weight: bold
+	
+	}
+.delivery {
+
+	ul.labelpairleft li {
+	color:$dark-grey;
+	width: 100%;
+	}
+
+	 form {
+			input[type="text"],
+			 {
+			 	width: 100%;
+			 	height: 30px;
+			 	line-height: 30px;
+
+			 }
+
+	 	} 
+}
+
+#adddeliveryaddress input, 
+#adddeliveryaddress textarea {
+border:none;
+margin-right: 0;
+margin-left: 0;
+padding: 3px;
+width: 100%;
+}
+
+#addressupdatecontent div.checkoutcontainer > form {
+	background: none;
+}
+#wrapper {
+		 
+		 input[type="submit"].inputBtn {
+		background:$primary-color!important;
+				&:hover {
+				background:darken($primary-color, 10%);	
+				}
+		}
+
+
+		form.contact input,
+		 form.contact textarea,
+		 #div_tellafriend input,
+		  #div_tellafriend textarea,
+		 #div_giftwrapoptions textarea ,
+		 #quickpay input,
+		  #quickpay textarea,
+		   form.contact input,
+		   form.contact textarea,
+		   #div_tellafriend input,
+		    #div_tellafriend textarea,
+		   #registration ul.contentform input,
+		   #registration ul.contentform textarea,
+		   #quickpay input,  #quickpay textarea,
+		    ul#customerdetails input,
+		    #returning input,
+		    .salesMessage,
+		    #registration ul ul li input,
+		     #myaccountaddressdetails input,
+		     #myaccountaddressdetails textarea,
+		      #myaccountaccountdetails input,
+		      #myaccountaccountdetails textarea,
+		      #addressupdatecontent div.checkoutcontainer input,
+		      #addressupdatecontent div.checkoutcontainer textarea {
+		
+			border-radius:none!important;
+			-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+
+			background:$grey;
+
+		}
+}
+
+
+#myaccount ul.contentaccountform ul.labelpairleft, 
+#myaccount ul.contentaddressform ul.labelpairleft {
+margin-bottom: 10px;
+}
+
+#addressupdatecontent div.checkoutcontainer textarea {
+width: 100%;
+border: none;
+max-width: none;
+}	
+
+.label + .value {
+	margin-top: 5px
+}
+
+div#pagevalidation_ajax ul.labelpairleft .validationtext {
+width: 90%;
+}
+
+#returning ul li#registerloginbutton {
+margin-top: -30px;
+}
+
+
+.productdetailwrap form[name="emailenq"] input[type="text"] {
+background: $grey;
+}
+
+
+#adddeliveryaddress input, 
+#adddeliveryaddress textarea {
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}

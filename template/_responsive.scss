@@ -1,0 +1,49 @@
+.container-fluid {
+	width: 100%;
+	overflow: hidden;
+	}
+
+
+	.container {
+
+	@media only screen and (min-width:250px)  {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	@media only screen and (min-width:800px)  {
+		max-width: 800px;
+	}
+
+	@media only screen and (min-width:1366px)  {
+		max-width: 1040px;
+	}
+
+
+}
+
+
+
+
+	.row {
+	width: 100%;
+	}
+
+
+
+	.col-xs-12 {
+	@media only screen and (min-width:250px) and (max-width:760px) {
+	width: 100%;
+	 }
+}
+
+
+
+.col-md-4 {
+	@media only screen and (min-width:768px) {
+		width: 33.333333333%;
+		float: left;
+
+	 }
+	
+}

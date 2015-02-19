@@ -1,0 +1,26 @@
+<!-- start of drawcontainerheader.html -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td width="100%">
+			<div class="pagetitle"><img src="<%=website.getImagePath("containerheader.gif")%>" alt="" class="containerHeader" /><%=pageTitle%></div>
+<% if (pageTitleImage != null && !pageTitleImage.equals("")) { %>
+		</td>
+		<td align="right">
+			<img src="<%=pageTitleImage%>" alt="" class="noBorder pageTitleImage" />
+<% } %>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+<% if (!pageTitleText .equals("") && !pageTitleText .equals("null")) {   %>
+
+			<div class="fulltext" style="padding-left:14px;">
+				<%=pageTitleText%>
+			</div>
+
+<% } %>
+		</td>
+	</tr>
+</table>
+<!-- end of drawcontainerheader.html -->

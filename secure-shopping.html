@@ -1,0 +1,65 @@
+<h1>Secure shopping</h1>
+
+<% if( website.getPaymentProviders() != null && website.getPaymentProviders().size() >= 1 ){
+		
+	String payProvName = website.getPaymentProviders().toString();
+	
+	if( payProvName.indexOf("Protx") > 0 ){
+		%>
+		<h2>SagePay</h2>
+		<p>When you shop with us, our secure server encrypts all of your personal information, including name, address and credit card information. We use SagePay which are an industry leader in secure internet transactions. SagePay are used by thousands of other UK businesses for transaction security.</p>
+		<p>All transaction information passed between our website and the SagePay Payment System is encrypted using 128-bit SSL certificates. No cardholder information is ever passed unencrypted and all messages from SagePay are signed using MD5 hashing to prevent tampering. You can be completely secure in the knowledge that nothing passed to SagePay can be examined, used or modified by any third parties attempting to gain access to sensitive information.</p>
+		<p>Once on the SagePay system, all sensitive data is secured using the same internationally recognised 256-bit encryption standards used by, among others, the US Government. The encryption keys are held on state-of-the-art, tamper proof systems in the same family as those used to secure VeriSign's Global Root certificate, making them all but impossible to extract. The data they hold is extremely secure and they are regularly audited by the banks and banking authorities to ensure it remains so.</p>
+		<p>SagePay has multiple private links into the banking network that are completely separate from the Internet and which do not cross any publicly accessible networks. Any cardholder information sent to the banks and any authorisation message coming back is secure and cannot be tampered with.</p>
+		<p>No individuals within our company or SagePay are able to decrypt transaction information or cardholder data. Their systems only allow access to our most senior staff and only in extenuating circumstances (such as investigations of Card Fraud by the Police). Your card information is secure even from their own employees because the systems never display the full card numbers, even on administration screens.</p>
+		<%
+	}
+	if( payProvName.indexOf("Worldpay") > 0 ){
+		%>
+		<h2>RBS WorldPay</h2>
+		<p>We use the industry leading internet payment company WorldPay to protect your card details and protect you and us from fraud. For millions of people around the world, WorldPay is the way to pay - trusted and secure. WorldPay payment solutions are trusted by thousands of businesses, big and small. WorldPay provides a secure connection to your card issuer, without itself holding information regarding the goods or services you have ordered. The following outlines the how you can make a payment through the WorldPay Payment Service and how we deal with the transaction.</p>
+		<h2>How does the WorldPay Payment Service work?</h2>
+		<ol>
+			<li>A shopper visits an e-commerce website and selects the items that they would like to buy.</li>
+			<li>The shopper then proceeds to the merchant's checkout with their shopping basket. This generates a summary description of the purchase that is sent to WorldPay for payment processing. This submission is often referred to as the "purchase token".</li>
+			<li>The shopper is redirected to WorldPay's secure server where they are presented with a series of payment pages, enabling them to choose their payment method and enter their payment details.</li>
+			<li>WorldPay records the shopper's payment details against the details submitted in the purchase token to produce a transaction.</li>
+		</ol>
+		<%
+	}
+	if( payProvName.indexOf("HSBC") > 0 ){
+		%>
+		<h2>HSBC</h2>
+		<p>We use HSBC Merchant Services, which is one of the UK's largest card processing providers and is a wholly-owned subsidiary of Global Payments Inc.</p>
+		<p>Global Payments is the sixth largest payment processing company in the world, with headquarters in Atlanta, Georgia USA and offices throughout the world. Global Payments' experience spans more than four decades; in the late 1960's its parent company pioneered electronic payment processing. And, since that time, Global Payments has become a leader in this essential aspect of commerce, combining leading-edge technology with extensive expertise to offer worldwide, world-class transaction processing solutions for every aspect of processing for both traditional and online businesses.</p>
+		<p>This experience is coupled with a programme of investment in technology and systems, which has resulted in some of the best value products and support services in the industry. Global Payments customers are supported by award-winning anti-fraud processes, a service-orientated business ethic and one of the safest, most secure transaction processing systems in the world.</p>
+		<%
+	}
+	if( payProvName.indexOf("PayPal") > 0 ){
+		%>
+		<h2>PayPal</h2>
+		<p>We use the industry leading internet payment company PayPal to protect your card details and protect from fraud. PayPal keep your information safe. We will never actually see your bank or credit card details, they are passed in a highly secure way directly to PayPal for processing. Industry-leading fraud prevention is just one of the reasons PayPal is a safe way to pay online. PayPal uses proprietary technology and constantly innovates to monitor transactions and maintain a secure payment system. To help you keep track of your account activity, PayPal sends an email confirmation of every account transaction. For more information visit <a href="http://www.paypal.co.uk">www.paypal.co.uk</a></p>
+		<%
+	}
+	if( payProvName.indexOf("Demo") > 0 ){
+		%>
+		<h2>Demo</h2>
+		<%
+	}
+	if( payProvName.indexOf("Factory") > 0 ){
+		%>
+		<h2>Factory</h2>
+		<%
+	}
+	if( payProvName.indexOf("HSBCE") > 0 ){
+		%>
+		<h2>HSBCE</h2>
+		<%
+	}
+	if( payProvName.indexOf("OrderOnlyMode") > 0 ){
+		%>
+		<h2>Order Only Mode</h2>
+		<%
+	}
+	
+} %>

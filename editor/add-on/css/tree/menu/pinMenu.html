@@ -1,0 +1,181 @@
+<html>
+<head>
+<link rel='stylesheet' href='design/style/pinMenu.css' type='text/css'>
+<script>
+var __curMenu = null;
+
+function onClick(table, row, design, func)
+{
+  // Libera: DKUBISA (06-28-2005) - give focus back to document
+  parent.editSetFocus();
+  eval("parent." + func + "(" + row + ")");
+}
+
+function onOver(table,row,design) 
+{
+  table.className = 'MenuItemHover' + design;
+  table.cellPadding = 1;
+  document.getElementById(row + '.2').className = 'MenuItemHoverText' + design;
+}
+
+function onOut(table,row,design) 
+{
+  table.className = 'MenuItem' + design;
+  table.cellPadding = 2;
+  document.getElementById(row + '.2').className  = 'MenuItemFont' + design;
+}
+
+// onFocus & onBlur Added to accomodate keyboard accessibility
+function onFocus(oTable, sRowId, sDesign) 
+{
+	try {
+		if(__curMenu.__curMenuItem != null) {
+			// Blur current menu item
+			__curMenu.__curMenuItem.blur();
+		} 
+
+		oTable.className = 'MenuItemHover' + sDesign;
+		oTable.cellPadding = 1;
+		document.getElementById(sRowId + '.2').className = 'MenuItemHoverText' + sDesign;
+		document.getElementById(sRowId + '.2').focus();
+	}	catch (e) {
+		// do nothing
+	}
+}
+
+function onBlur(table,row,design) 
+{
+  table.className = 'MenuItem' + design;
+  table.cellPadding = 2;
+  document.getElementById(row + '.2').className  = 'MenuItemFont' + design;
+}
+
+// Added for keyboard accessibility
+function onKeyDown(oTable, sRowId, sDesign, func) 
+{
+	var menuitem = __curMenu.getItemById(sRowId);
+	var key = window.event.keyCode;
+	
+	switch( key ) {
+		// TAB
+		case 9:
+			var sibling = null;
+			
+			if (window.event.shiftKey) {
+				// go to previous item
+				sibling = menuitem.getPrevSibling();
+			}
+			else {
+				// go to next item
+				sibling = menuitem.getNextSibling();
+			}
+			
+			if (sibling) {
+				
+				// remove style from current item
+				onOut(oTable, sRowId, sDesign);
+
+				// move to new item
+				sibling.focus();
+			
+			}
+		
+			window.event.cancelBubble = true;
+			window.event.returnValue = false;
+			break;
+		
+		// DOWN ARROW
+		case 40:
+			var sibling = menuitem.getNextSibling();
+			if (sibling) {
+				
+				// remove style from current item
+				onOut(oTable, sRowId, sDesign);
+				
+				// move to new item
+				sibling.focus();
+			
+			}
+		
+			window.event.cancelBubble = true;
+			window.event.returnValue = false;
+			break;
+			
+		// UP ARROW
+		case 38:
+			var sibling = menuitem.getPrevSibling();
+			if (sibling) {
+				
+				// remove style from current item
+				onOut(oTable, sRowId, sDesign);
+			
+				// move to new item
+				sibling.focus();
+			
+			}
+		
+			window.event.cancelBubble = true;
+			window.event.returnValue = false;
+			break;
+		
+		// RIGHT ARROW
+		case 39:
+			var sibling = __curMenu.parent.getNextSibling();
+			if (sibling != null) {
+				
+				__curMenu.parent.hideMenu();
+				sibling.showMenu();
+			}
+			window.event.cancelBubble = true;
+			window.event.returnValue = false;
+			break;
+		
+		// LEFT ARROW
+		case 37:
+			var sibling = __curMenu.parent.getPrevSibling();
+			if (sibling != null) {
+				
+				__curMenu.parent.hideMenu();
+				sibling.showMenu();
+			}
+			window.event.cancelBubble = true;
+			window.event.returnValue = false;
+			break;
+		
+		// ENTER
+		case 13:
+			onClick(oTable, sRowId, sDesign, func);
+			
+			window.event.cancelBubble = true;
+			window.event.returnValue = false;
+			break;
+						
+		// ESC
+		case 27:
+			__curMenu.parent.hideMenu();
+			
+			// give focus back to document
+			parent.editSetFocus();
+			
+			window.event.cancelBubble = true;
+			window.event.returnValue = false;
+			break;
+		
+		default:
+			return true;
+	}
+
+	return false;
+}
+
+function onBarFocus() 
+{
+	//alert("bar focus");
+	__curMenu.focus();
+}
+
+</script>
+</head>
+
+<body oncontextmenu="javascript: return false;" style='margin:0;overflow:hidden'>
+</body>

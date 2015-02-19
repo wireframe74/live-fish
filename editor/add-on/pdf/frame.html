@@ -1,0 +1,151 @@
+<HEAD>
+<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+<LINK href="../../design/style/dialog.css" type="text/css" rel="stylesheet">
+<SCRIPT>
+// browser detection
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+var browser = new Browser();
+
+var language = "EN";
+var design = "";
+var mode = "";
+var params = null;
+var tab = null;
+var tabDesign = "";
+
+if(browser.ie) {
+	language            = dialogArguments[0];
+	design              = dialogArguments[1];
+ 	params              = dialogArguments;
+} else {
+	var aParam          = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	design              = aParam[1];
+ 	params              = aParam;
+}
+
+function getLanguageString(lng,id)
+{
+  var aLanguage = params[14];
+  return aLanguage[id];
+}
+
+function tabCreate(objTab,id)
+{
+  var dlgPath = "../add-on/pdf/";
+  
+  tab = objTab;
+  objTab.design      = 1;
+	objTab.orientation = "0";
+	objTab.tabarea     = true;
+	objTab.designmode  = "IMAGE";
+	
+	var item = objTab.createItem();
+	item.text = getLanguageString("",5005);
+	item.title = getLanguageString("",5005);
+	item.tag = "PAGE";
+	item.active = true;
+  item.url = dlgPath + "page.html";
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.text = getLanguageString("",5006);
+	item.title =getLanguageString("",5006);;
+	item.tag = "DOC";
+	item.active = false;
+	item.url = dlgPath + "doc.html";
+	objTab.add(item);
+
+  // professional features
+  if(params[25] == "professional") {
+    // margin
+	  var item = objTab.createItem();
+	  item.text = getLanguageString("",5018);
+	  item.title =getLanguageString("",5018);;
+	  item.tag = "MARGIN";
+	  item.active = false;
+	  item.url = dlgPath + "margin.html";
+	  objTab.add(item);
+    // header/footer
+	  var item = objTab.createItem();
+	  item.text = getLanguageString("",5013);
+	  item.title =getLanguageString("",5013);;
+	  item.tag = "HEADFOOT";
+	  item.active = false;
+	  item.url = dlgPath + "headfoot.html";
+	  objTab.add(item);
+    // misc
+	  var item = objTab.createItem();
+	  item.text = getLanguageString("",5019);
+	  item.title =getLanguageString("",5019);;
+	  item.tag = "MISC";
+	  item.active = false;
+	  item.url = dlgPath + "misc.html";
+	  objTab.add(item);
+  }
+  
+	objTab.create();
+}
+
+function tabEventPageLoaded(item,id)
+{
+  item.getWindow().initDialog(params);
+}
+
+function tabEventTabClick(item)
+{
+  if(item.index == 3)
+    item.call("onTabClick()");
+
+  //tab.focus();
+  window.focus();
+
+}
+
+function save()
+{
+  var items = tab.getItems();
+  for(var i=0;i<items.length;i++) {
+    items[i].call("save()");
+  }
+
+  if(browser.ie)
+    window.returnValue = params;
+  else
+    top.window.opener.editPDFUpdateSettings(params);
+
+  window.close();
+}
+
+function init()
+{
+  document.getElementById("lblOK").value = getLanguageString(language,899);
+  document.getElementById("lblCancel").value = getLanguageString(language,900);
+}
+
+</SCRIPT>
+</HEAD>
+
+
+<body class="bodyframe" onload="init()">
+<table style="height:100%;width:100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td style="height:100%;width:100%"><iframe id="tab" style="height:100%;width:100%"	src="../../tab/pinTab.html?id=tab" frameBorder="0"></iframe></td>
+  </tr>
+  <tr>
+    <td align="right">          
+      <div style="padding-top:5px">
+        <INPUT style="WIDTH: 81px; HEIGHT: 24px" onclick="save()" id="lblOK" type="submit" size="108" value="__OK" NAME="lblOK"> <INPUT id="lblCancel" style="WIDTH: 73px; HEIGHT: 24px" onclick="window.close()" type="button" value="__Cancel" NAME="lblCancel">
+      </div>
+    </td>
+  </tr>
+</table>
+
+</body>

@@ -1,0 +1,637 @@
+<!-- start of components/stocklisting.html -->
+<%
+boolean showHome = false;
+boolean bContinue = true; 
+int paramParentVendorArticleId = paramPid;
+int pageNo = 1;
+int paramNumInSet = 0;
+     
+float price1 = 0;
+float price2 = 0;
+
+String searchString = "";
+String priceDesc = "";
+String tagAction = "";
+
+boolean showFeaturedItemsOnHomePage = website.isShowFeaturedItemsOnHomepage();
+
+if (request.getParameter("id") != null) { 
+    paramParentVendorArticleId = Integer.parseInt(request.getParameter("id"));
+}
+
+if (paramParentVendorArticleId==0) {
+    paramParentVendorArticleId = website.getRootId();
+}
+
+if (request.getParameter("pg") != null) {
+    pageNo = Integer.parseInt(request.getParameter("pg"));
+}
+
+if (request.getParameter("searchStr") != null) {
+    searchString = request.getParameter("searchStr");
+}
+if (request.getParameter("priceDesc") != null) {
+    priceDesc = request.getParameter("priceDesc");
+}
+
+if (request.getParameter("set") != null) {
+    paramNumInSet = Integer.parseInt(request.getParameter("set"));
+}
+if (request.getParameter("price1") != null) {
+    price1 = Float.parseFloat(request.getParameter("price1"));
+}
+if (request.getParameter("price2") != null) {
+    price2 = Float.parseFloat(request.getParameter("price2"));
+}
+
+if (request.getParameter("mnu") != null) {
+    userSession.resetTrail();
+}
+
+if (request.getParameter("tag") != null) {
+    tagAction = request.getParameter("tag");
+}
+
+String params="";
+if (!searchString.equals("")) {
+    params = "searchStr="+searchString+"";
+} else if (price2 > 0) {
+    params = "price1="+price1+"&price2="+price2+"&priceDesc="+priceDesc;
+} else {
+    if (paramParentVendorArticleId > 0) {
+        params = "id="+paramParentVendorArticleId;
+    }
+}
+if (tagAction.equals("qs")) {
+    if (!"".equals(params)) params += "&tag=qs&";
+    params += HTMLComponents.getTagParams(request);
+}
+
+Vector resultSet = null;
+Vector resultSet1 = null;
+
+resultSet1 = articleDetail.getHTMLArticleList(paramParentVendorArticleId, pageNo, searchString, null, false, price1, price2);
+
+ArrayList includeSetInList = null;
+boolean forceArticleSetsFirst = false;
+Vector resultSetAdditional = null;
+if (paramNumInSet > 0) {
+    includeSetInList = new ArrayList();
+    includeSetInList.add(new Integer(paramParentVendorArticleId));
+    forceArticleSetsFirst = true;
+    resultSetAdditional = articleDetail.getHTMLArticleList(paramParentVendorArticleId, pageNo, searchString, includeSetInList, forceArticleSetsFirst);
+    if (resultSetAdditional != null) {
+        resultSet = resultSetAdditional;
+    }
+}
+if (resultSet == null) {
+    resultSet = resultSet1;
+} else {
+    resultSet.addAll(resultSet1);
+}
+if (request.getParameterMap().size() == 0 || (request.getParameterMap().size() == 2 && request.getParameter("btn") != null && request.getParameter("nls") != null)) {
+    if (website.getArticleMenu().getSiteIndexIds().size() > 1) {
+        showHome = true;  // if its not all products (no categories) then set showHome
+    }
+%>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+			<center>
+				<%@include file='../../bannerhome.html' %>
+			</center>
+		</td>
+	</tr>
+</table>
+<%
+}
+
+%>
+<%-- Main containing table --%>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr> <%-- start of first row of main containing table --%>
+		<td>
+<%
+
+	String bannerName = "banner"+request.getParameter("cName")+".html"; 
+	File banner = new File(website.getWebSitePath()+bannerName);
+	if (banner.exists()) {
+	%>
+	<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<center>
+					<jsp:include page="<%=bannerName%>"/>
+				</center>
+			</td>
+		</tr>
+	</table> 
+	</td></tr><tr><td> 
+	<%
+}
+
+if (website.getDefaultWebsiteAccessDomainId() == Customer.WEB_ACCESS_TYPE_NONE) {
+	if (!userSession.isLoggedIn() || userSession.getWebsiteAccessDomainId() == Customer.WEB_ACCESS_TYPE_NONE) {
+		bContinue = false;
+		if (userSession.isLoggedIn()) {
+			userSession.refreshCurrentLogin(); // try a refresh
+			if (userSession.getWebsiteAccessDomainId() == Customer.WEB_ACCESS_TYPE_NONE) {
+%>   
+			<table border="0" width="100%" align="center" cellspacing="0" cellpadding="0">
+				<tr height="100%" >
+					<td width="100%" >
+						<br /><br /><br /><br /><br /><br />
+						<center>Registration pending, please try again later.</center> 
+						<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+					</td>
+				</tr>
+			</table>
+    
+<%
+			} else {
+				bContinue = true;
+			}
+		} else {
+%>
+			<table border="0" width="100%" align="center" cellspacing="0" cellpadding="0">
+				<tr height="100%" >
+					<td width="100%" >
+						<br /><br /><br /><br /><br /><br />
+						<center><%=website.getStockListingLoginMsg()%></center> 
+						<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+					</td>
+				</tr>
+			</table>
+<%
+		}
+	}
+}
+%>
+		</td>
+	</tr> <%-- end of first row of main containing table --%>
+
+	
+<%
+if (bContinue) {
+	if (!showHome) {
+%>
+	<tr> <%-- start of second row of main containing table --%>
+		<td>
+			<table border="0" width="100%" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="left" valign="top">&nbsp;
+<%
+    
+		String trailHTML = userSession.getTrailHTML(request, searchString, price2, priceDesc, pageNo, paramParentVendorArticleId);
+		if (request.getQueryString() != null) { 
+			out.write(""+trailHTML);
+		} 
+%>
+					</td>
+<%
+		if (articleDetail.getNumPages() > 1) {
+%>	        
+					<td align="right">
+    					<table border="0" cellspacing="0" cellpadding="0">
+    						<tr>
+   	        					<td align="right" <%=(pageNo < articleDetail.getNumPages()) ? "colspan=\"2\"" : "" %> class="pagenumber">
+   	        						<%="Page "+pageNo+" of "+articleDetail.getNumPages()%>&nbsp;
+   	        					</td>
+   							</tr>
+   							<tr height="20">
+<%
+			if (pageNo > 1) {
+%>
+								<td width="<%=(pageNo > 1 && pageNo < articleDetail.getNumPages())?"50%":"100%"%>" >
+   									<a href="<%=request.getRequestURI()%>?<%=params%>&amp;pg=<%=(pageNo-1)%>" class="button">
+   										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   									</a>
+   								</td>
+<%
+   			}
+   			if (pageNo < articleDetail.getNumPages()) {
+%>							
+   								<td width="<%=(pageNo > 1 && pageNo < articleDetail.getNumPages())?"50%":"100%"%>" >
+   									<a href="<%=request.getRequestURI()%>?<%=params%>&pg=<%=(pageNo+1)%>" class="button">
+   										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   									</a>
+   								</td>
+<%
+   			}
+%>
+   							</tr>	        
+   	        					        			
+   						</table>
+   					</td>	        
+<%	        
+   	    }
+%>					
+				</tr>
+			</table>
+		</td>
+	</tr> <%-- end of second row of main containing table --%>
+<%
+	}
+	
+%>
+	
+	<tr> <%-- start of fourth row of main containing table --%>
+		<td>
+			<img src="<%=website.getImagePath("spacer.gif")%>" alt="" class="height6 width1" />
+		</td>
+	</tr><%-- end of fourth row of main containing table --%>
+	
+<%
+if (resultSet.size() == 0) {
+%>
+	<tr> <%-- start of fifth row of main containing table --%>
+		<td>
+			<table align="left" width="200" height="120" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="pagetitle" align="left">
+						No articles found.
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr> <%-- end of fifth row of main containing table --%>
+<%
+	} else {
+	    if (!showHome || showCategoriesOnHomePage || showFeaturedItemsOnHomePage)  { 
+			boolean featuredProducts = false;
+			boolean hadGroups = false;
+			for (int typeCount=0;typeCount<2;typeCount++) {
+				if (typeCount == 1) {
+					if (!featuredProducts) {
+						break;
+					}
+				}
+				if (typeCount == 0 && showHome && !showCategoriesOnHomePage) {
+					// do nothing
+					featuredProducts = true;
+					hadGroups = true;
+				} else {
+
+				String parentImageName = null;
+	            Iterator iter = resultSet.iterator();
+	            int counter = 0;
+	            int totalCount = 0;
+	            int numAcross = website.getNumGroupItemsAcross();
+	            if (typeCount == 1) {
+	                numAcross = website.getNumStockItemsAcross();	                
+	            }
+	            while (iter.hasNext()) {
+	                Hashtable row = (Hashtable) iter.next();
+	                int articleType = ((Integer) row.get(ArticleDetail.ARTICLE_TYPE)).intValue();
+	                
+	                if (articleType == Article.ARTICLE_TYPE_CLASSIFICATION) {
+	                    if (typeCount == 0) {
+							if (totalCount==0) {
+							    hadGroups = true;
+							    String pageTitle = "";
+							    String pageTitleText = articleDetail.getFullText(paramParentVendorArticleId);
+							    String pageTitleImage = "";
+							    if (!searchString.equals("") || price2 > 0) {
+							        pageTitleText = "";	
+								}
+							    if (!showHome) {
+							        if (userSession.getTrailList().size() > 0) {
+							            pageTitle += ""+userSession.getTrailList().get(userSession.getTrailList().size()-1);
+						            }
+							        if (pageTitle.indexOf(".") > -1) {
+							            pageTitle = pageTitle.substring(pageTitle.indexOf(".")+1).trim();
+						            }
+						        } else {
+						            pageTitle = categoryTitleText;				
+					            }
+							    
+							    if (!pageTitle.equals("")) {
+%>
+	<tr> <%-- start of sixth row of main containing table --%>
+		<td>
+			<div class="stockcontainer">
+				<table cellspacing="0" align="center" cellpadding="0" border="0" width="99%">
+					<tr>
+						<td width="100%" class="pagetitle" align="left" colspan="100">
+							<%@include file="../drawcontainerheader.html"%>
+						</td>
+					</tr>
+<%
+       							}
+							}
+							
+							if (counter == 0) {
+%>
+					<tr>
+<%
+							}
+							int vendorArticleId = ((Integer)row.get(ArticleDetail.VENDOR_ARTICLE_ID)).intValue();
+%>
+						<td>
+							<%@include file="..\drawgroupthumb.html" %> 
+						</td>
+<%
+						    counter++;
+							totalCount++;
+							
+							if (counter == numAcross) {
+%>
+					</tr>
+<%
+								counter = 0;
+							}
+						}
+	                } else if (articleType == Article.ARTICLE_TYPE_STANDARD_ARTICLE || articleType == Article.ARTICLE_TYPE_CLASSIFICATION_ARTICLE_SET) {
+	                    if (typeCount == 0) {
+	                        featuredProducts = true;
+	                    } else {
+	                        if (totalCount==0) {
+	                            String pageTitle = "";
+	    					    String pageTitleText = articleDetail.getFullText(paramParentVendorArticleId);
+	    					    String pageTitleImage = "";
+	    					    if (!searchString.equals("") || price2 > 0) {
+	   					        	pageTitleText = "";	
+								}
+	    					    if (hadGroups) {
+	    					        hadGroups = false;
+	    					        if (searchString.equals("")) {
+	    					            pageTitle = featuredItemsTitle;
+	    					            pageTitleText = "";
+									} else {
+									    pageTitle = "\""+searchString+"\"";
+									    pageTitleText = "";
+									}
+	   					        } else {
+	   					            if (!showHome) {
+	   					                if (userSession.getTrailList().size() > 0) {
+	   					                    pageTitle += ""+userSession.getTrailList().get(userSession.getTrailList().size()-1);
+										}
+	   					                if (pageTitle.indexOf(".") > -1) {
+	   					                    pageTitle = pageTitle.substring(pageTitle.indexOf(".")+1).trim();
+										}
+									} else {
+									    pageTitle = categoryTitleText;
+									}
+								}
+								if (!pageTitle.equals("")) {
+%>
+	<tr> <%-- start of seventh row of main containing table --%>
+		<td>
+			<div class="stockcontainer">
+				<table cellspacing="0" align="center" cellpadding="0" border="0" width="99%">
+					<tr>
+						<td width="100%" class="pagetitle" colspan="100" align="left">
+							<%@include file="../drawcontainerheader.html"%>
+						</td>
+					</tr>
+<%
+								} 
+
+	                        }
+	                        if (counter == 0) {
+%>
+					<tr valign="top">
+<%	                        
+	                        }
+	                        String shortDescription = ""+row.get(ArticleDetail.SHORT_DESCRIPTION);
+							String fullDescription = ""+row.get(ArticleDetail.FULL_DESCRIPTION);
+							int blobStorageId = ((Integer)row.get(ArticleDetail.BLOB_STORAGE_ID)).intValue();
+							int vendorArticleId = ((Integer)row.get(ArticleDetail.VENDOR_ARTICLE_ID)).intValue();
+							int parentVendorArticleId = ((Integer)row.get(ArticleDetail.PARENT_VENDOR_ARTICLE_ID)).intValue();
+							int vendorArticleClsfnId = ((Integer)row.get(ArticleDetail.VENDOR_ARTICLE_CLSFN_ID)).intValue();
+							int quantity = ((BigDecimal)row.get(ArticleDetail.QUANTITY)).intValue();
+							float unitPrice = ((BigDecimal)row.get(ArticleDetail.PRICE)).floatValue();
+							int orderType = ArticleDetail.ORDER_TYPE_IN_STOCK_ONLY;
+							
+							if (website.isLookForCRtagsInFullText()) {
+								if (userSession.getArticleDetail().getFullText(vendorArticleId).startsWith("<cr")) counter = numAcross - 1; 
+							}
+
+							if (row.get(ArticleDetail.ORDER_TYPE_DOMAIN_ID) != null) orderType = ((Integer)row.get(ArticleDetail.ORDER_TYPE_DOMAIN_ID)).intValue();
+
+							boolean isArticleSet = ((Integer)row.get(ArticleDetail.ARTICLE_TYPE)).intValue() == Article.ARTICLE_TYPE_CLASSIFICATION_ARTICLE_SET;
+							int numInSet = 1;
+							String priceDescriptionPrefix = "";
+							int qtyForDiscountCheck = 1;
+
+							if (isArticleSet) {
+								Triplet countPriceAndQty = articleDetail.getArticleSetContentsCountPriceAndQuantity(vendorArticleId);
+								numInSet = ((Number)countPriceAndQty.get(0)).intValue();
+								quantity = ((Number)countPriceAndQty.get(1)).intValue();
+								unitPrice =((Number)countPriceAndQty.get(2)).floatValue();
+								priceDescriptionPrefix = "Set of "+numInSet+" ";
+								if (paramNumInSet > 0) {
+									priceDescriptionPrefix = "Complete set for ";
+								}
+								qtyForDiscountCheck = numInSet;
+							}
+							float discPrice = website.getArticleMenu().getDiscountPrice(vendorArticleId);
+							
+							if (discPrice <= 0) discPrice = unitPrice;
+
+							String discountSchemeDescString = website.getArticleMenu().getDiscountDescription(vendorArticleId);
+							Connection conn = null;
+							Statement stmt = null;
+							if (shortDescription.length() > 5 && shortDescription.substring(0,5).indexOf(".") > -1) {
+							    shortDescription = shortDescription.substring(shortDescription.indexOf(".")+1).trim();
+							}
+							if (fullDescription.length() > 5 && fullDescription.substring(0,5).indexOf(".") > -1){
+							    fullDescription = fullDescription.substring(fullDescription.substring(0,5).indexOf(".")+1).trim();
+							}
+							String clickLocation = null;
+							if (!isArticleSet || paramNumInSet > 0) {
+								clickLocation = ArticleMenu.getPageName(website, shortDescription, true)+"?pid="+parentVendorArticleId+"&id="+vendorArticleId; 
+								if (paramNumInSet == 0 && website.getOptimisationMode() == WebSite.OPTIMISATION_MODE_COMPILE_SPEED) {
+									clickLocation = website.getArticleMenu().getPageForVendorArticle(vendorArticleId);
+								}
+							} else {
+								clickLocation = "index.jsp?id="+vendorArticleId+"&pg=1&set="+numInSet;
+							}
+							
+							if (website.isShowOrigPriceWithDiscount()) {
+								if (discPrice != unitPrice) {
+									try {
+										conn = website.getConnection();
+										String sql = "select price from vendor_article where vendor_article_id = " + vendorArticleId;
+										stmt = conn.createStatement();
+										ResultSet rs = stmt.executeQuery(sql);
+                                	
+										if (rs.next()) {
+											BigDecimal origPrice = new BigDecimal(rs.getFloat(1)).setScale(2, BigDecimal.ROUND_HALF_EVEN);
+											if (origPrice.floatValue() > unitPrice) {
+												unitPrice = origPrice.floatValue();
+											}
+										}
+									} catch (Exception e) {
+                                		website.writeToLog(e);
+									} finally {
+										if (stmt != null) {
+											try {
+												stmt.close();
+											} catch (Exception e) {
+												website.writeToLog(e);
+											}
+										}
+										if (conn != null) {
+											website.releaseConnection(conn);
+										}
+									}
+								}
+							}
+							if (website.isShowOverrideAsDiscount()) {
+								
+								try {
+									conn = website.getConnection();
+									String sql = "select price from vendor_article where vendor_article_id = " + vendorArticleId;
+									stmt = conn.createStatement();
+									ResultSet rs = stmt.executeQuery(sql);
+									if (rs.next()) {
+										BigDecimal origPrice = new BigDecimal(rs.getFloat(1)).setScale(2, BigDecimal.ROUND_HALF_EVEN);
+										if (discPrice == unitPrice) {
+											if (origPrice.floatValue() > unitPrice) {
+												unitPrice = origPrice.floatValue();
+											}
+										}
+									}
+								} catch (Exception e) {
+									website.writeToLog(e);
+								} finally {
+									if (stmt != null) {
+										try {
+											stmt.close();
+										} catch (Exception e) {
+											website.writeToLog(e);
+										}
+									}
+									if (conn != null) {
+										website.releaseConnection(conn);
+									}
+								}
+							}
+							String abDiscountSchemeDescString = discountSchemeDescString;
+							int abBlobStorageId = blobStorageId;
+							String abClickLocation = clickLocation;
+							Hashtable abRow = row;
+							String abShortDescription = shortDescription;
+							String abPriceDescriptionPrefix = priceDescriptionPrefix;
+							float abUnitPrice = unitPrice;
+							float abDiscPrice = discPrice;
+
+							
+%>
+						<td>
+						<% try { %>
+
+							<%@include file="..\drawstockthumb.html" %> 
+
+						<% } catch (Exception exjdkdj33434kj) {
+							website.writeToLog("stocklisting.html failed to get image for abBlobStorageId: "+abBlobStorageId);
+							out.write("No image available");
+						} %>
+						</td>
+<%
+
+							counter++;
+							totalCount++;
+							if (counter == numAcross) {
+%>
+					</tr>
+<%
+								counter = 0;							    
+							}
+	                    }
+	                }
+				} //end of while loop
+				if (totalCount == 0) out.write("<tr valign=\"top\">");
+				if (counter < numAcross) {
+				    for (int i = counter; i < numAcross; i++) {
+%>
+						<td>&nbsp;</td>
+<%
+				    }
+%>
+					</tr>
+<%
+				}
+				if (totalCount > 0 && ((typeCount == 0 && hadGroups) || (typeCount == 1 && featuredProducts))) {
+%>
+
+				</table>
+			</div>
+		</td>
+	</tr> <%-- end of sixth/seventh row of main containing table --%>
+<%
+
+				}
+				}
+			}
+		}
+	}
+	if (!showHome) {
+%>
+	<tr> <%-- start of eigth row of main containing table --%>
+		<td align="right">
+<% 
+ 
+		if (articleDetail.getNumPages() > 1) {
+%>
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr height="20">
+<%
+			if (pageNo > 1) {
+%>
+					<td width="<%=(pageNo > 1 && pageNo < articleDetail.getNumPages())?"50%":"100%"%>" >
+						<a href="<%=request.getRequestURI()%>?<%=params%>&amp;pg=<%=(pageNo-1)%>" class="button">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</a>
+					</td>
+<%
+			}
+			if (pageNo < articleDetail.getNumPages()) {
+%>
+					<td width="<%=(pageNo > 1 && pageNo < articleDetail.getNumPages())?"50%":"100%"%>" >
+						<a href="<%=request.getRequestURI()%>?<%=params%>&pg=<%=(pageNo+1)%>" class="button">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</a>
+					</td>
+<%
+			}
+%>
+				</tr>	        
+				<tr>
+					<td align="right" <%=(pageNo < articleDetail.getNumPages()) ? "colspan=\"2\"" : "" %> class="pagenumber">
+						<%="Page "+pageNo+" of "+articleDetail.getNumPages()%>&nbsp;
+					</td>
+				</tr>	        			
+			</table>
+<%	        
+	    }
+%>
+		</td>
+	</tr><%-- end of eigth row of main containing table --%>
+<%
+	}
+}
+%>
+</table>
+<%
+if (request.getParameterMap().size() == 0 || (request.getParameterMap().size() == 2 && request.getParameter("btn") != null && request.getParameter("nls") != null)) {
+%>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+			<center>
+				<% 
+				String footerHomeName = "footerhome.html";
+				File footerHome = new File(website.getWebSitePath()+footerHomeName);
+				if (footerHome.exists()) { %>
+					<jsp:include page="<%=footerHomeName%>"/>
+				<% } %>
+			</center>
+		</td>
+	</tr>
+</table>
+<%
+}
+%>
+<!-- end of components/stocklisting.html -->

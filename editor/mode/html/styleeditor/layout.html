@@ -1,0 +1,269 @@
+<HEAD>
+  <title></title>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+
+function save()
+{
+  try {
+    var objElementStyle = params[5].style;
+    var display     = objElementStyle.display;
+    var visibility  = objElementStyle.visibility;
+    var position    = objElementStyle.position;
+    var overflow    = objElementStyle.overflow;
+    var styleFloat  = objElementStyle.styleFloat;
+    var left        = objElementStyle.left;
+    var top         = objElementStyle.top;
+    var changed = false;
+    var win = params[11];
+
+    // set display
+    if(document.getElementById("cmbDisplay").value != "")
+      objElementStyle.display = document.getElementById("cmbDisplay").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("display");
+      else
+        objElementStyle.display = null;
+    }
+    
+    // set visibility
+    if(document.getElementById("cmbVisibility").value != "")
+      objElementStyle.visibility = document.getElementById("cmbVisibility").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("visibility");
+      else
+        objElementStyle.visibility = null;
+    }
+
+    // set position
+    if(document.getElementById("cmbPosition").value != "")
+      objElementStyle.position = document.getElementById("cmbPosition").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("position");
+      else
+        objElementStyle.position = null;
+    }
+
+    // set overflow
+    if(document.getElementById("cmbOverflow").value != "")
+      objElementStyle.overflow = document.getElementById("cmbOverflow").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("overflow");
+      else
+        objElementStyle.overflow = null;
+    }
+
+    // set float
+    if(document.getElementById("cmbFloat").value != "")
+      objElementStyle.styleFloat = document.getElementById("cmbFloat").value;
+    else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("styleFloat");
+      else
+        objElementStyle.styleFloat = null;
+    }
+    
+    if(document.getElementById("txtLeft").value != "") {
+      objElementStyle.left = document.getElementById("txtLeft").value;
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("left");
+      else
+        objElementStyle.left = null;
+    }
+    
+    if(document.getElementById("txtTop").value != "") {
+      objElementStyle.top = document.getElementById("txtTop").value
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("top");
+      else
+        objElementStyle.top = null;
+    }
+
+    if(display     != objElementStyle.display)
+      changed = true;
+    if(visibility  != objElementStyle.visibility)
+      changed = true;
+    if(position    != objElementStyle.position)
+      changed = true;
+    if(overflow    != objElementStyle.overflow)
+      changed = true;
+    if(styleFloat  != objElementStyle.styleFloat)
+      changed = true;
+    if(left        != objElementStyle.left)
+      changed = true;
+    if(top         != objElementStyle.top)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+    
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in layout page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+  
+  try {
+    // set language strings
+    setStrings();
+
+	  language            = param[0];
+	  design              = param[1];
+    var objElementStyle = param[5].style;
+
+    // clear
+    comboSet(document.getElementById("cmbDisplay"),"");
+    comboSet(document.getElementById("cmbVisibility"),"");
+    comboSet(document.getElementById("cmbPosition"),"");
+    comboSet(document.getElementById("cmbOverflow"),"");
+    comboSet(document.getElementById("cmbFloat"),"");
+    document.getElementById("txtLeft").value = "";
+    document.getElementById("txtTop").value = "";
+
+    
+    // set display
+    if(objElementStyle.display)
+      comboSet(document.getElementById("cmbDisplay"),objElementStyle.display.toLowerCase());    
+    // set visibility
+    if(objElementStyle.visibility)
+      comboSet(document.getElementById("cmbVisibility"),objElementStyle.visibility.toLowerCase());    
+    // set position
+    if(objElementStyle.position)
+      comboSet(document.getElementById("cmbPosition"),objElementStyle.position.toLowerCase());    
+    // set overflow
+    if(objElementStyle.overflow)
+      comboSet(document.getElementById("cmbOverflow"),objElementStyle.overflow.toLowerCase());    
+    // set float
+    if(objElementStyle.styleFloat)
+      comboSet(document.getElementById("cmbFloat"),objElementStyle.styleFloat.toLowerCase());    
+
+    document.getElementById("txtLeft").value = objElementStyle.left;
+    document.getElementById("txtTop").value = objElementStyle.top;
+
+  } catch(Error) {}
+
+}
+
+    </SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="3388">_Display</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="3389" class="label">_Display:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbDisplay">
+            <option value="">-</option>
+            <option value="block">Block</option>
+            <option value="inline">Inline</option>
+            <option value="none">None</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3390" class="label">_Visibility:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbVisibility">
+            <option value="">-</option>
+            <option value="hidden">Hidden</option>
+            <option value="visible">Visible</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head"><span id="3391">_Position</span></legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="3392" class="label">_Position:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbPosition">
+            <option value="">-</option>
+            <option value="absolute">Absolute</option>
+            <option value="relative">Relative</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4006">_Size</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+      <tr>
+        <td>
+          <div id="4002" class="label">_Left:</div>
+        </td>
+        <td>
+          <input type="text" style="width:50px" value="" ID="txtLeft">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="4003" class="label">_Top:</div>
+        </td>
+        <td>
+          <input type="text" style="width:50px" value="" ID="txtTop">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head"><span id="4007">_Misc</span></legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="3393" class="label">_Overflow</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbOverflow">
+            <option value="">-</option>
+            <option value="auto">Auto</option>
+            <option value="hidden">Hidden</option>
+            <option value="scroll">Scroll</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="3394" class="label">_Float:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbFloat">
+            <option value="">-</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

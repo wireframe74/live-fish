@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+<STYLE> BODY { MARGIN-TOP: 10px; FONT-SIZE: 11px; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px; FONT-FAMILY: arial; BACKGROUND-COLOR: #ece9d8 }
+	.maintable { BORDER-RIGHT: #919b9c 1px solid; BORDER-TOP: #919b9c 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #919b9c 1px solid; BORDER-BOTTOM: #919b9c 1px solid; FONT-FAMILY: arial; BACKGROUND-COLOR: #f8f7f6 }
+	.head { PADDING-RIGHT: 3px; PADDING-LEFT: 3px; COLOR: blue; BACKGROUND-COLOR: #f8f7f6 }
+</STYLE>
+
+<script language="javascript" src="../../include/dialog.js"></script>
+<script>
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+var browser = new Browser();
+
+var language = "";
+var design = "";
+var pathabs = "";
+var tech = "";
+var params = null;
+var toolbars = null;
+
+if(browser.ie) {
+	language            = dialogArguments[0];
+	design              = dialogArguments[1];
+	pathabs             = dialogArguments[7];
+	tech                = dialogArguments[8];
+	params              = dialogArguments;
+} else {
+	aParam = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	design              = aParam[1];
+	pathabs             = aParam[7];
+	tech                = aParam[8];
+	params              = aParam;
+}
+
+var tree = null;
+
+function treeCreate(objTree,id)
+{
+	tree                       = objTree;
+	tree.showLines             = false;
+	tree.enableInlineEditing   = false;
+	tree.enableContext         = false;
+	tree.onBeforeNodeRemove    = "onBeforeNodeRemove";
+	tree.onBeforeNodeEdit      = "onBeforeNodeEdit";
+	tree.setDesign(2);
+
+  // set adapter	
+	tree.adapterUrl = "../server/" + tech + "/selectfolderadapter." + tech;
+	// set remote
+	tree.setMode(1);
+	// only folder
+	tree.folderOnly = true;
+  if(pathabs.substring(pathabs.length-1,pathabs.length) == "/")
+    tree.basePath = pathabs.substring(0,pathabs.length-1);
+  else
+    tree.basePath = pathabs;
+  
+  tree.enableInlineEditing   = true;
+	
+  // create first node and expand
+  var node0 = tree.createNode("/",tree.basePath,"","",true);
+  node0.enableEdit = false;
+  node0.enabledRemovable = false;
+  node0.enabledSelect = true;
+  tree.add(node0);
+  node0.expand();
+}
+
+function onBeforeNodeRemove()
+{
+  return true;
+}
+
+function onBeforeNodeEdit(newText)
+{
+  if(newText.length == 0)
+    return true;
+    
+  // check if text is valid
+	var regEx  = new RegExp("[a-zA-Z0-9_.-]+");
+	var match  = regEx.exec(newText);
+	try {
+	  if(match[0].length != newText.length)
+	    return true;
+  } catch(Error) {
+    return true;
+  }	  
+}
+
+function onSelect()
+{
+  var node = tree.getSelectedNode();
+
+  if(browser.ie) {
+	  window.returnValue = node.key;
+	} else {
+		window.opener.callbackSelect(node.key);
+	}
+	window.close(); 
+}
+
+function init()
+{
+  document.getElementById("btnSelect").value = getLanguageString(language,899);
+  document.getElementById("btnCancel").value = getLanguageString(language,502);
+}
+
+function toolbarCreate(objToolbars, id)
+{
+  var tbdesign = 3;
+  var border = true;
+
+	var imagePath = "../design/image/";
+	var toolbarPath = "design/style" + design + "/";
+
+	objToolbars.language = language;
+	toolbars = objToolbars;
+
+	objToolbars.backcolor = "#ECE9D8"; //"#9EBEF5";
+	
+	// create toolbar object
+	var objToolbar1 = objToolbars.createToolbar();
+	// define event handler
+	objToolbar1.action = "onToolbarButtonClick";
+	// set values
+	objToolbar1.design = design;
+	objToolbar1.border = true;
+	objToolbar1.height = 27;
+
+	// create a separator
+	objToolbar1.add(objToolbars.createSeparator(toolbarPath + "tbbegin.gif"));
+	objToolbar1.add(objToolbars.createButton("",imagePath + "folder_close.gif","",getLanguageString(language,1014),"CREATE"));
+	objToolbar1.add(objToolbars.createButton("",imagePath + "file_rename.gif","",getLanguageString(language,1013),"RENAME"));
+	objToolbar1.add(objToolbars.createSeparator(toolbarPath + "tbend.gif"));
+
+	objToolbars.add(objToolbar1);
+  objToolbars.create();
+
+}
+
+function onToolbarButtonClick(id)
+{
+  var button = toolbars.getElementById(id);
+  if(button.tag == "CREATE") {
+    if(tree.getSelectedNode()) {
+      var newNode = tree.createNode(getLanguageString("",1095),"__NEW__","","",true);
+      tree.getSelectedNode().addNew(newNode);
+    }
+  }
+  if(button.tag == "RENAME") {
+    if(tree.getSelectedNode()) {
+      tree.getSelectedNode().edit();
+    }
+  }
+}
+
+</script>
+</head>
+<body onload="init()">
+<table cellpadding=0 cellspacing=3 border=0 width=100% height=100%>
+<tr>
+<td height="27">
+<iframe id="toolbar" src="../../toolbar/pinToolbar.html" style="width:100%;height:27px" frameborder=0></iframe>
+</td>
+</tr>
+<tr>
+<td>
+<iframe class="maintable" id="tree" src="../../tree/pinTree.html" style="width:100%;height:100%" frameborder=0></iframe>
+</td>
+</tr>
+<tr>
+<td height="1%" align=right>
+<input id="btnSelect" type=button value="Auswählen" style="width:100px" onclick="onSelect()">&nbsp;<input  id="btnCancel" type=button value="Abbrechen" onclick="window.close()" style="width:100px">
+</td>
+</tr>
+</table>
+</body>
+</html>

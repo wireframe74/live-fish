@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" href="design/style/pinToolbar.css" type="text/css">
+<script language="javascript" src="include/pinToolbar.js"></script>
+<script language="javascript" src="menu/pinMenu.js"></script>
+<script>
+// browser detection
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+  this.safari = (agent.indexOf("safari")       !=   -1);
+}
+
+var browser = new Browser();
+
+function load()
+{
+  try {
+    objToolbars.__intisetemp = false;
+    if(browser.safari)
+      parent.toolbarCreate(objToolbars, window.name);
+    else
+      parent.toolbarCreate(objToolbars, window.frameElement.id);
+  } catch(Exception) {
+  }
+}
+</script>
+</head>
+
+<body style="margin:0px;overflow:hidden" onload="load()" oncontextmenu="javascript: return false;">
+<div unselectable='on' id="toolbar" style="width:100%;height:100%"></div>
+</body>
+</html>
+
+

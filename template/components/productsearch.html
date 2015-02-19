@@ -1,0 +1,35 @@
+<!-- start of components/productsearch.html -->
+			<form name="searchform" valign=top method="get" action='index.jsp' style="margin:0 0 0 0" >
+		            <table align="left" border="0"  cellpadding="0" cellspacing="0" bottommargin="0"><tr><td> 
+		            <table align=left border=0 bordercolor='#ECEFF6' bgcolor='#ECEFF6' cellpadding=0 cellspacing=0 bottommargin=0 class="menu">
+		                <tr>
+		                  <td>
+		                    <table align="left" border="<%=isNav?"0":"1"%>" bordercolor='#F0EAE3' bgcolor='#ECEFF6' cellpadding=0 cellspacing=0 bottommargin=0 class="menu">
+		                        <tr><td align="left">
+		                        <input type="textbox" name="searchStr" value="" onfocus="this.value='';" size=12 style="width: 150; border=0" onkeydown="return CheckReturn();">
+		                        </td></tr>
+		                    </table>
+		                </td>
+		                </tr>
+		            </table>
+            		    </td><td>
+		            <input type=hidden name='pg' value='1'>
+		            <table align="left" cellspacing=0 cellpadding=1 border=0>
+		                <tr>
+		                    <td>
+		                        <table width="12" cellspacing=0 cellpadding=0 border=0>
+		                            <tr>
+		                                <td align="right">
+							<a href="javascript: document.searchform.submit();"><img src="<%=website.getImagePath("tri.gif")%>" alt="" class="width9 height7 noBorder" /></a>	                                    
+		                                </td>
+		                            </tr>
+		                        </table>
+		                    </td>
+				
+		                </tr>
+		            </table>
+			    </td>
+		            </tr>
+		            </table>
+		        </form>
+<!-- end of components/productsearch.html -->

@@ -1,0 +1,65 @@
+<!-- start of drawstockthumb.html -->
+<%
+String imageName = website.getImagePath("ImageDefaultArticleThumb.jpg");
+try {
+	if (abBlobStorageId > 0) {
+		int imageVaId = ((Integer)abRow.get(ArticleDetail.VENDOR_ARTICLE_ID)).intValue();
+		RenderImageServlet.buildImage(userSession, imageVaId, abShortDescription, abBlobStorageId, website.getStockThumbSize(), true, request);
+		File cachedImage = new File(website.getWebSitePath()+website.getArticleMenu().getCachedImageName(abShortDescription,abBlobStorageId,website.getStockThumbSize()));
+		if (cachedImage.exists()) imageName = website.getArticleMenu().getCachedImageName(abShortDescription,abBlobStorageId,website.getStockThumbSize());
+	}		    														
+} catch (Exception e) {
+	website.writeToLog(e);
+}
+%>
+<center>
+	<div class="stockitem" style="width:<%=website.getStockThumbSize()%>px;">
+			
+<%
+if (!abDiscountSchemeDescString.equals("")) { 
+%>
+		<a href="<%=abClickLocation%>" class="discount">
+			<img src="<%=website.getImagePath("save.gif")%>" alt="<%=abDiscountSchemeDescString%>" class="noBorder saveImg" />
+		</a>
+<%
+} 
+%>
+		<a href="<%=abClickLocation%>">
+			<img src="<%=imageName%>" alt="<%=abShortDescription%>" title="<%=abShortDescription%>" class="noBorder center top" />
+		</a>
+		<div class="stock_item_text">
+			<a href="<%=abClickLocation%>" class="grouptext">
+				<%=abShortDescription%>
+			</a>
+		</div>
+		
+		<div class="stock_item_price">
+<%
+if (!abPriceDescriptionPrefix.equals("")) {
+%>
+			<a href="<%=abClickLocation%>" class="smalltext">
+				<%=abPriceDescriptionPrefix%>
+			</a>
+			<br />
+<%
+}
+%>
+	
+<%
+int vaId = ((Integer)abRow.get(ArticleDetail.VENDOR_ARTICLE_ID)).intValue(); 
+if (userSession.getWebsiteAccessDomainId() > Customer.WEB_ACCESS_TYPE_NO_PRICES && userSession.getArticleDetail().getOrderType(vaId) != VendorArticle.ORDER_TYPE_ENQUIRIES_ONLY_HIDE_PRICE) {
+%>
+			<a href="<%=abClickLocation%>" class="stockthumbprice">
+				<%=abUnitPrice != abDiscPrice?"Was:&nbsp;&nbsp;<strike>":""%>
+				<%=userSession.convertAndFormatPrice(abUnitPrice)%>
+				<%=abUnitPrice != abDiscPrice?"</strike>":""%>
+				<%=abUnitPrice != abDiscPrice?"Now:&nbsp;&nbsp;"+userSession.convertAndFormatPrice(abDiscPrice):""%>
+				<br />
+			</a>
+<%
+}
+%>
+		</div>
+	</div>
+</center>
+<!-- end of drawstockthumb.html -->

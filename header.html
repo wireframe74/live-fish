@@ -1,0 +1,41 @@
+<section class="top-area">
+	<div class="wrap960">
+		<div class="pull-left"><p>Australia's aquarium fish home delivery experts</p></div>
+		<div class="pull-right"><a href="#">About us</a>&nbsp;&nbsp;<a href="#">Contact Us</a>&nbsp;&nbsp;<a href="#">FAQ</a></div>
+	</div>
+</section>
+
+
+<div class="wrap960">
+
+	<div id="headerleft">
+		<div id="logo">
+			<a href="index.jsp"><img src="images/logo.gif" alt="logo" /></a> 
+		</div>
+
+	</div>
+	
+	<% if (!WebSite.isThisPageInList(request, "checkoutv2")) { %>
+	
+		<div id="headerright">
+			
+
+
+
+			<div id="headersearch" class="sitesearchbox">
+				<form name="headersearchform" id="searchform" action="index.jsp">
+					<input type="text" name="searchStr" id="search" placeholder="Search Item or Keyword" /><!-- 
+					 --><a href="javascript:document.headersearchform.submit();" >Search</a>
+				 </form>
+			</div>
+			
+			<div id="headerbasket" class="miniBasketHold">
+				<!-- Ajax Main Elements Load here -->
+				<%@include file="/basketareaempty.html" %>
+			</div>
+			
+		</div>
+	
+	<% } %>
+	
+</div>

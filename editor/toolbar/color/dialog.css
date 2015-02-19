@@ -1,0 +1,94 @@
+.bodyframe 
+{
+	background-color: #ECE9D8;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: arial;
+	MARGIN-left: 6px;
+	MARGIN-top: 10px;
+	MARGIN-right: 6px;
+	MARGIN-bottom: 6px;
+  overflow: hidden;
+}
+
+.bodyframestyle 
+{
+  background-color: #9EBEF5;
+  margin-left: 4px;
+  margin-right: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.bodypage
+{
+	background-color: white;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: arial;
+	MARGIN-left: 6px;
+	MARGIN-top: 10px;
+	MARGIN-right: 6px;
+  overflow: hidden;
+}
+
+td,input,select
+{
+	FONT-SIZE: 11px;
+	FONT-FAMILY: arial;
+}
+
+.maintable
+{	
+	border: 1px solid #919B9C;
+	background-color: #F8F7F6;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: arial;
+	padding: 10px;
+}
+
+
+.head 
+{
+	PADDING-RIGHT: 3px; 
+	PADDING-LEFT: 3px; 
+	COLOR: #0046d5; 
+	font-size: 11px;
+	font-family: arial;
+}
+
+
+.mainframe
+{	
+	border: 1px solid #919B9C;
+	background-color: #F8F7F6;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: arial;
+	padding: 13px;
+}
+
+.label 
+{
+  width: 60px;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: arial;
+}
+
+.label40 
+{
+  width: 40px;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: arial;
+}
+
+.label80
+{
+  width: 80px;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: arial;
+}
+
+.label100
+{
+  width: 100px;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: arial;
+}

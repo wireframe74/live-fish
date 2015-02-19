@@ -1,0 +1,301 @@
+<HEAD>
+<title></title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../../include/dialog.js"></script>
+<SCRIPT>
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var name = "";
+var win = null;
+
+function save()
+{
+  try {
+    var objElementStyle = objElement.style;
+    var id           = objElement.id;
+    var name     = objElement.name;
+    var width     = objElementStyle.width;
+    var height     = objElementStyle.height;
+
+    if(mode == "LABEL" || mode == "DIV" || mode == "TEXTAREA")
+      var innerHTML   = objElement.innerHTML;
+    else
+      var value           = objElement.value;
+    if(mode == "INPUT" &&  (objElement.type.toUpperCase() == "CHECKBOX" || objElement.type.toUpperCase() == "RADIO"))
+      var checked      = objElement.checked;
+    var changed = false;
+
+		if(mode == "INPUT" && !document.getElementById("cmbType").disabled) {
+      if(curType != document.getElementById("cmbType").value) {
+        // if this happens then a new object is created and other frame pages
+        // will not work anymore
+			  var newInput = doc.createElement("input");
+			  newInput.type = document.getElementById("cmbType").value.toLowerCase();
+        if(browser.ie)
+			    objElement.replaceNode(newInput);
+			  else
+				  objElement.parentNode.replaceChild(newInput,objElement);
+			  objElement = newInput;
+      }
+		}
+
+    // there is a bug when setting name
+    // name is not refreshed
+    if(browser.ie) {
+      if(document.getElementById("txtName").value != "" && name != document.getElementById("txtName").value){
+        if(mode == "INPUT")
+          var html = "<input id='__tmpInput' type='" + document.getElementById("cmbType").value + "' name='" + document.getElementById("txtName").value + "' " + (objElement.style.cssText != "" ? " style='" + objElement.style.cssText + "'":"") + ">";
+        if(mode == "TEXTAREA")
+          var html = "<textarea id='__tmpInput' name='" + document.getElementById("txtName").value + "'>";
+        
+        win.editSelectObject(objElement);
+        win.editInsertHtml(html);
+        objElement = win.editGetDocument().getElementById("__tmpInput");
+        win.editSelectObject(objElement);
+        win.editSetActiveObject(objElement);
+        setTimeout("update()",200);
+      }
+    }
+		
+    var objElementStyle = objElement.style;
+
+
+    if(document.getElementById("txtID").value != "")
+      objElement.id = document.getElementById("txtID").value;
+    else
+      objElement.removeAttribute("id");
+
+    if(document.getElementById("txtName").value != "") {
+      if(browser.ns)
+        objElement.name = document.getElementById("txtName").value
+    } else {
+      objElement.removeAttribute("name");
+    }
+
+    if(document.getElementById("txtWidth").value != "") {
+      objElementStyle.width = document.getElementById("txtWidth").value;
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("width");
+      else
+        objElementStyle.width = "";
+    }
+    
+    if(document.getElementById("txtHeight").value != "") {
+      objElementStyle.height = document.getElementById("txtHeight").value
+    } else {
+      if(browser.ie)
+        objElementStyle.removeAttribute("height");
+      else
+        objElementStyle.height = "";
+    }
+
+    if(mode == "LABEL" || mode == "DIV" || mode == "TEXTAREA") {
+      objElement.innerHTML = document.getElementById("txtValue").value;
+    } else {
+      objElement.value = document.getElementById("txtValue").value;
+    }
+
+    // if we have checkbox/radio then show checked
+    if(mode == "INPUT") {
+      if(objElement.type.toUpperCase() == "CHECKBOX" || objElement.type.toUpperCase() == "RADIO") {
+        objElement.checked = document.getElementById("chkChecked").checked;
+      }
+    }
+
+    if(id       != objElement.id)
+      changed = true;
+    if(name     != objElement.name)
+      changed = true;
+    if(width    != objElementStyle.width)
+      changed = true;
+    if(height   != objElementStyle.height)
+      changed = true;
+
+    if(mode == "LABEL" || mode == "DIV" || mode == "TEXTAREA") {
+      if(innerHTML   != objElement.innerHTML)
+        changed = true;
+    } else {
+      if(value           != objElement.value)
+        changed = true;
+    }
+    if(mode == "INPUT" &&  (objElement.type.toUpperCase() == "CHECKBOX" || objElement.type.toUpperCase() == "RADIO")) {
+      if(checked      != objElement.checked)
+        changed = true;
+    }
+
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+    
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in input page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+    win                 = params[11];
+
+    var objElementStyle = objElement.style;
+
+    // clear
+	  document.getElementById("txtName").value = "";
+    document.getElementById("txtValue").value = "";
+
+    document.getElementById("txtID").value = objElement.id;
+
+    if(objElement.name) {
+		  document.getElementById("txtName").value = objElement.name;
+		  name = objElement.name;
+		}
+
+    if(mode == "LABEL" || mode == "DIV" || mode == "TEXTAREA")
+      document.getElementById("txtValue").value = objElement.innerHTML;
+    else
+      document.getElementById("txtValue").value = objElement.value;
+
+    if(mode == "INPUT") {
+      // if we have checkbox/radio then show checked
+      if(objElement.type.toUpperCase() == "CHECKBOX" || objElement.type.toUpperCase() == "RADIO") {
+        document.getElementById("chkChecked").checked = objElement.checked;
+        document.getElementById("enableChecked").style.display = "block";
+      } else {
+        document.getElementById("enableChecked").style.display = "none";
+      }
+      // set type
+		  if(objElement.type && (objElement.tagName == "INPUT")) {
+        document.getElementById("enableType").style.display = "block";
+        curType = objElement.type.toUpperCase();
+			  setCombo(document.getElementById("cmbType"),objElement.type.toUpperCase())
+		  } else {
+        document.getElementById("enableChecked").style.display = "none";
+			  document.getElementById("cmbType").disabled = true;
+		  }
+    } else {
+      document.getElementById("enableChecked").style.display = "none";
+      document.getElementById("enableType").style.display = "none";
+    }
+    
+    document.getElementById("txtWidth").value = objElementStyle.width;
+    document.getElementById("txtHeight").value = objElementStyle.height;
+
+    // set language strings
+    setStrings();
+
+  } catch(Error) {
+  }
+
+}
+
+function update()
+{
+  try {
+    // save selection
+    //win.editSaveRange();
+    win.onmouseupPINEDIT();
+    //win.editSetRange();
+  } catch(Error) {}
+}
+
+</SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+    <fieldset>
+      <legend class="head">
+      <span id="964">_ID/Name</span>
+    </legend>
+      <table cellspacing="0" cellpadding="1" border="0">
+        <tr>
+          <td style="width:1%">
+            <div id="962" class="label">_ID:</div> 
+          </td>
+          <td>
+            <input type="text" value="" ID="txtID">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="963" class="label">_Name:</div> 
+          </td>
+          <td>
+            <input type="text" value="" ID="txtName">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="4012" class="label">_Value:</div> 
+          </td>
+          <td>
+            <input type="text" value="" ID="txtValue">
+          </td>
+        </tr>
+
+        <tr id="enableChecked">
+          <td>
+            <div id="3342" class="label">_Checked:</div> 
+          </td>
+          <td>
+            <input type="checkbox" value="" ID="chkChecked">
+          </td>
+        </tr>
+        <tr id="enableType">
+          <td>
+            <div id="3343" class="label">_Type:</div> 
+          </td>
+          <td>
+            <select id="cmbType">
+              <option value="BUTTON">Button</option>
+              <option value="CHECKBOX">Checkbox</option>
+              <option value="FILE">File</option>
+              <option value="HIDDEN">Hidden</option>
+              <option value="PASSWORD">Password</option>
+              <option value="RADIO">Radio</option>
+              <option value="RESET">Reset</option>
+              <option value="SUBMIT">Submit</option>
+              <option value="TEXT">Text</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend class="head">
+      <span id="4006">_Size</span> 
+    </legend>
+      <table cellspacing="0" cellpadding="1" border="0">
+        <tr>
+          <td>
+            <div id="4000" class="label">_Width:</div>
+          </td>
+          <td>
+            <input type="text" value="" ID="txtWidth" NAME="txtWidth">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="4001" class="label">_Height:</div> 
+          </td>
+          <td>
+            <input type="text" value="" ID="txtHeight" NAME="txtHeight">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+</BODY>

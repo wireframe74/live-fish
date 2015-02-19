@@ -1,0 +1,17 @@
+<!-- start of components/siteindex.html -->
+<% String pageTitle = "Site Map";
+   String pageTitleText = "";
+   String pageTitleImage = "";
+%>
+
+<% if (new File(website.getWebSitePath()+"sitemap_static.html").exists()) { %>
+	<%@include file="../../sitemap_static.html"%>
+<% } %>
+
+<% if (website.isShowProductOnSitemap()) { %>
+	<%=website.getArticleMenu().getFullSiteIndexHTML()%>
+<% } else { %>
+	<%=website.getArticleMenu().getCSSMenuHTML(0,false,true,false)%>
+<% } %>
+	
+<!-- end of components/siteindex.html -->

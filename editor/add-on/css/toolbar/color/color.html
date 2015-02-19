@@ -1,0 +1,244 @@
+<html>
+<head>
+<link rel="stylesheet" href="../design/style/pinToolbar.css" type="text/css">
+<script language="javascript" src="../include/pinToolbar.js"></script>
+<script>
+// browser detection
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+var browser = new Browser();
+
+var language = "";
+var design = "3";
+var mode = "";
+var color = "";
+var border = "";
+var idFrame = "";
+var objToolbars ;
+
+function getLanguageString(language,key)
+{
+  if(language == "DE") {
+    if(key == "1000") return "Keine Farbe";
+    if(key == "1001") return "Weitere Farben";
+  } else if(language == "NL") {
+    if(key == "1000") return "No color";
+    if(key == "1001") return "More colors";
+  } else {
+    if(key == "1000") return "No color";
+    if(key == "1001") return "More colors";
+  }
+}
+
+function load()
+{
+  // process parameters
+  var param = "";
+  try {
+    param = window.location.search;
+  } catch(Error) {}
+
+  if(param.length > 0) {
+    param = param.substring(1,param.length);
+    var aArray = param.split("&");
+    for(var i=0;i<aArray.length;i++) {
+      var aParam = aArray[i].split("=");
+      for(var j=0;j<aParam.length-1;j++) {
+        if(aParam[0].toUpperCase() == "LANGUAGE") {
+          language = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "STYLE") {
+          design = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "MODE") {
+          mode = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "BGCOLOR") {
+          color = aParam[1];
+        }
+        if(aParam[0].toUpperCase() == "ID") {
+          idFrame = aParam[1];
+        }
+      }
+    }
+  }
+
+  var objToolbars0 = new Toolbars("__button1");
+  objToolbars0.backcolor = color;
+  objToolbars0.__intisetemp = false;
+  var objToolbar0 = new Toolbar();
+  objToolbar0.height = 17;
+  objToolbar0.fullsize = true;
+  objToolbar0.border = false;
+  objToolbar0.design = design;
+  var objButton = new Button(getLanguageString(language,"1000"),"","onNoColorClick","","NOCOLOR");
+  objButton.width = "100%";
+  objButton.useparent = false;
+  objToolbar0.add(objButton);
+  objToolbars0.add(objToolbar0);
+  objToolbars0.create();
+
+  // create the main toolbar collection
+  objToolbars = new Toolbars("__toolbar");
+  objToolbars.__intisetemp = false;
+  objToolbars.backcolor = color;
+
+  var objToolbar1 = new Toolbar();
+  objToolbar1.action = "onButtonClick";
+  objToolbar1.height = 14;
+  objToolbar1.border = false;
+  objToolbar1.design = design;
+  objToolbar1.add(new ColorButton("black","","black"));
+  objToolbar1.add(new ColorButton("#993300","","#993300"));
+  objToolbar1.add(new ColorButton("#333300","","#333300"));
+  objToolbar1.add(new ColorButton("#003300","","#003300"));
+  objToolbar1.add(new ColorButton("#003366","","#003366"));
+  objToolbar1.add(new ColorButton("#000080","","#000080"));
+  objToolbar1.add(new ColorButton("#333399","","#333399"));
+  objToolbar1.add(new ColorButton("#333333","","#333333"));
+  // add toolbar to collection
+  objToolbars.add(objToolbar1);
+
+  objToolbar1 = new Toolbar();
+  objToolbar1.action = "onButtonClick";
+  objToolbar1.height = 14;
+  objToolbar1.border = false;
+  objToolbar1.design = design;
+  objToolbar1.add(new ColorButton("#800000","","#800000"));
+  objToolbar1.add(new ColorButton("#FF6600","","#FF6600"));
+  objToolbar1.add(new ColorButton("#808000","","#808000"));
+  objToolbar1.add(new ColorButton("#008000","","#008000"));
+  objToolbar1.add(new ColorButton("#008080","","#008080"));
+  objToolbar1.add(new ColorButton("#0000FF","","#0000FF"));
+  objToolbar1.add(new ColorButton("#666699","","#666699"));
+  objToolbar1.add(new ColorButton("#808080","","#808080"));
+  // add toolbar to collection
+  objToolbars.add(objToolbar1);
+
+  objToolbar1 = new Toolbar();
+  objToolbar1.action = "onButtonClick";
+  objToolbar1.height = 14;
+  objToolbar1.border = false;
+  objToolbar1.design = design;
+  objToolbar1.add(new ColorButton("#FF0000","","#FF0000"));
+  objToolbar1.add(new ColorButton("#FF9900","","#FF9900"));
+  objToolbar1.add(new ColorButton("#99CC00","","#99CC00"));
+  objToolbar1.add(new ColorButton("#339966","","#339966"));
+  objToolbar1.add(new ColorButton("#33CCCC","","#33CCCC"));
+  objToolbar1.add(new ColorButton("#3366FF","","#3366FF"));
+  objToolbar1.add(new ColorButton("#800080","","#800080"));
+  objToolbar1.add(new ColorButton("#999999","","#999999"));
+  // add toolbar to collection
+  objToolbars.add(objToolbar1);
+
+  objToolbar1 = new Toolbar();
+  objToolbar1.action = "onButtonClick";
+  objToolbar1.height = 14;
+  objToolbar1.border = false;
+  objToolbar1.design = design;
+  objToolbar1.add(new ColorButton("#FF00FF","","#FF00FF"));
+  objToolbar1.add(new ColorButton("#FFCC00","","#FFCC00"));
+  objToolbar1.add(new ColorButton("#FFFF00","","#FFFF00"));
+  objToolbar1.add(new ColorButton("#00FF00","","#00FF00"));
+  objToolbar1.add(new ColorButton("#00FFFF","","#00FFFF"));
+  objToolbar1.add(new ColorButton("#00CCFF","","#00CCFF"));
+  objToolbar1.add(new ColorButton("#993366","","#993366"));
+  objToolbar1.add(new ColorButton("#C0C0C0","","#C0C0C0"));
+  // add toolbar to collection
+  objToolbars.add(objToolbar1);
+
+  objToolbar1 = new Toolbar();
+  objToolbar1.action = "onButtonClick";
+  objToolbar1.height = 14;
+  objToolbar1.border = false;
+  objToolbar1.design = design;
+  objToolbar1.add(new ColorButton("#FF99CC","","#FF99CC"));
+  objToolbar1.add(new ColorButton("#FFCC99","","#FFCC99"));
+  objToolbar1.add(new ColorButton("#FFFF99","","#FFFF99"));
+  objToolbar1.add(new ColorButton("#CCFFCC","","#CCFFCC"));
+  objToolbar1.add(new ColorButton("#CCFFFF","","#CCFFFF"));
+  objToolbar1.add(new ColorButton("#99CCFF","","#99CCFF"));
+  objToolbar1.add(new ColorButton("#CC99FF","","#CC99FF"));
+  objToolbar1.add(new ColorButton("#FFFFFF","","#FFFFFF"));
+  // add toolbar to collection
+  objToolbars.add(objToolbar1);
+
+  // now create toolbar
+  objToolbars.create();
+
+  objToolbars1 = new Toolbars("__button2");
+  objToolbars1.backcolor = color;
+  objToolbars1.__intisetemp = false;
+  var objToolbar1 = new Toolbar();
+  objToolbar1.height = 17;
+  objToolbar1.fullsize = true;
+  objToolbar1.border = false;
+  objToolbar1.design = design;
+  var objButton = new Button(getLanguageString(language,"1001"),"","onMoreClick","","MORE");
+  objButton.width = "100%";
+  objButton.useparent = false;
+  objToolbar1.add(objButton);
+  objToolbars1.add(objToolbar1);
+  objToolbars1.create();
+
+  // set popup color
+  document.getElementById("table").style.backgroundColor = color;
+}
+
+function onButtonClick(id)
+{
+  // get object
+  var button = objToolbars.getElementById(id);
+	
+  parent.document.getElementById(idFrame).contentWindow.toolbarPopupAction("COLORBUTTON",button.tag);
+}
+
+function onMoreClick(id)
+{
+  if(browser.ns) {
+    var left = screen.width/2 - 300/2;
+    var top = screen.height/2 - 230/2;
+    window.open("colordialog.html?language=" + language,"color","modal=1,left=" + left + ",top=" + top + ",height=335,width=440,resizable=0,status=0,scrollbars=0");
+  } else {
+    parent.document.getElementById(idFrame).contentWindow.toolbarPopupAction("COLORBUTTON","");
+    var color = window.showModalDialog("colordialog.html?language=" + language,"","dialogHeight:335px;dialogWidth:440px;resizable:0;status:0;scroll:0");
+    if(color != null) {
+			parent.document.getElementById(idFrame).contentWindow.toolbarPopupAction("COLORBUTTON",color);
+    }
+  }
+}
+
+function onNoColorClick(id)
+{
+  parent.document.getElementById(idFrame).contentWindow.toolbarPopupAction("COLORBUTTON","NOCOLOR");
+}
+
+function MozillaCallbackSetColor(color)
+{
+  parent.document.getElementById(idFrame).contentWindow.toolbarPopupAction("COLORBUTTON",color);
+}
+</script>
+</head>
+
+<body style="margin:0;overflow:hidden" onload="load();">
+
+<table id="table" style="border-width: 1px;border-style:solid;border-left-color:ButtonHighlight;border-right-color:ButtonShadow;border-top-color:ButtonHighlight;border-bottom-color:ButtonShadow;background-color: buttonface" width="100%" height="100%" cellpadding="0" cellspacing="0">
+<tr>
+  <td id="__button1"></td>
+</tr>
+<tr>
+  <td id="__toolbar" style="border: 0px"></td>
+</tr>
+<tr>
+  <td id="__button2"></td>
+</tr>
+</table>
+
+</body>
+</html>

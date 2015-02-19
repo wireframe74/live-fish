@@ -1,0 +1,14 @@
+<!-- start of javascript.html -->
+
+<irMaps ctrls="0" link="1" double="6" type="p"></irMaps>
+
+<irRefine minHide="0"></irRefine>
+
+<% if (request.getRequestURI().indexOf("quickpay.jsp") > -1 && ((QuickPayPageModel)userSession.getWebController().getCurrentPageController().getPageModel()).isAddressLookupFailed()) { 
+	((QuickPayPageModel)userSession.getWebController().getCurrentPageController().getPageModel()).setAddressLookupFailed(false); %>
+	<script>GB_showCenter('Review Address Details','../../../components/changeaddrpopup.jsp?addressid=<%=userSession.getDeliveryAddressId()%>&addresstype=<%=request.getParameter("addresstype")%>&failedlookup=1&failedreason=<%=((QuickPayPageModel)userSession.getWebController().getCurrentPageController().getPageModel()).getAddressLookupFailedMessage()%>',580,660,0);</script>
+<% } %>
+
+<script type="text/javascript" src="js/joined.js"></script>
+
+<!-- end of javascript.html -->

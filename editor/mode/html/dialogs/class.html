@@ -1,0 +1,69 @@
+<HEAD>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../../include/dialog.js"></script>
+<SCRIPT>
+
+function initDialog(para)
+{
+  params = para;
+
+  // add styles
+  var combo = document.getElementById("cmbClass");
+  comboClear(combo);
+  var aStyle = para[12];
+  comboAdd(combo,"-","NOTHING");
+  comboAdd(combo,getLanguageString("","4008"),"STANDARD");
+  for(var i=0;i<aStyle.length;i++) {
+    comboAdd(combo,aStyle[i].displayName,aStyle[i].className);
+  }
+
+  // set current value
+  comboSet(combo,para[5].className);  
+  
+  // set language strings
+  setStrings();
+}
+
+function updateDialog(para)
+{
+  initDialog(para)
+}
+
+function save()
+{
+  var combo = document.getElementById("cmbClass");
+  var value = combo.value;
+
+  if(value != "STANDARD" && value != "NOTHING") {
+    params[5].className = value;
+    params[11].__editOnChanged(true);
+  }
+  
+  if(value == "STANDARD") {
+    params[5].removeAttribute("className");
+    params[11].__editOnChanged(true);
+  }
+    
+      
+}
+
+</SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="3337">_Class</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <span id="3338" class="label">_Class:</span>
+        </td>
+        <td>
+          <select id="cmbClass" NAME="cmbClass">
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

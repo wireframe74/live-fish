@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Validator</title>
+</head>
+<script>
+var win = null;
+var xhtml = "";
+
+// browser detection
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+var browser = new Browser();
+
+if(browser.ie)
+  win = dialogArguments;
+else
+  win = window.opener;
+
+function validate()
+{
+  document.getElementById("btnValidate").disabled = true;
+  document.getElementById("lblMessage").style.visibility = "visible";
+  
+  var valtype = document.getElementById("valtype").value;
+
+  xhtml = win.__editGetValidatorData(valtype);
+  
+  document.getElementById("validator").src = "dummy.html";
+
+  document.getElementById("btnValidate").disabled = true;
+  document.getElementById("lblMessage").style.visibility = "visible";
+
+  setTimeout("__temp_delay()",100);
+}
+
+function __temp_delay()
+{
+  document.getElementById("btnValidate").disabled = true;
+  document.getElementById("lblMessage").style.visibility = "visible";
+
+  var temp = "<form style='visibility:hidden' method='post' enctype='multipart/form-data' id='form' action='http://validator.w3.org/check'>";
+  temp+="<textarea id='fragment' name='fragment'></textarea>";
+  temp+="<input id='direct-doctype' name='doctype' value='Inline'>";
+  temp+="</form>";
+
+  var doc = document.getElementById("validator").contentWindow.document;
+  doc.body.innerHTML = temp;
+  doc.getElementById("fragment").value = xhtml;
+  doc.getElementById("form").submit();
+}
+
+function loadContent()
+{
+  document.getElementById("btnValidate").disabled = false;
+  document.getElementById("lblMessage").style.visibility = "hidden";
+}
+
+function setType()
+{
+  document.getElementById("valtype").selectedIndex = win.globalXHtmlType;
+}
+
+</script>
+<body style="font-family: arial;font-size:11px;margin:0;overflow:hidden" onload="setType()">
+
+<table width=100% height=100% cellspacing=2 cellpadding=0 border=0 >
+<tr>
+<td height="1%">
+<input style="font-family: arial;font-size:11px" id="btnValidate" type="button" value="Validate" onclick="validate()">&nbsp;
+<select style="font-family: arial;font-size:11px" id="valtype">
+<option value="0">XHTML 1.0 transitional</option> 
+<option value="1">XHTML 1.0 strict</option> 
+<option value="2">XHTML 1.1</option> 
+</select>&nbsp;
+<span style="font-family: arial;font-size:11px;visibility:hidden" id="lblMessage">Validating...</span>
+</td>
+</tr>
+<tr>
+<td>
+<iframe id="validator" style="border: 1px solid #c0c0c0;width:100%;height:100%" frameborder=0 onload="loadContent()"></iframe>
+</td>
+</tr>
+</table>
+</body>
+</html>

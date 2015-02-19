@@ -1,0 +1,63 @@
+.ir-testim .testim span {
+text-align: left;
+font-weight: normal;
+}
+
+.ir-testim .testim {
+	font-weight: bold;
+}
+
+
+.ir-testim p {
+font-size: 12px;
+}
+
+.aside {
+	h2 {
+		color: $primary-color;
+		font-size:18px;
+		text-align:left;
+		@extend %primary-font;
+		background-position:bottom left;
+	}
+}
+
+#refinecategory .refinetitle, 
+#refinefurther .refinetitle, 
+#quickshop .refinetitle {
+	@extend %primary-font;
+}
+
+.psMark {
+border: 1px solid $primary-color;
+background: $primary-color;
+cursor: pointer;
+}
+
+
+.psBarFill {
+background-color: #999;	
+border: 1px solid #999;
+}
+
+//WHEN SCROLLED
+.psBar {
+border: 1px solid #999;
+background-color: #222;
+}
+
+#refinefurther .refineitems li a:before {
+border: none;
+background: #fff;
+}
+.aside {
+
+	#refinefurther,
+	.asidebox,
+	#quickshop {
+		background: #f2f2f2;
+		border-radius:0;
+	}
+
+	
+}

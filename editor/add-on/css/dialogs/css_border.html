@@ -1,0 +1,346 @@
+<HEAD>
+<title></title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../include/dialog.js"></script>
+<script language="javascript" src="../include/listbox.js"></script>
+<script language="javascript" src="../include/color.js"></script>
+<script language="javascript" >
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var lbStyle = null;
+var lbWidth = null;
+var border = new Array("borderBottom", "borderTop", "borderLeft", "borderRight");
+var lng = null;
+var params = new Array();
+
+function updateDesign(rule)
+{
+
+	try {
+    lbStyle.selectItem("solid");
+    lbWidth.selectItem("1px");
+    document.getElementById("borderColor").style.backgroundColor = "#000000";	
+
+		document.getElementById("tempObj").style.cssText = rule.cssText();
+		objPreview = document.getElementById("tempObj");
+		
+		if (objPreview.style != null) {
+				var objElementStyle = objPreview.style;
+				var i = 0;
+				
+				objBorder = "'solid'";
+				while (i < border.length && objBorder == "'solid'") {
+					if (eval("objElementStyle." + border[i] + "Style").length > 0) {   
+						objBorder = "objElementStyle." + border[i] + "Style";
+					} 
+					i++;
+				} 
+				var func = "lbStyle.selectItem(" + objBorder + ")";
+				eval(func);
+	
+				//set border width
+				i = 0;
+				objWidth = "'1px'";
+				while (i < border.length && objWidth == "'1px'") {
+					if (eval("objElementStyle." + border[i] + "Width").length > 0) {   
+						objWidth = "objElementStyle." + border[i] + "Width";
+					} 
+					i++;
+				}  				
+				var func = "lbWidth.selectItem(" + objWidth + ")";
+				eval(func);    
+	
+	
+				i = 0;
+				objColor = "'#000000'";
+				while (i < border.length && objColor == "'#000000'") {
+					if (eval("objElementStyle." + border[i] + "Color").length > 0) {   
+						objColor = "objElementStyle." + border[i] + "Color";
+					} 
+					i++;
+				} 
+				var func = "document.getElementById('borderColor').style.backgroundColor = " + objColor ;
+				eval(func);  
+	
+				//set preview borders
+				var temp = 0;
+        var func = "";
+				for (i=0;i<border.length;i++) {
+					if (eval("objElementStyle." + border[i] + "Width") != "") {
+						temp = 1;
+					  func = "document.getElementById('preview').style." + border[i]+ " = '1px solid #000000'";
+					  eval(func);
+						func = "document.getElementById('" + border[i]+ "').checked = true";
+						eval(func);
+					} else {
+					  func = "document.getElementById('preview').style." + border[i]+ " = ''";
+					  eval(func);
+						func = "document.getElementById('" + border[i]+ "').checked = false";
+						eval(func); 
+					}
+				} 
+		}
+
+	} catch(Error) {alert(Error);}
+}
+
+function updateStyleSheet(style, value) {
+	parent.parent.parent.parent.updateRule(style.toLowerCase(), value.toLowerCase());
+}
+
+function updateBorder(type)
+{
+  var topText = "";
+  var leftText = "";
+  var bottomText = "";
+  var rightText = "";
+  
+  if (type.indexOf("top") > -1) {
+  	if (document.getElementById("borderTop").checked == true) {
+  		updateStyleSheet("border-top", lbWidth.selectedItem.value +  " " + lbStyle.selectedItem.value + " " + document.getElementById("borderColor").style.backgroundColor);
+  		document.getElementById("preview").style.borderTop = lbWidth.selectedItem.value +  " " + lbStyle.selectedItem.value + " " + document.getElementById("borderColor").style.backgroundColor;
+  	} else {
+      updateStyleSheet("border-top", "");
+      document.getElementById("preview").style.borderTop = "";
+  	}
+  }
+  if (type.indexOf("bottom") > -1) {
+  	if (document.getElementById("borderBottom").checked == true) {
+  		updateStyleSheet("border-bottom", lbWidth.selectedItem.value +  " " + lbStyle.selectedItem.value + " " + document.getElementById("borderColor").style.backgroundColor);
+  		document.getElementById("preview").style.borderBottom = lbWidth.selectedItem.value +  " " + lbStyle.selectedItem.value + " " + document.getElementById("borderColor").style.backgroundColor;
+  	} else {
+  		updateStyleSheet("border-bottom", "");
+  		document.getElementById("preview").style.borderBottom = "";
+  	}
+  }
+  if (type.indexOf("left") > -1) {
+  	if (document.getElementById("borderLeft").checked == true) {
+  		updateStyleSheet("border-left", lbWidth.selectedItem.value +  " " + lbStyle.selectedItem.value + " " + document.getElementById("borderColor").style.backgroundColor);
+  		document.getElementById("preview").style.borderLeft = lbWidth.selectedItem.value +  " " + lbStyle.selectedItem.value + " " + document.getElementById("borderColor").style.backgroundColor;
+  	} else {
+  		updateStyleSheet("border-left", "");
+  		document.getElementById("preview").style.borderLeft = "";
+  	}
+  }
+  if (type.indexOf("right") > -1) {
+  	if (document.getElementById("borderRight").checked == true) {
+  		updateStyleSheet("border-right", lbWidth.selectedItem.value +  " " + lbStyle.selectedItem.value + " " + document.getElementById("borderColor").style.backgroundColor);
+  		document.getElementById("preview").style.borderRight = lbWidth.selectedItem.value +  " " + lbStyle.selectedItem.value + " " + document.getElementById("borderColor").style.backgroundColor;
+  	} else {
+  		updateStyleSheet("border-right", "");
+  		document.getElementById("preview").style.borderRight = "";
+  	}
+  }
+
+}
+
+function onBorderStyleClick(item)
+{
+  updateBorder("top, left, bottom, right");
+}
+
+function onBorderWidthClick(item)
+{
+  updateBorder("top, left, bottom, right");
+}
+
+function showBorderStyle()
+{
+  lbStyle = new ListBox();
+  lbStyle.onClick = "onBorderStyleClick";
+
+  var none = new ListItem('<div  unselectable=\"ON\" style="cursor:pointer; width:100%; height:5px; font-size:9px;">none</div>', 'none', 'none', true);
+  lbStyle.add(none);
+  var dotted = new ListItem('<div style="cursor:pointer; font-size:1px; width:100%; height:3px; border-bottom:dotted 2px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>', 'dotted', 'dotted', '2px');
+  lbStyle.add(dotted);
+  var solid = new ListItem('<div style="cursor:pointer; font-size:1px; width:100%;  height:1px; border-bottom:solid 1px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', 'solid', 'solid', '2px');
+  lbStyle.add(solid);
+  var dashed = new ListItem('<div style="cursor:pointer; font-size:1px; width:100%;  height:1px; border-bottom:dashed 1px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', 'dashed', 'dashed', '2px');
+  lbStyle.add(dashed);
+  var double1 = new ListItem('<div style="cursor:pointer; font-size:1px; width:100%;  height:3px; border-bottom:double 3px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', 'double', 'double', '3px');
+  lbStyle.add(double1);
+
+  var temp = lbStyle.create();
+  return temp;
+}
+
+function showBorderWidth()
+{
+  lbWidth = new ListBox();
+  lbWidth.onClick = "onBorderWidthClick";
+  
+  var one = new ListItem('<div style="cursor:pointer; font-size:1px; width:100%; height:3px; border-bottom:solid 1px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '1px', '1px', '2px');
+  lbWidth.add(one);
+  var two = new ListItem('<div style="cursor:pointer; font-size:1px; width:100%;  height:1px; border-bottom:solid 2px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '2px', '2px', '2px');
+  lbWidth.add(two);
+  var three = new ListItem('<div style="cursor:pointer; font-size:1px; width:100%;  height:1px; border-bottom:solid 3px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '3px', '3px', '2px');
+  lbWidth.add(three);
+  var four = new ListItem('<div style="cursor:pointer; font-size:1px; width:100%;  height:3px; border-bottom:solid 4px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '4px', '4px', '3px');
+  lbWidth.add(four);
+
+  var temp = lbWidth.create();
+  return temp;
+}
+
+function getLanguageString(id)
+{
+	return lng[id];
+}
+
+function afterSelectColor(color)
+{
+  document.getElementById("borderColor").style.backgroundColor = color;
+  updateBorder("top, left, bottom, right");
+}
+
+function selectColor()
+{
+  try {
+    var color = new ColorDialog("1");
+    color.onAfterSelect = "afterSelectColor";
+
+    var colors = parent.parent.parent.parent.getColors();
+
+    color.colors = colors;
+    color.color = document.getElementById("borderColor").style.backgroundColor;
+    color.language = parent.parent.parent.parent.globalLanguage;
+    color.open();
+
+  } catch(Error) {}
+}
+
+function initDialog(param)
+{
+  //params = param;
+
+  try {
+    // set language strings
+		lng = parent.parent.parent.parent.getLocalizationResource();
+    setStrings();
+
+    document.getElementById("lblBorderColor").value = getLanguageString(1200);
+
+    document.getElementById("borderStyle").innerHTML = showBorderStyle();    
+    document.getElementById("borderWidth").innerHTML = showBorderWidth();   
+    document.getElementById("chkVLine").style.visibility = "hidden";
+    document.getElementById("chkHLine").style.visibility = "hidden";
+    document.getElementById("hLine").style.visibility = "hidden";
+    document.getElementById("vLine").style.visibility = "hidden";
+    document.getElementById("chkHLine").checked = false;    
+    document.getElementById("chkVLine").checked = false;   
+    
+    //set Border Values if not set 
+    lbStyle.selectItem("solid");
+    lbWidth.selectItem("1px");
+    document.getElementById("borderColor").style.backgroundColor = "#000000";
+
+  } catch(Error) {alert(Error);}
+} 
+
+</SCRIPT> 
+</HEAD>
+<BODY class="bodypage">
+      <table cellspacing="0" cellpadding="3" border="0" width="1%">
+        <tr>
+          <td valign="top" width="1%">
+        <fieldset>
+          <legend class="head">
+            <span id="1201" class="label">_border</span>
+          </legend>   
+          <div style="width:160px; height:265px; overflow:hidden" id="border" align="center">   
+          <table>
+            <tr>
+              <td>
+              <span id="1202" class="label" style="margin-top:5px; " >_borderStyle:</span><br />
+              <div style="width:130px; height:85px; padding:2px; overflow:auto;  border:2px inset" id="borderStyle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span id="1203" class="label"  style=" margin-top:5px; ">_borderWidth:</span><br />
+                <div style="width:130px; height:70px; padding:2px; overflow:auto;  border:2px inset" id="borderWidth"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <table border="0" style="width:100%; padding-top:5px;" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td colspan="2" nowrap="nowrap">
+                    <span id="1204" class="label">_borderColor:</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:100%">
+                    <div id="borderColor" style="width:100%; height:17px; border:1px solid #c0c0c0">&nbsp;</div>
+                    
+                  </td>
+                  <td>
+                    <input style="margin-left:2px;" id="lblBorderColor" type="button" value="..."  onclick="selectColor();">
+                  </td>
+                </tr>
+              </table>
+              </td>
+            </tr>
+          </table>
+              </div>
+          </fieldset>
+          </td>
+          <td valign="top">
+            <fieldset>
+              <legend class="head">
+                <span id="1205" class="label">_preview</span>
+              </legend>
+              <div style="width: 160px; height: 265px;" id="borderPreview" class="label" align="center" >
+                <div id="divVLine" style="overflow:hidden; z-index:1; position:absolute; width: 21px; height: 100px; left: 275px; top: 108px;" language="javascript" onclick="updateBorder()">
+                  <div id="vLine" style="width:3px; height:118px; font-size:1px; border-left: 1px solid #000000">&nbsp;</div>
+                </div>
+                <div id="divHLine" style="overflow:hidden; z-index:2; position:absolute; width: 113px; height: 10px; left: 229px; top: 152px;" language="javascript" onclick="updateBorder()">
+                  <div id="hLine" style="font-size:1px; width:130px; height:3px; border-bottom: 1px solid #000000">&nbsp;</div>              
+                </div>
+                  <table border="0" width="1%" style="border-collapse:collapse; position:absolute; left:197px; top:86px;">
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td align="left"><input id="borderLeft" type="checkbox"  onclick="updateBorder('left')" /></td>
+                      <td align="center" >
+                        <input id="chkVLine" type="checkbox" onclick="updateBorder()" /></td>
+                      <td align="right"><input id="borderRight" type="checkbox" onclick="updateBorder('right')" />
+                      </td>
+                      <td>&nbsp;</td>                                        
+                    </tr>
+                    <tr>
+                      <td valign="top" align="center">
+                        <input id="borderTop" type="checkbox" onclick="updateBorder('top')" /></td>
+                      <td align="center" id="preview" colspan="3" rowspan="3" style=" background-image:url('cell.gif'); background-position:center; background-repeat:no-repeat; border-right: black 1px solid; border-top: black 1px solid;
+                        border-left: black 1px solid; border-bottom: black 1px solid; border-collapse:collapse; width:100px; height:100px;">
+                        </td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="middle">
+                        <input id="chkHLine" type="checkbox" onclick="updateBorder()" /></td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="bottom" align="center"><input id="borderBottom" type="checkbox" onclick="updateBorder('bottom');" /></td>
+                      <td>&nbsp;</td>                                        
+                    </tr>         
+                    <tr>
+                      <td><div id="space4" style="width:30px;">&nbsp;</div></td>
+                      <td colspan="3"><div id="space5" style=" width:110px;">&nbsp;</div></td>
+                      <td><div id="space6" style=" width:30px;">&nbsp;</div></td>                                        
+                    </tr>                  
+                  </table>
+              </div>
+            </fieldset>          
+          </td>
+        </tr>
+      </table>
+<div id="temp1" style="visibility:hidden"><div id="tempObj" style="background-color:#CCCCCC;"></div></div>
+</BODY>

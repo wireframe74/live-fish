@@ -1,0 +1,566 @@
+<html>
+  <head>
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+    <script language="javascript" src="../include/dialog.js"></script>
+    <script language="javascript" src="../include/ajax.js"></script>
+    <script>
+var mode = "";
+var web = "";
+var language = "";
+var urlabs = "";
+var pathabs = "";
+var folderName = "";
+var filter = "";
+var tech = "";
+var fileName = "";
+var folderName = "";
+var win = null;
+var selectedPath = "";
+var type = "";
+var toolbars = null;
+
+// use id and not the object because in ASP.Net object can be changed through blur
+if(browser.ie) {
+	language            = dialogArguments[0];
+	mode                = dialogArguments[2];
+  if(mode == "IMAGE") {
+	  urlabs              = dialogArguments[6];
+	  pathabs             = dialogArguments[7];
+  } else {
+	  urlabs              = dialogArguments[16];
+	  pathabs             = dialogArguments[17];
+  }
+	tech                = dialogArguments[8];
+	filter              = dialogArguments[9];
+	win                 = dialogArguments[11];
+	type                = dialogArguments[19];
+	selectedPath        = dialogArguments[20];
+	params              = dialogArguments;
+} else {
+	aParam = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	mode                = aParam[2];
+  if(mode == "IMAGE") {
+	  urlabs              = aParam[6];
+	  pathabs             = aParam[7];
+  } else {
+	  urlabs              = aParam[16];
+	  pathabs             = aParam[17];
+  }
+	tech                = aParam[8];
+	filter              = aParam[9];
+	win                 = aParam[11];
+	type                = aParam[19];
+	selectedPath        = aParam[20];
+	params              = aParam;
+}
+
+// set title
+document.title = getLanguageString(language,11001) + document.title;
+
+var imageCellWidth = 80;
+var imageCellHeight = 80;
+var imageRowCount = 3;
+
+function onBack()
+{
+  document.getElementById("filelist").contentWindow.goBack();
+}
+
+function onDelete()
+{
+  if(fileName == "") {
+    alert(getLanguageString(language,11007));
+    return;
+  }
+
+  if(confirm(getLanguageString(language,11008))) {
+    var win = document.getElementById("filelist").contentWindow;
+    win.onDelete(fileName);
+  }
+}
+
+function onRename()
+{
+  var newExt = ".html";
+
+  if(mode == 'IMAGE')
+    newExt = "";
+  
+  if(fileName == "") {
+    alert(getLanguageString(language,11007));
+    return;
+  }
+  showPrompt("Rename", "New Name:", 130, 500, fileName, 'callBackOnRename'); 
+}
+
+
+function callBackOnRename(newName) 
+{
+
+  if(!newName)
+    return;
+      
+  if(mode != 'IMAGE') {
+    if(newName != "" && newName != ".html" && newName != ".htm") {
+      if(checkFileName(newName)) {
+        var win = document.getElementById("filelist").contentWindow;
+        win.onRename(newName,fileName);
+      }
+    }
+  } else {
+    if(checkFileName(newName)) {
+      var win = document.getElementById("filelist").contentWindow;
+      win.onRename(newName,fileName);
+    }
+  }
+}
+
+function onCreateFolder()
+{
+  showPrompt("Create Folder", "Name:", 130, 500, '', 'callBackOnCreateFolder');
+}
+
+function callBackOnCreateFolder(newName)
+{
+  if(!newName)
+    return;
+
+  if(checkFileName(newName)) {
+    var win = document.getElementById("filelist").contentWindow;
+    win.onCreateFolder(newName);
+  }
+}
+
+function process()
+{
+  var ret = "";
+  var win = document.getElementById("filelist").contentWindow;
+
+  if(mode == 'OPEN' || mode == 'IMAGE') {
+    if(win.getSelectedRow() < 0) {
+      alert(getLanguageString(language,11007));
+      return;
+    }
+    var type = win.getSelectedType();
+    if(type == 'FOLDER') {
+      win.dblClick(win.getSelectedRow(),type);
+      return;
+    }
+    ret = win.getSelectedPath();
+    ret = ret.replace(/\\/gi, "/");
+  }
+  if(mode == 'SAVE') {
+    if(document.getElementById("txtFile").value == "") {
+      alert(getLanguageString(language,11009));
+      return;
+    }
+    // we need the url because the user can enter the file name
+    var fileName = document.getElementById("txtFile").value;
+
+    if(!checkFileName(fileName))
+      return;
+		ret = win.getCurrentPath() + fileName;
+  }
+
+  if(browser.ns) {
+    if(mode == 'OPEN')
+      if(filter == "swf;")
+				window.opener.callbackMozilla("FLASH", ret);
+      else if(filter.indexOf("avi")>=0)
+				window.opener.callbackMozilla("MEDIA", ret);
+      else
+				window.opener.callbackMozilla("OPENDOC", ret);
+    if(mode == 'SAVE')
+      window.opener.callbackMozilla("SAVEDOC", ret);
+    if(mode == 'IMAGE')
+      window.opener.callbackMozilla("OPENIMAGE", ret);
+  } else {
+    window.returnValue = ret;
+  }
+  window.close();
+}
+
+function checkFileName(fileName)
+{
+  for(var i=0;i<fileName.length;i++) {
+    var c = fileName.charCodeAt(i);
+    if((c < 47 || c > 122) && c!=45 && c!=46 && c!=95) {
+      alert(getLanguageString(language,11010));
+      return false;
+    }
+  }
+  return true;
+}
+
+function RowDblClick()
+{
+	process();  
+}
+
+function onRefreshFileList(currentPath)
+{
+  fileName = "";
+  folderName = "";
+  document.getElementById("lblPath").innerHTML = "";
+  //win.__editSetSelectedDialogPath(currentPath,type);
+}
+
+function Pair(key, value)
+{
+  this.key = key;
+  this.value = value;
+}
+
+function readFile(path)
+{
+//  try {
+    Ajax.method = "POST";
+    Ajax.callback = __callback;
+  	var aParams = new Array();
+  	aParams[0] = new Pair("path",path);
+  	aParams[1] = new Pair("key","read");
+    Ajax.request("../adapter/adapter." + tech,aParams);
+/*
+  } catch(Error) {
+alert(Error);
+  }
+*/
+}
+
+function __callback()
+{
+  try {
+    if (Ajax.text.length > 0) {
+      document.getElementById("preview").contentWindow.document.body.style.margin = "0";
+      document.getElementById("preview").contentWindow.document.body.style.fontFamily = "Courier";
+      document.getElementById("preview").contentWindow.document.body.style.fontSize = "12px";
+      var text = Ajax.text;
+      text = text.replace(/\r/gi,"");
+      text = text.replace(/\n/gi,"<br>");
+      text = text.replace(/\t/gi,"&nbsp;&nbsp;");
+      document.getElementById("preview").contentWindow.document.body.innerHTML = text;;
+    }
+  } catch(Error) {}
+}
+
+function selectPath(path)
+{
+  path = path.replace(/\\/gi, "/");
+  readFile(path);
+  document.getElementById("lblPath").innerHTML = path;
+  document.getElementById("lblPath").title = path;
+return;
+
+  document.getElementById("chkMode").checked = false;
+  
+  if(filter.indexOf("avi")>=0) {
+    document.getElementById("preview").contentWindow.document.body.innerHTML = "<embed pluginspage='http://download.microsoft.com/download/winmediaplayer/nsplugin/6.4/WIN98/EN-US/wmpplugin.exe' src='" + path + "' type='application/x-mplayer2'>";
+  } else {
+    document.getElementById("preview").contentWindow.document.body.style.margin = "0";
+    document.getElementById("preview").contentWindow.document.body.innerHTML = "<iframe src='" + path + "?rnd=" + Math.random() + "' frameborder=0 width='100%' height='100%'></iframe>"
+    document.getElementById("lblPath").innerHTML = path;
+    document.getElementById("lblPath").title = path;
+  }
+}
+
+function SetImageSize()
+{
+  try {
+    // force width
+    var aImages = document.getElementById("preview").contentWindow.document.getElementsByTagName("img");
+    for(var i=0;i<aImages.length;i++) {
+      var objImage = aImages[i];
+      if(browser.ie) {
+        if(objImage.readyState != "complete") {
+          setTimeout("SetImageSize()",100);
+          return;
+        } else {
+          var td = objImage.parentNode.parentNode.parentNode.parentNode.parentNode;
+          if(td.title == "") {
+            td.title = objImage.width + "*" + objImage.height + " Pixel/" + objImage.fileSize + " Byte";
+  	        if(objImage.width > imageCellWidth) {
+              objImage.width = imageCellWidth;
+            }
+  	        if(objImage.height > imageCellHeight) {
+              objImage.height = imageCellHeight;
+            }
+          }
+          objImage.style.visibility = "visible";
+        }
+      } else {
+        if(!objImage.complete) {
+          setTimeout("SetImageSize()",100);
+          return;
+        } else {
+          var td = objImage.parentNode.parentNode.parentNode.parentNode.parentNode;
+          if(td.title == "") {
+            td.title = objImage.width + "*" + objImage.height + " Pixel/" + objImage.fileSize + " Byte";
+  	        if(objImage.width > imageCellWidth) {
+              objImage.width = imageCellWidth;
+            }
+  	        if(objImage.height > imageCellHeight) {
+              objImage.height = imageCellHeight;
+            }
+            objImage.style.visibility = "visible";
+          }
+        }
+      }      
+    }
+  } catch(Error) {}  
+}
+
+function onImageAllClick(checkbox)
+{
+  if(checkbox.checked) {
+    previewImages();
+  }
+}
+
+function onImageClick(id)
+{
+  var ret = document.getElementById("preview").contentWindow.document.getElementById(id).src;
+  if(browser.ns) {
+    window.opener.callbackMozilla("OPENIMAGE", ret);
+  } else {
+    window.returnValue = ret;
+  }
+  window.close();
+}
+
+function previewImages()
+{
+  try {
+    if(mode == 'IMAGE') {
+      document.getElementById("preview").contentWindow.document.body.style.margin = "10px";
+      // get files
+      var aHidden = document.getElementById("filelist").contentWindow.document.getElementsByTagName("input");
+      var temp = "<table border=0>";
+      var j=0;
+      var k=0;
+      var baseUrl = document.getElementById("filelist").contentWindow.getCurrentUrl();
+      baseUrl = baseUrl.replace(/\\/gi, "/");
+      if(baseUrl.substring(baseUrl.length-1,baseUrl.length) != "/")
+        baseUrl = baseUrl + "/";
+
+      for(var i=0;i<aHidden.length;i++) {
+        var path = aHidden[i].value;
+        path = path.replace(/\\/gi, "/");
+        var ext = path.substring(path.length-3,path.length).toLowerCase();
+		    // now build the URL
+        if(ext == "gif" || ext == "peg" || ext == "jpg" || ext== "png") {
+          k = path.length - 1;
+          while(path.substring(k,k+1) != "/") {
+            k--;
+          }
+          var fileName = path.substring(k + 1);
+          path = baseUrl + fileName;
+          if((j % imageRowCount) == 0)
+            temp += "<tr>";
+          temp += "<td  align='center' style='cursor:hand;border: 1px solid white' onclick='parent.onImageClick(\"img" + j + "\")' onmouseover='this.style.border=\"1px solid red\"' onmouseout='this.style.border=\"1px solid white\"'>";
+          temp += "<table style='height:100%' border=0>";
+          temp += "<tr><td align='center'>";
+          temp += "<div style='width:" + imageCellWidth + "px;height:" + imageCellHeight + "px'><table style= 'width:100%;height:100%' cellspacing=0 cellpadding=0 border=0><tr><td align='center'><img id='img" + j + "' style='visibility:hidden' valign='center' src='" + path + "' border=0><div></td></tr></table><td></tr>";
+          temp += "<tr><td height='1%' align='center' nowrap><div style='text-overflow: ellipsis;font-family:arial;font-size:9px'>" + fileName + "</div></td></tr>";
+          temp += "</table></td>";          
+          if((j % imageRowCount) == (imageRowCount-1))
+            temp += "</tr>";
+          j++;
+        }
+      }
+      temp += "</table>";                
+      document.getElementById("preview").contentWindow.document.body.innerHTML = temp;
+      document.getElementById("preview").contentWindow.document.body.style.backgroundColor = "white";
+      SetImageSize();
+      return;
+    } 
+  } catch(Error) {}
+}
+
+function setFileName(name)
+{
+  if(mode == 'SAVE') {
+    document.getElementById("txtFile").value = name;
+  }
+  fileName = name;
+}
+
+function setFolderName(name)
+{
+  folderName = name;
+}
+
+function load()
+{
+
+  try {
+    document.getElementById("lblCancel").value = getLanguageString(language,11015);
+    if(mode == "OPEN")
+      document.getElementById("lbl2").value = getLanguageString(language,11002);
+    if(mode == "SAVE")
+      document.getElementById("lbl2").value = getLanguageString(language,11003);
+    if(mode == "IMAGE")
+      document.getElementById("lbl2").value = getLanguageString(language,11004);
+    if(mode == "SELECT") {
+      document.getElementById("lbl2").value = getLanguageString(language,11002);
+      document.getElementById("lblPath").innerHTML = docdir;
+    }
+    if(mode == "SAVE")
+      document.getElementById("lbl3").innerHTML = getLanguageString(language,11005);
+    document.getElementById("lbl4").innerHTML = getLanguageString(language,11006);
+  } catch(Error) {
+  }
+
+  var url = "filelist." + tech + "?";
+  url = url + "mode=" + mode; 
+  url = url + "&language=" + language; 
+  url = url + "&urlabs=" + urlabs; 
+  url = url + "&pathabs=" + pathabs; 
+  url = url + "&filter=" + filter; 
+  url = url + "&path=" + selectedPath; 
+  url = url + "&rnd=" + Math.random();
+
+  document.getElementById("filelist").src = url;
+  // set mode objects dynamicly
+  if(mode != "SAVE") {
+    document.getElementById("txtFile").style.display = 'none';
+    document.getElementById("lbl3").style.display = 'none';
+  } else {
+    document.getElementById("layPreviewText").style.display = 'none';
+    document.getElementById("layPreview").style.display = 'none';
+  }
+  
+  if(mode == "IMAGE")
+    document.getElementById("layImageAll").style.visibility = "visible";
+
+	// parameter check
+	if(pathabs == "" && tech != "aspx")
+		alert("pinEdit Warning (Parameter Check):\n" + "Please specify parameters for url and path !");
+}
+
+function toolbarCreate(objToolbars, id)
+{
+  
+  toolbars = objToolbars;
+  
+	// set design
+	var design = "4";
+	var imagePath = "design/image/style" + design + "/";
+	// define toolbar back color
+	objToolbars.backcolor = "#ECE9D8"; //"#9EBEF5";
+
+	// create toolbar object
+	var objToolbar = objToolbars.createToolbar();
+	// set values
+	objToolbar.design = design;
+	objToolbar.border = false;
+	objToolbar.height = 27;
+
+	// add begin icon
+  objToolbar.add(objToolbars.createSeparator(imagePath + "tbbegin.gif"));
+
+	objToolbar.add(objToolbars.createButton("",imagePath + "goback.gif","onButtonClick",getLanguageString(language,11011),"BACK"));
+	objToolbar.add(objToolbars.createSeparator(imagePath + "separator.gif"));
+	objToolbar.add(objToolbars.createButton("",imagePath + "file_delete.gif","onButtonClick",getLanguageString(language,11012),"DELETE"));
+	objToolbar.add(objToolbars.createButton("",imagePath + "file_rename.gif","onButtonClick",getLanguageString(language,11013),"RENAME"));
+	objToolbar.add(objToolbars.createSeparator(imagePath + "separator.gif"));
+	objToolbar.add(objToolbars.createButton("",imagePath + "folder_close.gif","onButtonClick",getLanguageString(language,11014),"FOLDER"));
+
+  objToolbar.add(objToolbars.createSeparator("design/image/style" + design + "/tbend.gif"));
+
+	// add toolbar to collection
+	objToolbars.add(objToolbar);
+
+	// now create toolbar
+	objToolbars.create();
+
+}
+
+// event is called after button click
+function onButtonClick(id)
+{
+  var button = toolbars.getElementById(id);
+
+  if(button.tag == "BACK")   onBack();
+  if(button.tag == "DELETE") onDelete();
+  if(button.tag == "RENAME") onRename();
+  if(button.tag == "FOLDER") onCreateFolder();
+}
+
+
+    </script>
+  </head>
+  <body style="margin-left: 5px;margin-right:5px" bgcolor="#ECE9D8" onload="load();">
+    <table style="width:100%;height:100%;">
+      <tr>
+        <td style="width:100%">
+          <table style="width:100%;height:100%; padding-left: 2px; padding-right: 2px;font-family: arial; font-size:11px; font-weight:normal"
+            border="0" cellspacing="0" cellpadding="1">
+            <tr>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="1" cellpadding="0" >
+                  <tr>
+                    <!--<td><img src="../../design/image/goback.gif" onclick="onBack()" border="0" alt="Zurück"></td>
+                    <td><img src="../../design/image/delete.gif" onclick="onDelete()" border="0" alt="Datei löschen"></td>
+                    <td><img src="../../design/image/rtl.gif" onclick="onRename()" border="0" alt="Datei umbenennen"></td>
+                    <td>&nbsp;</td>-->
+                    <td>
+                      <iframe id="toolbar" style="height: 27px;width:100%" src="../toolbar/pinToolbar.html" frameborder="0"></iframe>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td></td>
+              <td nowrap id="layPreviewText"><span id="lbl4"></span><span id="layImageAll" style="visibility:hidden"><span style="width:20px"></span>
+                  <input type="checkbox" id="chkMode" checked onclick="onImageAllClick(this)"><span id="">Show all images</span>
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <td style='WIDTH:360px;HEIGHT:100%'>
+                <iframe id='filelist' src="dummy.html" style='background-color: white;WIDTH:100%;HEIGHT:100%'
+                  frameborder="0" scrolling='auto' onload="setTimeout('previewImages()',200);"></iframe>
+              </td>
+              <td width="1px"></td>
+              <td id="layPreview">
+                <iframe id='preview' style='width:100%;height:100%;' src="../dummy.html" frameborder="0" onload="javascript: if(!this.contentWindow.document.body.style.backgroundColor) this.contentWindow.document.body.style.backgroundColor = 'white';"></iframe>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+                  <tr><td height="1%" nowrap>
+                    <div style="border: 1px inset;width:360px;text-overflow: ellipsis;overflow:hidden;padding-left: 4px;font-family: arial; font-size:11px;background-color: #ECE9D8" id="lblPath"></div>
+                  </td></tr>
+      <tr>
+        <td style="height: 50px; width:100%">
+          <table style="width:100%;height:100%; padding-left: 2px; padding-right: 2px;font-family: arial; font-size:11px; font-weight:normal"
+            border="0" cellspacing="0" cellpadding="1">
+            <tr>
+              <td nowrap><p id="lbl3">File name:</p>
+              </td>
+              <td width="100%"><input style="width: 200px;font-size:11px" type="text" id="txtFile" name="txtFile"></td>
+              <td align="right"><input id="lbl2" type="button" style="width: 80px" name="" value="" onclick="process()"></td>
+            </tr>
+            <tr>
+              <td nowrap></td>
+              <td width="100%">
+              </td>
+              <td align="right"><input id="lblCancel" type="button" style="width: 80px" name="" value="Cancel" onclick="window.returnValue='0';window.close();"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+            </tr>
+          </table>
+        </td>
+      </td>
+    </table>
+  </body>
+</html>

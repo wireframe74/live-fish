@@ -1,0 +1,140 @@
+<toolbars>
+<toolbar position="top">
+  <regionstart />
+  <button image="new.gif" callback="editNew(1)" tag="NEW" tooltipid="101"></button>
+  <button image="open.gif" callback="editOpen(7);editStatusBarSetText(editGetFileUrl());" tag="OPEN" tooltipid="102"></button>
+  <button image="save.gif" callback="var html = editGetHtmlBody(); globalDocumentUrlAbsolute = globalAutoTextUrlAbsolute; globalDocumentPathAbsolute = globalAutoTextPathAbsolute; if(editGetFileUrl() == '')  editSaveDialog(html,7); else  editSave(null,html);" tag="SAVE" tooltipid="118"></button>
+  <button image="saveas.gif" callback="var html = editGetHtmlBody(); globalDocumentUrlAbsolute = globalAutoTextUrlAbsolute; globalDocumentPathAbsolute = globalAutoTextPathAbsolute; if(editGetFileUrl() == '')  editSaveDialog(html,7); else  editSave(null,html);" tag="SAVEAS" tooltipid="119"></button>
+  <separator />
+  <button image="search.gif" callback="editSearch()" tag="SEARCH" tooltipid="113"></button>
+  <separator />
+  <button image="print.gif" callback="editPrint()" tag="PRINT" tooltipid="103"></button>
+  <button image="preview.gif" callback="editPreview()" tag="PREVIEW" tooltipid="3314"></button>
+  <separator />
+  <button image="page.gif" callback="editProperties(4)" tag="PAGE" tooltipid="1016"></button>
+  <button image="spell.gif" callback="editSpell()" tag="SPELL" tooltipid="411"></button>
+  <separator />
+  <button image="cut.gif" callback="editCut()" tag="CUT" tooltipid="104"></button>
+  <button image="copy.gif" callback="editCopy()" tag="COPY" tooltipid="105"></button>
+  <button image="paste.gif" callback="editPaste()" tag="PASTE" tooltipid="106"></button>
+  <separator />
+  <button image="undo.gif" callback="editUndo()" tag="UNDO" tooltipid="107"></button>
+  <button image="redo.gif" callback="editRedo()" tag="REDO" tooltipid="108"></button>
+  <regionend />
+
+  <distance width="3" background="true"></distance>
+
+  <regionstart />
+  <checkbutton image="special.gif" callback="editShowSpecialChar(button.pressed)" tag="SPECIAL" tooltipid="1042" />
+  <button image="link.gif" callback="editLink()" tag="LINK" tooltipid="109"></button>
+  <button image="anchor.gif" callback="editInsertObject('ANCHOR')" tag="ANCHOR" tooltipid="407"></button>
+  <menubutton image="image.gif" tooltipid="110" popupwidth="160">
+    <listitem textid="703" value="INSERTSERVER" image="image.gif" callback="editOpen(3)"></listitem>
+    <listitem textid="702" value="INSERTWEB" image="image_world.gif" callback="editInsertObject('IMAGEWEB')"></listitem>
+    <listitem textid="701" value="INSERTLOC" image="image_server.gif" callback="editInsertObject('IMAGE')"></listitem>
+  </menubutton>
+  <popupbutton image="table.gif" tooltipid="111" url="popup/table2.html" callback="if(popup.value != ''){var temp = popup.value.split(':');eventOnCreateTable(temp[0],temp[1]);}" popupheight="132" popupwidth="120"></popupbutton>
+  <button image="rule.gif" callback="editInsertObject('RULE')" tag="RULE" tooltipid="112"></button>
+  <button image="char.gif" callback="editChar()" tag="CHAR" tooltipid="115"></button>
+  <button image="marquee.gif" callback="editInsertObject('MARQUEE')" tag="MARQUEE" tooltipid="409"></button>
+  <button image="flash.gif" callback="editOpen(4)" tag="FLASH" tooltipid="3303"></button>
+  <button image="media.gif" callback="editOpen(5)" tag="MEDIA" tooltipid="3304"></button>
+  <regionend />
+</toolbar>
+
+<toolbar position="top">
+  <dropdownlist displayvalue="tag2" width="100" callback="editSetStyle(dropdown.selectedItem.value,dropdown.selectedItem.tag1)" tag="STYLE" tooltipid="3014">
+	  <listitem textid="6000" value="Standard"></listitem>
+  </dropdownlist>
+  <distance></distance>
+  <dropdownlist displayvalue="Tag1" width="80" callback="editFormat(dropdown.selectedItem.value)"  tag="FORMAT" tooltipid="3015">
+	  <listitem text="Normal" value="NORMAL" tag="Normal" ></listitem>
+	  <listitem text="&lt;h1 unselectable='ON'&gt;Heading 1&lt;/h1&gt;" value="&lt;h1&gt;" tag="Heading 1"></listitem>
+	  <listitem text="&lt;h2 unselectable='ON'&gt;Heading 2&lt;/h2&gt;" value="&lt;h2&gt;" tag="Heading 2"></listitem>
+	  <listitem text="&lt;h3 unselectable='ON'&gt;Heading 3&lt;/h3&gt;" value="&lt;h3&gt;" tag="Heading 3"></listitem>
+	  <listitem text="&lt;h4 unselectable='ON'&gt;Heading 4&lt;/h4&gt;" value="&lt;h4&gt;" tag="Heading 4"></listitem>
+	  <listitem text="&lt;h5 unselectable='ON'&gt;Heading 5&lt;/h5&gt;" value="&lt;h5&gt;" tag="Heading 5"></listitem>
+	  <listitem text="&lt;h6 unselectable='ON'&gt;Heading 6&lt;/h6&gt;" value="&lt;h6&gt;" tag="Heading 6"></listitem>
+	  <listitem text="&lt;address unselectable='ON' &gt;Address&lt;/address&gt;" value="&lt;address&gt;" tag="Address" ></listitem>
+	  <listitem text="&lt;dir unselectable='ON' &gt;Directory List&lt;/dir&gt;" value="&lt;dir&gt;" tag="Directory List"></listitem>
+	  <listitem text="&lt;pre unselectable='ON' &gt;Formatted&lt;/pre&gt;" value="&lt;pre&gt;" tag="Formatted"></listitem>
+	  <listitem text="&lt;menu unselectable='ON' &gt;Menu List&lt;/menu&gt;" value="&lt;menu&gt;" tag="Menu List"></listitem>
+  </dropdownlist>
+  <distance />
+  <dropdownlist displayvalue="Value" comparemode="1" width="114" callback="editFont(dropdown.selectedItem.value)"  tag="FONT" tooltipid="3016">
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Arial'&gt;Arial&lt;/span&gt;"                        value="Arial"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Arial Black'&gt;Arial Black&lt;/span&gt;"            value="Arial Black"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Courier'&gt;Courier&lt;/span&gt;"                    value="Courier"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Courier New'&gt;Courier New&lt;/span&gt;"            value="Courier New"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Georgia'&gt;Georgia&lt;/span&gt;"                    value="Georgia"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Impact'&gt;Impact&lt;/span&gt;"                      value="Impact"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Lucida Console'&gt;Lucida Console&lt;/span&gt;"      value="Lucida Console"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Tahoma'&gt;Tahoma&lt;/span&gt;"                      value="Tahoma"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Times New Roman'&gt;Times New Roman&lt;/span&gt;"    value="Times New Roman"></listitem>
+	  <listitem text="&lt;span unselectable='ON' style='font-family:Verdana'&gt;Verdana&lt;/span&gt;"                    value="Verdana"></listitem>
+  </dropdownlist>
+  <distance />
+  <dropdownlist displayvalue="value" width="45" callback="editFontSize(dropdown.selectedItem.value)"  tag="FONTSIZE" tooltipid="3017">
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 6'&gt;6&lt;/span&gt;" value="6"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 7'&gt;7&lt;/span&gt;" value="7"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 8'&gt;8&lt;/span&gt;" value="8"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 9'&gt;9&lt;/span&gt;" value="9"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 10'&gt;10&lt;/span&gt;" value="10"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 11'&gt;11&lt;/span&gt;" value="11"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 12'&gt;12&lt;/span&gt;" value="12"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 13'&gt;13&lt;/span&gt;" value="13"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 14'&gt;14&lt;/span&gt;" value="14"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 15'&gt;15&lt;/span&gt;" value="15"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 16'&gt;16&lt;/span&gt;" value="16"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 18'&gt;18&lt;/span&gt;" value="18"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 20'&gt;20&lt;/span&gt;" value="20"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 22'&gt;22&lt;/span&gt;" value="22"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 24'&gt;24&lt;/span&gt;" value="24"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 36'&gt;36&lt;/span&gt;" value="36"></listitem>
+	  <listitem text="&lt;span unselectable='ON'  style='font-family:Arial;font-size: 48'&gt;48&lt;/span&gt;" value="48"></listitem>
+  </dropdownlist>
+  <distance />
+  <regionstart />
+  <button image="bold.gif" tag="BOLD" callback="editBold(!button.pressed)" tooltipid="201" ></button>
+  <button image="italic.gif" tag="ITALIC" callback="editItalic(!button.pressed)" tooltipid="202"></button>
+  <button image="underline.gif" tag="UNDERLINE" callback="editUnderline(!button.pressed)" tooltipid="203"></button>
+  <button image="strikethrough.gif" tag="STRIKE" callback="editStrikeThrough(!button.pressed)" tooltipid="1080"></button>
+  <separator />
+  <colorbutton image="color.gif" callback="editColor(colorbutton.color)" tag="COLOR" tooltipid="215"></colorbutton>
+  <colorbutton image="backcolor.gif" callback="editBackColor(colorbutton.color)" tag="BACKCOLOR" tooltipid="216"></colorbutton>
+  <separator />
+  <button image="left.gif" tag="JUSTIFYLEFT" callback="editJustifyLeft()" tooltipid="206" ></button>
+  <button image="center.gif" tag="JUSTIFYCENTER" callback="editJustifyCenter()" tooltipid="207" ></button>
+  <button image="right.gif" tag="JUSTIFYRIGHT" callback="editJustifyRight()" tooltipid="208" ></button>
+  <button image="block.gif" tag="JUSTIFYFULL" callback="editJustifyFull()" tooltipid="209" ></button>
+  <separator />
+  <menubutton image="linespacing.gif" update="false" tooltipid="1081" popupwidth="100">
+    <listitem text="1"  image="empty.gif" callback="editLineSpacing(14)"></listitem>
+    <listitem text="1.25"  image="empty.gif" callback="editLineSpacing(17.5)"></listitem>
+    <listitem text="1.5"  image="empty.gif" callback="editLineSpacing(21)"></listitem>
+    <listitem text="2" image="empty.gif" callback="editLineSpacing(28)"></listitem>
+    <listseparator />
+    <listitem textid="7010" value=""  image="paragraph2.gif" callback="editProperties(7)"></listitem>
+  </menubutton>
+  <separator />
+  <button image="orderedlist.gif" tag="INSERTORDEREDLIST" callback="editOrderedList()"  tooltipid="210" ></button>
+  <button image="unorderedlist.gif" tag="INSERTUNORDEREDLIST" callback="editUnorderedList()"  tooltipid="211" ></button>
+  <button image="indent.gif" tag="INDENT" callback="editIndent()"  tooltipid="212" ></button>
+  <button image="outdent.gif" tag="OUTDENT" callback="editOutdent()"  tooltipid="213" ></button>
+  <regionend />
+</toolbar>
+
+
+<toolbar position="bottom">
+	<regionstart />
+	<checkbutton textid="401" tooltipid="401" selected="true" image="edit.gif" callback="editSetToolbarVisible('TOP',true);editSetMode(button.tag);editSetActiveMode(button.tag);" tag="EDIT" group="BOTTOM" />
+	<checkbutton textid="402" tooltipid="402" image="html.gif" tag="HTML" callback="editSetToolbarVisible('TOP',false);editSetMode(button.tag);editSetActiveMode(button.tag);" group="BOTTOM" />
+	<checkbutton textid="403" tooltipid="403" image="preview.gif" tag="PREVIEW" callback="editSetToolbarVisible('TOP',false);editSetMode(button.tag);editSetActiveMode(button.tag);" group="BOTTOM" />
+	<regionend />
+  <distance width="3" background="true"></distance>
+	<regionstart />
+  <button textid="1084" tag="VALIDATOR" callback="editValidator()" tooltipid="1084"></button>
+	<regionend />
+</toolbar>
+
+</toolbars>

@@ -1,0 +1,220 @@
+<HTML>
+<HEAD>
+<title></title>
+    <link rel="stylesheet" href="../design/style/dialog.css" type="text/css">
+      <script language="javascript" src="../include/dialog.js"></script>
+<SCRIPT>
+
+var __objRange = null;
+var language   = "";
+var design     = "";
+var doc        = null;
+var win        = null;
+var editorwin  = null;
+var __objSelectedRange = null;
+var __moz_found = false;
+var findTextMatches = new Array();
+var runSearch = false;
+
+function search()
+{
+  var curRange;
+  var search = "";
+
+  if(document.getElementById("txtSearch").value == "") {
+    alert(getLanguageString(language,996));
+    return;
+  } else {
+    search = document.getElementById("txtSearch").value;
+  }
+
+	if(browser.ie) {
+		if(__objRange != null) {
+			curRange = __objRange;
+		} else {
+			curRange = doc.body.createTextRange();
+			__objRange = curRange;
+		}
+		var searchtype = 0;
+    if(document.getElementById("chkWord").checked)
+      searchtype = 2;
+    if(document.getElementById("chkCase").checked)
+      searchtype = searchtype + 4;
+      
+
+		if(curRange.findText(search,1,searchtype)) {
+			curRange.select();
+			curRange.scrollIntoView();
+			__objSelectedRange = curRange;
+			__objRange.setEndPoint("StartToEnd", curRange)
+		} else {
+		  curRange.collapse(true);
+		  curRange.select();
+			alert(getLanguageString(language,997))
+			__objRange = null;
+			__objSelectedRange = null;
+		}
+	} else {
+
+    try {
+		  if(!runSearch) {
+	      findText(editorwin.document.getElementById("pinEdit").contentWindow.document.body,search,document.getElementById("chkCase").checked ? false:true,document.getElementById("chkWord").checked ? true:false);
+	    }
+		  if(findTextMatches.length > 0) {
+	      highlightText();
+      }	else {
+			  runSearch = false;
+			  findTextMatches = new Array();
+			  alert(getLanguageString(language,997))
+			  var selection = editorwin.getWindow().getSelection();
+			  var range = selection.getRangeAt( selection.rangeCount-1 ).cloneRange();
+			  selection.removeAllRanges();
+			  return;
+      }    
+     	      
+		} catch(Error) {
+		}
+
+	}
+  runSearch = true;
+}
+
+function replace()
+{
+	if(document.getElementById("txtReplace").value == "") {
+		alert(getLanguageString(language,998));
+		return;
+	}
+	
+	if(browser.ie) {
+		try {
+			if(__objSelectedRange != null) {
+				var range = doc.selection.createRange();
+				range.pasteHTML(document.getElementById("txtReplace").value);
+				//window.opener.__editOnChanged(true);
+				editorwin.__editOnChanged(true);
+			}
+		} catch(Error) {}
+	} else {
+		//if(findTextMatches.length > 0) {
+			editorwin.editInsertHtml(document.getElementById("txtReplace").value);	
+			editorwin.__editOnChanged(true);
+			window.focus();
+		//}
+	}
+  search();
+}
+
+function findText(body, query, ignoreCase, wholeWord) 
+{
+	findTextMatches.length = 0;
+	if (ignoreCase)
+		query = query.toLowerCase();
+
+	var tw = body.ownerDocument.createTreeWalker(body, NodeFilter.SHOW_TEXT, { acceptNode: function(node) {	return NodeFilter['FILTER_' + (RegExp(query, (ignoreCase ? 'i' : '')).test(node.nodeValue) ? 'ACCEPT' : 'REJECT')] } }, true);
+
+	var offsets = [];
+	offsets[-1] = query.length * -1;
+	var totalMatches, trueOffsetDiff;
+	var range = body.ownerDocument.createRange();
+
+	while (tw.nextNode()) {
+		totalMatches = tw.currentNode.nodeValue.split(RegExp(query, (ignoreCase ? 'i' : ''))).length - 1;
+		for (var i = 0; i < totalMatches; i++) {
+		  var checkWord = true;
+		  if(wholeWord) {
+		    if(tw.currentNode.nodeValue.length != query.length)
+		      checkWord = false;
+		  }
+      if(checkWord) {
+			  trueOffsetDiff = offsets[offsets.length - 1] + query.length;
+			  offsets[offsets.length] = tw.currentNode.nodeValue.substr(trueOffsetDiff)[ignoreCase ? 'toLowerCase' : 'toString']().indexOf(query) + trueOffsetDiff;
+
+			  range.selectNode(tw.currentNode);
+			  range.setStart(tw.currentNode, offsets[offsets.length - 1]);
+			  range.setEnd(tw.currentNode, range.startOffset + query.length);
+			  findTextMatches[findTextMatches.length] = range.cloneRange();
+      }
+		}
+		offsets.length = 0;
+	}
+	return (tw.currentNode != body);
+}
+
+function highlightText() 
+{
+	if (findTextMatches.length > 0) {
+		with (editorwin.document.getElementById('pinEdit').contentWindow.getSelection()) {
+			removeAllRanges();
+			addRange(findTextMatches.shift());
+		}
+		return true;
+	}
+	else
+		return false;
+}
+
+
+function initDialog(param)
+{
+  params = param;
+
+
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+	  editorwin           = params[11];	  
+	  userMode            = params[21];
+
+    // set language strings
+    setStrings();
+
+		//document.getElementById("txtSearch").focus();
+    document.getElementById("lbl4").value = getLanguageString(language,4324);
+    document.getElementById("lbl5").value = getLanguageString(language,4326);
+    
+  } catch(Error) {
+  }
+}
+
+function changeSearch()
+{
+  findTextMatches = new Array();
+  runSearch = false;
+}
+
+
+      </SCRIPT>
+  </HEAD>
+  <BODY style="MARGIN:5px;OVERFLOW:hidden">
+    <table width="100%" border="0" cellSpacing="0" cellPadding="0">
+      <tr>
+        <td valign="top">
+          <TABLE class="maintable" cellSpacing="0" cellPadding="4" width="100%" border="0">
+            <TR>
+              <TD colspan="2">
+              </TD>
+            </TR>
+            <TR>
+              <TD width="1%" nowrap>
+                <span style="width:50px;" id="4323">_Search:</span>
+              </TD>
+              <td><INPUT id="txtSearch" style="FONT-SIZE: 11px; WIDTH: 200px; FONT-FAMILY: arial"  onchange="javascript: changeSearch()" NAME="txtSearch">&nbsp;<INPUT id="lbl4" style="WIDTH: 83px" type="button" value="_Search" onClick="search()"</td>
+            </TR>
+            <TR>
+              <TD nowrap>
+                <span style="width:50px;" id="4325">_Replace:</span>
+              </TD>
+              <td><INPUT id="txtReplace" style="FONT-SIZE: 11px; WIDTH: 200px; FONT-FAMILY: arial" NAME="txtReplace">&nbsp;<INPUT id="lbl5" style="WIDTH: 83px" type="button" value="_Replace" onClick="replace()"</td>
+            </TR>
+            <tr><td colspan=2 ><input id="chkCase" type=checkbox NAME="chkCase"><span id="1086">_Case</span></td></tr>
+            <tr><td colspan=2><input id="chkWord" type=checkbox NAME="chkWord"><span id="1087">_Word</span></td></tr>
+          </TABLE>
+        </td>
+      </tr>
+    </table>
+  </BODY>
+</HTML>

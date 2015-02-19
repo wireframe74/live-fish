@@ -1,0 +1,120 @@
+/* ------------------*/
+/* Style3            */
+/*-------------------*/
+.pinButtonStandard {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#9EBEF5;
+	padding:		2px 3px 2px 3px;		
+}
+.pinButtonHover {
+	cursor: 		pointer;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#000080;
+	padding:		1px 2px 1px 2px;		
+	background-image: url('tbover.gif');
+}
+.pinButtonPopup {
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-left-color:	#808080;
+	border-right-color:	#808080;
+	border-top-color:		#808080;
+	border-bottom-color:  	white;
+	padding:		1px 2px 1px 2px;		
+	background-image: url('tbdown.gif');
+}
+.pinButtonActive {
+	cursor: 		pointer;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#666666;
+	padding:		2px 1px 0px 3px;
+	background-image: url('tbdown.gif');
+}
+
+
+.pinComboStandard {
+	cursor:		default;
+	color:		ButtonText;
+	background-color: white;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	white;
+}
+.pinComboHover {
+	cursor: 		pointer;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#000080;
+}
+.pinComboPopup {
+	cursor: 		pointer;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#000080;
+}
+
+
+
+.pinMenuItemStandard {
+	cursor: 		Default;
+	border:		1px solid white;
+	background:		white;
+	font-family: 	arial;
+	font-size: 		11px;
+}
+.pinMenuItemHover {
+	cursor: 		pointer;
+	border:		1px solid #000080;
+	font-family: 	arial;
+	font-size: 	11px;
+	background-image: url('tbdown.gif');
+}
+
+.pinToolbarIn
+{
+	background-image: url('tbback.gif');
+}
+.pinToolbarOut
+{
+	margin-left:0px;
+	margin-top:0px;
+	border-width:1px;
+	border-style: solid;
+}
+
+.pinToolbarInput
+{
+	border: 1px solid white;
+	height: 18px;
+	font-family: arial;
+	font-size: 11px;
+}
+
+.pinToolbarInputHover
+{
+	border: 1px solid #000080;
+	height: 18px;
+	font-family: arial;
+	font-size: 11px;
+}
+
+pinToolbarLabel
+{
+	font-family: arial;
+	font-size: 11px;
+}

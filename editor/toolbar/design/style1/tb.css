@@ -1,0 +1,146 @@
+/* ------------------*/
+/* Style1 Button     */
+/* ------------------*/
+.pinButtonStandard {
+	font:			Menu;
+	cursor: 		Default;
+	border:		1px solid ButtonFace;
+	background:		ButtonFace;
+	color:		ButtonText;
+	padding:		1px 2px 1px 2px;		
+}
+.pinButtonHover {
+	font:			Menu;
+	cursor: 			pointer;
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:		ButtonHighlight;
+	border-bottom-color:	ButtonShadow;
+	padding:			1px 2px 1px 2px;		
+}
+.pinButtonActive {
+	font:			Menu;
+	cursor: 			pointer;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+	padding:			2px 1px 0px 3px;
+}
+.pinButtonPopup {
+	font:			Menu;
+	cursor: 			pointer;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+	padding:			2px 1px 0px 3px;
+}
+.pinButtonDisabled {
+	font:			Menu;
+	cursor: 			Default;
+	padding:			1px 2px 1px 2px;		
+	color:			GrayText;
+	border:			1px solid ButtonFace;
+}
+.pinMenuItemStandard {
+	font:			Menu;
+	cursor: 		Default;
+	border:		1px solid ButtonFace;
+	background:		ButtonFace;
+	color:		ButtonText;
+}
+.pinMenuItemHover {
+	font:			Menu;
+	cursor: 			pointer;
+	border:		1px solid #316AC5;
+	background:		#316AC5;
+	color:		White;
+}
+.pinToolbarIn
+{
+	background-color: ButtonFace;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonHighlight;
+	border-bottom-color:ButtonShadow;
+}
+.pinToolbarOut
+{
+	margin-left:  0px;
+	margin-top:   0px;
+	border-width: 0px;
+	border-style: solid;
+}
+
+.pinComboStandard 
+{
+	cursor:		default;
+	color:		ButtonText;
+	background-color: white;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	white;
+}
+
+.pinComboHover 
+{
+	cursor: 		pointer;
+	font:			Menu;
+	background-color: white;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+}
+
+.pinComboPopup
+{
+	cursor: 		pointer;
+	font:			Menu;
+	background-color: white;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+}
+
+.pinToolbarInput
+{
+	border: 1px solid white;
+	height: 18px;
+	font-family: arial;
+	font-size: 11px;
+}
+
+.pinToolbarInputHover
+{
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+	height: 18px;
+	font-family: arial;
+	font-size: 11px;
+}
+
+pinToolbarLabel
+{
+	font-family: arial;
+	font-size: 11px;
+}

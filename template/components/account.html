@@ -1,0 +1,501 @@
+<!-- start of components/account.html -->
+<%
+	String alertMessage = null;
+	if (request.getAttribute("alertMessage") != null) alertMessage = (String)request.getAttribute("alertMessage");
+
+	final String initialValidationString = "Please enter your ";
+	String validationString = initialValidationString ;
+	if (request.getAttribute("validationString") != null) validationString = (String)request.getAttribute("validationString");
+
+	String paramAction = "";
+	if (request.getAttribute("action") != null) paramAction = (String)request.getAttribute("action");
+
+	String paramSource = "";
+	if (request.getAttribute("src") != null) paramSource = (String)request.getAttribute("src");
+
+	int confirmMode = 0;
+	if (request.getAttribute("confirmMode") != null) confirmMode = Integer.parseInt((String)request.getAttribute("confirmMode"));
+
+	
+	//out.write(""+request.getAttribute("validationString")+"    request.getAttribute(action): "+request.getAttribute("action"));
+%>
+<table width="100%" align="center" cellspacing=0 cellpadding=0 border="0"><tr><td>
+        <table border=0 width=100% align=center valign=top cellspacing=0 cellpadding=0>
+        <tr>
+        	<td align=left valign=bottom class="trail">
+	        	<%=userSession.getTrailHTML("Register", userSession.getFullURL(request))%>
+        	</td>
+	 	<td align=right width=100>
+        		<table width=100% border=0 cellspacing=0 cellpadding=0>
+	 		<tr>
+				<td width=50%>
+				</td>
+		       </tr>
+			</table>
+    	 	</td>
+	 </tr>
+	</table>
+</td></tr>
+<tr>
+<td>
+<BR>
+<BR>
+<table width="100%" align="center" valign=top border=0 cellspacing=0 cellpadding=0>
+    <tr>
+        <td> 
+		<table border="0" cellspacing=0 cellpadding=0><tr valign="middle">
+	         <td valign="middle"><a href=<%="'"+userSession.getLastURL()+"'"%> class="button">&nbsp;&nbsp;<img src="<%=website.getImagePath("btnleft.gif")%>" alt="Back" class="btnLeft btn-grey" />&nbsp;Back To Shop&nbsp;&nbsp;</a><br></td>
+             </tr></table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+         <br>
+        </td>
+    </tr>
+    <%
+        if (validationString != null && !validationString.equals(initialValidationString)) {
+    %>
+        <tr>
+            <td>
+                <table width=100% cellpadding=2 cellspacing=0>
+                    <tr>
+                        <td valign=top>
+                            <img src="<%=website.getImagePath("icon_error.gif")%>" alt="error icon" />&nbsp;
+                        </td>
+                        <td color=red>
+                            <font class="discount" style="font.size:12px"><b><%=validationString%></b></font>
+                            <br><br>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    <% } %>
+<% if (confirmMode == 0) { %>
+    <tr>
+        <td>
+		<BR> 
+		<div class="checkoutcontainer">
+		<table cellspacing="0" cellpadding="0" border="0" width="99%"><tr><td>
+
+            <form name="logindetails" action='register.jsp' method="POST" onsubmit='return true;' style="margin:0 0 0 0;">
+                <input type=hidden name="action" value='login'>
+                <input type=hidden name="src" value='<%=paramSource%>'>
+
+		  
+                <table width="100%" cellspacing="0" cellpadding="0" class="form"><tr><td>
+                <table width="100%" align="left" border="0" cellspacing="1" cellpadding=0> 
+                    <tr>
+			   <% 
+				String pageTitle = "Returning customers login";
+				String pageTitleText = "";
+				String pageTitleImage = "";
+			    %>
+                        <td>
+				<%@include file="../drawcontainerheader.html"%>
+                        </td>
+                    </tr>
+                    <tr height="8"><td> </td></tr>
+                    <tr>
+                        <td>
+                            <table class="inputitemlabel" width=100% align="left" border=0 cellspacing=0 cellpadding=0>
+                                <tr height=40>
+                                    <td height=100% valign=center align=left>
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td> 
+                                        &nbsp;Email Address <input class="inputitem" type=text name="emailaddress" value='<%=request.getAttribute("emailaddress")%>'>
+                                    </td>
+                                    <td>
+                                        Password <input class="inputitem" type=password name="password" value=''>
+                                    </td> 
+                                </tr> 
+                            </table> 
+                        </td>
+                     </tr>
+                     <tr></tr><tr></tr><tr></tr>
+                     <tr>
+                        <td>
+                            <table width="100%" align=left border="0" cellspacing=0 cellpadding=0>
+                                <tr>
+                                    <td align="left">
+					<div style="padding-top:8px;">    
+                                        &nbsp;<a href="javascript: document.logindetails.action.value='forgot'; document.logindetails.submit();" class="trail">Forgotten your password?</a> 
+					</div>
+                                    </td>
+                                    <td align="right"> 
+						<div align="right" style="padding-right:0px;"> 
+                                        		<input type="submit" name="submit1" align="right"  value="   Login   "> 
+						</div> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                     </tr>
+                </table>
+                </tr></td></table>
+		 
+               </form>
+		 </tr></td></table>
+		 </div>
+              <script language="javascript"><!--
+                  document.logindetails.emailaddress.focus();
+              //--></script>
+        </td>
+    </tr>
+<% } %>
+
+    <tr>
+        <td>
+        	<br>
+		<% if (!paramAction.equals("getAddr")) out.write("<BR>"); %>
+
+		<div class="checkoutcontainer">
+		  <table cellspacing="0" cellpadding="0" border="0" width="99%"><tr><td>
+	  
+			<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+	                    <tr>
+				    <% 
+					String pageTitle = "New customer registration";
+					String pageTitleText = "";
+					String pageTitleImage = "";
+
+					if (confirmMode == 1) {
+						pageTitle = "Confirm your registration details";
+					} 
+				    %>
+	                        <td>
+					<%@include file="../drawcontainerheader.html"%>
+	                        </td>
+	                    </tr>
+	                    <tr height=8><td> </td></tr>
+			</table>
+		  </td></tr><tr><td>
+<% if (website.getPcaAccountCode() != null && confirmMode == 0) { %>
+	         <form name="registerdetails" action="register.jsp" method="POST" style="margin:0 0 0 0;">
+
+			<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0">
+			
+			<tr>
+                        <td>
+                            <table class="inputitemlabel" width="100%" align="left" border="0" cellspacing="0" cellpadding="0" >
+                                <tr>
+                                    <td height="100%" valign="center" align="left">
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td align=right>
+                                        Name*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="name" value='<%=request.getAttribute("name")%>'>
+                                    </td>
+                                    <td align=right>
+                                        Email&nbsp;Address*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="emailaddress" value='<%=request.getAttribute("emailaddress")%>'>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td height=100% valign=center align=left>
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                   
+                                    <td align="right">
+                                        Post&nbsp;Code/Zip*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="addrlu1" value='<%=request.getAttribute("addrlu1")%>'>
+                                    </td>
+
+                                    <td align="right">
+                                        House&nbsp;Name/Number*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="addrlu2" value='<%=request.getAttribute("addrlu2")%>'>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                  			<td colspan="5"><BR>
+                    				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        				<tr valign=top>
+                            				<td>
+                                					<FONT STYLE="font.size:11px;" size="1" valign=top><i></i><BR></font>
+                                					<FONT STYLE="font.size:11px;" size="1">Fields marked with an * are required</font>
+                            				</td>
+				                           <td width=20% align="right" valign="bottom">
+                                				 	<input type=hidden name="action" value='getAddr'>
+									<input type=hidden name="src" value='<%=paramSource%>'>
+
+                           					<input type=submit name="submit" style="margin-bottom:0px;margin-right:0px;" value=' Next > '> 
+                            				</td>
+                        				</tr>
+                     			</table>
+                  			</td>
+                		   </tr>
+
+                            </table>
+                        </td>
+                     </tr>
+                
+			</table>
+		  </form>
+
+		  </td></tr><tr><td>
+
+<% } else { %> 
+
+	         <form name="registerdetails" action="register.jsp" method="POST" style="margin:0 0 0 0;">
+
+                <table width="100%" class="form" cellspacing="0" cellpadding="4"><tr><td>
+                <table width="100%" align="left" border="0" cellspacing=0 cellpadding=0>
+		 
+
+                    <tr>
+                        <td>
+                            <table class="inputitemlabel" width="100%" align="left" border="0" cellspacing="0" cellpadding="0" >
+                                <tr>
+                                    <td height="100%" valign="center" align="left">
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td align=right>
+                                        Name*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="name" value='<%=request.getAttribute("name")%>'>
+                                    </td>
+                                    <td align=right>
+						<div align="right" style="margin-right:5px;text-align:right;">
+	                                        Billing&nbsp;Address*
+						</div>
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="address1" value='<%=request.getAttribute("address1")%>'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height=100% valign=center align=left>
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="address2" value='<%=request.getAttribute("address2")%>'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height=100% valign=center align=left>
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="address3" value='<%=request.getAttribute("address3")%>'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height=100% valign=center align=left>
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td align=right>
+                                        State*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="county" value='<%=request.getAttribute("county")%>'>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height=100% valign=center align=left>
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td align=right>
+                                        Post Code/Zip*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="postcode" value='<%=request.getAttribute("postcode")%>'>
+                                    </td>
+                                </tr>
+				     <tr>
+                                    <td height=100% valign=center align=left>
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td align=right>
+                                        Country*&nbsp;
+                                    </td>
+                                    <td>
+					<select class="inputitem" name="country" value='<%=request.getAttribute("country")%>'><%=website.getCountryList((String)request.getAttribute("country"))%></select>
+					<script>
+var temp = "AU";
+var mySelect = document.getElementByName('country');
+
+for(var i, j = 0; i = mySelect.options[j]; j++) {
+    if(i.value == temp) {
+        mySelect.selectedIndex = j;
+        break;
+    }
+}
+</script>
+                                    </td>
+                                </tr>
+				    <tr>
+                                    <td height=100% valign=center align=left>
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td align=right>
+                                        Delivery Area*&nbsp;
+                                    </td>
+                                    <td>
+                                        <select class="inputitem" name="carriageregion" value='<%=userSession.getShoppingBasket().getCarriageRegionId()%>'><%=userSession.getCarriageRegions(true)%></select>
+                                    </td>
+                                </tr>
+                                <tr><td><br></td></tr>
+                                <tr>
+                                    <td valign=center align=left>
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td align=right>
+                                        Telephone&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="telephone" value='<%=request.getAttribute("telephone")%>'>
+                                    </td>
+                                    <td align=right>
+                                        Email Address*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=text name="emailaddress" value='<%=request.getAttribute("emailaddress")%>'>
+                                    </td>
+                                </tr>
+                                <tr><td><br></td></tr>
+                                <tr>
+                                    <td valign="center" align="left">
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+                                    <td align="right" colspan="3">
+                                        Choose Password*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=password name="password1" value="">
+                                    </td>
+				     </tr>
+				     <tr>
+					 <td valign="center" align="left">
+                                        <FONT STYLE="font.size:12px;" COLOR="#FFFFFF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></FONT>
+                                    </td>
+
+                                    <td align="right" colspan="3">
+                                        Confirm Password*&nbsp;
+                                    </td>
+                                    <td>
+                                        <input class="inputitem" type=password name="password2" value="">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                     </tr>
+                </table>
+                </td></tr>
+                <tr>
+                  <td><BR>
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr valign=top>
+                            <td>
+                                <FONT STYLE="font.size:11px;" size="1" valign=top><i>Note:</i><BR></font>
+			    </td>
+                            <td>
+                                <FONT STYLE="font.size:11px;" size="1">Passwords must be at least 4 characters long</font>
+                                <br>
+                                <FONT STYLE="font.size:11px;" size="1">For card orders, this must be the cardholder's registered address</font>
+                                <br>
+                                <FONT STYLE="font.size:11px;" size="1">Fields marked with an * are required</font>
+                            </td>
+                            <td width=20% align=right valign=bottom>
+                                <input type=hidden name="action" value='register'>
+                                <input type=hidden name="src" value='<%=paramSource%>'>
+                                <input type=hidden name="confirmMode" value='<%=confirmMode%>'>
+                                <input type=submit name="submit" value=' Register '> 
+                            </td>
+                        </tr>
+                     </table>
+                  </td>
+                </tr>
+             </table>
+            </form>
+
+<% if (paramAction.equals("getAddr")) { %>
+		<script language="javascript"><!--
+                  document.registerdetails.password1.focus();
+              //--></script>
+
+<% } 
+  } %>
+	    </tr></td></table>
+
+	    </div>
+		<BR>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <br>
+             <table border="0" cellspacing=0 cellpadding=0><tr valign="middle">
+	         <td valign="middle"><a href=<%="'"+userSession.getLastURL()+"'"%> class="button">&nbsp;&nbsp;<img src="<%=website.getImagePath("btnleft.gif")%>" alt="Back" class="btnLeft">&nbsp;Back To Shop&nbsp;&nbsp;</a><br></td>
+             </tr></table>
+        </td>
+    </tr>
+</table>
+<%
+    if (alertMessage != null && !alertMessage.trim().equals("")) {
+%>
+            <script language="javascript"><!--
+                alert("<%=alertMessage%>");
+            //--></script>
+<%
+    }
+%>
+
+</td></tr><tr><td><br><br>
+
+</td></tr></table>
+<!-- end of components/account.html -->

@@ -1,0 +1,594 @@
+2015/02/17 15:38:10	 	Using log file C:\apache\webapps\ROOT\log_tue.txt
+2015/02/17 15:38:10	 	C:\apache\webapps\ROOT\log_tue.txt maximum size set to 100 MB, current size is 0 MB
+2015/02/17 15:38:10   String index out of range: -9
+java.lang.StringIndexOutOfBoundsException: String index out of range: -9
+	at java.lang.String.substring(String.java:1937)
+	at co.simplypos.model.website.WebSite.initialise(WebSite.java:875)
+	at co.simplypos.model.website.WebSite.initialise(WebSite.java:787)
+	at co.simplypos.model.website.WebSite.initialise(WebSite.java:783)
+	at co.simplypos.model.website.WebSite.initialise(WebSite.java:778)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:127)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:377)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:859)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1555)
+	at java.lang.Thread.run(Thread.java:619)
+2015/02/17 15:38:10	 	WebSite cache folder set to: _logs/work/[unknown]/C:\apache\webapps\ROOT/C:\apache\webapps\ROOT
+2015/02/17 15:38:10   String index out of range: -1
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1931)
+	at java.lang.String.substring(String.java:1904)
+	at co.simplypos.model.website.WebSite.initialise(WebSite.java:949)
+	at co.simplypos.model.website.WebSite.initialise(WebSite.java:787)
+	at co.simplypos.model.website.WebSite.initialise(WebSite.java:783)
+	at co.simplypos.model.website.WebSite.initialise(WebSite.java:778)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:127)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:377)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:859)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1555)
+	at java.lang.Thread.run(Thread.java:619)
+2015/02/17 15:38:10	 	webSiteRelativeURL: C:\apache\webapps\ROOT/    websiteURL: http://localhost:8080/index.jsp   webSitePath: C:\apache\webapps\ROOT\
+2015/02/17 15:38:10	 	Initialising
+2015/02/17 15:38:10	 	   load database configuration
+2015/02/17 15:38:10	 	      databaseUrl: jdbc:mysql://localhost/demo
+2015/02/17 15:38:10	 	   load database pool
+2015/02/17 15:38:10	 	      Using context lookup: jdbc/demo
+2015/02/17 15:38:10	 	      Could not use container db pooling, using local pool instead. Reason: Name jdbc is not bound in this Context
+2015/02/17 15:38:11	 	   staging/live configuration not detected
+2015/02/17 15:38:12	 	      lookup website row: select website_id from website where db_name = 'demo'  and db_user_name = 'demo'
+2015/02/17 15:38:12	 	   load website configuration from database
+2015/02/17 15:38:12	 	   check if database cache needs rebuilding
+2015/02/17 15:38:12	 	   run database upgrade scripts
+2015/02/17 15:38:13	 	   calculating compatability modes
+2015/02/17 15:38:13	 	   standard VAT Rate set to: 10.0
+2015/02/17 15:38:13	 	getAnyDiscountStartsOrExpiresToday:sql:select 1 from discount_scheme  where (offer_end > date_sub(curdate(), INTERVAL 1 DAY) and offer_end < date_add(curdate(), INTERVAL 1 DAY))  or (offer_start > date_sub(curdate(), INTERVAL 1 DAY) and offer_start < date_add(curdate(), INTERVAL 1 DAY)) 
+2015/02/17 15:38:13	 	   performing quick restart as no upload in past 24 hours and no discount expiry today
+2015/02/17 15:38:13	 	Image lib cache folder set to: images/_lib/
+2015/02/17 15:38:14	 	   building menu
+2015/02/17 15:38:14	 	   building menu complete
+2015/02/17 15:38:14	 	   clearing aged empty baskets
+2015/02/17 15:38:14	 	   clearing aged empty baskets complete
+2015/02/17 15:38:14	 	   building Override Text Cache
+2015/02/17 15:38:14	 	   building Indicator Image Cache
+2015/02/17 15:38:15	 	Website initialised
+2015/02/17 15:38:15	 	Remove initialise flag
+2015/02/17 15:38:15	 	Website startup took 4.836 seconds.
+2015/02/17 15:38:15	 	Website stockThumbSize changed to: 160
+2015/02/17 15:38:15	 	Website productPageImageSize changed to: 500
+2015/02/17 15:38:15	 	Website linkedProductsStockThumbSize changed to: 140
+2015/02/17 15:38:15	 	Website additionalImageSize changed to: 75
+2015/02/17 15:38:15	 	Website alsoBoughtStockThumbSize changed to: 128
+2015/02/17 15:38:15	 	Website recentlyViewedStockThumbSize changed to: 128
+2015/02/17 15:38:20	 	Initialising top selling items: reset: true  topSellers is null: true  topSellers.size(): 0
+2015/02/17 15:38:21	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:38:21	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:38:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:38:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:38:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:38:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:38:53	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:38:53	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:38:53	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:40:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:40:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:40:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:46:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:46:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:46:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:46:32	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:46:32	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:46:32	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:48:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:48:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:48:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:53:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:53:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:53:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:53:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:53:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:53:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:53:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:53:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:53:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:54:32	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:54:33	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:54:33	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:54:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:54:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:54:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:54:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:54:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:54:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:55:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:55:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:55:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:56:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:56:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:56:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:57:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:57:27	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:57:27	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:57:27	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:58:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:58:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:58:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:58:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:58:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:58:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:58:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:58:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:14	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:14	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:38	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:38	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:38	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:39	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 15:59:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:00:01	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:00:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:00:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:00:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:01:14	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:01:16	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:01:16	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:01:16	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:01:25	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:01:25	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:01:25	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:03:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:03:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:03:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:04:01	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:04:01	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:04:01	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:04:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:04:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:04:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:05:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:05:43	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:05:43	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:07:19	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:07:19	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:07:19	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:07:27	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:07:28	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:07:28	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:08:43	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:08:43	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:08:43	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:11:33	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:11:33	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:11:33	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:11:53	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:11:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:11:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:12:56	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:12:57	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:12:57	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:13:06	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:13:06	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:13:06	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:13:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:13:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:13:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:16:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:16:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:16:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:20:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:20:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:20:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:20:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:20:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:20:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:32	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:38	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:38	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:21:38	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:28:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:28:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:28:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:28:55	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:28:55	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:31:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:31:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:31:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:31:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:32:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:32:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:32:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:32:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:33:51	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:33:52	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:33:52	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:33:52	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:33:55	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:35:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:35:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:35:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:35:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:36:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:36:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:36:51	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:36:51	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:40:41	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:40:41	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:40:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:40:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:41:41	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:41:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:41:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:41:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:46:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:46:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:46:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:46:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:47:44	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:47:44	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:47:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 16:47:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:02:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:02:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:02:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:02:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:04:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:04:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:04:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:04:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:05:07	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:05:08	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:05:08	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:05:08	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:06	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:06	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:25	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:25	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:51	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:52	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:52	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:06:52	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:07:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:07:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:07:06	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:07:06	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:07:17	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:07:17	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:07:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:07:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:08:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:08:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:08:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:08:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:10:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:10:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:10:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:10:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:10:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:10:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:10:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:10:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:11:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:11:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:11:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:11:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:12:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:12:27	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:12:28	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:12:28	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:01	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:28	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:29	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:13:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:14:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:15:00	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:15:00	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:15:00	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:15:27	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:15:28	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:15:28	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:15:28	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:40	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:41	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:41	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:52	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:52	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:52	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:18:53	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:21:17	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:21:17	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:21:17	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:21:17	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:21:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:21:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:21:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:21:26	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:22:10	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:22:11	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:22:11	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:22:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:01	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:27:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:15	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:16	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:16	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:16	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:28:50	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:19	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:20	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:20	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:21	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:55	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:55	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:56	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:29:56	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:30:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:30:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:30:42	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:30:43	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:30:43	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:30:44	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:30:44	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:31:34	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:31:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:31:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:31:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:10	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:10	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:39	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:40	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:48	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:49	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:32:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:33:24	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:33:24	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:33:24	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:33:25	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:33:25	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:33:25	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:33:25	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:18	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:19	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:19	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:19	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:29	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:31	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:33	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:34	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:34	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:34	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:34	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:34	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:34	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:34	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:40	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:40	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:40	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:40	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:41	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:41	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:41	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:44	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:53	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:53	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:39:53	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:40:03	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:40:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:40:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:14	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:14	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:15	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:23	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:24	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:24	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:56	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:56	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:56	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:41:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:42:00	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:42:00	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:09	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:10	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:10	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:10	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:35	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:36	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:43:37	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:44:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:44:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:44:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:44:47	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:44:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:44:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:00	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:00	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:45	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:46	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:53	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:55	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:55	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:55	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:56	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:57	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:58	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:45:58	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:46:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:46:04	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:46:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:46:05	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:47:56	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:47:57	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:47:57	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:47:57	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:47:57	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:47:58	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:47:58	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:47:58	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:02	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:07	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:09	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:09	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:10	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:11	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:11	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:54	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:57	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:57	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:48:59	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:00	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:06	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:07	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:07	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:16	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:16	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:17	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:19	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:29	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:49:30	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:08	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:09	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:09	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:09	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:12	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:13	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:23	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:23	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:24	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4
+2015/02/17 17:52:24	 	Initialising top selling items: reset: true  topSellers is null: false  topSellers.size(): 4

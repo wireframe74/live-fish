@@ -1,0 +1,105 @@
+/*Lets fix IE7!*/
+.irFlags li{
+	display: inline;
+	margin-right: 5px;
+}
+#headersearch input{
+	width: 175px;
+}
+.basketFlipper{
+	right: 0;
+	top: 0;
+}
+#headerbasket{
+	padding-top: 10px;
+}
+#shopping_cart{
+	z-index: 10000;
+}
+#headersearch{
+	margin-top: 25px;
+}
+#qm0 div{
+	margin-top: 0;
+}
+#menucoltopnavstyle{
+	background-color: transparent;
+}
+#qm0>a{
+	height: 20px;
+}
+.salesMessage{
+	display: inline;
+	width: auto;
+}
+.salesMessage a{
+	width: 300px;
+}
+#salesWrap{
+	text-align: center;
+}
+#homepage ul.productsLayoutModeThumb li.stockThumb{
+	width: 19%;
+}
+ul.blocklist li.formwrap{
+	left: 0;
+}
+ul.blocklist li.formwrap a.catpageaddtobasket{
+	width: 85%;
+}
+.stockThumb li ul.formwrapper li.productqty input{
+	width: 40%;
+}
+ul.productsLayoutModeThumb div.stockthumb{
+	width: 87%;
+}
+#footer div.footerDiv{
+	display: inline;
+	width: auto;
+	max-width: 200px;
+}
+#footer div.footerDiv>*{
+	width: 200px;
+}
+#footer div.footerDiv>a{
+	width: 65px;
+}
+#newsformwrap input{
+	width: 130px;
+	margin-right: 5px;
+}
+#footer .secureLogos .payDiv{
+	display: none;
+}
+.aside{
+	width: 24%;
+}
+#refinefurther, .asidebox{
+	width: 84%;
+}
+ul.productsLayoutModeThumb li.stockThumb{
+	width: 23%;
+}
+div.component_stockdetail .detailInfo .qtyaddtobasket .inputitem_productqty{
+	margin-right: 1%;
+	margin-left: 1%;
+}
+#linkedproductswrapper .stocklistingbody{
+	width: 92%;
+}
+div.component_stockdetail .detailInfo {
+	width: 91%;
+}
+div#returning{
+	width: 41%;
+}
+#registration form[name="accountdetails"]{
+	float: right;
+	width: 55%;
+}
+div#newregister{
+	width: 100%;
+}
+#nav .topNav > li{
+	display: inline;
+}

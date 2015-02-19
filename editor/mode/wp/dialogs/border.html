@@ -1,0 +1,462 @@
+<HEAD>
+<title></title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../../include/dialog.js"></script>
+<script language="javascript" src="../../../include/listbox.js"></script>
+<SCRIPT>
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var lbStyle = null;
+var lbWidth = null;
+var border = new Array("borderBottom", "borderTop", "borderLeft", "borderRight");
+var hasChanged = false;
+
+function showPreview() 
+{
+    var objPreview = document.getElementById("preview").style;
+    setAttributes(objPreview);
+    
+    //set div properties for hline and vline
+    if (document.getElementById("chkVLine").checked == true) {
+      document.getElementById("vLine").style.visibility = "visible";
+      document.getElementById("vLine").style.borderLeftStyle = lbStyle.selectedItem.value;
+      document.getElementById("vLine").style.borderLeftWidth = lbWidth.selectedItem.value;
+      document.getElementById("vLine").style.borderLeftColor = document.getElementById("borderColor").style.backgroundColor;
+    } else {
+      document.getElementById("vLine").style.visibility = "hidden";
+    }
+      
+    if (document.getElementById("chkHLine").checked == true) {
+      document.getElementById("hLine").style.visibility = "visible";
+      document.getElementById("hLine").style.borderBottomStyle = lbStyle.selectedItem.value;
+      document.getElementById("hLine").style.borderBottomWidth = lbWidth.selectedItem.value;
+      document.getElementById("hLine").style.borderBottomColor = document.getElementById("borderColor").style.backgroundColor;      
+    } else {
+      document.getElementById("hLine").style.visibility = "hidden";   
+    }
+}
+
+function onBorderStyleClick(item)
+{
+  if(item.value == "none") {
+    // uncheck all checkboxes
+    document.getElementById("chkHLine").checked = false;
+    document.getElementById("chkVLine").checked = false;
+    document.getElementById("borderLeft").checked = false;
+    document.getElementById("borderRight").checked = false;
+    document.getElementById("borderTop").checked = false;
+    document.getElementById("borderBottom").checked = false;
+  }
+  if(item.value == "double") {
+    lbWidth.selectItem("3px");
+  }
+  showPreview();
+}
+
+function onBorderWidthClick(item)
+{
+  showPreview();
+}
+
+function showBorderStyle(obj)
+{
+
+  lbStyle = new ListBox();
+  lbStyle.onClick = "onBorderStyleClick";
+
+  var none = new ListItem('<div style="width:100%; height:5px; font-size:9px;">None</div>', '', 'none', true);
+  lbStyle.add(none);
+  var dotted = new ListItem('<div style="font-size:1px; width:100%; height:3px; border-bottom:dotted 2px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>', '', 'dotted', '2px');
+  lbStyle.add(dotted);
+  var solid = new ListItem('<div style="font-size:1px; width:100%;  height:1px; border-bottom:solid 1px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', 'solid', '2px');
+  lbStyle.add(solid);
+  var dashed = new ListItem('<div style="font-size:1px; width:100%;  height:1px; border-bottom:dashed 1px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', 'dashed', '2px');
+  lbStyle.add(dashed);
+  var double1 = new ListItem('<div style="font-size:1px; width:100%;  height:3px; border-bottom:double 3px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', 'double', '3px');
+  lbStyle.add(double1);
+
+  var temp = lbStyle.create();
+  return temp;
+}
+
+function showBorderWidth(obj)
+{
+  lbWidth = new ListBox();
+  lbWidth.onClick = "onBorderWidthClick";
+  
+  var one = new ListItem('<div style="font-size:1px; width:100%; height:3px; border-bottom:solid 1px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', '1px', '2px');
+  lbWidth.add(one);
+  var two = new ListItem('<div style="font-size:1px; width:100%;  height:1px; border-bottom:solid 2px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', '2px', '2px');
+  lbWidth.add(two);
+  var three = new ListItem('<div style="font-size:1px; width:100%;  height:1px; border-bottom:solid 3px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', '3px', '2px');
+  lbWidth.add(three);
+  var four = new ListItem('<div style="font-size:1px; width:100%;  height:3px; border-bottom:solid 4px #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>', '', '4px', '3px');
+  lbWidth.add(four);
+
+  var temp = lbWidth.create();
+  return temp;
+}
+
+function setBorderAttribute(obj, attribute, value)
+{
+  for (i=0;i<border.length;i++) {
+    if (document.getElementById(border[i]).checked == true) {
+      var func = "obj." + border[i] + attribute + " = value";
+      eval(func);
+    } else {
+      removeAttribute(obj, border[i]+"Width"); 
+      removeAttribute(obj, border[i]+"Style");
+      removeAttribute(obj, border[i]+"Color");
+    }
+  }
+}
+
+function deleteBorderAttribute(obj, attribute)
+{
+  for (i=0;i<border.length;i++) {
+    removeAttribute(obj, border[i]+attribute);
+  }
+}
+
+function setAttributes(obj)
+{  
+  try {
+    if (document.getElementById("borderColor").style.backgroundColor != "") {
+      setBorderAttribute(obj, "Color", document.getElementById("borderColor").style.backgroundColor);
+    } else {
+      setBorderAttribute(obj, "Color", "#000000");
+    }
+    if (lbWidth.selectedItem != null) {
+      if (lbWidth.selectedItem.value != "none") {
+        setBorderAttribute(obj, "Width", lbWidth.selectedItem.value);        
+      } else {
+        deleteBorderAttribute(obj, "Width"); 
+        deleteBorderAttribute(obj, "Style");
+        deleteBorderAttribute(obj, "Color");
+      }
+    }
+    if (lbStyle.selectedItem != null) {
+      if (lbStyle.selectedItem.value != "none") {
+        setBorderAttribute(obj, "Style", lbStyle.selectedItem.value);        
+      } else {
+        deleteBorderAttribute(obj, "Style"); 
+        deleteBorderAttribute(obj, "Width");
+        deleteBorderAttribute(obj, "Color");
+      }
+    }
+  } catch(Error) {}  
+  hasChanged = true;
+}
+
+function save()
+{
+  try {
+    var changed = hasChanged;
+    var win = params[11];
+
+    if (mode == "TABLE") {
+      var objElement = params[5];
+      setAttributes(objElement.style);
+
+      //set the horizontal and/or vertical lines between the cells
+		  for(var i=0;i<objElement.rows.length;i++) {
+			  var tr = objElement.rows[i];
+        for (var y=0;y<tr.cells.length;y++) {
+			    var curtd = tr.cells[y];
+			    if (document.getElementById("chkVLine").checked == true) {
+            curtd.style.borderLeftStyle = lbStyle.selectedItem.value;
+            curtd.style.borderLeftWidth = lbWidth.selectedItem.value;
+            curtd.style.borderLeftColor =  document.getElementById("borderColor").style.backgroundColor;
+            curtd.style.borderRightStyle = lbStyle.selectedItem.value;
+            curtd.style.borderRightWidth = lbWidth.selectedItem.value;
+            curtd.style.borderRightColor =  document.getElementById("borderColor").style.backgroundColor;
+          } else {
+            removeAttribute(curtd.style, "borderLeftStyle");
+            removeAttribute(curtd.style, "borderLeftWidth");
+            removeAttribute(curtd.style, "borderLeftColor");
+            removeAttribute(curtd.style, "borderRightStyle");
+            removeAttribute(curtd.style, "borderRightWidth");
+            removeAttribute(curtd.style, "borderRightColor");
+          }
+			    if (document.getElementById("chkHLine").checked == true) {
+	          curtd.style.borderTopStyle = lbStyle.selectedItem.value;
+            curtd.style.borderTopWidth = lbWidth.selectedItem.value;
+            curtd.style.borderTopColor =  document.getElementById("borderColor").style.backgroundColor;
+            curtd.style.borderBottomStyle = lbStyle.selectedItem.value;
+            curtd.style.borderBottomWidth = lbWidth.selectedItem.value;
+            curtd.style.borderBottomColor =  document.getElementById("borderColor").style.backgroundColor;         
+          } else {
+            removeAttribute(curtd.style, "borderTopStyle");
+            removeAttribute(curtd.style, "borderTopWidth");
+            removeAttribute(curtd.style, "borderTopColor");
+            removeAttribute(curtd.style, "borderBottomStyle");
+            removeAttribute(curtd.style, "borderBottomWidth");
+            removeAttribute(curtd.style, "borderBottomColor");
+          }                  
+			  }
+		  }      
+      // check highlight
+      if(lbStyle.selectedItem.value == "none")
+        objElement.border = 0;
+      
+      win.editSetTableHighlight(true);
+
+    } else {
+	    var sel = new params[11].Selection(params[4]);
+      if(sel.type == "NONE") {
+        var activeObject = sel.getActiveObject("p");
+        if(activeObject) {
+          setAttributes(activeObject);
+          changed = true;
+        }
+      }        
+      if(sel.type == "TEXT") {
+        var selectedObjects = sel.prepareSelection();
+        for(var i=0;i<selectedObjects.length;i++) {
+          var curObject = selectedObjects[i];
+          if(curObject.tagName.toLowerCase() == "span") {
+            setAttributes(curObject.style);
+          }
+        }
+        changed = true;
+      }
+    }    
+   
+    if(changed) {
+      params[11].__editOnChanged(true);
+    }
+
+  } catch(Error) {
+    if(isDebug)
+      alert("An error occured in input page: " + Error);
+  }
+}
+
+function initDialog(param)
+{
+
+  params = param;
+
+  try {
+	  mode = params[2];
+
+    // set language strings
+    setStrings();
+    
+    // Set Input Values
+    document.getElementById("lblBorderColor").value = getLanguageString("",4076);
+    document.getElementById("borderColor").style.border = "1px solid #c0c0c0";
+    document.getElementById("borderStyle").innerHTML = showBorderStyle(objElementStyle);    
+    document.getElementById("borderWidth").innerHTML = showBorderWidth(objElementStyle);   
+    lbStyle.selectItem("solid");
+    lbWidth.selectItem("1px");
+
+	  var sel = new params[11].Selection(params[4]);
+
+    var activeObject = null;
+    // if we have a table
+    if (mode == "TABLE") {
+      activeObject = params[5];
+    } else {
+      // we have no selection
+      if(sel.type == "NONE") {
+        // search for span tag
+        activeObject = sel.getActiveObject("span");
+      }
+      // we have no active object
+      if(!activeObject) {
+        // search in selection for spans
+        var aObjects = sel.getSelectedObjects(true,"span");
+        // if we have 1
+        if(aObjects.length == 1)
+          activeObject = aObjects[0];
+      }
+    }
+    if(activeObject) {
+      var objElementStyle = activeObject.style;
+
+      //set border style
+      var objBorder = "'solid'";
+      var i = 0;
+      do {
+        if (!eval("objElementStyle." + border[i] + "Style") == "") {   
+          objBorder = "objElementStyle." + border[i] + "Style";
+        } 
+        i++;
+      } while (i < border.length && objBorder == "'solid'") 
+      var func = "lbStyle.selectItem(" + objBorder + ")";
+      eval(func);
+      
+      //set border width
+      objWidth = "'1px'";
+      i = 0;
+      do {
+        if (!eval("objElementStyle." + border[i] + "Width") == "") {   
+          objWidth = "objElementStyle." + border[i] + "Width";
+        } 
+        i++;
+      } while (i < border.length && objWidth == "'1px'") 
+      var func = "lbWidth.selectItem(" + objWidth + ")";
+      eval(func);    
+
+
+      objColor = "'#000000'";
+      i = 0;
+      do {
+        if (!eval("objElementStyle." + border[i] + "Color") == "") {   
+          objColor = "objElementStyle." + border[i] + "Color";
+        } 
+        i++;
+      } while (i < border.length && objColor == "'#000000'") 
+      var func = "document.getElementById('borderColor').style.backgroundColor = " + objColor ;
+      eval(func);  
+
+      //set preview borders
+      var temp = 0;    
+      for (i=0;i<border.length;i++) {
+        if (eval("objElementStyle." + border[i] + "Width") != "") {
+          temp = 1;
+          var func = "document.getElementById('" + border[i]+ "').checked = true";
+          eval(func);
+        }
+      } 
+    }
+
+    if (mode == "TABLE") {
+      document.getElementById("chkVLine").style.visibility = "visible";
+      document.getElementById("chkHLine").style.visibility = "visible";
+      document.getElementById("hLine").style.visibility = "visible";
+      document.getElementById("vLine").style.visibility = "visible";
+
+	    var hasBorderWidth = (activeObject.style.borderWidth == "" || activeObject.style.borderWidth == null) ? false:true;
+ 	    if(!hasBorderWidth && activeObject.border == 0) {
+        document.getElementById("chkHLine").checked = false;    
+        document.getElementById("chkVLine").checked = false;      
+      } else {
+        document.getElementById("chkHLine").checked = true;    
+        document.getElementById("chkVLine").checked = true;      
+      }
+    } else {
+      document.getElementById("chkVLine").style.visibility = "hidden";
+      document.getElementById("chkHLine").style.visibility = "hidden";
+      document.getElementById("hLine").style.visibility = "hidden";
+      document.getElementById("vLine").style.visibility = "hidden";
+      document.getElementById("chkHLine").checked = false;    
+      document.getElementById("chkVLine").checked = false;   
+    }
+        
+    showPreview();
+    
+  } catch(Error) {
+    if(params[31])
+      alert("An error occured in border.html: " + Error);
+  }
+} 
+
+</SCRIPT> 
+</HEAD>
+<BODY class="bodypage">
+      <table cellspacing="0" cellpadding="3" border="0" width="1%">
+        <tr>
+          <td valign="top" width="1%">
+        <fieldset>
+          <legend class="head">
+            <span id="4070" class="label">_border</span>
+          </legend>   
+          <div style="width:160px; height:265px; overflow:hidden" id="border" align="center">   
+          <table>
+            <tr>
+              <td>
+              <span id="4071" class="label" style="margin-top:5px; " >_borderStyle:</span><br />
+              <div style="width:130px; height:85px; padding:2px; overflow:auto;  border:2px inset" id="borderStyle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span id="4072" class="label"  style=" margin-top:5px; ">_borderWidth:</span><br />
+                <div style="width:130px; height:70px; padding:2px; overflow:auto;  border:2px inset" id="borderWidth"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <table border="0" style="width:100%; padding-top:5px;" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td colspan="2" nowrap="nowrap">
+                    <span id="4073" class="label">_borderColor:</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:100%">
+                    <div id="borderColor" style="width:100%; height:17px;">&nbsp;</div>
+                    
+                  </td>
+                  <td>
+                    <input id="lblBorderColor" type="button" value="..."  onclick="selectColorWp('borderColor'); showPreview();">
+                  </td>
+                </tr>
+              </table>
+              </td>
+            </tr>
+          </table>
+              </div>
+          </fieldset>
+          </td>
+          <td valign="top">
+            <fieldset>
+              <legend class="head">
+                <span id="4075" class="label">_preview</span>
+              </legend>
+              <div style="width: 160px; height: 265px;" id="borderPreview" class="label" align="center" >
+                <div id="divVLine" style="overflow:hidden; z-index:1; position:absolute; width: 21px; height: 100px; left: 275px; top: 108px;" language="javascript" onclick="showPreview()">
+                  <div id="vLine" style="width:3px; height:118px; font-size:1px; border-left: 1px solid #000000">&nbsp;</div>
+                </div>
+                <div id="divHLine" style="overflow:hidden; z-index:2; position:absolute; width: 113px; height: 10px; left: 229px; top: 152px;" language="javascript" onclick="showPreview()">
+                  <div id="hLine" style="font-size:1px; width:130px; height:3px; border-bottom: 1px solid #000000">&nbsp;</div>              
+                </div>
+                  <table border="0" width="1%" style="border-collapse:collapse; position:absolute; left:197px; top:86px;">
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td align="left"><input id="borderLeft" type="checkbox"  onclick="showPreview()" /></td>
+                      <td align="center" >
+                        <input id="chkVLine" type="checkbox" onclick="showPreview()" /></td>
+                      <td align="right"><input id="borderRight" type="checkbox" onclick="showPreview()" />
+                      </td>
+                      <td>&nbsp;</td>                                        
+                    </tr>
+                    <tr>
+                      <td valign="top" align="center">
+                        <input id="borderTop" type="checkbox" onclick="showPreview()" /></td>
+                      <td align="center" id="preview" colspan="3" rowspan="3" style=" background-image:url('cell.gif'); background-position:center; background-repeat:no-repeat; border-right: black 1px solid; border-top: black 1px solid;
+                        border-left: black 1px solid; border-bottom: black 1px solid; border-collapse:collapse; width:100px; height:100px;">
+                        </td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="middle">
+                        <input id="chkHLine" type="checkbox" onclick="showPreview()" /></td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="bottom" align="center"><input id="borderBottom" type="checkbox" onclick="showPreview();" /></td>
+                      <td>&nbsp;</td>                                        
+                    </tr>         
+                    <tr>
+                      <td><div id="space4" style="width:30px;">&nbsp;</div></td>
+                      <td colspan="3"><div id="space5" style=" width:110px;">&nbsp;</div></td>
+                      <td><div id="space6" style=" width:30px;">&nbsp;</div></td>                                        
+                    </tr>                  
+                  </table>
+              </div>
+            </fieldset>          
+          </td>
+        </tr>
+      </table>
+
+</BODY>

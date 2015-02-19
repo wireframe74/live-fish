@@ -1,0 +1,173 @@
+<HEAD>
+  <TITLE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TITLE>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+
+var language = "";
+var design   = "";
+var win      = null;
+var form = null;
+
+function save()
+{
+  try {
+
+    var id = form.id;
+    var name = form.name;
+    var method = form.method;
+    var action = form.action;
+    var changed = false;
+
+
+    if(form) {
+      // there is a bug when setting name
+      // name is not refreshed
+      if(browser.ie) {
+        if(document.getElementById("txtName").value != ""){
+          var doc = win.editGetDocument();
+          //var inner = (form.innerHTML != "") ? form.innerHTML : "&nbsp;";
+			    var frag = doc.createDocumentFragment();
+			    for(var j=0;j<form.childNodes.length;j++) {
+				    var subNode = form.childNodes[j].cloneNode(true);
+            if(subNode.nodeType == 3) {
+					    var newNode = doc.createTextNode(subNode.nodeValue);
+					    frag.appendChild(newNode);
+            } else {
+					    var newNode = subNode;
+					    frag.appendChild(newNode);
+				    }
+          }
+
+          var html = "<form id='__tmpInput' name='" + document.getElementById("txtName").value + "'></form>";
+          var newForm = doc.createElement(html);
+          form.replaceNode(newForm);
+          form = doc.getElementById("__tmpInput");
+          form.removeAttribute("id");
+          form.appendChild(frag);
+          win.__editShowSymbols();
+          win.editSelectObject(form);
+        }
+      } else {
+        form.name = document.getElementById("txtName").value;
+      }
+
+      if(document.getElementById("txtID").value != "")
+        form.id = document.getElementById("txtID").value;
+      else
+        form.removeAttribute("id");
+        
+      if(document.getElementById("cmbMethod").value != "")
+        form.method = document.getElementById("cmbMethod").value;
+      else
+        form.removeAttribute("method");
+      
+      if(document.getElementById("txtAction").value != "")
+        form.action = win.__editRelativeGetRelFromAbs(document.getElementById("txtAction").value,"LINK");
+      else
+        form.removeAttribute("action");
+
+      if(id != form.id)
+        changed = true;
+      if(name != form.name)
+        changed = true;
+      if(method != form.method)
+        changed = true;
+      if(action != form.action)
+        changed = true;
+
+      if(changed) {
+        win.__editOnChanged(true);
+      }
+    }
+    
+  } catch(Error) {
+    if(params[31])
+      alert("An error occured in form.html: " + Error);
+  }
+
+  window.close();
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+    win                 = params[11];
+
+    var sel = new params[11].Selection(params[4]);
+    form = sel.getActiveObject("form");
+
+	  // clear
+    document.getElementById("txtID").value = "";
+    document.getElementById("txtName").value = "";
+	  
+    if(form.id)
+      document.getElementById("txtID").value = form.id;
+    if(form.name)
+      document.getElementById("txtName").value = form.name;
+    setCombo(document.getElementById("cmbMethod"),form.method)
+    if(form.action)
+      document.getElementById("txtAction").value = win.__editRelativeGetUrl2(form,"action");
+    
+    // set language strings
+    setStrings();
+
+  } catch(Error) {}
+}
+
+</SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="964">_Name</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="962" class="label">_ID:</div>
+        </td>
+        <td>
+          <input type="text" value="" ID="txtID" NAME="txtID">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="963" class="label">_Name:</span>
+        </td>
+        <td>
+          <input type="text" value="" ID="txtName" NAME="txtName">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="3327">_Form</span>
+    </legend>
+    <table title="" style="WIDTH: 100%" cellspacing="0" cellpadding="1" border="0" ID="Table2">
+      <tr>
+        <td>
+          <span id="3324" class="label">_Action:</span>
+        </td>
+        <td>
+          <SELECT id="cmbMethod">
+            <option value="get" selected>GET</option>
+            <option value="post">POST</option>
+          </SELECT>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span id="3325" class="label">_Target:</span>
+        </td>
+        <td style="width:100%">
+          <input type="text" value="" ID="txtAction" style="width: 100%">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>
+</HTML>

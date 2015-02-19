@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <title>Upload</title>
+    <script language="javascript" src="../../include/dialog.js"></script>
+    <STYLE> BODY { MARGIN-TOP: 15px; FONT-SIZE: 11px; MARGIN-LEFT: 15px; MARGIN-RIGHT: 15px; FONT-FAMILY: arial; BACKGROUND-COLOR: #ece9d8 }
+	.maintable { BORDER-RIGHT: #919b9c 1px solid; BORDER-TOP: #919b9c 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #919b9c 1px solid; BORDER-BOTTOM: #919b9c 1px solid; FONT-FAMILY: arial; BACKGROUND-COLOR: #f8f7f6 }
+	.head { PADDING-RIGHT: 3px; PADDING-LEFT: 3px; COLOR: blue; BACKGROUND-COLOR: #f8f7f6 }
+	</STYLE>
+    <script>
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+var browser = new Browser();
+
+var language = "";
+var urlabs   = "";
+var pathabs  = "";
+var tech     = "";
+var insert   = "";
+
+// use id and not the object because in ASP.Net object can be changed through blur
+aParam = window.opener.__editGetParam(); 
+language            = aParam[0];
+insert              = aParam[2];
+urlabs              = aParam[6];
+pathabs             = aParam[7];
+tech                = aParam[8];
+filter              = aParam[9];
+params              = aParam;
+
+function load()
+{
+  // set labels
+  document.getElementById("lblUpload").value = getLanguageString(language,3201);
+  document.getElementById("lblCancel").value = getLanguageString(language,900);
+  //document.getElementById("lblUploadFile").innerHTML = getLanguageString(language,3202);
+  document.getElementById("lblSubFolder").innerHTML = getLanguageString(language,3206);
+  document.getElementById("lblFile").innerHTML = getLanguageString(language,3204);
+  document.getElementById("btnSelect").value = getLanguageString(language,3205);
+  // set path
+  //document.getElementById('txtPath').innerHTML = urlabs;
+
+	// parameter check
+	if(pathabs == "")
+		alert("pinEdit Warning (Parameter Check):\n" + "Please specify the globalRootPath parameter in config.js or the cp parameter !");
+}
+
+function beforeSubmit()
+{
+  if(document.getElementById('file').value == "") {
+    alert(getLanguageString(language,3311));
+    return;
+  }
+  // get file extension
+  var path = document.getElementById('file').value;
+  var ext = "";
+  if(path.indexOf(".") > 0) {
+    for(var i=path.length;i>0;i--) {
+      if(path.substring(i,i+1) == ".") {
+        ext = path.substring(i+1);
+        break;
+      }
+    }
+    // check filter
+    var isValid = false;
+    var allFilters = filter.split(";");
+    for(var i=0;i<allFilters.length;i++) {
+      if(allFilters[i] == ext) {
+        isValid = true;
+      }
+    }
+    if(!isValid) {
+      alert(getLanguageString(language,3311));
+      return;
+    }
+  }
+  
+  // set the selected path
+  document.frmUpload.lblUpload.disabled = true;
+  document.frmUpload.lblCancel.disabled = true;
+  // set the selected path
+  var subFolder = document.getElementById("subfolder").value;
+  if(subFolder.substring(0,1) == "/")
+    subFolder = subFolder.substring(1);
+  // check /
+  if(pathabs.substring(pathabs.length-1,pathabs.length) != "/")
+    pathabs = pathabs + "/";
+  pathabs = pathabs + subFolder;
+  if(pathabs.substring(pathabs.length-1,pathabs.length) != "/")
+    pathabs = pathabs + "/";
+
+  if(urlabs.substring(urlabs.length-1,urlabs.length) != "/")
+    urlabs = urlabs + "/";
+  urlabs = urlabs + subFolder;
+  if(urlabs.substring(urlabs.length-1,urlabs.length) != "/")
+    urlabs = urlabs + "/";
+
+  document.frmUpload.action = "uploadProcess." + tech + "?path=" + pathabs + "&url=" + urlabs + "&insert=" + insert;
+
+  // submit document
+  document.frmUpload.submit();
+}
+
+function onSelect()
+{
+  // open window 
+  if(browser.ie) {
+    var subfolder = window.showModalDialog("selectfolder.html",aParam,"dialogHeight:350px;dialogWidth:300px;resizable:1;status:0;scroll:0");
+    if(subfolder != null) {
+      subfolder = subfolder.substring(pathabs.length);
+      subfolder = subfolder.replace(/\\/gi, "/");
+      document.getElementById("subfolder").value = subfolder;
+    }
+  } else {
+    var left = screen.width/2 - 400/2;
+    var top = screen.height/2 - 350/2;
+    window.open("selectfolder.html","SelectFolder","modal=1,left=" + left + ",top=" + top + ",height=350,width=300,resizable=1,status=0,menubar=0,scrollbars=0");
+  }
+  
+}
+
+function callbackSelect(path)
+{
+  var subfolder = path.substring(pathabs.length);
+  subfolder = subfolder.replace(/\\/gi, "/");
+  document.getElementById("subfolder").value = subfolder;
+}
+
+function __editGetParam()
+{
+  return aParam;
+}
+
+    </script>
+  </head>
+  <BODY onload="load()">
+    <form name="frmUpload" enctype="multipart/form-data" method="post" action="" ID="Form1">
+        <table class="maintable" width="100%" height="70" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td width="70px">
+              <span id='lblFile' style="padding-left:5px">__Filename:</span>
+            </td>
+            <td>
+              <INPUT id="file" style="height:20px" type="file" name="file">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span id='lblSubFolder' style="padding-left:5px">__Sub folder:</span>
+            </td>
+            <td>
+              <input id="subfolder" readonly style="WIDTH: 144px;height:20px" NAME="subfolder">&nbsp;<INPUT id="btnSelect" style="width:130px;height:20px" onclick="javascript:onSelect();" type="button"
+                value="__Auswählen" NAME="btnSelect">
+            </td>
+          </tr>
+        </table>
+      <div style="height:10px">
+      </div>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0" ID="Table1">
+        <tr>
+          <td align="right" colspan="2"><INPUT id='lblUpload' style="WIDTH: 81px;" onclick="beforeSubmit()" type="button" value="Upload"
+              NAME="lblUpload">&nbsp;<INPUT id='lblCancel' style="WIDTH: 81px;" onclick="window.close()" type="button" value="Cancel"
+              NAME="lblCancel">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </BODY>
+</html>

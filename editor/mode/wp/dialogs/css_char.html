@@ -1,0 +1,322 @@
+<HEAD>
+<title></title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../../../include/dialog.js"></script>
+<script language="javascript" src="../../../include/listbox.js"></script>
+<SCRIPT>
+
+var curType = "";
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var lb = null;
+
+function showPreview() 
+{
+  if (parent.parent.lbStyleSheet.selectedItem != null) {
+    objElementStyle = parent.parent.objPreview.style;
+    setAttributes(objElementStyle);
+    //Update ListItem
+    parent.parent.updateListItem();
+  }
+}
+
+function updateColor()
+{
+  showPreview();
+}
+
+function update() 
+{
+   
+  var objElementStyle = parent.parent.objPreview.style;
+ 
+  // set font
+  if(objElementStyle.fontFamily) {
+    comboSet(document.getElementById("cmbFont"),objElementStyle.fontFamily.toUpperCase());
+  } else {
+    comboSet(document.getElementById("cmbFont"),"");
+  }
+
+  // set font size
+  if(objElementStyle.fontSize)
+    comboSet(document.getElementById("cmbFontSize"),objElementStyle.fontSize);     
+  else
+    comboSet(document.getElementById("cmbFontSize"),"10px");     
+
+  // set font weight and style
+  if (objElementStyle.fontWeight == "bold")
+    var bold = true;
+  if (objElementStyle.fontStyle == "italic")
+    var italic = true;
+  
+  if (bold == true) {
+    if (italic == true) {
+      comboSet(document.getElementById("cmbFontType"),"bolditalic");
+    } else {
+      comboSet(document.getElementById("cmbFontType"),"bold");
+    }
+  } else if (italic == true) {
+    comboSet(document.getElementById("cmbFontType"),"italic");
+  } else {
+    comboSet(document.getElementById("cmbFontType"),"standard");
+  }
+  
+  // set font color
+  if(objElementStyle.color) {
+    //document.getElementById("txtColor").value = objElementStyle.color;
+    document.getElementById("txtColor").style.backgroundColor = objElementStyle.color;
+  } else {
+    removeAttribute(document.getElementById("txtColor").style, "backgroundColor");
+  }
+  
+  document.getElementById("chkUnderline").checked = (objElementStyle.textDecoration.indexOf("underline") >= 0) ? true:false;
+  document.getElementById("chkStrike").checked = (objElementStyle.textDecoration.indexOf("line-through") >= 0) ? true:false;
+  document.getElementById("chkOverline").checked = (objElementStyle.textDecoration.indexOf("overline") >= 0) ? true:false;
+  document.getElementById("chkBlink").checked = (objElementStyle.textDecoration.indexOf("blink") >= 0) ? true:false;
+  document.getElementById("chkCaps").checked = (objElementStyle.fontVariant == "small-caps") ? true:false;    
+
+}
+
+function onListItemClick(item)
+{
+  showPreview();
+}
+
+function setAttributes(obj)
+{
+  try {
+  
+  //font style and weight
+  if(document.getElementById("cmbFontType").value != "standard") {    
+    if (document.getElementById("cmbFontType").value.indexOf("bold") >= 0) {
+      obj.fontWeight = "bold";
+    } else {
+      removeAttribute(obj, "fontWeight");
+    } 
+    if (document.getElementById("cmbFontType").value.indexOf("italic") >= 0) {
+      obj.fontStyle = "italic";
+    } else {
+      removeAttribute(obj, "fontStyle");
+    }
+  } else {
+    removeAttribute(obj, "fontStyle");
+    removeAttribute(obj, "fontWeight");
+  }
+
+  // font size
+  if(document.getElementById("cmbFontSize").value != "") {
+    obj.fontSize = document.getElementById("cmbFontSize").value;
+  } else {
+    removeAttribute (obj, "fontSize");
+  }
+  
+  //font family
+  if(document.getElementById("cmbFont").value != "-") {
+    obj.fontFamily = document.getElementById("cmbFont").value;
+  } else {
+    removeAttribute (obj, "fontFamily");
+  }
+  
+  //font color
+  if(document.getElementById("txtColor").style.backgroundColor != "") {
+    obj.color = document.getElementById("txtColor").style.backgroundColor;
+  } else {
+    removeAttribute (obj, "color");
+  }    
+
+  //text decoration
+  var text = "";
+  if(document.getElementById("chkUnderline").checked)
+    text = text + "underline ";
+  if(document.getElementById("chkStrike").checked)
+    text = text + "line-through ";
+  if(document.getElementById("chkOverline").checked)
+    text = text + "overline ";
+  if(document.getElementById("chkBlink").checked)
+    text = text + "blink ";
+
+  if (text.length > 0)
+    obj.textDecoration = text;
+  else
+    removeAttribute(obj, "textDecoration");   
+    
+  // font caps
+  if(document.getElementById("chkCaps").checked) {
+    obj.fontVariant = "small-caps";
+  } else {
+    removeAttribute (obj, "fontVariant");
+  }
+  
+  //border bottom / underline
+  if (lb.selectedItem != null) {
+    if (lb.selectedItem.value != "none") {
+      obj.borderBottomStyle = lb.selectedItem.value;
+      obj.borderBottomWidth = lb.selectedItem.tag1;
+      if (document.getElementById("borderColor").style.backgroundColor != "")
+        obj.borderBottomColor = document.getElementById("borderColor").style.backgroundColor;
+      else
+        obj.borderBottomColor = "#000000";
+    } else {
+      removeAttribute (obj, "borderBottomStyle");
+      removeAttribute (obj, "borderBottomWidth");
+      removeAttribute (obj, "borderBottomColor");
+    }
+  }
+  } catch (Error) {}
+}
+
+
+function save()
+{
+  try {
+    var objElementStyle = objElement.style;
+    var changed = false;
+    var win = params[11];
+
+    setAttributes(objElementStyle);
+    
+		
+   	
+  /*  
+   
+    if(width    != objElementStyle.width)
+      changed = true;
+*/
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+    
+  } catch(Error) {}
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+	  language            = params[0];
+	  design              = params[1];
+	  mode                = params[2];
+	  doc                 = params[4];
+	  objElement          = params[5];
+	  win                 = params[11];	  
+	  userMode            = params[21];
+	  	  
+    // set language strings
+    setStrings();
+		document.getElementById("lblColor").value = getLanguageString("",4209);
+          
+  } catch(Error) {}
+
+} 
+
+
+
+ 
+</SCRIPT> 
+</HEAD>
+<BODY class="bodypage">
+    <fieldset>
+      <legend class="head">
+        <span id="4024">_Font</span>
+      </legend>
+      <table cellspacing="0" cellpadding="3" border="0" width="1%">
+          <tr>
+            <td width="1%">
+              <span id="4025" class="label">_Family:</span><br />
+              <select id="cmbFont" language="javascript" size="5" style="width: 130px" onchange="showPreview()">
+                <option value="">-</option>
+                <option value="ARIAL">Arial</option>
+                <option value="ARIAL BLACK">Arial Black</option>
+                <option value="COURIER">Courier</option>
+                <option value="COURIER NEW">Courier New</option>
+                <option value="IMPACT">Impact</option>
+                <option value="LUCIDA CONSOLE">Lucida Console</option>
+                <option value="TAHOMA">Tahoma</option>
+                <option value="TIMES NEW ROMAN">Times New Roman</option>
+                <option value="VERDANA">Verdana</option>
+              </select>
+            </td>
+            <td><div id="space1" style="width:10px;">&nbsp;</div>
+            </td>
+            <td width="1%">
+              <span id="4026" class="label">_Type:</span><br />
+              <select id="cmbFontType" language="javascript" size="5" style="width: 80px" onchange="showPreview()">
+                <option value="standard"><span id="" class="label">Standard</span></option>
+                <option value="italic"><span id="Span1" class="label">Italic</span></option>
+                <option value="bold"><span id="" class="label">Bold</span></option>
+                <option value="bolditalic"><span id="Span2" class="label">Bold Italic</span></option>
+              </select>
+            </td>   
+            <td><div  id="space2" style="width:10px;">&nbsp;</div>
+            </td>                     
+            <td width="1%">
+              <span id="4027" class="label">_Size:</span><br />
+              <select id="cmbFontSize" size="5" style="width: 50px" onchange="showPreview()">
+                <option value="8px">8</option>
+                <option value="9px">9</option>
+                <option value="10px">10</option>
+                <option value="11px">11</option>
+                <option value="12px">12</option>
+                <option value="14px">14</option>
+                <option value="16px">16</option>
+                <option value="18px">18</option>
+                <option value="20px">20</option>
+                <option value="22px">22</option>
+                <option value="24px">24</option>
+                <option value="26px">26</option>
+                <option value="28px">28</option>
+                <option value="30px">30</option>
+                <option value="36px">36</option>
+                <option value="48px">48</option>
+               </select>
+            </td>
+          </tr>
+          <tr>
+          <td >
+              <table border="0" style="width:100%; padding-top:5px;" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td colspan="2" nowrap="nowrap">
+                    <span id="4028" class="label">_borderColor:</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:100%">
+                    <div id="txtColor" style="width:100%; height:17px; border:1px solid #c0c0c0">&nbsp;</div>
+                    
+                  </td>
+                  <td>
+                    <input id="lblColor" type="button" value="_Select"  onclick="selectColorWp('txtColor'); showPreview();">
+                  </td>
+                </tr>
+              </table>					
+            </td>
+						<td colspan="4">
+          </tr>
+        </table>      
+    </fieldset>
+
+    <fieldset>
+      <legend class="head">
+        <span id="4032">_effects</span>
+      </legend>
+      <table  cellspacing="0" cellpadding="3" border="0" width="100%">
+        <tr>
+          <td valign="top" style="width: 33%" nowrap="nowrap">
+            <input type="checkbox" ID="chkOverline"  onclick="showPreview()"><span id="4033" class="label">_Overline</span><br />
+            <input type="checkbox" ID="chkUnderline" onclick="showPreview()"><span id="4034" class="label">_Underline</span><br />
+          </td>
+          <td valign="top" style="width: 33%" nowrap="nowrap">
+            <input type="checkbox" ID="chkCaps" onclick="showPreview()"><span id="4035" class="label">_Caps</span><br />
+            <input type="checkbox" ID="chkBlink" onclick="showPreview()"><span id="4036" class="label">_Blink</span>
+          </td>
+          <td valign="top" style="width: 33%" nowrap="nowrap">
+            <input type="checkbox" ID="chkStrike" onclick="showPreview()"><span id="4037" class="label">_Strike through</span>
+          </td>
+        </tr>
+      </table>
+    </fieldset>    
+</BODY>

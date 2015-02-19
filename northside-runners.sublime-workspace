@@ -1,0 +1,907 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"primary",
+				"primary-font"
+			],
+			[
+				"dark",
+				"dark-grey"
+			],
+			[
+				"pri",
+				"primary-color"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"border-radius",
+				"border-radius"
+			],
+			[
+				"prima",
+				"primary-color"
+			],
+			[
+				"import",
+				"important"
+			],
+			[
+				"IM",
+				"important"
+			],
+			[
+				"post",
+				"post-thumbnail	post-thumbnail"
+			],
+			[
+				"pos",
+				"post-thumbnail	post-thumbnail"
+			],
+			[
+				"impo",
+				"important"
+			],
+			[
+				"prim",
+				"primary-color"
+			],
+			[
+				"template",
+				"template_directory"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"ta",
+				"target	Attr"
+			],
+			[
+				"m",
+				"middle"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"conte",
+				"contentHeight"
+			],
+			[
+				"side",
+				"sidebarHeight"
+			],
+			[
+				"block",
+				"blockquote"
+			],
+			[
+				"firs",
+				"first-child"
+			],
+			[
+				"style",
+				"stylesheet_directory"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"tr",
+				"transiton"
+			],
+			[
+				"pr",
+				"primary-color"
+			],
+			[
+				"wpQ",
+				"WP_Query"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"get_post_th",
+				"get_the_post_thumbnail"
+			],
+			[
+				"the_post",
+				"the_post_thumbnail"
+			],
+			[
+				"templa",
+				"template_directory"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Disable Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"fetc",
+				"Fetch: Package"
+			],
+			[
+				"fet",
+				"Fetch: Package"
+			],
+			[
+				"pack",
+				"Package Control: Enable Package"
+			],
+			[
+				"live",
+				"LiveReload: Self test"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"fetch",
+				"Fetch: Manage"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Convert Case: Upper Case"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"gist",
+				"Gist: Create Public Gist"
+			],
+			[
+				"gis",
+				"Gist: Open Gist"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"synta",
+				"Set Syntax: Sass"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"syn",
+				"Set Syntax: Sass"
+			],
+			[
+				"word",
+				"WordPress Codex: Search from Input"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax:l",
+				"Set Syntax: LESS"
+			],
+			[
+				"syntax l",
+				"Set Syntax: LESS"
+			],
+			[
+				"synt",
+				"Set Syntax: Sass"
+			],
+			[
+				"syntax",
+				"Set Syntax: Sass"
+			],
+			[
+				"syntax:s",
+				"Set Syntax: Sass"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/C/apache/webapps/ROOT/template/components/register.html",
+		"/C/apache/webapps/ROOT/template/components/sitenavigation.jsp",
+		"/C/apache/webapps/ROOT/socialLinks.html",
+		"/C/apache/webapps/ROOT/footer.html",
+		"/C/apache/webapps/ROOT/template/components/account.html",
+		"/C/apache/webapps/ROOT/template/.sass-cache/0569cab70b21a44572ad837d5817a4239fceadb4/_detail-page.scssc",
+		"/C/apache/webapps/ROOT/template/style.css",
+		"/C/apache/webapps/ROOT/template/home-template.jsp",
+		"/C/apache/webapps/ROOT/template/template.jsp",
+		"/C/apache/webapps/ROOT/template/_fonts.scss",
+		"/C/apache/webapps/ROOT/template/_variables.scss",
+		"/C/apache/webapps/ROOT/index.jsp",
+		"/C/apache/webapps/ROOT/template/components/header.html",
+		"/C/apache/webapps/ROOT/basketareaempty.html",
+		"/C/apache/webapps/ROOT/template/home-widgets.jsp",
+		"/C/apache/webapps/ROOT/template/components/footer.html",
+		"/C/apache/webapps/ROOT/template/_detail-page.scss",
+		"/C/apache/webapps/ROOT/template/components/changeaddr.jsp",
+		"/C/apache/webapps/ROOT/template/_customise.scss",
+		"/C/apache/webapps/ROOT/template/style.scss",
+		"/C/apache/webapps/ROOT/signup.html",
+		"/C/apache/webapps/ROOT/logout.html",
+		"/C/apache/webapps/ROOT/thankyou.html",
+		"/C/apache/webapps/ROOT/template/components/stockdetail.jsp",
+		"/C/apache/webapps/ROOT/template/components/stocklisting.jsp",
+		"/C/apache/webapps/ROOT/template/components/stocklisting.html",
+		"/C/apache/webapps/ROOT/template/components/delivery.html",
+		"/C/apache/webapps/ROOT/delivery.jsp",
+		"/C/apache/webapps/ROOT/database.xml",
+		"/C/apache/webapps/ROOT/template/components/confirm.jsp",
+		"/C/apache/webapps/ROOT/confirm.jsp",
+		"/C/apache/webapps/ROOT/template/components/confirm_old.jsp",
+		"/C/apache/webapps/ROOT/changeaddr.jsp",
+		"/C/apache/webapps/ROOT/template/components/accountButtons.jsp",
+		"/C/apache/webapps/ROOT/accessdeclaration.html",
+		"/C/apache/webapps/ROOT/terms-and-conditions.html",
+		"/C/apache/webapps/ROOT/template/components/shoppingbasket.jsp",
+		"/C/apache/webapps/ROOT/editor/config/xml-toolbar/toolbar-hf.xml",
+		"/C/apache/webapps/ROOT/template/components/sitenavigation_defunct.jsp",
+		"/C/apache/webapps/ROOT/template/components/shoppingbasket_mobile.jsp",
+		"/C/apache/webapps/ROOT/header.html",
+		"/C/apache/webapps/ROOT/register.jsp",
+		"/C/apache/webapps/ROOT/redirect.jsp",
+		"/C/apache/webapps/ROOT/footerhome.html",
+		"/C/apache/webapps/ROOT/leftmargin090.html",
+		"/C/apache/webapps/ROOT/_backup/shoppingbasket.jsp",
+		"/C/apache/webapps/ROOT/secure-shopping.html",
+		"/C/apache/webapps/ROOT/editor/add-on/css/pinStyleHelp.html",
+		"/C/apache/webapps/ROOT/template/_product-listing.scss",
+		"/C/apache/webapps/ROOT/template/_sidebar.scss",
+		"/C/apache/webapps/ROOT/siteindex.jsp",
+		"/C/apache/webapps/ROOT/template/style_ie.css",
+		"/C/apache/webapps/ROOT/log_sun.txt",
+		"/C/apache/webapps/ROOT/template/components/stocklistingquantityarea.jsp",
+		"/C/apache/webapps/ROOT/CountryCodes.txt",
+		"/C/apache/webapps/ROOT/editor/toolbar/color/color_used.html",
+		"/C/apache/webapps/ROOT/template/components/custauth.html",
+		"/C/apache/webapps/ROOT/leftmargin010.html",
+		"/C/Users/ChrisJ/Dropbox/CHRIS_WORK/PORTABLE APPS/sublime3-portable/Data/Packages/User/html/image-jsp.sublime-snippet",
+		"/C/apache/webapps/ROOT/template/components/footer.jsp",
+		"/C/apache/webapps/ROOT/custauth.jsp",
+		"/C/apache/webapps/ROOT/editor/dialogs/color_used.html",
+		"/C/apache/webapps/ROOT/template/base.scss",
+		"/C/apache/webapps/ROOT/bannerhome.html",
+		"/C/apache/webapps/ROOT/editor/include/validate.js",
+		"/C/apache/webapps/ROOT/version_model.txt",
+		"/C/apache/webapps/ROOT/template/_base.scss",
+		"/C/apache/webapps/ROOT/index.html",
+		"/C/apache/webapps/ROOT/template/components/stocklistingtrailandpageno.jsp",
+		"/C/apache/webapps/ROOT/template/style_old.css",
+		"/C/apache/webapps/ROOT/contactus.html",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/css/main.scss",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/css/_variables.scss",
+		"/C/apache/webapps/ROOT/editor/mode/html/styleeditor/font.html",
+		"/C/apache/webapps/ROOT/editor/_source/internals/fck_onload.js",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/css/_mixins.scss",
+		"/C/apache/webapps/ROOT/style.css",
+		"/C/apache/webapps/ROOT/editor/setmode_tg.jsp",
+		"/C/apache/webapps/ROOT/salesmessages.html",
+		"/C/apache/webapps/ROOT/templateOrders.jsp",
+		"/C/apache/webapps/ROOT/testimonials.html",
+		"/C/apache/webapps/ROOT/editor/fckconfig_old.js",
+		"/C/apache/webapps/ROOT/edit.jsp",
+		"/C/apache/webapps/ROOT/template/fonts/MyFontsWebfontsKit.css",
+		"/C/Users/ChrisJ/Dropbox/CHRIS_WORK/TEAM TREEHOUSE/Jquery/lightbox_complete/js/app-orig.js",
+		"/C/Users/ChrisJ/Dropbox/CHRIS_WORK/TEAM TREEHOUSE/Jquery/lightbox_complete/js/app.js",
+		"/C/wamp/www/aawep/wp-content/themes/aawep/assets/css/_yuck.scss",
+		"/C/wamp/www/wpa/wp-content/themes/aawep/foxyshop-single-product.php",
+		"/C/wamp/www/aawep/wp-content/themes/au-blog/category.php",
+		"/C/wamp/www/wpa/wp-content/themes/wedding-academy-blog/archive.php",
+		"/C/wamp/www/wpa/wp-content/themes/wedding-academy-blog/category.php",
+		"/C/wamp/www/wpa/wp-content/themes/aawep/assets/css/_yuck.scss",
+		"/C/wamp/www/wpa/wp-content/themes/wedding-academy-blog/assets/css/custom-old.css",
+		"/C/wamp/www/wpa/wp-content/themes/aawep/assets/css/custom.css",
+		"/C/wamp/www/aawep/wp-content/themes/aawep/assets/css/custom.css",
+		"/C/wamp/www/aawep/wp-content/themes/sftp-config-alt.json",
+		"/C/wamp/www/aawep/wp-content/themes/aawep/functions.php",
+		"/C/wamp/www/aawep/wp-content/themes/aawep/templates/aa-google-hangouts.php",
+		"/C/wamp/www/aawep/wp-content/themes/sftp-config.json",
+		"/C/Users/ChrisJ/Desktop/functions.php",
+		"/C/wamp/www/aawep/wp-config.php",
+		"/C/wamp/www/love-this-school/wp-config.php",
+		"/C/wamp/www/nzawep/wp-content/themes/aawep/sftp-config.json",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/header.php",
+		"/C/Users/ChrisJ/Desktop/download/index.html",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/front-page.php",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/assets/css/main.scss",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/about-page-template.php",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/page.php",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/footer.php",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/assets/css/style.css",
+		"/C/wamp/www/portfolio/wp-content/themes/flex/header.php",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/assets/js/main.js",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/single.php",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/assets/css/main.css",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/functions.php",
+		"/C/wamp/www/portfolio/wp-content/themes/tdt/style.css",
+		"/C/wamp/www/aawep/wp-content/themes/au-blog/post-banner.php",
+		"/C/wamp/www/portfolio/wp-config.php",
+		"/C/wamp/www/nzawep/wp-config.php",
+		"/C/Users/ChrisJ/Desktop/temp.html",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/front-page.php",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/css/_globals.scss",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/css/_buttons.scss",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/single.php",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/artists-listing.php",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/css/_modules.scss",
+		"/C/wamp/www/awme-dev/wp-content/themes/bootstrap/functions.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"",
+			".",
+			"css",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"4px",
+			"ELSEWHERE",
+			"repressed.rec@optusnet.com.au",
+			"Quick Shop",
+			"btn-grey",
+			"back to",
+			"Back to shop",
+			"registerforgotpassword",
+			"All rights reserved. By",
+			"All rights",
+			"4px",
+			",",
+			"8px",
+			"border-r",
+			"productsLayoutModeList",
+			"h1",
+			"1. Your Shopping Basket",
+			"border-radius:5px",
+			"%;\n",
+			",",
+			"8px",
+			"+",
+			"$grey",
+			"refine y",
+			"REFINE",
+			"Rosie",
+			"- Rosie",
+			"Customer Testimonials",
+			"8px",
+			".asidebox",
+			"footerDiv",
+			"We believe its the little things that count!",
+			"div",
+			"<img src=\"",
+			"about-home",
+			"75px",
+			"button",
+			".hero-wrapper button",
+			"!userSession.isHomePage())",
+			"isHomePage());",
+			"isHomePage())",
+			"WebSite.isThisPageInList",
+			"#headerright",
+			"Crows Nest • 02 8065 3583   |   Manly • 02 8964 8871",
+			"headerright",
+			"#headerright",
+			"jQuery",
+			"jquery",
+			"Prototype",
+			"prototype",
+			"\">",
+			"15px",
+			"cta-1",
+			"<li>",
+			"li>",
+			"li",
+			"<div id=\"productsCatProdHdr\" class=\"productsCatHdr\">",
+			"class=\"productsCatHdr\"",
+			"h1",
+			"id=\"stocklisting\"",
+			"class=\"sortSearch\"",
+			"viewing",
+			"id=\"productsCatProdHdr\"",
+			"productsCatProdHdr",
+			"lato",
+			"$",
+			"width=\"200\" height=\"200\"",
+			"</strong>",
+			"<strong>",
+			"Repressed Records",
+			"Please feel free to contact us with any questions",
+			")",
+			"@include(",
+			"@include",
+			"#nav > #qm0 > a",
+			"Welcome to Repressed Records",
+			"pagebanner",
+			"#ef2729",
+			"#cc2036",
+			"#dd0306",
+			"webfonts",
+			"template/style.css",
+			"stylesheet",
+			".qmmc",
+			"header",
+			"$",
+			".container.content",
+			".contact",
+			".contact .",
+			".contact",
+			".container.content",
+			".video-trigger",
+			".contact-form-wrap .container",
+			"http",
+			"//",
+			".item",
+			"contain",
+			".box",
+			".item",
+			"section",
+			"jquer",
+			"25",
+			"js/",
+			"css/",
+			"uk-tv",
+			".widget-5 ",
+			"side",
+			"nav-bg",
+			".nav-bg",
+			"col-xs-6",
+			"website",
+			"col-xs-12 col-sm-6",
+			"description",
+			"col-xs-12",
+			"//",
+			";('url');",
+			"blogininfo",
+			"<?php bloginfo('url'); ?>",
+			"530px",
+			"slider",
+			".9",
+			"about",
+			" no-padding",
+			"no-p",
+			"listing  ",
+			"col-sm-6",
+			"no-padding",
+			"-15px"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"grey-btn",
+			"border-radius:8px",
+			"#cc2036",
+			".box",
+			"listing ",
+			"col-sm-6 listing ",
+			"",
+			"'freeway_gothicmedium', arial, sans-serif",
+			"jQuery",
+			"'freeway_gothicmedium', arial, sans-serif",
+			"col-xs-6",
+			".paged-nav",
+			"\\n",
+			"<?php bloginfo('url' ); ?>/aawep2014/wp-content/themes/",
+			"<?php bloginfo('url' ); ?>/aawep2014/wp-content/",
+			"{site_url}assets/fonts/",
+			"{site_url}assets/images/",
+			"{site_url}images/",
+			"http://www.thosedigitalthoughts.com/fonts/",
+			"{site_url}assets/images/",
+			"{site_url}",
+			"http://www.aawep.com.au/aawep2014/wp-content/themes/aawep/assets/images/",
+			"</a>{$impression_track}",
+			"Australian Property Finance Members",
+			"<?php bloginfo('url'); ?>/",
+			"jQuery",
+			"files/",
+			"jQuery",
+			"450",
+			"490",
+			"720",
+			"470",
+			"450",
+			"640",
+			"599",
+			"490",
+			"480",
+			"767",
+			"jQuery",
+			"",
+			"&nbsp;&nbsp|&nbsp;&nbsp",
+			"  |  ",
+			"14px",
+			"<a style=\"text-decoration:none;\"",
+			"style=\"color:#808080; text-decoration:none;",
+			"13px",
+			"../images/",
+			"#{$images}/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 130.0
+	},
+	"project": "northside-runners.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"_de",
+				"template\\_detail-page.scss"
+			],
+			[
+				"_cu",
+				"template\\_customise.scss"
+			],
+			[
+				"_cus",
+				"template\\_customise.scss"
+			],
+			[
+				"socia",
+				"socialLinks.html"
+			],
+			[
+				"foo",
+				"footer.html"
+			],
+			[
+				"_fo",
+				"template\\_fonts.scss"
+			],
+			[
+				"site",
+				"template\\components\\sitenavigation.jsp"
+			],
+			[
+				"stockde",
+				"template\\components\\stockdetail.jsp"
+			],
+			[
+				"deliver",
+				"template\\components\\delivery.html"
+			],
+			[
+				"confir",
+				"template\\components\\confirm.jsp"
+			],
+			[
+				"chan",
+				"template\\components\\changeaddr.jsp"
+			],
+			[
+				"account",
+				"template\\components\\account.html"
+			],
+			[
+				"than",
+				"thankyou.html"
+			],
+			[
+				"sign",
+				"signup.html"
+			],
+			[
+				"header",
+				"template\\components\\header.html"
+			],
+			[
+				"_",
+				"template\\_detail-page.scss"
+			],
+			[
+				"regis",
+				"template\\components\\register.html"
+			],
+			[
+				"_d",
+				"template\\_detail-page.scss"
+			],
+			[
+				"_va",
+				"template\\_variables.scss"
+			],
+			[
+				"templa",
+				"template\\template.jsp"
+			],
+			[
+				"_f",
+				"template\\_fonts.scss"
+			],
+			[
+				"shoppingbas",
+				"template\\components\\shoppingbasket.jsp"
+			],
+			[
+				"_v",
+				"template\\_variables.scss"
+			],
+			[
+				"cus",
+				"template\\_customise.scss"
+			],
+			[
+				"custom",
+				"template\\_customise.scss"
+			],
+			[
+				"head",
+				"template\\components\\header.html"
+			],
+			[
+				"cust",
+				"template\\_customise.scss"
+			],
+			[
+				"sty",
+				"template\\style.scss"
+			],
+			[
+				"sitena",
+				"template\\components\\sitenavigation.jsp"
+			],
+			[
+				"_pr",
+				"template\\_product-listing.scss"
+			],
+			[
+				"leftmarg",
+				"leftmargin090.html"
+			],
+			[
+				"style",
+				"template\\style.scss"
+			],
+			[
+				"foot",
+				"footer.html"
+			],
+			[
+				"sociallinks.html",
+				"socialLinks.html"
+			],
+			[
+				"custo",
+				"template\\_customise.scss"
+			],
+			[
+				"footer",
+				"template\\components\\footer.jsp"
+			],
+			[
+				"base",
+				"template\\base.scss"
+			],
+			[
+				"basketareaempty.html",
+				"basketareaempty.html"
+			],
+			[
+				"template",
+				"template\\template.jsp"
+			],
+			[
+				"index.",
+				"index.jsp"
+			],
+			[
+				"var",
+				"template\\_variables.scss"
+			],
+			[
+				"index.js",
+				"index.jsp"
+			],
+			[
+				"stocklisting",
+				"template\\components\\stocklisting.jsp"
+			],
+			[
+				"stocklisttra",
+				"template\\components\\stocklistingtrailandpageno.jsp"
+			],
+			[
+				"font",
+				"template\\_fonts.scss"
+			],
+			[
+				"template.js",
+				"template\\template.jsp"
+			],
+			[
+				"banner",
+				"bannerhome.html"
+			],
+			[
+				"glob",
+				"css\\_globals.scss"
+			],
+			[
+				"fro",
+				"bootstrap\\front-page.php"
+			],
+			[
+				"ho",
+				"bootstrap\\home.php"
+			],
+			[
+				"fr",
+				"bootstrap\\front-page.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 319.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

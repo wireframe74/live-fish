@@ -1,0 +1,102 @@
+<HTML>
+  <HEAD>
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+    <link rel="stylesheet" href="dialog.css" type="text/css">
+      <script language="javascript" src="../../../include/validate.js"></script>
+      <script language="javascript" src="../../../include/dialog.js"></script>
+      <SCRIPT>
+
+var language = "EN";
+
+// use id and not the object because in ASP.Net object can be changed through blur
+if(browser.ie) {
+	language            = dialogArguments[0];
+	params              = dialogArguments;
+} else {
+	aParam = window.opener.__editGetParam(); 
+	params              = aParam;
+}
+
+function save()
+{
+  var ret = "";
+
+  var field = document.getElementById("txtName");
+
+  if(!check(field, cTEXT, getLanguageString(language,3009)))
+    return;
+
+  if(browser.ns) {
+     window.opener.callbackMozilla("TEXTMODULE", document.getElementById("txtName").value);
+  } else {
+    window.returnValue = document.getElementById("txtName").value;
+  }
+
+  window.close();
+}
+
+function Load()
+{
+  try {
+    // process parameters
+    var param = "";
+    try {
+      param = window.location.search;
+    } catch(Error) {}
+
+    if(param.length > 0) {
+      param = param.substring(1,param.length);
+      var aArray = param.split("&");
+      for(var i=0;i<aArray.length;i++) {
+        var aParam = aArray[i].split("=");
+        for(var j=0;j<aParam.length-1;j++) {
+          if(aParam[0].toUpperCase() == "LANGUAGE") {
+            language = aParam[1];
+          }
+        }
+      }
+    }
+    
+    // set language strings
+    setStrings();
+    
+    document.getElementById("lblOK").value = getLanguageString(language,899);
+    document.getElementById("lblCancel").value = getLanguageString(language,900);
+
+  } catch(Error) {}
+}
+
+</SCRIPT>
+</HEAD>
+
+  <BODY class="bodypage" onload="javascript: Load();">
+    <fieldset>
+      <legend class="head">
+        <span id="963">_ID/Name</span>
+      </legend>
+      <TABLE cellSpacing="0" cellPadding="1" width="100%" border="0" ID="Table1">
+        <TR>
+          <TD nowrap>
+            <div id="3007" class="label">_Name:</div>
+          </TD>
+          <TD><INPUT id="txtName" style="FONT-SIZE: 11px; WIDTH: 260px; FONT-FAMILY: arial; HEIGHT: 18px"
+              value=""></TD>
+        </TR>
+      </TABLE>
+    </fieldset>
+    <table ID="Table2">
+      <tr>
+        <td height="4"></td>
+      </tr>
+    </table>
+    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0" ID="Table3">
+      <TR>
+        <TD>
+          <P align="right"><INPUT id="Button1" style="WIDTH: 83px; HEIGHT: 24px" type="button" value="OK" onClick="save()"
+              NAME="Button1">&nbsp;<INPUT id="Button2" style="WIDTH: 79px; HEIGHT: 24px" type="button" value="Cancel" onclick="window.returnValue='';window.close();"
+              NAME="Button2"></P>
+        </TD>
+      </TR>
+    </TABLE>
+  </BODY>
+</HTML>

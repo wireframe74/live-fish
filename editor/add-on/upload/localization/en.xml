@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<strings>
+	<text id="3" value="Add files" />
+	<text id="4" value="Delete" />
+	<text id="5" value="Upload" />
+	<text id="6" value="Progress:" />
+	<text id="7" value="New" />
+	<text id="8" value="Rename" />
+	<text id="9" value="Delete" />
+	
+	<text id="1000" value="Name" />
+	<text id="1001" value="Size" />
+	<text id="1002" value="This file is too large: " />
+	<text id="1003" value="Unknown file extension !" />
+	<text id="1004" value="Total upload file size exceeded !" />
+	<text id="1005" value="Files to upload" />
+	<text id="1006" value="Destination folder (not selected)" />
+	<text id="1007" value="Destination folder" />
+	<text id="1008" value="Width: " />
+	<text id="1009" value="Height: " />
+	<text id="1010" value="All" />
+	<text id="1011" value="Documents" />
+	<text id="1012" value="Yes" />
+	<text id="1013" value="No" />
+	<text id="1014" value="Do you really want to delete ?" />
+	<text id="1015" value="Delete files/folders" />
+  <text id="1016" value="Save" />
+  <text id="1017" value="Cancel" />
+  <text id="1018" value="" />
+  <text id="1019" value="Please select destination folder first !" />
+  <text id="1020" value="/" />
+  <text id="1021" value="Date" />
+  <text id="1022" value="Images" />
+  <text id="1023" value="Image Preview:" />
+  <text id="1024" value="Image Resize:" />
+  <text id="1025" value="Name:" />
+  <text id="1026" value="File: " />
+ 
+  <text id="2000" value="Folder/File could not be renamed. Possibly the name is already in use !" />
+  <text id="2001" value="Folder/File could not be deleted !" />
+  <text id="2002" value="Folder/File could not be created. Possibly the name is already in use !" />
+  <text id="2003" value="Unable to read file structure !" />
+  <text id="2004" value="Message" />
+  
+</strings>
+

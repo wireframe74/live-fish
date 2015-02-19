@@ -1,0 +1,52 @@
+<html>
+<head>
+<script type="text/javascript" language="JavaScript">
+  function Browser()
+  {
+    var agent  = navigator.userAgent.toLowerCase();
+    this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                  ((agent.indexOf('spoofer')   ==   -1) &&
+                  (agent.indexOf('compatible') ==   -1)));
+    this.ie    = (agent.indexOf("msie")       !=   -1);
+  }
+  var browser = new Browser();
+
+  function load()
+  {
+    var doc = document.getElementById("code").contentWindow.document;
+    if(browser.ie) {
+      doc.onkeydown = onkeydownCode;
+    } else {
+      doc.addEventListener("keydown", onkeydownCode, false);
+    }
+  }
+  
+  function onkeydownCode(e)
+  {
+  try {
+    var evt = null;
+    if(browser.ie) {
+      evt = document.getElementById("code").contentWindow.event;
+    } else {
+  		evt = e;
+    }
+    if(evt.keyCode == 9) {
+      if(browser.ie) {
+        evt.cancelBubble = true;
+        evt.returnValue = false;
+      } else {
+        evt.preventDefault();
+      }
+      return false;
+    }
+
+   } catch(Error) {}
+    
+  }
+</script>
+
+</head>
+<body style="margin:0px; background-color:#FFFFFF;">
+  <iframe src="dummy.html" frameborder="0" style="width:398px; height:100%;" onLoad="load()" id="code"></iframe>
+</body>
+</html>

@@ -1,0 +1,91 @@
+Thu Nov 29 09:56:22 GMT 2007 basewebsite upgrade started
+ 
+Backup.....(/home/webdesig/Upgrde_auto_backup_9116)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files........................................DONE!
+edit css.....toadd_20070601.css ADDED.....toadd_20070821.css ADDED.....toadd_20070921.css ADDED.....toadd_20071026.css ADDED...DONE!
+set ownership and permissions.......DONE!
+VERSION FILE NOT ADDED DO MANUALY!
+Complete!!
+Thu Nov 29 12:20:10 GMT 2007 basewebsite upgrade started
+ 
+Backup.....(/home/webdesig/Upgrde_auto_backup_27541)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files........................................DONE!
+edit css.toadd_20070601.css already added!..toadd_20070821.css already added!..toadd_20070921.css already added!..toadd_20071026.css already added!....DONE!
+set ownership and permissions.......DONE!
+VERSION FILE NOT ADDED DO MANUALY!
+Complete!!
+Thu Nov 29 12:22:27 GMT 2007 basewebsite upgrade started
+ 
+Backup.....(/home/webdesig/Upgrde_auto_backup_14357)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files........................................DONE!
+edit css.toadd_20070601.css already added!..toadd_20070821.css already added!..toadd_20070921.css already added!..toadd_20071026.css already added!....DONE!
+set ownership and permissions.......DONE!
+version exists!
+Complete!!
+Thu Nov 29 13:11:47 GMT 2007 basewebsite upgrade started
+ 
+Backup.....(/home/webdesig/Upgrde_auto_backup_20992)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files........................................DONE!
+edit css.toadd_20070601.css already added!..toadd_20070821.css already added!..toadd_20070921.css already added!..toadd_20071026.css already added!....DONE!
+set ownership and permissions.......DONE!
+version exists!
+Complete!!
+Fri Dec 21 16:04:59 GMT 2007 jazkids upgrade started
+ 
+Backup.....(/home/webdesig/Upgrde_auto_backup_7344)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files........................................DONE!
+edit css.....toadd_20070601.css ADDED.toadd_20070821.css already added!..toadd_20070921.css already added!..toadd_20071026.css already added!....DONE!
+set ownership and permissions.......DONE!
+version exists!
+Complete!!
+Wed Jul  9 15:38:49 BST 2008 kraxi upgrade started
+ 
+Backup.....(/home/webdesig/Upgrde_auto_backup_18078)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files...........................................DONE!
+meta folder not there so CREATED !!!
+edit css.toadd_20070601.css already added!..toadd_20070821.css already added!..toadd_20070921.css already added!..toadd_20071026.css already added!......toadd_20080201.css ADDED.....toadd_20080627.css ADDED...DONE!
+set ownership and permissions.......DONE!
+version exists!
+Complete!!
+Fri Jul 25 11:52:43 BST 2008 b-fair upgrade started
+ 
+Backup.....(/home/webdesig/webapps/Upgrde_auto_backup_23060)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files...............................................DONE!
+meta folder LIVES !!!
+edit css.toadd_20070601.css already added!..toadd_20070821.css already added!..toadd_20070921.css already added!..toadd_20071026.css already added!......toadd_20080201.css ADDED.....toadd_20080627.css ADDED...DONE!
+set ownership and permissions.......DONE!
+version exists!
+Complete!!
+Tue Jul 29 16:08:41 BST 2008 basewebsite upgrade started
+ 
+Backup.....(/home/webdesig/webapps/Upgrde_auto_backup_8292)..Done
+upgrade template...old template removed..new template added..custom files added..DONE!
+upgrade WEB-INF...old WEB-INF removed..new WEB-INF added..custom files added..DONE!
+Remove all *.jsp..DONE!
+additional root files..........................................DONE!
+meta folder LIVES !!!
+edit css.toadd_20070601.css already added!..toadd_20070821.css already added!..toadd_20070921.css already added!..toadd_20071026.css already added!......toadd_20080201.css ADDED.toadd_20080627.css already added!....DONE!
+set ownership and permissions.......DONE!
+version exists!
+Complete!!

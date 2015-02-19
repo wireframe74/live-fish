@@ -1,0 +1,187 @@
+<HEAD>
+<title></title>
+<LINK href="dialog.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="../include/dialog.js"></script>
+<script language="javascript" src="../include/listbox.js"></script>
+<script language="javascript" src="../include/input.js"></script>
+
+<script type="text/javascript" language="JavaScript">
+var language = "";
+var design = "";
+var mode = "";
+var objElement;
+var isDebug = false;
+var lng=null;
+
+function getLanguageString(id)
+{
+	return lng[id];
+}
+
+function updateStyleSheet(style, value)
+{
+  parent.parent.parent.parent.updateRule(style.toLowerCase(), value);
+}
+
+function updateDesign(rule)
+{
+    comboSet(document.getElementById("cmbAlignH"),"");
+    comboSet(document.getElementById("cmbAlignV"),"");
+    comboSet(document.getElementById("cmbDirection"),"");
+    comboSet(document.getElementById("cmbLetterUnit"),"px");
+    comboSet(document.getElementById("cmbHeightUnit"),"px");
+    //comboSet(document.getElementById("cmbWriting"),"");
+    document.getElementById("txtLetters").value = "";
+    document.getElementById("txtHeight").value = "";
+
+  if (rule.styles.length > 0) {
+    for (var i=0;i<rule.styles.length;i++) {
+      if (rule.styles[i].name == "text-align") {
+        comboSet(document.getElementById("cmbAlignH"),rule.styles[i].value)
+      } else if (rule.styles[i].name == "vertical-align") {
+        comboSet(document.getElementById("cmbAlignV"),rule.styles[i].value);
+      } else if (rule.styles[i].name == "direction") {
+        comboSet(document.getElementById("cmbDirection"),rule.styles[i].value);
+      } else if (rule.styles[i].name == "letter-spacing") {
+        temp = parseSizeUnit(rule.styles[i].value);
+        document.getElementById("txtLetters").value = temp[0];
+        comboSet(document.getElementById("cmbLetterUnit"),temp[1]);
+      } else if (rule.styles[i].name == "line-height") {
+        temp = parseSizeUnit(rule.styles[i].value);
+        document.getElementById("txtHeight").value = temp[0];
+        comboSet(document.getElementById("cmbHeightUnit"),temp[1]);
+        
+      }
+    }
+  }
+}
+
+function initDialog(param)
+{
+
+  try {
+    lng = parent.parent.parent.parent.getLocalizationResource();
+    // set language strings
+    setStrings();
+    
+  } catch(Error) {}
+}
+
+</SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head"><span id="1600">_Alignemnt</span></legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td>
+          <div id="1601" class="label">_Horizontal:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbAlignH" onchange="updateStyleSheet('text-align',this.value)">
+            <option value="">-</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="center">Center</option>
+            <option value="justify">Justify</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="1602" class="label">_Vertical:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbAlignV" onchange="updateStyleSheet('vertical-align',this.value)">
+            <option value="">-</option>
+            <option value="auto">Standard</option>
+            <option value="baseline">Baseline</option>
+            <option value="sub">Sub</option>
+            <option value="super">Super</option>
+            <option value="top">Top</option>
+            <option value="middle">Middle</option>
+            <option value="bottom">Bottom</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head"><span id="1603">_Spacing</span></legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table1">
+      <tr>
+        <td>
+          <div id="1604" class="label">_Letters:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtLetters" style="width: 30px" onchange="updateStyleSheet('letter-spacing',this.value + document.getElementById('cmbLetterUnit').value)">
+        </td>
+        <td>
+          <select id="cmbLetterUnit" onchange="updateStyleSheet('letter-spacing',document.getElementById('txtLetters').value + document.getElementById('cmbLetterUnit').value)">
+            <option value="%">%</option>
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="ex">ex</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pc">pc</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="1605" class="label">_Height:</div>
+        </td>
+        <td>
+          <input type="text" ID="txtHeight" style="width: 30px" onchange="updateStyleSheet('line-height',this.value + document.getElementById('cmbHeightUnit').value)">
+        </td>
+        <td>
+          <select id="cmbHeightUnit" onchange="updateStyleSheet('line-height',document.getElementById('txtHeight').value + document.getElementById('cmbHeightUnit').value)">
+            <option value="%">%</option>
+            <option value="cm">cm</option>
+            <option value="em">em</option>
+            <option value="ex">ex</option>
+            <option value="in">in</option>
+            <option value="mm">mm</option>
+            <option value="pc">pc</option>
+            <option value="pt">pt</option>
+            <option selected value="px">px</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head"><span id="1606">_Text flow</span></legend>
+    <table cellspacing="0" cellpadding="1" border="0" ID="Table3">
+      <tr>
+        <td>
+          <div id="1607" class="label">_Direction</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbDirection" onchange="updateStyleSheet('direction',this.value)">
+            <option value="">-</option>
+            <option value="ltr">Left to right</option>
+            <option value="rtl">Right to left</option>
+          </select>
+        </td>
+      </tr>
+      <!--
+      <tr>
+        <td>
+          <div id="1608" class="label">_Hor./Vert.:</div>
+        </td>
+        <td>
+          <select style="width:80px" id="cmbWriting" onchange="updateStyleSheet('','')">
+            <option value="">-</option>
+            <option value="lr-tb">Horizontal</option>
+            <option value="tb-rl">Vertical</option>
+          </select>
+        </td>
+      </tr>
+      -->
+    </table>
+  </fieldset>
+</BODY>

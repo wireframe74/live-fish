@@ -1,0 +1,406 @@
+/* ------------------*/
+/* Office 2003S      */
+/*-------------------*/
+.MenuBarOffice2003S {
+	background-color: #D8D8E6;
+}
+.MenuBarItemStandardOffice2003S {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#D8D8E6;
+	padding:		2px 3px 2px 3px;		
+}
+.MenuBarItemHoverOffice2003S {
+	cursor: 		Hand;
+	cursor: 		pointer;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#4B4B6F;
+	padding:		1px 2px 1px 2px;		
+	background-image: url('../image/Office2003S/tbover.gif');
+}
+.MenuBarItemActiveOffice2003S {
+	cursor: 		Hand;
+	cursor: 		pointer;
+  font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-top-color:	#7c7c94;
+	border-left-color:	#7c7c94;
+	border-right-color:	#7c7c94;
+	border-bottom-color:	white;
+	padding:		1px 2px 1px 2px;
+	background-image: url('../../design/image/Office2003S/backactive.gif');
+}
+.MenuBarItemTextOffice2003S {
+	font: 		Menu;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+
+.MenuFrameOffice2003S {
+	border:0px solid #7c7c94;
+	background-color:white;
+	position:absolute;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBorderOffice2003S{
+	border:1px solid #7c7c94;
+}
+.MenuOffice2003S {
+	background-image: url('../../design/image/Office2003S/back.gif');
+	background-repeat: repeat-y;
+	width: 100%;
+ 	BORDER: 1px solid white;
+}
+.MenuItemOffice2003S {
+	height: 22px;
+	border: 0px;
+}
+.MenuItemHoverOffice2003S {
+	height: 22px;
+	border: 1px solid #4B4B6F;
+	background-image: url('../../design/image/Office2003S/tbover.gif');
+	cursor: hand;
+	cursor: 		pointer;
+}
+.MenuItemDisabledOffice2003S {
+	font: 	Menu;
+	color: #8D8D8D;
+	padding-left: 13px;
+	text-align: left;
+}
+.MenuItemFontOffice2003S {
+	font:			Menu;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemHoverTextOffice2003S {
+	font:			Menu;
+	padding-left: 2px;
+	text-align: left;
+}
+.MenuSeparatorOffice2003S {
+	font-size: 1px;
+	border-bottom: 1px solid #6D6E8F;
+}
+.MenuLineOffice2003S {
+	color: white;
+}
+
+
+
+/* ------------------*/
+/* Office 2003       */
+/*-------------------*/
+.MenuBarOffice2003 {
+	background-color: #9EBEF5;
+}
+.MenuBarItemStandardOffice2003 {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#9EBEF5;
+	padding:		2px 3px 2px 3px;		
+}
+.MenuBarItemHoverOffice2003 {
+	cursor: 		hand;
+	cursor: 		pointer;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#000080;
+	padding:		1px 2px 1px 2px;		
+	background-image: url('../image/Office2003/tbover.gif');
+}
+.MenuBarItemActiveOffice2003 {
+	cursor: 		Hand;
+	cursor: 		pointer;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-top-color:	#002E96;
+	border-left-color:	#002E96;
+	border-right-color:	#002E96;
+	border-bottom-color:	white;
+	padding:		1px 2px 1px 2px;
+	background-image: url('../../design/image/Office2003/backactive.gif');
+}
+.MenuBarItemTextOffice2003 {
+	font: 		Menu;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+
+.MenuFrameOffice2003 {
+	border:0px solid #002E96;
+	background-color:white;
+	position:absolute;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBorderOffice2003{
+	border:1px solid #002E96;
+}
+.MenuOffice2003 {
+	background-image: url('../../design/image/Office2003/back.gif');
+	background-repeat: repeat-y;
+	width: 100%;
+ 	BORDER: 1px solid white;
+}
+.MenuItemOffice2003 {
+	height: 22px;
+	border: 0px;
+}
+.MenuItemHoverOffice2003 {
+	height: 22px;
+	border: 1px solid #000080;
+	background-image: url('../../design/image/Office2003/tbover.gif');
+	cursor: hand;
+	cursor: 		pointer;
+}
+.MenuItemDisabledOffice2003 {
+	font: 	Menu;
+	color: #8D8D8D;
+	padding-left: 13px;
+	text-align: left;
+}
+.MenuItemFontOffice2003 
+{
+  cursor:hand; 
+	cursor: 		pointer;
+	font:			Menu;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemHoverTextOffice2003 {
+	font:			Menu;
+	padding-left: 2px;
+	text-align: left;
+}
+.MenuSeparatorOffice2003 {
+	font-size: 1px;
+	border-bottom: 1px solid #98AFDA;
+}
+.MenuLineOffice2003 {
+	color: #9BBCEB;
+}
+
+
+
+/* ------------------*/
+/* Office XP         */
+/*-------------------*/
+.MenuBarOfficeXP {
+	background-color: #ECE9D8;
+}
+.MenuBarItemStandardOfficeXP {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#9EBEF5;
+	padding:		2px 3px 2px 3px;		
+}
+.MenuBarItemHoverOfficeXP {
+	cursor: 		Hand;
+	cursor: 		pointer;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#316AC5;
+	padding:		1px 2px 1px 2px;		
+	background-color: #C1D2EE;
+}
+.MenuBarItemActiveOfficeXP {
+	cursor: 		Hand;
+	cursor: 		pointer;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-top-color:	#8A867A;
+	border-left-color:	#8A867A;
+	border-right-color:	#8A867A;
+	border-bottom-color:	white;
+	padding:		1px 2px 1px 2px;
+	background-color: #EFEDDE;
+}
+.MenuBarItemTextOfficeXP {
+	font: 		Menu;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+
+.MenuFrameOfficeXP {
+	border:0px solid #8A867A;
+	background-color:white;
+	position:absolute;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBorderOfficeXP {
+	border:1px solid #8A867A;
+}
+.MenuOfficeXP {
+	background-color:white;
+	background-image: url('../../design/image/OfficeXP/back.gif');
+	background-repeat: repeat-y;
+	width: 100%;
+ 	BORDER: 1px solid white;
+}
+.MenuItemOfficeXP {
+	height: 22px;
+	border: 0px;
+}
+.MenuItemHoverOfficeXP {
+	height: 22px;
+	border: 1px solid #316AC5;
+	background-color: #C1D2EE;
+	cursor: hand;
+	cursor: 		pointer;
+}
+.MenuItemDisabledOfficeXP {
+	font: 	Menu;
+	color: #8D8D8D;
+	padding-left: 13px;
+	text-align: left;
+}
+.MenuItemFontOfficeXP {
+	font:			Menu;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemHoverTextOfficeXP {
+	font:			Menu;
+	padding-left: 2px;
+	text-align: left;
+}
+.MenuSeparatorOfficeXP {
+	font-size: 1px;
+	border-bottom: 1px solid #C5C2B8;
+}
+.MenuLineOfficeXP {
+	color: #EFEDDE;
+}
+
+
+/* ------------------*/
+/* Office 2000       */
+/*-------------------*/
+.MenuBarOffice2000 {
+	background-color: #ECE9D8;
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:		ButtonHighlight;
+	border-bottom-color:	ButtonShadow;
+}
+.MenuBarItemStandardOffice2000 {
+	cursor:		default;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	0px;
+	border-style:	solid;
+	border-color:	#9EBEF5;
+	padding:		2px 3px 2px 3px;		
+}
+.MenuBarItemHoverOffice2000 {
+	cursor: 		Hand;
+	cursor: 		pointer;
+	font:			Menu;
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:		ButtonHighlight;
+	border-bottom-color:	ButtonShadow;
+	padding:		1px 2px 1px 2px;		
+	background-color: #ECE9D8;
+}
+.MenuBarItemActiveOffice2000 {
+	cursor: 		Hand;
+	cursor: 		pointer;
+	font:			Menu;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonShadow;
+	border-right-color:	ButtonHighlight;
+	border-top-color:	ButtonShadow;
+	border-bottom-color:ButtonHighlight;
+	padding:		1px 2px 1px 2px;
+	background-color: #EFEDDE;
+}
+.MenuBarItemTextOffice2000 {
+	font: 		Menu;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+
+.MenuFrameOffice2000 {
+	border: 0px solid #002E96;
+	background-color:white;
+	position:absolute;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color="#c0c0c0", Direction=135, Strength=4);
+}
+.MenuBorderOffice2000 {
+	border-width:		1px;
+	border-style:		solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:		ButtonHighlight;
+	border-bottom-color:	ButtonShadow;
+}
+.MenuOffice2000 {
+	background-color:#ECE9D8;
+	width: 100%;
+ 	BORDER: 1px solid #ECE9D8;
+}
+.MenuItemOffice2000 {
+	height: 22px;
+	border: 0px;
+}
+.MenuItemHoverOffice2000 {
+	height: 22px;
+	border: 1px solid #316AC5;
+	background-color: #316AC5;
+	color: white;
+	cursor: hand;
+	cursor: 		pointer;
+}
+.MenuItemDisabledOffice2000 {
+	font: 	Menu;
+	color: #8D8D8D;
+	padding-left: 13px;
+	text-align: left;
+}
+.MenuItemFontOffice2000 {
+	font:			Menu;
+	padding-left: 1px;
+	text-align: left;
+}
+.MenuItemHoverTextOffice2000 {
+	font:			Menu;
+	padding-left: 2px;
+	text-align: left;
+}
+.MenuSeparatorOffice2000 {
+	font-size: 1px;
+	border-bottom: 1px solid #C5C2B8;
+}
+.MenuLineOffice2000 {
+	color: ButtonHighlight;
+}
+
+
+
+

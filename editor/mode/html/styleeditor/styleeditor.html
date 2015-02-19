@@ -1,0 +1,143 @@
+<HEAD>
+<title></title>
+<LINK href="../../../design/style/dialog.css" type="text/css" rel="stylesheet">
+<SCRIPT>
+// browser detection
+function Browser()
+{
+  var agent  = navigator.userAgent.toLowerCase();
+  this.ns    = ((agent.indexOf('mozilla')   !=   -1) &&
+                ((agent.indexOf('spoofer')   ==   -1) &&
+                (agent.indexOf('compatible') ==   -1)));
+  this.ie    = (agent.indexOf("msie")       !=   -1);
+}
+var browser = new Browser();
+
+var params = null;
+var tab = null;
+
+function getLanguageString(lng,id)
+{
+  var aLanguage = params[14];
+  return aLanguage[id];
+}
+
+function initDialog(para)
+{
+  params = para;
+  // set body style
+  if(para[13] == "3")
+    document.body.className = "bodyframestyle";
+  else
+    document.body.className = "bodyframe";
+
+  // init tab: r used when loaded in tab
+  document.getElementById("tabstyle").src = "../../../tab/pinTab.html?r=123";
+}
+
+function updateDialog(para)
+{
+  try {
+  params = para;
+    var items = tab.getItems();
+    for(var i=0;i<items.length;i++) {
+      items[i].getWindow().initDialog(params);
+    }
+  } catch(Error) {}
+}
+
+function tabCreate(objTab,id)
+{
+  var dlgPath = "../mode/html/styleeditor/";
+  
+  tab = objTab;
+  objTab.design      = params[13];
+	objTab.orientation = "0";
+	objTab.tabarea     = true;
+	objTab.designmode  = "IMAGE";
+	
+	var item = objTab.createItem();
+	item.text = getLanguageString("",3402);
+	item.title = getLanguageString("",3402);
+	item.tag = "FONT";
+	item.active = true;
+  item.url = dlgPath + "font.html";
+	objTab.add(item);
+
+	if(params[15] == "0") {
+	  var item = objTab.createItem();
+	  item.text = getLanguageString("",3403);
+	  item.title = getLanguageString("",3403);
+	  item.tag = "BACKGROUND";
+	  item.active = false;
+	  item.url = dlgPath + "background.html";
+	  objTab.add(item);
+  } else {
+  	objTab.isHooverEnabled = false;
+  }
+  
+	var item = objTab.createItem();
+	item.text = getLanguageString("",3404);
+	item.title = getLanguageString("",3404);
+	item.tag = "BORDER";
+	item.active = false;
+	if(params[15] == "1")
+  	item.url = dlgPath + "bordersmall.html";
+	else
+  	item.url = dlgPath + "border.html";
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.text = getLanguageString("",3405);
+	item.title = getLanguageString("",3405);
+	item.tag = "SPACING";
+	item.active = false;
+	item.url = dlgPath + "spacing.html";
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.text = getLanguageString("",3406);
+	item.title = getLanguageString("",3406);
+	item.tag = "TEXT";
+	item.active = false;
+	item.url = dlgPath + "text.html";
+	objTab.add(item);
+
+	var item = objTab.createItem();
+	item.text = getLanguageString("",3407);
+	item.title = getLanguageString("",3407);
+	item.tag = "LAYOUT";
+	item.active = false;
+	item.url = dlgPath + "layout.html";
+	objTab.add(item);
+
+	objTab.create();
+}
+
+function tabEventPageLoaded(item,id)
+{
+  item.getWindow().initDialog(params);
+}
+
+
+function save()
+{
+  try {
+    var items = tab.getItems();
+    for(var i=0;i<items.length;i++) {
+      items[i].call("save()");
+    }
+  } catch(Error) {}
+}
+</SCRIPT>
+</HEAD>
+
+
+<body style="overflow:hidden">
+<table style="height:100%;width:100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td style="height:100%;width:100%"><iframe id="tabstyle" style="height:100%;width:100%"	src="dummy.html" frameBorder="0"></iframe></td>
+  </tr>
+</table>
+
+</body>

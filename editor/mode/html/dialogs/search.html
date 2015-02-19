@@ -1,0 +1,177 @@
+<HTML>
+  <HEAD>
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+    <link rel="stylesheet" href="dialog.css" type="text/css">
+      <script language="javascript" src="../../../include/dialog.js"></script>
+      <SCRIPT>
+var __objRange = null;
+var language   = "";
+var design     = "";
+var doc        = null;
+var win        = null;
+var editorwin  = null;
+var __objSelectedRange = null;
+var __moz_found = false;
+
+if(browser.ie) {
+	language            = dialogArguments[0];
+	design              = dialogArguments[1];
+  doc                 = dialogArguments[4];
+  editorwin           = dialogArguments[11];
+  params              = dialogArguments;
+} else {
+	aParam = window.opener.__editGetParam(); 
+	language            = aParam[0];
+	design              = aParam[1];
+  doc                 = aParam[4];
+  editorwin           = aParam[11];
+  params              = aParam;
+}
+
+document.title = getLanguageString(language,991) + document.title;
+
+function search()
+{
+  var curRange;
+  var search = "";
+
+  if(document.getElementById("txtSearch").value == "") {
+    alert(getLanguageString(language,996));
+    return;
+  } else {
+    search = document.getElementById("txtSearch").value;
+  }
+
+	if(browser.ie) {
+		if(__objRange != null) {
+			curRange = __objRange;
+		} else {
+			curRange = doc.body.createTextRange();
+			__objRange = curRange;
+		}
+
+		if(curRange.findText(search,1,0)) {
+			curRange.select();
+			__objSelectedRange = curRange;
+			__objRange.setEndPoint("StartToEnd", curRange)
+		} else {
+			alert(getLanguageString(language,997))
+			__objRange = null;
+			__objSelectedRange = null;
+		}
+	} else {
+		/*
+		param searchString: the search string
+		param caseSensitive: is the search case sensitive?
+		param backwards: should we search backwards?
+		param wrapAround: should wrap the search?
+		param wholeWord: should we search only for whole words?
+		param searchInFrames: should we search in all frames?
+		param showDialog: should we show the Find Dialog? */
+    try {
+		  __moz_found = editorwin.document.getElementById('pinEdit').contentWindow.find( search, false, false, false, false, false, false ) ;
+		} catch(Error) {
+      try {
+        editorwin.__editMozResetModeEdit();
+        win = editorwin.document.getElementById('pinEdit').contentWindow;
+        setTimeout("search()",100);
+        return;        
+		  } catch(Error2) {
+		     __moz_found = true;
+		  }
+		}
+    try {
+		  if(!__moz_found) {
+			  alert(getLanguageString(language,997))
+			  var selection = win.getSelection();
+			  var range = selection.getRangeAt( selection.rangeCount-1 ).cloneRange();
+			  selection.removeAllRanges();
+		  }
+		} catch(Error) {
+		}
+	}
+}
+
+function replace()
+{
+	if(document.getElementById("txtReplace").value == "") {
+		alert(getLanguageString(language,998));
+		return;
+	}
+	
+	if(browser.ie) {
+		try {
+			if(__objSelectedRange != null) {
+				var range = doc.selection.createRange();
+				range.pasteHTML(document.getElementById("txtReplace").value);
+				//window.opener.__editOnChanged(true);
+				editorwin.__editOnChanged(true);
+			}
+		} catch(Error) {}
+	} else {
+		if(__moz_found) {
+			window.opener.editInsertHtml(document.getElementById("txtReplace").value);	
+			window.opener.__editOnChanged(true);
+			__moz_found = false;
+		}
+	}
+  search();
+}
+
+function Load()
+{
+  try {
+		document.getElementById("txtSearch").focus();
+    document.getElementById("lblCancel").value = getLanguageString(language,900);
+    document.getElementById("lbl2").innerHTML = getLanguageString(language,992);
+    document.getElementById("lbl3").innerHTML = getLanguageString(language,993);
+    document.getElementById("lbl4").value = getLanguageString(language,994);
+    document.getElementById("lbl5").value = getLanguageString(language,995);
+  } catch(Error) {}
+}
+      </SCRIPT>
+  </HEAD>
+  <BODY style="margin:5px;overflow:hidden" onload="Load()">
+    <table width="100%" border="0" cellSpacing="0" cellPadding="0">
+      <tr>
+        <td valign="top">
+          <TABLE class="maintable" cellSpacing="0" cellPadding="4" width="100%" border="0">
+            <TR>
+              <TD colspan="2"><p id="lbl2">_Search:</p>
+              </TD>
+            </TR>
+            <TR>
+              <TD colspan="2"><INPUT id="txtSearch" style="FONT-SIZE: 11px; WIDTH: 270px; FONT-FAMILY: arial; " value=""></TD>
+            </TR>
+            <TR>
+              <TD colspan="2"><p id="lbl3">_Replace:</p>
+              </TD>
+            </TR>
+            <TR>
+              <TD colspan="2"><INPUT id="txtReplace" style="FONT-SIZE: 11px; WIDTH: 270px; FONT-FAMILY: arial; " value=""></TD>
+            </TR>
+          </TABLE>
+        </td>
+        <td height="100%">
+          <TABLE height="100%" border="0" cellspacing="2" cellpadding="0" ID="Table1">
+            <TR>
+              <TD><INPUT id="lbl4" style="WIDTH: 83px; " type="button" value="_Search" onClick="search()"
+                  NAME="lbl4"></TD>
+            </TR>
+            <TR>
+              <TD><INPUT id="lbl5" style="WIDTH: 83px;" type="button" value="_Replace" onClick="replace()"
+                  NAME="lbl5"></TD>
+            </TR>
+            <TR>
+              <TD height="100%">&nbsp;</TD>
+            </TR>
+            <TR>
+              <TD><INPUT id="lblCancel" style="WIDTH: 83px; " type="button" value="_Cancel" onclick="window.returnValue='';window.close();"
+                  NAME="lblCancel"></TD>
+            </TR>
+          </TABLE>
+        </td>
+      </tr>
+    </table>
+  </BODY>
+</HTML>

@@ -1,0 +1,195 @@
+<HEAD>
+  <TITLE></TITLE>
+  <LINK href="dialog.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="../../../include/dialog.js"></script>
+    <SCRIPT>
+
+var language = "";
+var design = "";
+var objElement;
+var technology = "";
+var baseUrl    = "";
+var basePath   = "";
+var filter     = "";
+var relpath    = "";
+var win        = null;
+
+function save()
+{
+  try {
+    var objElementStyle = objElement.style;
+    var alt             = objElement.alt;
+    var longdesc        = objElement.longDesc;
+    var accesskey       = objElement.accessKey;
+    var tabindex        = objElement.tabIndex;
+    var changed = false;
+    var win = params[11];
+
+    // alt - should be ever available to be conform with XHTML
+    objElement.alt = document.getElementById("txtAlt").value;
+    
+    if(document.getElementById("txtLongDesc").value != "") {
+      objElement.longDesc = document.getElementById("txtLongDesc").value;
+    } else {
+      objElement.removeAttribute("longDesc");
+    }
+    if(document.getElementById("txtTabIndex").value != "") {
+      objElement.tabIndex = document.getElementById("txtTabIndex").value;
+    } else {
+      objElement.removeAttribute("tabIndex");
+    }
+    if(document.getElementById("txtAccessKey").value != "") {
+      if(browser.ie)
+        objElement.accessKey = document.getElementById("txtAccessKey").value;
+      else
+        objElement.accesskey = document.getElementById("txtAccessKey").value;
+    } else {
+       objElement.removeAttribute("accessKey");
+       objElement.removeAttribute("accesskey");
+    }
+
+    if(alt != objElement.alt)
+      changed = true;
+    if(longDesc != objElement.longDesc)
+      changed = true;
+    if(tabIndex != objElement.tabIndex)
+      changed = true;
+    if(accessKey != objElement.accessKey)
+      changed = true;
+
+    if(changed) {
+      win.__editOnChanged(true);
+    }
+
+  } catch(Error) { 
+  }
+  
+  window.close();
+}
+
+function initDialog(param)
+{
+  params = param;
+
+  try {
+	  language            = param[0];
+	  design              = param[1];
+	  objElement          = param[5];
+	  baseUrl             = param[6];
+	  basePath            = param[7];
+	  technology          = param[8];
+	  filter              = param[9];
+	  relpath             = param[10];
+	  win                 = param[11];
+
+    // set language strings
+    setStrings();
+
+    var objElementStyle = objElement.style;
+
+    if(objElement.alt)
+      document.getElementById("txtAlt").value       = objElement.alt;
+    if(objElement.longDesc)
+      document.getElementById("txtLongDesc").value  = objElement.longDesc;
+    if(browser.ie) {
+      if(objElement.accessKey)
+        document.getElementById("txtAccessKey").value = objElement.accessKey;
+    } else {
+      if(objElement.accesskey)
+        document.getElementById("txtAccessKey").value = objElement.accesskey;
+    }
+    if(objElement.tabIndex > 0)
+      document.getElementById("txtTabIndex").value  = objElement.tabIndex;
+
+    if(!param[18])
+      document.getElementById("btnUrl").style.display = "none";
+
+  } catch(error) { }
+}
+
+function onUrlSelect()
+{
+  params[2] = "OPEN";
+  params[9] = "html;";
+  // set the predefined values from config.js
+	if(browser.ie) {
+		var path = window.showModalDialog("../../../server/" + technology + "/dialog.html",params,"dialogHeight:600px;dialogWidth:600px;resizable:1;status:0;scroll:0");
+		if(path != "0" && path != null) {
+ 			document.getElementById("txtLongDesc").value = path;
+		}
+	} else {
+		var left = screen.width/2 - 600/2;
+		var top = screen.height/2 - 600/2;
+		window.open("../../../server/" + technology + "/dialog.html","dialog","modal=1,left=" + left + ",top=" + top + ",height=600,width=600,resizable=1,status=0,scrollbars=0");
+	}
+}
+
+function __editGetParam()
+{
+  return params;
+}
+
+function callbackMozilla(mode, para1, para2)
+{
+  if(mode == "OPENDOC") {
+    if(para1 != "0" && para1 != null) {
+ 			document.getElementById("txtLongDesc").value = para1;
+    }
+  }
+}
+
+
+</SCRIPT>
+</HEAD>
+<BODY class="bodypage">
+  <fieldset>
+    <legend class="head">
+      <span id="4007">_Text</span>
+    </legend>
+    <table width="1%" cellspacing="0" cellpadding="1" border="0" ID="Table1">
+      <tr>
+        <td width="1%">
+          <div id="4018" class="label80">_Alt:</div>
+        </td>
+        <td width="1%">
+          <INPUT id="txtAlt" style="FONT-SIZE: 11px; WIDTH: 100px; FONT-FAMILY: arial; HEIGHT: 20px">
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td width="1%">
+          <div id="4019" class="label80">_Longdesc:</div>
+        </td>
+        <td nowrap>
+          <INPUT id="txtLongDesc" style="FONT-SIZE: 11px; WIDTH: 100px; FONT-FAMILY: arial">
+        </td>
+        <td width="1%">
+          <input id="btnUrl" type="button" value="..." style="width:20px" onclick="javascript: onUrlSelect();">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend class="head">
+      <span id="4020">_Key</span>
+    </legend>
+    <table cellspacing="0" cellpadding="1" border="0">
+      <tr>
+        <td width="1%">
+          <div id="4021" class="label80">_Accesskey:</div>
+        </td>
+        <td>
+          <input id="txtAccessKey" type="text"  style="width:100px;">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="4022" class="label80">_tabindex:</div>
+        </td>
+        <td>
+          <input id="txtTabIndex" type="text" style="width:100px;">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</BODY>

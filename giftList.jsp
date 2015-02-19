@@ -1,0 +1,1 @@
+<%String templatePage = "giftlist";request.setAttribute("templatePage",templatePage);%><%@include file="template/template.jsp"%>

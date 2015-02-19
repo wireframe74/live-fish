@@ -1,0 +1,59 @@
+<!-- start of components/custauth.html -->
+<%
+
+if (!userSession.isLoggedIn() || userSession.getWebsiteAccessDomainId() != Customer.WEB_ACCESS_TYPE_FULL_ADMIN) {
+	out.write("<br><br><center><b>You must be logged in as the admin manager to access this page</b></center><br><br>");
+	
+       return;
+}
+                    
+
+String sql = "select c.web_access_type_domain_id, c.customer_id, c.name, c.email_address, a.address_line1, a.address_line2, a.address_line3, a.county, a.country, a.post_code, a.contact, a.telephone, a.mobile from customer c, address_clsfn ac, address a where c.customer_id = ac.object_id and a.address_id = ac.address_id and ac.address_clsfn_domain_id = 1071  and ac.address_type_domain_id = 1051 and c.web_access_type_domain_id = 1805 order by c.name";
+Connection conn = null;
+Statement stmt = null;
+try {
+	conn = website.getConnection();
+	stmt = conn.createStatement();
+
+	if (request.getParameter("custid") != null) {
+		try {
+			int custId = Integer.parseInt(request.getParameter("custid"));
+			stmt.executeUpdate("update customer set web_access_type_domain_id = "+request.getParameter("level")+" where customer_id = "+custId);
+			conn.commit();
+
+		} catch (Exception nfe) {
+			out.write(""+nfe.getMessage());
+		}
+	}
+
+
+
+	ResultSet rs = stmt.executeQuery(sql);
+
+	out.write("<table border=\"1\" style=\"borderwidth:1px\" cellpadding=0 cellspacing=0><tr>");   
+	while (rs.next()) {
+		
+		int custId = rs.getInt(2);
+		out.write("<td><a href='custauth.jsp?custid="+custId+"&level=1810'><b>Accept</b></a></td>");
+		out.write("<td>&nbsp;</td>");
+		out.write("<td><a href='custauth.jsp?custid="+custId+"&level=1800'><b>Decline</b></a></td>");
+		out.write("<td>&nbsp;</td>");     
+
+		for (int col=2;col<rs.getMetaData().getColumnCount();col++) {
+			out.write("<td>"); 
+			out.write(""+(rs.getObject(col+1) == null || (""+rs.getObject(col+1)).equals("null")?"&nbsp;":rs.getObject(col+1)));  
+			out.write("</td>");
+             	}     
+		
+
+		out.write("</tr><tr>");
+	}
+	out.write("</tr></table>");
+
+	rs.close();
+} finally {
+	if (stmt != null) stmt.close();
+	if (conn != null) website.releaseConnection(conn);
+}
+%>  
+<!-- end of components/custauth.html -->

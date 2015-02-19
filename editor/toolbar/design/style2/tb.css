@@ -1,0 +1,138 @@
+/* ------------------*/
+/* Style2            */
+/*-------------------*/
+.pinButtonStandard
+{
+	cursor:		default;
+	background:		ButtonFace;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	ButtonFace;
+	padding:		1px 2px 1px 2px;		
+}
+
+.pinButtonHover
+{
+	cursor: 		pointer;
+	background:		#C1D2EE;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#316AC5;
+	padding:		1px 2px 1px 2px;		
+}
+
+.pinButtonPopup
+{
+	background:		white;
+	color:		ButtonText;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-left-color:	#808080;
+	border-right-color:	#808080;
+	border-top-color:		#808080;
+	border-bottom-color:  	white;
+	padding:		1px 2px 1px 2px;		
+}
+
+.pinButtonActive
+{
+	font:			Menu;
+	cursor: 		pointer;
+	background:		#C1D2EE;
+	padding:		2px 1px 0px 3px;
+	border:		1px solid #316AC5;
+}
+
+.pinToolbarIn
+{
+	background-color: ButtonFace;
+	border-width:		1px;
+	border-style:	solid;
+	border-left-color:	ButtonHighlight;
+	border-right-color:	ButtonShadow;
+	border-top-color:	ButtonHighlight;
+	border-bottom-color:ButtonShadow;
+}
+
+.pinToolbarOut
+{
+	margin-left:  0px;
+	margin-top:   0px;
+	border-width: 0px;
+	border-style: solid;
+}
+
+.pinMenuItemStandard
+{
+	cursor: 		Default;
+	border:		1px solid white;
+	background:		white;
+	font-family: 	arial;
+	font-size: 		11px;
+}
+
+.pinMenuItemHover
+{
+	cursor: 		pointer;
+	border:		1px solid #316AC5;
+	background:		#C1D2EE;
+	font-family: 	arial;
+	font-size: 	11px;
+}
+
+.pinComboStandard
+{
+	cursor:		default;
+	color:		ButtonText;
+	background-color: white;
+	font:			Menu;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	white;
+}
+
+.pinComboHover
+{
+	cursor: 		pointer;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#316AC5;
+}
+
+.pinComboPopup
+{
+	cursor: 		pointer;
+	font:			Menu;
+	background-color: white;
+	border-width:	1px;
+	border-style:	solid;
+	border-color:	#316AC5;
+}
+
+.pinToolbarInput
+{
+	border: 1px solid white;
+	height: 18px;
+	font-family: arial;
+	font-size: 11px;
+}
+
+.pinToolbarInputHover
+{
+	border: 1px solid #316AC5;
+	height: 18px;
+	font-family: arial;
+	font-size: 11px;
+}
+
+pinToolbarLabel
+{
+	font-family: arial;
+	font-size: 11px;
+}
