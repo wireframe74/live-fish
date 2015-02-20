@@ -729,6 +729,11 @@ line-height: 19px;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
 	padding-right:10px;
+
+	@media only screen and  (max-width:992px) {
+		width:100%;
+		position:relative;
+	}
 }
 .article {
 	width: 75%;
@@ -861,7 +866,7 @@ div.stocklistingSortOptions{
 }
 
 div.pagebottomnavextra{
-	background:url(../images/border.gif) top left repeat-x;
+	border-top:3px solid #eee;
 	position:relative;
 	margin-top: 20px;
 	min-height: 40px;
@@ -2496,6 +2501,8 @@ div.component_stockdetail .detailInfo .qtyaddtobasket .inputitem_productqty:nth-
 .productdetailwrap form[name="emailenq"]{
 	text-align: left;
 	margin-bottom: 5px;
+	@extend %primary-font;
+	
 }
 .productdetailwrap form[name="emailenq"] input[type="submit"]{
 	width: 20%;
@@ -3077,6 +3084,10 @@ ul.productsLayoutModeThumb li.stockThumb{
 	width:25%;
 	margin:0;
 	border:0;
+
+	@media only screen and (max-width:992px) {
+		width:50%;
+	}
 }
 ul.productsLayoutModeThumb li.stockThumb:nth-of-type(4n+1){
 	padding-right: 10px;
@@ -3297,7 +3308,7 @@ ul.productsLayoutModeList li.stockThumb:last-of-type{
 .stocklisting ul.blocklist.layoutModeList{
 	padding-bottom: 10px;
 	margin-bottom: 10px;
-	border-bottom: 1px solid #aaa;
+	border-bottom: none;
 }
 
 

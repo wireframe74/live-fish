@@ -1,6 +1,6 @@
 #wrapper > .container >  .article.full,
 .article.full {
-	width: 1000px;
+	width: 100%;
 }
 
 
@@ -51,6 +51,7 @@ div.component_stockdetail .detailInfo,
 #recentlyviewedbody .stockthumbFormat3
 {
 	background:#fff;
+	border:1px solid #eee;
 }
 
 
@@ -120,7 +121,7 @@ padding-top:20px;
 
 
 #component_stockdetail_recentlyviewed {
-background:url(../images/border.gif) top left repeat-x;	
+border-top:3px solid #eee;
 margin-top: 30px;
 width: 100%;
 float: left;
@@ -185,6 +186,7 @@ font-size:24px;
 .productprice strong{
 	font-size: 1.8em;
 	color:$primary-color;
+	@extend %bold-font;
 }
 
 

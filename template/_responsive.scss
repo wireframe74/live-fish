@@ -3,19 +3,30 @@
 	overflow: hidden;
 	}
 
+.row-fluid [class*="span"]:first-child {
+margin-left: 0;
+}
 
-	.container {
+
+	.container,
+	#footer div.wrap960, 
+		.wrap960 {
+
+	padding-left: 15px;
+	padding-right: 15px;
+
+
 
 	@media only screen and (min-width:250px)  {
 		width: 100%;
 		margin: 0 auto;
 	}
 
-	@media only screen and (min-width:800px)  {
+	@media only screen and (min-width:800px) and   (max-width:992px){
 		max-width: 800px;
 	}
 
-	@media only screen and (min-width:1366px)  {
+	@media only screen and (min-width:1040px)  {
 		max-width: 1040px;
 	}
 

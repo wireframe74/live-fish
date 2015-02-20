@@ -167,9 +167,7 @@ if (thisPgName == null || thisPgName.equals("null")) thisPgName = "unclassifiedp
 
 		<% }%> <!-- .END HOME PAGE CONDITIONAL -->
 
-	<% if (!userSession.isHomePage()) { %>
-	 <div class="main-wrap">
-	<% }%> <!-- .END HOME PAGE CONDITIONAL -->
+
 
 		<div class="container <% if (userSession.isHomePage()) { %> homepage-area  module-wrap <% }%> ">
 
@@ -205,11 +203,35 @@ if (thisPgName == null || thisPgName.equals("null")) thisPgName = "unclassifiedp
 
 			<% if (userSession.isHomePage()) { %> 
 
-			<div class="module-wrap white-module">
+			<div class="module-wrap white-module guarantees">
 
-					<h2>Brands</h2>
-					<p><img src="<%=website.getImagePath("brands.gif")%>" alt="Brands" /></p>
-					<p><a href="/brands.irc" class="btn">More</a></p>
+					 <h3 class="section-title clearfix title_center "><span>Our Guarantees</span>  </h3>
+
+			<div class="container">
+				
+					<ul>
+
+					<li class="icon1">
+						<h3>FREE SHIPPING - ORDERS OVER $150</h3>
+						<p>Aquarium fish professionally home delivered for only $18.50  -  or free for orders over $150!</p>
+					</li>
+
+					<li class="icon2">
+						<h3>MONEY BACK GUARANTEE</h3>
+						<p>We offer you a comprehensive Moneyback Guarantee on all fish and plants!</p>
+					</li>
+
+					<li class="icon3">
+						<h3>COMPANY PROFILE</h3>
+						<p>Find out how passionate we are about our business.</p>
+					</li>
+				</ul>
+
+
+
+			</div>
+
+
 
 		     </div>
 
@@ -218,9 +240,7 @@ if (thisPgName == null || thisPgName.equals("null")) thisPgName = "unclassifiedp
 
 		<% }%> <!-- .END HOME PAGE CONDITIONAL -->
 		
-	<% if (!userSession.isHomePage()) { %>
-	 </div>
-	<% }%> <!-- .END MAIN WRAP -->	
+
 
 
 
